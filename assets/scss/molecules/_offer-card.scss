@@ -1,0 +1,69 @@
+.kse-offer {
+   margin: 40px 0;
+   &__card {
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: #fff;
+      padding: 24px 32px;
+      overflow: hidden;
+      position: relative;
+      &:hover {
+         &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.3);
+         }
+      }
+   }
+
+   &__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      z-index: 2;
+      position: relative;
+   }
+
+   &__title {
+      font-family: "Begum";
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 10px;
+   }
+
+   &__subtitle {
+      font-family: "Acumin Pro Condensed";
+      font-size: 16px;
+   }
+
+   &__discount {
+      display: flex;
+      align-items: start;
+      gap: 8px;
+   }
+
+   &__amount {
+      font-family: "Begum";
+      font-size: 56px;
+      font-weight: 700;
+   }
+
+   &__off {
+      font-family: "Begum";
+      font-size: 24px;
+      font-weight: 600;
+      margin-top: 8px;
+   }
+
+   &__note {
+      font-family: "Acumin Pro Condensed";
+      font-size: 16px;
+      margin-bottom: 18px;
+   }
+}

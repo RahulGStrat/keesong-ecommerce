@@ -8,13 +8,14 @@
 @import "./base/dev";
 
 // atoms
-@import 'atoms/button';
+@import "atoms/button";
 
 // molecule
+@import "molecules/offer-card";
+@import "molecules/recipe-card";
 
 // organisms
 @import 'organisms/footer';
-
-
+@import "organisms/offer-section";
 
 // pages
