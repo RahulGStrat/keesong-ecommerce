@@ -1,0 +1,135 @@
+.kse-btn {
+    &--pri {
+        display: inline-block;
+        padding: 8px 42px;
+        font-size: 16px;
+        font-weight: 600;
+        font-family: "Acumin Pro Condensed";
+        color: #ffffff;
+        text-decoration: none;
+        background: linear-gradient(90deg,
+                #f14e54 0%,
+                #f36a6f 40%,
+                #f68a8e 100%);
+        border: 2px solid #ffffff;
+        border-radius: 10px;
+        transition: background 3s ease-in-out;
+
+        &:hover {
+            color: #ffffff;
+            background: linear-gradient(90deg,
+                    #f68a8e 0%,
+                    #f36a6f 40%,
+                    #f14e54 100%);
+        }
+    }
+
+    &--header {
+        color: #fff;
+        padding: 8px 28px;
+        display: inline-block;
+        font-size: 22px;
+        font-family: "Acumin Pro Condensed";
+        font-weight: 600;
+        transition: 0.3s ease-in-out;
+        width: 18%;
+        text-align: center;
+        background-color: #f14a50;
+        border: 1px solid #f14a50;
+        border-radius: 14px;
+
+        &:hover {
+            color: #fff;
+            border: 1px solid #d4373d;
+            background-color: #d4373d;
+        }
+    }
+
+    &--sec {
+        display: inline-block;
+        padding: 8px 42px;
+        font-size: 16px;
+        font-weight: 600;
+        font-family: "Acumin Pro Condensed";
+        color: #ffffff;
+        text-decoration: none;
+        background: linear-gradient(90deg,
+                #f14e54 0%,
+                #f36a6f 40%,
+                #f68a8e 100%);
+        border-radius: 10px;
+        transition: background 3s ease-in-out;
+
+        &:hover {
+            color: #ffffff;
+            background: linear-gradient(90deg,
+                    #f68a8e 0%,
+                    #f36a6f 40%,
+                    #f14e54 100%);
+        }
+    }
+
+    &--wht {
+        background-color: #fff !important;
+        border: 2px solid #fff;
+        padding: 8px 42px;
+        border-radius: 10px;
+        color: #414141;
+        font-size: 16px;
+        transition: 0.3s all;
+        font-family: "Acumin Variable";
+
+        &:hover {
+            background-color: #f2f2f2 !important;
+            border: 2px solid #414141;
+            border-radius: 10px;
+            color: #414141;
+        }
+    }
+
+    &--reward {
+        color: #fff;
+        padding: 8px 28px;
+        display: inline-block;
+        font-size: 22px;
+        font-family: "Acumin Pro Condensed";
+        font-weight: 600;
+        transition: 0.3s ease-in-out;
+        width: 18%;
+        text-align: center;
+        background-color: #f05b72;
+        border: 1px solid #f05b72;
+        border-radius: 50px;
+
+        &:hover {
+            color: #fff;
+            border: 1px solid #c94358;
+            background-color: #c94358;
+        }
+    }
+
+    &--whtpill {
+        background: #ffffff;
+        color: #f14a50;
+        border: none;
+        padding: 8px 24px;
+        font-size: 18px;
+        font-family: "Acumin Pro Condensed";
+        font-weight: 600;
+        border-radius: 50px;
+        cursor: pointer;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        transition: all 0.2s ease;
+        width: 10%;
+        display: block;
+        text-align: center;
+        border: 2px solid #fff;
+
+        &:hover {
+            color: #f14a50;
+            border: 2px solid #f14a50;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+        }
+    }
+}

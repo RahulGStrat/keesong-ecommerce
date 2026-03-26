@@ -1,11 +1,55 @@
-// @font-face {
-//   font-family: "MyWebFont";
-//   src: url("pathofyourfont.woff2") format("woff2"),
-//     url("pathofyourfont.woff") format("woff");
-//   font-style: normal;
-//   font-weight: normal;
-//   font-display: swap;
-// }
+@font-face {
+    font-family: "Acumin Variable";
+    src: url("../../assets/fonts/Acumin Variable Concept.woff2") format('woff2-variations'),
+         url("../../assets/fonts/Acumin Variable Concept.woff") format('woff-variations');
+    font-weight: 100 900;
+    font-style: normal oblique 0deg 12deg;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Acumin Pro Condensed';
+    src: url('../../assets/fonts/AcuminProCond-Bold.woff2') format('woff2'),
+        url('../../assets/fonts/AcuminProCond-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Begum';
+    src: url('../../assets/fonts/Begum-Light.woff2') format('woff2'),
+         url('../../assets/fonts/Begum-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Begum';
+    src: url('../../assets/fonts/Begum-Bold.woff2') format('woff2'),
+         url('../../assets/fonts/Begum-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Begum';
+    src: url('../../assets/fonts/Begum-Medium.woff2') format('woff2'),
+         url('../../assets/fonts/Begum-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Begum';
+    src: url('../../assets/fonts/Begum-Semibold.woff2') format('woff2'),
+         url('../../assets/fonts/Begum-Semibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
 
 html {
   scroll-behavior: smooth;
@@ -13,9 +57,7 @@ html {
 
 html,
 body {
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
-    Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Acumin Variable";
   font-size: 16px;
   font-weight: $font-regular;
   line-height: 1.3;
