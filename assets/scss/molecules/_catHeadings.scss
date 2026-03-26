@@ -38,3 +38,11 @@
     padding: 5px 42px;
   }
 }
+
+@include mobile{
+  .kse-catHead{
+    .kse-btn--wht {
+      padding: 5px 10px;
+    }
+  }
+}
