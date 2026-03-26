@@ -1,0 +1,155 @@
+.kse-footer {
+    background: #ef4b4b;
+    padding: 50px 40px 30px;
+    color: #fff;
+    font-family: Arial, sans-serif;
+
+    &__innerwrap {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        gap: 25px;
+        flex-wrap: wrap;
+    }
+
+    &__col {
+        width: 23%;
+
+        &--a {
+            width: 15%;
+        }
+
+        &--b {
+            width: 36%;
+        }
+
+        &--c {
+            width: 22%;
+        }
+
+        &--d {
+            width: 15%;
+        }
+
+    }
+
+    &__logo img {
+        width: 120px;
+        margin-bottom: 20px;
+    }
+
+    &__colhead {
+        font-size: 14px;
+        font-weight: 700;
+        margin-bottom: 15px;
+    }
+
+    &__colsubhead {
+        font-size: 12px;
+        font-weight: 700;
+        margin-bottom: 10px;
+
+        &.invisible {
+            visibility: hidden;
+        }
+    }
+
+    &__links {
+        display: flex;
+        gap: 25px;
+    }
+
+    &__links ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    &__item {
+        font-size: 12px;
+        margin-bottom: 6px;
+        cursor: pointer;
+        opacity: 0.9;
+        transition: 0.3s;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    &__itemb {
+        font-size: 12px;
+        margin-bottom: 6px;
+        cursor: pointer;
+        opacity: 0.9;
+        transition: 0.3s;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    &__contactitm {
+        font-size: 12px;
+        margin-bottom: 8px;
+    }
+
+    &__policyitm {
+        margin-top: 10px;
+        font-weight: 600;
+
+        .divider {
+            margin: 0 6px;
+            opacity: 0.8;
+        }
+    }
+
+    &__sclicons {
+        display: flex;
+        gap: 12px;
+        margin-top: 10px;
+    }
+
+    &__sclicons a {
+        display: inline-flex;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        overflow: hidden;
+        transition: transform 0.3s ease;
+
+        img {
+            width: 100%;
+            height: 100%;
+            transition: 0.3s ease;
+        }
+
+        &:hover {
+            transform: translateY(-2px);
+        }
+    }
+
+    &__saklogo img {
+        width: 100px;
+        margin-top: 15px;
+    }
+
+    &__copyright {
+        font-size: 11px;
+        margin-top: 20px;
+        opacity: 0.9;
+    }
+}
+
+
+@include mobile {
+    .kse-footer {
+        &__innerwrap {
+            flex-direction: column;
+        }
+
+        &__links {
+            flex-direction: column;
+            gap: 15px;
+        }
+    }
+}
