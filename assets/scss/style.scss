@@ -9,15 +9,19 @@
 
 // atoms
 @import "atoms/button";
+@import "atoms/heading";
+
 // molecule
 @import "molecules/offer-card";
 @import "molecules/recipe-card";
-@import 'molecules/productTile';
-@import 'molecules/offerCard';
-@import 'molecules/catHeadings';
+@import "molecules/productTile";
+@import "molecules/offerCard";
+@import "molecules/catHeadings";
 // organisms
-@import 'organisms/header';
-@import 'organisms/footer';
+@import "organisms/header";
+@import "organisms/footer";
 @import "organisms/offer-section";
 @import "organisms/home-hero-sec";
+@import "organisms/recipe-slider";
+
 // pages
