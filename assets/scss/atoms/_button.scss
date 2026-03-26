@@ -105,4 +105,29 @@
          background-color: #c94358;
       }
    }
+
+   &--whtpill {
+      background: #ffffff;
+      color: #f14a50;
+      border: none;
+      padding: 8px 24px;
+      font-size: 18px;
+      font-family: "Acumin Pro Condensed";
+      font-weight: 600;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      transition: all 0.2s ease;
+      width: 10%;
+      display: block;
+      text-align: center;
+      border: 2px solid #fff;
+
+      &:hover {
+         color: #f14a50;
+         border: 2px solid #f14a50;
+         transform: translateY(-2px);
+         box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+      }
+   }
 }
