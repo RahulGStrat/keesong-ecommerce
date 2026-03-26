@@ -1,0 +1,40 @@
+.kse-catHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  border-radius: 12px;
+  background: linear-gradient( 90deg, #7a0026 0%, #b23a48 50%, #f28c8c 100%);
+  color: #fff;
+
+  &--green{
+   background: linear-gradient(90deg, #5fbf5f 0%, #9fd36a 50%, #d6e76b 100%);
+  }
+  &--orange{
+    background: linear-gradient(90deg,#ef3b36 0%,#f39c5a 55%,#f5d27a 100%);
+  }
+
+  &__title {
+    font-size: 26px;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  &__btn {
+    background: #fff;
+    color: #333;
+    border: none;
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      background: #f2f2f2;
+    }
+  }
+  .kse-btn--wht{
+    padding: 5px 42px;
+  }
+}

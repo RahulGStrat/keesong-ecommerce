@@ -14,8 +14,12 @@
 // molecule
 @import "molecules/offer-card";
 @import "molecules/recipe-card";
-
+@import "molecules/productTile";
+@import "molecules/offerCard";
+@import "molecules/catHeadings";
 // organisms
+@import "organisms/header";
+@import "organisms/footer";
 @import "organisms/offer-section";
 @import "organisms/recipe-slider";
 
