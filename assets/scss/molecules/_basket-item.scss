@@ -114,7 +114,7 @@
 }
 @include tablet {
    .kse-basket-item {
-      align-items: flex-start;
+      align-items: start;
 
       &__image {
          width: 120px;
