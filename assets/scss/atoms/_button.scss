@@ -15,12 +15,10 @@
 
       &:hover {
          color: #ffffff;
-         background: linear-gradient(
-            90deg,
-            #f68a8e 0%,
-            #f36a6f 40%,
-            #f14e54 100%
-         );
+         background: linear-gradient(90deg,
+               #f68a8e 0%,
+               #f36a6f 40%,
+               #f14e54 100%);
       }
    }
 
@@ -60,12 +58,23 @@
 
       &:hover {
          color: #ffffff;
-         background: linear-gradient(
-            90deg,
-            #f68a8e 0%,
-            #f36a6f 40%,
-            #f14e54 100%
-         );
+         background: linear-gradient(90deg,
+               #f68a8e 0%,
+               #f36a6f 40%,
+               #f14e54 100%);
+      }
+
+      &.cart {
+         text-align: left;
+         display: flex;
+         width: 10%;
+         align-items: center;
+         padding: 8px 14px;
+         justify-content: space-between;
+
+         img {
+            width: 22px;
+         }
       }
    }
 

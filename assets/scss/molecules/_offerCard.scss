@@ -1,6 +1,6 @@
 .kse-offer-card {
   position: relative;
-  width: 180px;
+  width: 280px;
   border-radius: 20px;
   overflow: hidden;
   font-family: Georgia, serif;
@@ -38,22 +38,22 @@
   }
 
   &__percent {
-    font-size: 60px;
+    font-size: 65px;
     font-weight: 700;
   }
 
   &__off {
-    font-size: 60px;
+    font-size: 65px;
     font-weight: 700;
   }
 
   &__subtitle {
-    font-size: 16px;
+    font-size: px;
     margin-top: 5px;
   }
 
   &__item {
-    font-size: 20px;
+    font-size: 26px;
     font-weight: 600;
     margin-bottom: 10px;
   }
