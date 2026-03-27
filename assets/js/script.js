@@ -1,6 +1,8 @@
 // Recipe slider initialization
 $(".kse-recipe-slider__track").slick({
    slidesToShow: 4,
+     prevArrow: $('.kse-arrow--prev'),
+  nextArrow: $('.kse-arrow--next'),
    slidesToScroll: 1,
    arrows: true,
    dots: false,
@@ -52,6 +54,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
 /* PDP */
 document.addEventListener("DOMContentLoaded", function () {
+// adding and removing active class for sort module
+document.querySelectorAll('.kse-sort__btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.kse-sort__btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+  });
+});
+
+// filter module - active class adding and removing
+$('.kse-filter__listitm').on('click', function () {
+  $('.kse-filter__listitm').removeClass('active');
+  $(this).addClass('active');
+});
 
   /* =========================
      THUMBNAIL CLICK

@@ -1,157 +1,165 @@
 @font-face {
-    font-family: "Acumin Variable";
-    src: url("../../assets/fonts/Acumin Variable Concept.woff2") format('woff2-variations'),
-         url("../../assets/fonts/Acumin Variable Concept.woff") format('woff-variations');
-    font-weight: 100 900;
-    font-style: normal oblique 0deg 12deg;
-    font-display: swap;
+   font-family: "Acumin Variable";
+   src:
+      url("../../assets/fonts/Acumin Variable Concept.woff2")
+         format("woff2-variations"),
+      url("../../assets/fonts/Acumin Variable Concept.woff")
+         format("woff-variations");
+   font-weight: 100 900;
+   font-style: normal oblique 0deg 12deg;
+   font-display: swap;
 }
 @font-face {
-    font-family: 'Acumin Pro Condensed';
-    src: url('../../assets/fonts/AcuminProCond-Bold.woff2') format('woff2'),
-        url('../../assets/fonts/AcuminProCond-Bold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
+   font-family: "Acumin Pro Condensed";
+   src:
+      url("../../assets/fonts/AcuminProCond-Bold.woff2") format("woff2"),
+      url("../../assets/fonts/AcuminProCond-Bold.woff") format("woff");
+   font-weight: bold;
+   font-style: normal;
+   font-display: swap;
 }
 @font-face {
-    font-family: 'Begum';
-    src: url('../../assets/fonts/Begum-Light.woff2') format('woff2'),
-         url('../../assets/fonts/Begum-Light.woff') format('woff');
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
+   font-family: "Begum";
+   src:
+      url("../../assets/fonts/Begum-Light.woff2") format("woff2"),
+      url("../../assets/fonts/Begum-Light.woff") format("woff");
+   font-weight: 300;
+   font-style: normal;
+   font-display: swap;
 }
 
 @font-face {
-    font-family: 'Begum';
-    src: url('../../assets/fonts/Begum-Bold.woff2') format('woff2'),
-         url('../../assets/fonts/Begum-Bold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
+   font-family: "Begum";
+   src:
+      url("../../assets/fonts/Begum-Bold.woff2") format("woff2"),
+      url("../../assets/fonts/Begum-Bold.woff") format("woff");
+   font-weight: bold;
+   font-style: normal;
+   font-display: swap;
 }
 
 @font-face {
-    font-family: 'Begum';
-    src: url('../../assets/fonts/Begum-Medium.woff2') format('woff2'),
-         url('../../assets/fonts/Begum-Medium.woff') format('woff');
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
+   font-family: "Begum";
+   src:
+      url("../../assets/fonts/Begum-Medium.woff2") format("woff2"),
+      url("../../assets/fonts/Begum-Medium.woff") format("woff");
+   font-weight: 500;
+   font-style: normal;
+   font-display: swap;
 }
 
 @font-face {
-    font-family: 'Begum';
-    src: url('../../assets/fonts/Begum-Semibold.woff2') format('woff2'),
-         url('../../assets/fonts/Begum-Semibold.woff') format('woff');
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
+   font-family: "Begum";
+   src:
+      url("../../assets/fonts/Begum-Semibold.woff2") format("woff2"),
+      url("../../assets/fonts/Begum-Semibold.woff") format("woff");
+   font-weight: 600;
+   font-style: normal;
+   font-display: swap;
 }
 
 @font-face {
-    font-family: "Acumin Variable Concept";
-    src: url('../../assets/fonts/AcuminVariableConcept.woff2') format('woff2'),
-         url('../../assets/fonts/AcuminVariableConcept.woff') format('woff');
-    font-weight: 100 900;
-    font-style: normal;
-    font-display: swap;
+   font-family: "Acumin Variable Concept";
+   src:
+      url("../../assets/fonts/AcuminVariableConcept.woff2") format("woff2"),
+      url("../../assets/fonts/AcuminVariableConcept.woff") format("woff");
+   font-weight: 100 900;
+   font-style: normal;
+   font-display: swap;
 }
-
 
 html {
-  scroll-behavior: smooth;
+   scroll-behavior: smooth;
 }
 
 html,
 body {
-  font-family: "Acumin Variable";
-  font-size: 16px;
-  font-weight: $font-regular;
-  line-height: 1.3;
-  width: 100%;
-  min-height: 100%;
-  color: $color-black;
-  background-color: $color-white;
+   font-family: "Acumin Variable";
+   font-size: 16px;
+   font-weight: $font-regular;
+   line-height: 1.3;
+   width: 100%;
+   min-height: 100%;
+   color: $color-black;
+   background-color: $color-white;
 }
 
 a,
 button,
 input {
-  outline: none;
+   outline: none;
 }
 
 a,
 a:hover {
-  text-decoration: none;
+   text-decoration: none;
 }
 
 p,
 li {
-  margin-bottom: 0;
+   margin-bottom: 0;
 }
 
 button {
-  border: 0;
-  background-color: transparent;
+   border: 0;
+   background-color: transparent;
 }
 
 *:focus {
-  outline: none;
+   outline: none;
 }
 
 .content-wrapper {
-  width: 100%;
-  max-width: 1240px;
-  padding-left: $spacer-6;
-  padding-right: $spacer-6;
-  margin-left: auto;
-  margin-right: auto;
+   width: 100%;
+   max-width: 1240px;
+   padding-left: $spacer-6;
+   padding-right: $spacer-6;
+   margin-left: auto;
+   margin-right: auto;
 }
 
 .desk-visible {
-  display: block;
+   display: block;
 }
 
 .only-mobile {
-  display: none;
+   display: none;
 }
 
 .hide-mobile-tablet {
-  display: block;
+   display: block;
 }
 
 .only-mobile-tablet {
-  display: none;
+   display: none;
 }
 
 @include mobile-tablet {
-  .content-wrapper {
-    padding-left: $spacer-5;
-    padding-right: $spacer-5;
-  }
+   .content-wrapper {
+      padding-left: $spacer-5;
+      padding-right: $spacer-5;
+   }
 
-  .hide-mobile-tablet {
-    display: none;
-  }
+   .hide-mobile-tablet {
+      display: none;
+   }
 
-  .only-mobile-tablet {
-    display: block;
-  }
+   .only-mobile-tablet {
+      display: block;
+   }
 }
 
 @include mobile {
-  .content-wrapper {
-    padding-left: $spacer-3;
-    padding-right: $spacer-3;
-  }
+   .content-wrapper {
+      padding-left: $spacer-3;
+      padding-right: $spacer-3;
+   }
 
-  .desk-visible {
-    display: none;
-  }
+   .desk-visible {
+      display: none;
+   }
 
-  .only-mobile {
-    display: block;
-  }
+   .only-mobile {
+      display: block;
+   }
 }

@@ -1,6 +1,14 @@
 .kse-recipe-slider {
-   margin: 30px 0;
+position: relative;
+   .kse-catHead {
+      margin-top: 40px;
+   }
+
    &__track {
+      padding: 30px 0;
+      border-bottom: 1px solid #c6c6c6;
+      overflow: hidden;
+
       .slick-list {
          margin: 0 -12px;
       }
@@ -9,9 +17,9 @@
    &__item {
       padding: 0 12px;
    }
-   .slick-arrow {
+   .kse-arrow {
       position: absolute;
-      top: 40%;
+      top: 45%;
       transform: translateY(-50%);
       z-index: 2;
       width: 38px;
@@ -36,8 +44,8 @@
       }
    }
 
-   .slick-prev {
-      left: -17px;
+   .kse-arrow--prev {
+      left: 0;
 
       &::before {
          transform: rotate(-45deg);
@@ -45,8 +53,8 @@
       }
    }
 
-   .slick-next {
-      right: -17px;
+   .kse-arrow--next {
+      right: 0;
 
       &::before {
          transform: rotate(135deg);
@@ -54,7 +62,7 @@
       }
    }
 
-   .slick-arrow:hover {
+   .kse-arrow:hover {
       background: rgba(0, 0, 0, 0.5);
    }
 }

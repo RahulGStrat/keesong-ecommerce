@@ -10,6 +10,11 @@
     height: 100%;
     object-fit: cover;
     display: block;
+    transition: transform 0.4s ease;
+  }
+
+  &:hover .kse-offer-card__image {
+    transform: scale(1.1);
   }
 
   &__content {
@@ -48,8 +53,10 @@
   }
 
   &__subtitle {
-    font-size: px;
+    font-size: 22px;
     margin-top: 5px;
+    font-family: "Begum";
+    font-weight: 700;
   }
 
   &__item {
@@ -73,7 +80,8 @@
       background: #f1f1f1;
     }
   }
-  .kse-btn--whtpill{
+
+  .kse-btn--whtpill {
     width: 100%;
     padding: 5px 24px !important;
   }

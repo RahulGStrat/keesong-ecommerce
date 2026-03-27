@@ -23,12 +23,14 @@
       color: #fff;
       font-weight: bold;
       font-size: 14px;
+      font-family: "Acumin Variable Concept";
       padding: 6px 20px 6px 12px;
       clip-path: polygon(0% 0%, 100% 0%, 85% 50%, 100% 100%, 0% 100%);
 
       span {
          display: flex;
       }
+
       small {
          margin-right: 4px;
          font-size: 10px;
@@ -46,10 +48,12 @@
       font-weight: bold;
       margin-bottom: 6px;
       color: #222;
+      font-family: "Begum";
    }
 
    &__desc {
-      font-size: 13px;
+      font-family: "Acumin Variable";
+      font-size: 14px;
       color: #666;
       margin-bottom: 10px;
       line-height: 1.4;
@@ -77,42 +81,45 @@
       width: 100%;
       text-align: center;
    }
-  &__title {
-    font-size: 14px;
-    font-weight: bold;
-    margin-bottom: 6px;
-    color: #222;
-  }
 
-  &__desc {
-    font-size: 12px;
-    color: #666;
-    margin-bottom: 10px;
-    line-height: 1.4;
-  }
+   &__title {
+      font-size: 14px;
+      font-weight: bold;
+      margin-bottom: 6px;
+      color: #222;
+   }
 
-  &__bottom {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
+   &__desc {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 10px;
+      line-height: 1.4;
+   }
 
-  &__price {
-    font-size: 16px;
-    font-weight: bold;
-    color: #000;
-  }
+   &__bottom {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+   }
 
-  &__actions {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+   &__price {
+      font-size: 16px;
+      font-weight: bold;
+      color: #414141;
+      font-family: "Acumin Variable Concept";
 
-  .kse-btn{
-    width: 100%;
-    text-align: center;
-  }
+   }
+
+   &__actions {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+
+   .kse-btn {
+      width: 100%;
+      text-align: center;
+   }
 }
 
 .kse-qty {
@@ -131,6 +138,7 @@
 
       &:hover {
          // background: #ccc;
+         color: #333333;
       }
    }
 
@@ -158,6 +166,7 @@
    display: flex;
    justify-content: center;
    align-items: center;
+
    img {
       width: 85%;
    }
