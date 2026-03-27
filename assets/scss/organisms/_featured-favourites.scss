@@ -1,0 +1,54 @@
+.kse-featured {
+  padding: 20px 0;
+  background-color: #f7f5f2;
+  &__headbtnout {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+  }
+  .kse-heading {
+    color: $purple-color;
+    margin-bottom: 0;
+  }
+  .kse-btn--wht {
+    border: 1px solid #000;
+    font-weight: 400;
+    border-radius: 6px;
+  }
+  &__products {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 32px;
+    margin-bottom: 40px;
+    gap: 30px;
+  }
+  .kse-PdTile {
+    width: calc(25% - 16px);
+  }
+}
+
+@include tablet {
+  .kse-featured {
+    &__products {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+    .kse-PdTile {
+      width: calc(50% - 16px);
+    }
+  }
+}
+
+@include mobile {
+  .kse-featured {
+    &__products {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+    .kse-PdTile {
+      width: calc(50% - 16px);
+    }
+  }
+}
