@@ -1,0 +1,68 @@
+.kse-order-review {
+   flex: 1;
+   padding: 20px;
+   border: 1px solid #c3c3c3;
+   border-radius: 5px;
+   height: fit-content;
+
+   &__title {
+      font-size: 18px;
+      margin-bottom: 20px;
+   }
+   .bold {
+      font-family: "Acumin Pro Condensed";
+   }
+
+   &__row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 12px;
+
+      &--total {
+         font-weight: 700;
+         margin-top: 20px;
+         margin-bottom: 0;
+      }
+   }
+
+   &__totalsub {
+      font-size: 13px;
+      color: #b3b3b3;
+   }
+
+   &__promo {
+      display: flex;
+      margin-bottom: 16px;
+
+      input {
+         flex: 1;
+         padding: 8px;
+         border: 1px solid #c3c3c3;
+         border-radius: 5px 0 0 5px;
+      }
+
+      button {
+         padding: 8px 12px;
+         background: #414141;
+         color: #fff;
+         border: none;
+         border-radius: 0 5px 5px 0;
+      }
+   }
+
+   &__note {
+      background: linear-gradient(
+         to right,
+         #fcdde2 0%,
+         #fef0f2 50%,
+         #fcdde2 100%
+      );
+      padding: 12px;
+      font-size: 12px;
+      margin-bottom: 16px;
+   }
+
+   .kse-btn {
+      width: 100%;
+   }
+}
