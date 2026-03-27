@@ -76,6 +76,29 @@
             width: 22px;
          }
       }
+
+      &.wishlist {
+         text-align: left;
+         display: flex;
+         width: 10%;
+         align-items: center;
+         padding: 8px 14px;
+         justify-content: space-between;
+         background: #fff !important;
+         transition: 0.3s all;
+         color: #121212;
+         border: 1px solid #121212;
+
+         img {
+            width: 22px;
+           visibility: hidden;
+         }
+
+         &:hover {
+            background: #b3b3b3 !important;
+            color: #fff;
+         }
+      }
    }
 
    &--wht {
