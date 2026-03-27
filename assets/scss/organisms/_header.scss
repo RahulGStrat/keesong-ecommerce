@@ -78,26 +78,33 @@
             display: none;
         }
     }
+     &-arrow {
+        display: inline-block;
+        // margin-left: 5px;
+        // border-left: 5px solid transparent;
+        // border-right: 5px solid transparent;
+        // border-top: 6px solid #333;
+        transition: 0.3s;
+        // position: absolute;
+        right: 0px;
+        top: 8px;
+        svg{
+         width: 10px;
+          height: 10px;
+          margin-top: -2px;
+        }
+    }
     }
 
     &__menu-item--category {
         cursor: pointer;
         // padding-right: 15px;
-            &.active .kse-Head__arrow {
+            a.active .kse-Head__menu-arrow {
             transform: rotate(180deg);
         }
     }
-
-    &__arrow {
-        display: inline-block;
-        margin-left: 5px;
-        border-left: 5px solid transparent;
-        border-right: 5px solid transparent;
-        border-top: 6px solid #333;
-        transition: 0.3s;
-        // position: absolute;
-        right: 0px;
-        top: 8px;
+    &__subLink{
+      display: none;
     }
 
     /* 🔥 FULL WIDTH MEGA MENU */
@@ -171,7 +178,7 @@
   &__icn{
     width: 22px;
     svg {
-            fill: none;
+      fill: none;
             fill-rule: evenodd;
             stroke: #231f20;
             stroke-linecap: round;
@@ -255,7 +262,28 @@
       justify-content: space-between;
       padding: 16px 16px;
     }
+    &__subLink{
+      display: flex;
+      transition: all ease-in 0.3s;
+      svg{
+        width: 10px;
+        height: 10px;
+        transform: translate(0px , 4px);
 
+      }
+    }
+    &__mega-col{
+      h4{
+        display: flex;
+        gap: 5px;
+        font-weight: 600;
+      }
+      &.active{
+        .kse-Head__subLink{
+          transform: rotate(180deg) translate(0px , 0px);
+        }
+      }
+    }
     &__megaWrap.active {
       position: fixed;
       top: 20px;
@@ -307,9 +335,9 @@
     }
     &__mega-col{
       &.active{
-        h4{
-          font-weight: 600;
-        }
+        // h4{
+        //   font-weight: 600;
+        // }
         .sub-items {
           display: block;
         }
@@ -317,14 +345,6 @@
     }
   }
 }
-
-
-
-
-
-
-
-
 .overlay {
   position: fixed;
   top: 0;
@@ -348,7 +368,6 @@
   cursor: pointer;
 }
 
-
 .kse-Head__hamburger {
   width: 32px;
   display: none;
@@ -364,7 +383,6 @@
   border-radius: 2px;
   transition: 0.3s;
 }
-
 
 .kse-Head__hamburger.active .bar:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);

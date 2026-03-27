@@ -36,12 +36,15 @@ const closeBtn = document.getElementById("closeBtn");
 // hamburger
 hamburger.addEventListener("click", () => {
   menu.classList.toggle("active");
-  hamburger.classList.toggle("active"); //
+  hamburger.classList.toggle("active");
 });
 
 // category click
 categoryBtn.addEventListener("click", (e) => {
   e.preventDefault();
+
+  // 👉 ADD ACTIVE CLASS TO MAIN MENU ITEM
+  categoryBtn.classList.toggle("active");
 
   if (window.innerWidth > 768) {
     // desktop
@@ -58,6 +61,9 @@ categoryBtn.addEventListener("click", (e) => {
 function closeMenu() {
   overlay.classList.remove("active");
   megaMenu.classList.remove("active", "mobile");
+
+  // 👉 REMOVE ACTIVE FROM MAIN MENU
+  categoryBtn.classList.remove("active");
 }
 
 overlay.addEventListener("click", closeMenu);
@@ -82,6 +88,9 @@ document.querySelectorAll(".kse-Head__mega-col h4").forEach(title => {
 document.addEventListener("click", (e) => {
   if (!e.target.closest("#categoryBtn") && !e.target.closest("#megaMenu")) {
     megaMenu.classList.remove("active");
+
+    // 👉 ALSO REMOVE ACTIVE FROM MAIN MENU
+    categoryBtn.classList.remove("active");
   }
 });
 
