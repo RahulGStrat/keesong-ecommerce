@@ -49,6 +49,10 @@
          color: #fff;
          border: none;
          border-radius: 0 5px 5px 0;
+         transition: 0.3s all;
+         &:hover {
+            background: #262626;
+         }
       }
    }
 
