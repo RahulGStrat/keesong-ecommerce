@@ -1,0 +1,27 @@
+.kse-pdp {
+
+    &__out {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .pdp-productsec {
+        width: 75%;
+    }
+    .kse-greatwith {
+        width: 25%;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1199px) {
+    .kse-pdp {
+        .pdp-productsec {
+      .kse-btn--sec.cart {
+        width: 35%;
+      }
+      .kse-btn--sec.whishlist {
+        width: 35%;
+      }
+    }
+    }
+}

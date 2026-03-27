@@ -50,4 +50,69 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
+/* PDP */
+document.addEventListener("DOMContentLoaded", function () {
 
+  /* =========================
+     THUMBNAIL CLICK
+  ========================= */
+  const mainImage = document.getElementById("mainProductImage");
+  const thumbnails = document.querySelectorAll(".thumb");
+
+  if (mainImage && thumbnails.length) {
+    thumbnails.forEach(thumb => {
+      thumb.addEventListener("click", function () {
+        mainImage.src = this.src;
+
+        thumbnails.forEach(t => t.classList.remove("active"));
+        this.classList.add("active");
+      });
+    });
+  }
+
+  /* =========================
+     IMAGE ZOOM
+  ========================= */
+  const container = document.getElementById("zoomContainer");
+
+  if (container && mainImage) {
+    container.addEventListener("mousemove", function (e) {
+      const rect = container.getBoundingClientRect();
+
+      const x = ((e.clientX - rect.left) / rect.width) * 100;
+      const y = ((e.clientY - rect.top) / rect.height) * 100;
+
+      mainImage.style.transformOrigin = `${x}% ${y}%`;
+      mainImage.style.transform = "scale(2)";
+    });
+
+    container.addEventListener("mouseleave", function () {
+      mainImage.style.transform = "scale(1)";
+      mainImage.style.transformOrigin = "center";
+    });
+  }
+
+});
+/*  */
+
+/* pdp toggle */
+document.addEventListener("DOMContentLoaded", function () {
+      const toggleBtn = document.querySelector(".kse-greatwith .toggle-icon");
+      const list = document.querySelector(".kse-greatwith__list");
+
+      // default = open
+      let isOpen = true;
+
+      toggleBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        isOpen = !isOpen;
+
+        // toggle list
+        list.style.display = isOpen ? "flex" : "none";
+
+        // rotate icon
+        toggleBtn.classList.toggle("rotated", !isOpen);
+      });
+    });
+/*  */
