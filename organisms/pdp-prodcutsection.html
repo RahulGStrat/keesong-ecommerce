@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,62 +13,63 @@
     <link rel="stylesheet" href="../assets/css/style.css" />
     <!-- styles -->
     <title>Document</title>
-  </head>
-  <body>
+</head>
+
+<body>
     <!-- body content start -->
-     <div class="pdp-productsec">
-  <div class="container">
-    <div class="pdp-productsec__out">
+    <div class="pdp-productsec">
+            <div class="pdp-productsec__out">
 
-      <!-- LEFT: IMAGES -->
-      <div class="pdp-productsec__images">
-        <div class="main-img">
-          <img src="/assets/images/chicken-1.png" alt="product" />
-          <span class="offer-badge">5% OFF</span>
-        </div>
+                <!-- LEFT: IMAGES -->
+                <div class="pdp-productsec__images">
+                    <div class="main-img" id="zoomContainer">
+                        <div class="kse-PdTile__badge"><span>5 <small>%</small> OFF</span> </div>
+                        <img id="mainProductImage" src="/assets/images/chicken-1.png" alt="product" />
+                    </div>
 
-        <div class="thumbs">
-          <img src="/assets/images/chicken-1.png" />
-          <img src="/assets/images/chicken-1.png" />
-          <img src="/assets/images/chicken-1.png" />
-          <img src="/assets/images/chicken-1.png" />
-        </div>
-      </div>
+                    <div class="thumbs">
+                        <img class="thumb active" src="/assets/images/chicken-part-1.png">
+                        <img class="thumb" src="/assets/images/chicken-part-2.png" />
+                        <img class="thumb" src="/assets/images/chicken-part-3.png" />
+                        <img class="thumb" src="/assets/images/chicken-part-4.png" />
+                    </div>
+                </div>
 
-      <!-- RIGHT: DETAILS -->
-      <div class="pdp-productsec__details">
-        <h1 class="title">Lorem ipsum</h1>
+                <!-- RIGHT: DETAILS -->
+                <div class="pdp-productsec__details">
+                    <h1 class="title">Lorem ipsum</h1>
 
-        <p><strong>Brand:</strong> Lorem Ipsum</p>
-        <p><strong>Country of Origin:</strong> Lorem Ipsum</p>
+                    <p><strong>Brand:</strong> Lorem Ipsum</p>
+                    <p><strong>Country of Origin:</strong> Lorem Ipsum</p>
 
-        <div class="price">
-          <span class="new">$000.00/pkt</span>
-          <span class="old">$189.00/pkt</span>
-        </div>
+                    <div class="price">
+                        <span class="new">$000.00/pkt</span>
+                        <span class="old">$189.00/pkt</span>
+                    </div>
 
-        <div class="quantity">
-          <span>Quantity:</span>
-          <div class="qty-box">
-            <button>-</button>
-            <input type="text" value="1" />
-            <button>+</button>
-          </div>
-        </div>
+                    <div class="quantity">
+                        <span>Quantity:</span>
+                        <div class="qty-box">
+                            <button>-</button>
+                            <input type="text" value="1" />
+                            <button>+</button>
+                        </div>
+                    </div>
 
-        <div class="actions">
-          <button class="add-cart">Add to Cart 🛒</button>
-          <button class="wishlist">Add to Wishlist</button>
-        </div>
+                    <div class="actions">
+                        <a href="#" class="kse-btn kse-btn--sec cart">Add to cart <img
+                                src="../assets/images/Cart-icon.png" alt="AddtoCart"></a>
+                        <a href="#" class="kse-btn kse-btn--sec wishlist">Add to Wishlist <img
+                                src="../assets/images/Cart-icon.png" alt="AddtoCart"></a>
+                    </div>
 
-        <p class="note">
-          * Lorem ipsum dolor sit amet, consectetuer adipiscing elit...
-        </p>
-      </div>
+                    <i class="note">
+                        * Lorem ipsum dolor sit amet, consectetuer adipiscing elit...
+                    </i>
+                </div>
 
+            </div>
     </div>
-  </div>
-</div>
     <!-- body content end -->
 
     <!-- scripts -->
@@ -76,6 +78,8 @@
     <script src="../assets/js/slick.min.js"></script>
     <script src="../assets/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/js/script.js"></script>
+    
     <!-- scripts -->
-  </body>
+</body>
+
 </html>
