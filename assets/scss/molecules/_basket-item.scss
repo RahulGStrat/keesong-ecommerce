@@ -78,6 +78,9 @@
          cursor: pointer;
          font-weight: bold;
          color: #54b047;
+         &:hover {
+            color: #44923a;
+         }
       }
       .quantity {
          margin-right: 8px;
@@ -110,6 +113,9 @@
       cursor: pointer;
       font-weight: bold;
       color: #54b047;
+      &:hover {
+         color: #44923a;
+      }
    }
 }
 @include tablet {
