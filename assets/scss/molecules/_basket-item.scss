@@ -1,0 +1,174 @@
+.kse-basket-item {
+   display: flex;
+   align-items: center;
+   gap: 16px;
+   padding: 20px;
+   background: #fff;
+   border-radius: 5px;
+   position: relative;
+   font-family: "Acumin Variable Concept";
+
+   &__image {
+      position: relative;
+      width: 146px;
+
+      img {
+         width: 100%;
+         border-radius: 8px;
+      }
+   }
+
+   &__badge {
+      position: absolute;
+      top: 5px;
+      left: 1px;
+      background: #54b047;
+      color: #fff;
+      font-size: 14px;
+      font-family: "Acumin Variable Concept";
+      padding: 6px 20px 6px 12px;
+      font-weight: 600;
+      clip-path: polygon(0% 0%, 100% 0%, 85% 50%, 100% 100%, 0% 100%);
+   }
+
+   &__content {
+      flex: 1;
+   }
+
+   &__category {
+      font-size: 12px;
+      color: #414141;
+   }
+
+   &__title {
+      font-size: 16px;
+      margin: 4px 0;
+      color: #414141;
+      font-weight: bold;
+   }
+
+   &__price {
+      display: flex;
+      align-items: end;
+      gap: 8px;
+      margin-bottom: 8px;
+   }
+
+   &__current {
+      font-weight: 600;
+      color: #121212;
+   }
+
+   &__old {
+      text-decoration: line-through;
+      color: #b3b3b3;
+      font-size: 12px;
+      margin-left: 16px;
+   }
+
+   &__quantity {
+      display: flex;
+      align-items: center;
+      color: #121212;
+
+      button {
+         font-size: 20px;
+         width: 24px;
+         height: 27px;
+         border: none;
+         cursor: pointer;
+         font-weight: bold;
+         color: #54b047;
+         &:hover {
+            color: #44923a;
+         }
+      }
+      .quantity {
+         margin-right: 8px;
+      }
+      .number {
+         border-right: 1px solid #c3c3c3;
+         border-left: 1px solid #c3c3c3;
+         padding: 0 10px;
+      }
+   }
+
+   &__total {
+      font-weight: 600;
+      min-width: 100px;
+      text-align: right;
+      color: #121212;
+      margin: 12px 0 32px;
+      .kse-basket-item__old {
+         margin-left: 22px;
+      }
+   }
+
+   &__remove {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      border: none;
+      background: transparent;
+      font-size: 18px;
+      cursor: pointer;
+      font-weight: bold;
+      color: #54b047;
+      &:hover {
+         color: #44923a;
+      }
+   }
+}
+@include tablet {
+   .kse-basket-item {
+      align-items: start;
+
+      &__image {
+         width: 120px;
+      }
+
+      &__title {
+         font-size: 15px;
+      }
+
+      &__total {
+         margin: 8px 0 16px;
+      }
+   }
+}
+@include mobile {
+   .kse-basket-item {
+      flex-direction: column;
+      gap: 12px;
+
+      &__image {
+         width: 100%;
+         max-width: 100%;
+      }
+
+      &__content {
+         width: 100%;
+      }
+
+      &__price {
+         flex-wrap: wrap;
+         gap: 6px;
+      }
+
+      &__badge {
+         top: 6px;
+         font-size: 16px;
+         padding: 8px 24px 8px 16px;
+      }
+
+      &__total {
+         text-align: left;
+         margin: 8px 0;
+      }
+
+      &__remove {
+         top: -1px;
+         right: -1px;
+      }
+   }
+}

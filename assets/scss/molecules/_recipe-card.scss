@@ -1,0 +1,76 @@
+.kse-recipe-card {
+   display: flex;
+   flex-direction: column;
+
+   &__image {
+      border-radius: 6px;
+      overflow: hidden;
+      margin-bottom: 12px;
+
+      img {
+         width: 100%;
+         display: block;
+      }
+   }
+
+   &__title {
+      font-family: "Begum";
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 5px;
+      min-height: 42px;
+   }
+
+   &__share {
+      margin-bottom: 12px;
+   }
+
+   &__share-text {
+      font-size: 12px;
+      margin-bottom: 4px;
+      color: #414141;
+      display: block;
+   }
+
+   &__icons {
+      display: flex;
+      gap: 8px;
+   }
+
+   &__icon {
+      position: relative;
+      width: 28px;
+      height: 28px;
+      display: inline-block;
+
+      img {
+         width: 100%;
+         height: 100%;
+         display: block;
+      }
+
+      .icon-hover {
+         position: absolute;
+         inset: 0;
+         opacity: 0;
+         transition: opacity 0.3s ease;
+      }
+
+      &:hover {
+         .icon-hover {
+            opacity: 1;
+         }
+
+         .icon-default {
+            opacity: 0;
+         }
+      }
+   }
+
+   &__cta {
+      margin-top: 8px;
+      .kse-btn--sec {
+         width: 100%;
+      }
+   }
+}

@@ -1,0 +1,49 @@
+.kse-sort {
+    font-size: 14px;
+    font-weight: 700;
+    color: #121212;
+    font-family: "Acumin Variable Concept";
+
+    &__wrap {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 50px;
+    }
+
+    &__label {
+        font-size: 16px;
+        font-weight: 700;
+        color: #121212;
+    }
+
+    &__options {
+        display: flex;
+        gap: 30px;
+    }
+
+    &__btn {
+        padding: 0px 14px;
+        min-height: 35px;
+        font-size: 14px;
+        background: transparent;
+        border: 1px solid #121212;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.25s ease;
+        display: flex;
+        align-items: center;
+
+        &:hover {
+            background: #b3b3b3;
+            border-color: #b3b3b3; 
+            color: #fff;
+        }
+
+        &.active {
+            background: #b3b3b3;
+            border-color: #b3b3b3;
+            color: #fff;
+        }
+    }
+}

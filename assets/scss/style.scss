@@ -8,13 +8,30 @@
 @import "./base/dev";
 
 // atoms
-@import 'atoms/button';
+@import "atoms/button";
+@import "atoms/heading";
 
 // molecule
-@import 'molecules/productTile';
-@import 'molecules/offerCard';
-@import 'molecules/catHeadings';
+@import "molecules/offer-card";
+@import "molecules/recipe-card";
+@import "molecules/productTile";
+@import "molecules/offerCard";
+@import "molecules/catHeadings";
+@import "molecules/filter-sidebar";
+@import "molecules/basket-item";
+@import "molecules/order-review";
+@import "molecules/pdp-navtabs";
+@import "molecules/product-sorting";
+
 // organisms
-@import 'organisms/header';
+@import "organisms/header";
+@import "organisms/footer";
+@import "organisms/offer-section";
+@import "organisms/home-hero-sec";
+@import "organisms/recipe-slider";
+@import "organisms/your-basket";
+@import "organisms/featured-favourites";
 @import 'organisms/Promotions';
+@import 'organisms/pdp-prodcutsection';
+
 // pages
