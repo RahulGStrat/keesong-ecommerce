@@ -1,0 +1,60 @@
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 991px) {
+
+  .kse-Head__hamburger {
+    display: flex !important;
+  }
+
+  .kse-Head__center {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 280px;
+    height: 100%;
+    background: #fff;
+    padding: 20px;
+    transition: 0.3s;
+    z-index: 1000;
+  }
+
+  .kse-Head__center.active {
+    left: 0;
+  }
+
+  .kse-Head__menu {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .kse-Head__menu li::after {
+    display: none;
+  }
+
+  .kse-Head__right {
+    display: none;
+  }
+
+  /* Disable desktop mega on mobile */
+  .kse-Head__megaWrap {
+    display: none !important;
+  }
+
+}
+
+/* =========================
+   HAMBURGER
+========================= */
+.kse-Head__hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.kse-Head__hamburger span {
+  width: 22px;
+  height: 2px;
+  background: #333;
+}

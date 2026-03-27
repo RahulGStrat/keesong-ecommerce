@@ -1,0 +1,143 @@
+.kse-voyage {
+
+    &__outer {
+        display: flex;
+        min-height: 620px;
+    }
+
+    &__left,
+    &__right {
+        min-height: 620px;
+    }
+
+    &__left {
+        flex: 0 0 50%;
+        background-color: #680a38;
+        display: flex;
+        align-items: center;
+    }
+
+    &__content {
+        padding: 60px;
+        max-width: 520px;
+
+        .kse-btn--reward {
+            width: 65%;
+        }
+    }
+
+    &__head {
+        font-size: 56px;
+        line-height: 1.1;
+        color: #fff;
+        margin-bottom: 20px;
+        font-family: "Begum";
+        font-weight: 700;
+    }
+
+    &__txt {
+        font-size: 22px;
+        color: #f05b72;
+        line-height: 26px;
+        margin-bottom: 30px;
+        text-transform: uppercase;
+        font-family: "Acumin Pro Condensed";
+    }
+
+    &__right {
+        flex: 0 0 50%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
+
+
+@include tablet-pro {
+    .kse-voyage {
+        &__right {
+            background-position: 80% 100%;
+        }
+
+        &__head {
+            font-size: 42px;
+            line-height: 50px;
+        }
+
+        &__content .kse-btn--reward {
+            width: 60%;
+            font-size: 20px;
+        }
+    }
+}
+
+@include tablet {
+    .kse-voyage {
+        &__outer {
+            flex-direction: column;
+        }
+
+        &__left,
+        &__right {
+            flex: 0 0 100%;
+        }
+
+        &__left {
+            min-height: 350px;
+        }
+
+        &__right {
+            min-height: 600px;
+            background-position: 100% 80%;
+        }
+
+        &__content {
+            padding: 40px 20px;
+        }
+
+        &__head {
+            font-size: 36px;
+        }
+    }
+}
+
+@include mobile {
+    .kse-voyage {
+        &__outer {
+            flex-direction: column;
+        }
+
+        &__left,
+        &__right {
+            flex: 0 0 100%;
+        }
+
+        &__left {
+            min-height: 330px;
+        }
+
+        &__right {
+            min-height: 300px;
+            background-position: 90% 80%;
+        }
+
+        &__content {
+            padding: 30px 20px;
+        }
+
+        &__head {
+            font-size: 28px;
+            line-height: 34px;
+        }
+
+        &__txt {
+            font-size: 14px;
+            line-height: 20px;
+        }
+
+        &__content .kse-btn--reward {
+            font-size: 14px;
+            width: 60%;
+        }
+    }
+}
