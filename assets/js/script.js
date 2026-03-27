@@ -1,6 +1,8 @@
 // Recipe slider initialization
 $(".kse-recipe-slider__track").slick({
    slidesToShow: 4,
+     prevArrow: $('.kse-arrow--prev'),
+  nextArrow: $('.kse-arrow--next'),
    slidesToScroll: 1,
    arrows: true,
    dots: false,
