@@ -148,6 +148,12 @@
          gap: 6px;
       }
 
+      &__badge {
+         top: 6px;
+         font-size: 16px;
+         padding: 8px 24px 8px 16px;
+      }
+
       &__total {
          text-align: left;
          margin: 8px 0;
