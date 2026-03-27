@@ -11,7 +11,6 @@
 @import "atoms/button";
 @import "atoms/heading";
 
-
 // molecule
 @import "molecules/offer-card";
 @import "molecules/recipe-card";
@@ -23,7 +22,6 @@
 @import "molecules/order-review";
 @import "molecules/pdp-navtabs";
 
-
 // organisms
 @import "organisms/header";
 @import "organisms/footer";
@@ -32,9 +30,7 @@
 @import "organisms/recipe-slider";
 @import "organisms/your-basket";
 @import "organisms/featured-favourites";
-@import 'organisms/Promotions';
-@import 'organisms/testingCode';
-@import "organisms/your-basket";
+@import "organisms/Promotions";
+@import "organisms/testingCode";
 
 // pages
-
