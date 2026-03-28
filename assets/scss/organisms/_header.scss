@@ -142,7 +142,9 @@
 
     h4 {
       margin-bottom: 10px;
-      font-size: 14px;
+      font-size: 16px;
+      font-family: "Acumin Pro Condensed";
+      color: #121212;
     }
 
     ul {
@@ -154,8 +156,9 @@
 
         a {
           text-decoration: none;
-          font-size: 13px;
-          color: #555;
+          font-size: 14px;
+          color: #666666;
+          font-family: "Acumin Variable";
 
           &:hover {
             color: #ff4d4d;
