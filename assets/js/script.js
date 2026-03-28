@@ -88,7 +88,7 @@ function initMenu() {
 }
 
 // =========================
-// RECIPE SLIDER (FIXED)
+// RECIPE SLIDER
 // =========================
 function initRecipeSlider() {
    const $slider = $(".kse-recipe-slider__track");
