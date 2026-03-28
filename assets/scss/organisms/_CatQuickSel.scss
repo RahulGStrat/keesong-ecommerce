@@ -1,6 +1,7 @@
 .kse-CatQuickSel {
     display: flex;
     align-items: center;
+    margin-bottom: 50px;
     &__item {
         display: flex;
         align-items: center;
@@ -58,15 +59,40 @@
         }
     }
 }
-
-    .kse-icon {
-      font-size: 16px;
+@include mobile-tablet{
+    .kse-CatQuickSel {
+        gap: 7px;
+        margin-bottom: 20px;
+        &__item{
+            margin-left: 0px;
+            padding: 5px 10px;
+            height: 32px;
+            border-radius: 30px;
+            width: auto;
+            &-icon{
+                img{
+                    height: 15px;
+                }
+            }
+        }
     }
-
-    .kse-item.active {
-      background: rgba(255, 255, 255, 0.2);
+}
+@include mobile{
+    .kse-CatQuickSel {
+        gap: 7px;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+        &__item{
+            margin-left: 0px;
+            padding: 5px 10px;
+            height: 32px;
+            border-radius: 30px;
+            width: auto;
+            &-icon{
+                img{
+                    height: 15px;
+                }
+            }
+        }
     }
-
-    .kse-item:not(.kse-label):hover {
-      background: rgba(255, 255, 255, 0.15);
-    }
+}
