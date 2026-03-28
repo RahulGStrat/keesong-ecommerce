@@ -1,9 +1,11 @@
 .kse-recipe-slider {
-position: relative;
    .kse-catHead {
       margin-top: 40px;
    }
 
+   &__inner {
+      position: relative;
+   }
    &__track {
       padding: 30px 0;
       border-bottom: 1px solid #c6c6c6;
@@ -42,10 +44,15 @@ position: relative;
          border-left: 3px solid #fff;
          display: block;
       }
+      &.slick-disabled {
+         opacity: 0.4;
+         cursor: not-allowed;
+         pointer-events: none;
+      }
    }
 
    .kse-arrow--prev {
-      left: 0;
+      left: -17px;
 
       &::before {
          transform: rotate(-45deg);
@@ -54,7 +61,7 @@ position: relative;
    }
 
    .kse-arrow--next {
-      right: 0;
+      right: -17px;
 
       &::before {
          transform: rotate(135deg);
