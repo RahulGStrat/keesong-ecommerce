@@ -231,15 +231,21 @@ function initHeaderDropdown() {
 // =========================
 // AFTER 5 PRODUCT DIVIDER
 // =========================
-const products = document.querySelectorAll('#product-list .kse-PdTile');
+function insertDividers() {
+  const products = document.querySelectorAll('#product-list .kse-PdTile');
 
-products.forEach((product, index) => {
-  // insert after every 5th item BUT not the last item
-  if ((index + 1) % 5 === 0 && (index + 1) !== products.length) {
-    const div = document.createElement('div');
-    div.className = 'custom-divider';
-    div.innerHTML = '';
+  products.forEach((product, index) => {
+    if ((index + 1) % 5 === 0 && (index + 1) !== products.length) {
+      const div = document.createElement('div');
+      div.className = 'custom-divider';
+      div.innerHTML = '';
 
-    product.after(div);
-  }
-});
+      product.after(div);
+    }
+  });
+}
+
+// run only on desktop
+if (window.innerWidth >= 769) {
+  insertDividers();
+}
