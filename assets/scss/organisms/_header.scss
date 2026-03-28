@@ -252,6 +252,57 @@
     cursor: pointer;
     // height: 25px;
   }
+
+  &__userWrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+  }
+
+  &__dropdown {
+    position: absolute;
+    top: 135%;
+    right: -42px;
+    background: #fff;
+    border-radius: 6px;
+    min-width: 140px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    display: none;
+    z-index: 999;
+  }
+
+  &__dropdown ul {
+    margin: 0;
+    padding: 8px 0;
+    list-style: none;
+  }
+
+  &__dropdown li {
+    padding: 10px 14px;
+  }
+
+  &__dropdown li a {
+    text-decoration: none;
+    color: #121212;
+    display: block;
+    font-family: "Acumin Variable Concept";
+    font-size: 14px;
+
+    &:hover {
+      color: #f14a50;
+      font-weight: 600;
+    }
+  }
+
+  &__dropdown li:hover {
+    background: #f2f2f2;
+  }
+
+  &__dropdown.active {
+    display: block;
+  }
 }
 
 @include mobile-tablet {
