@@ -1,27 +1,68 @@
 .kse-pdp {
+  .breadcrumb-wrapper {
+    padding: 24px 0 12px 0 ;
+    border-bottom: 1px solid #ddd;
+    font-family: "Acumin Variable";
+  }
 
-    &__out {
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-    }
-    .pdp-productsec {
-        width: 75%;
-    }
-    .kse-greatwith {
-        width: 25%;
-    }
+  .custom-breadcrumb {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    font-size: 16px;
+  }
+
+  .custom-breadcrumb .breadcrumb-item {
+    color: #000;
+  }
+
+  .custom-breadcrumb .breadcrumb-item a {
+    text-decoration: none;
+    color: #000;
+  }
+
+  .custom-breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+    content: ">";
+    color: #000;
+  }
+
+  /* Active item */
+  .custom-breadcrumb .breadcrumb-item.active {
+    font-weight: 500;
+  }
+  &__out {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .pdp-productsec {
+    width: 75%;
+  }
+  .kse-greatwith {
+    width: 25%;
+  }
 }
 
-@media (min-width: 1024px) and (max-width: 1199px) {
-    .kse-pdp {
-        .pdp-productsec {
-      .kse-btn--sec.cart {
-        width: 35%;
-      }
-      .kse-btn--sec.whishlist {
-        width: 35%;
-      }
+@include tablet {
+  .kse-pdp {
+    .pdp-productsec {
+      width: 50%;
     }
+    .kse-greatwith {
+      width: 50%;
     }
+  }
+}
+@include mobile {
+  .kse-pdp {
+    &__out {
+      flex-direction: column;
+    }
+    .pdp-productsec {
+      width: 100%;
+    }
+    .kse-greatwith {
+      width: 100%;
+    }
+  }
 }
