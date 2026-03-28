@@ -45,12 +45,12 @@ overlay.addEventListener("click", closeMenu);
 closeBtn.addEventListener("click", closeMenu);
 
 // accordion
-document.querySelectorAll(".kse-Head__mega-col h4").forEach(title => {
+document.querySelectorAll(".kse-Head__mega-col h4").forEach((title) => {
   title.addEventListener("click", () => {
     if (window.innerWidth <= 768) {
       const current = title.parentElement;
 
-      document.querySelectorAll(".kse-Head__mega-col").forEach(col => {
+      document.querySelectorAll(".kse-Head__mega-col").forEach((col) => {
         if (col !== current) col.classList.remove("active");
       });
 
@@ -79,57 +79,70 @@ window.addEventListener("resize", () => {
 
 // MENU END HERE====================================================
 
+// header dropdown script starts here
+const userToggle = document.getElementById("headeruserToggle");
+const dropdown = document.getElementById("headeruserDropdown");
+
+userToggle.addEventListener("click", function (e) {
+  e.stopPropagation();
+  dropdown.classList.toggle("active");
+});
+
+document.addEventListener("click", function () {
+  dropdown.classList.remove("active");
+});
+// header dropdown script ends here
 
 // Recipe slider initialization
 $(".kse-recipe-slider__track").slick({
-   slidesToShow: 4,
-     prevArrow: $('.kse-arrow--prev'),
-  nextArrow: $('.kse-arrow--next'),
-   slidesToScroll: 1,
-   arrows: true,
-   dots: false,
-   infinite: false,
+  slidesToShow: 4,
+  prevArrow: $(".kse-arrow--prev"),
+  nextArrow: $(".kse-arrow--next"),
+  slidesToScroll: 1,
+  arrows: true,
+  dots: false,
+  infinite: false,
 
-   responsive: [
-      {
-         breakpoint: 1024,
-         settings: {
-            slidesToShow: 3,
-         },
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
       },
-      {
-         breakpoint: 768,
-         settings: {
-            slidesToShow: 2,
-         },
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 2,
       },
-      {
-         breakpoint: 480,
-         settings: {
-            slidesToShow: 1,
-         },
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
       },
-   ],
+    },
+  ],
 });
-
 
 document.addEventListener("DOMContentLoaded", function () {
-// adding and removing active class for sort module
-document.querySelectorAll('.kse-sort__btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.querySelectorAll('.kse-sort__btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
+  // adding and removing active class for sort module
+  document.querySelectorAll(".kse-sort__btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      document
+        .querySelectorAll(".kse-sort__btn")
+        .forEach((b) => b.classList.remove("active"));
+      btn.classList.add("active");
+    });
   });
-});
 
-// filter module - active class adding and removing
-$('.kse-filter__listitm').on('click', function () {
-  $('.kse-filter__listitm').removeClass('active');
-  $(this).addClass('active');
-});
+  // filter module - active class adding and removing
+  $(".kse-filter__listitm").on("click", function () {
+    $(".kse-filter__listitm").removeClass("active");
+    $(this).addClass("active");
+  });
 
-
-/* PDP */
+  /* PDP */
   /* =========================
      THUMBNAIL CLICK
   ========================= */
@@ -137,11 +150,11 @@ $('.kse-filter__listitm').on('click', function () {
   const thumbnails = document.querySelectorAll(".thumb");
 
   if (mainImage && thumbnails.length) {
-    thumbnails.forEach(thumb => {
+    thumbnails.forEach((thumb) => {
       thumb.addEventListener("click", function () {
         mainImage.src = this.src;
 
-        thumbnails.forEach(t => t.classList.remove("active"));
+        thumbnails.forEach((t) => t.classList.remove("active"));
         this.classList.add("active");
       });
     });
@@ -168,28 +181,27 @@ $('.kse-filter__listitm').on('click', function () {
       mainImage.style.transformOrigin = "center";
     });
   }
-
 });
 /*  */
 
 /* pdp toggle */
 document.addEventListener("DOMContentLoaded", function () {
-      const toggleBtn = document.querySelector(".kse-greatwith .toggle-icon");
-      const list = document.querySelector(".kse-greatwith__list");
+  const toggleBtn = document.querySelector(".kse-greatwith .toggle-icon");
+  const list = document.querySelector(".kse-greatwith__list");
 
-      // default = open
-      let isOpen = true;
+  // default = open
+  let isOpen = true;
 
-      toggleBtn.addEventListener("click", function (e) {
-        e.preventDefault();
+  toggleBtn.addEventListener("click", function (e) {
+    e.preventDefault();
 
-        isOpen = !isOpen;
+    isOpen = !isOpen;
 
-        // toggle list
-        list.style.display = isOpen ? "flex" : "none";
+    // toggle list
+    list.style.display = isOpen ? "flex" : "none";
 
-        // rotate icon
-        toggleBtn.classList.toggle("rotated", !isOpen);
-      });
-    });
+    // rotate icon
+    toggleBtn.classList.toggle("rotated", !isOpen);
+  });
+});
 /*  */
