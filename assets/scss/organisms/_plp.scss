@@ -18,6 +18,17 @@
         &-in{
             display: flex;
             gap: 20px;
+            flex-wrap: wrap;
+
+            .kse-PdTile{
+                width: calc(20% - 16px);
+            }
+
+            .custom-divider{
+                width: 100%;
+                display: block;
+                border-bottom: 1px solid #cbcbcb;
+            }
         }
         // &-box{
         //     border-bottom: 1px solid #ccc;
