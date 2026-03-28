@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
-/* PDP */
+
 document.addEventListener("DOMContentLoaded", function () {
 // adding and removing active class for sort module
 document.querySelectorAll('.kse-sort__btn').forEach(btn => {
@@ -68,6 +68,8 @@ $('.kse-filter__listitm').on('click', function () {
   $(this).addClass('active');
 });
 
+
+/* PDP */
   /* =========================
      THUMBNAIL CLICK
   ========================= */

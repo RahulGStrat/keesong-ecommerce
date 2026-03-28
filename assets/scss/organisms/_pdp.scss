@@ -13,15 +13,26 @@
     }
 }
 
-@media (min-width: 1024px) and (max-width: 1199px) {
+@include tablet {
     .kse-pdp {
         .pdp-productsec {
-      .kse-btn--sec.cart {
-        width: 35%;
-      }
-      .kse-btn--sec.whishlist {
-        width: 35%;
-      }
+        width: 50%;
+    }
+    .kse-greatwith {
+        width: 50%;
+    }
+    }
+}
+@include mobile {
+    .kse-pdp {
+        &__out {
+            flex-direction: column;
+        }
+        .pdp-productsec {
+        width: 100%;
+    }
+    .kse-greatwith {
+        width: 100%;
     }
     }
 }
