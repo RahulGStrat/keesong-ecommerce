@@ -3,6 +3,7 @@
     font-weight: 700;
     color: #121212;
     font-family: "Acumin Variable Concept";
+    margin-bottom: 40px;
 
     &__wrap {
         display: flex;
@@ -36,7 +37,7 @@
 
         &:hover {
             background: #b3b3b3;
-            border-color: #b3b3b3; 
+            border-color: #b3b3b3;
             color: #fff;
         }
 
@@ -44,6 +45,17 @@
             background: #b3b3b3;
             border-color: #b3b3b3;
             color: #fff;
+        }
+    }
+}
+@include mobile-tablet{
+    .kse-sort{
+        &__wrap{
+            flex-direction: column;
+            gap: 10px;
+        }
+        &__btn{
+            padding: 10px;
         }
     }
 }
