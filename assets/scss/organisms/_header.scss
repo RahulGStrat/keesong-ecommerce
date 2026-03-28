@@ -70,6 +70,10 @@
         &:hover {
           color: #f14a50;
         }
+
+        &.active {
+          color: #f14a50;
+        }
       }
 
       &::after {
@@ -87,6 +91,7 @@
     &-arrow {
       display: inline-block;
       transition: 0.3s;
+      margin-left: 3px;
       // position: absolute;
       right: 0px;
       top: 8px;
