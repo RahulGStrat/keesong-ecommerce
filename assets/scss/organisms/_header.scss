@@ -66,6 +66,10 @@
         text-transform: uppercase;
         color: #121212;
         font-family: "Acumin Pro Condensed";
+
+        &:hover {
+          color: #f14a50;
+        }
       }
 
       &::after {
