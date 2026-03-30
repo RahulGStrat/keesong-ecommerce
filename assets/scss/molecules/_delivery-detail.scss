@@ -109,6 +109,7 @@
       &__grid {
          flex-direction: column;
          gap: 24px;
+         padding: 0px;
       }
 
       &__billing-head {
@@ -122,6 +123,13 @@
       &__note {
          width: 100%;
          margin-left: 0;
+      }
+      &__cta {
+         margin-top: 20px;
+
+         .kse-btn {
+            width: 100%;
+         }
       }
    }
 }
