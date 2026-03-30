@@ -275,6 +275,14 @@
         color: #f14a50;
       }
     }
+
+    &:has(.kse-Head__dropdown.active) .kse-Head__user {
+      color: #f14a50;
+    }
+
+    &:has(.kse-Head__dropdown.active) .kse-Head__icn svg {
+      stroke: #f14a50;
+    }
   }
 
   &__dropdown {
