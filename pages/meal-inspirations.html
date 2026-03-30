@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- styles -->
+  <link rel="stylesheet" href="../assets/css/aos.css">
+  <link rel="stylesheet" href="../assets/css/slick.css">
+  <link rel="stylesheet" href="../assets/css/slick-theme.css">
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="icon" type="image/png" href="/assets/images/keesong.png">
+  <!-- styles -->
+  <!-- favicon -->
+  <link rel="icon" type="image/png" href="../assets/images/keesong-favicn.png">
+  <title>Meal Inspirations</title>
+</head>
+
+<body>
+  <!-- body content start -->
+  <!--  -->
+  <header class="kse-Head">
+
+    <div class="content-wrapper">
+
+      <div class="kse-Head__in">
+        <!-- LEFT: LOGO -->
+        <div class="kse-Head__left">
+          <div class="kse-Head__hamburger" id="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+          <div class="kse-Head__logo">
+            <img src="../assets/images/keesong.png" alt="Kee Song">
+          </div>
+        </div>
+
+        <!-- CENTER: SEARCH + MENU -->
+        <div class="kse-Head__center">
+
+          <!-- Search -->
+          <div class="kse-Head__search">
+            <input type="text" placeholder="Search">
+          </div>
+
+          <!-- Menu -->
+          <ul class="kse-Head__menu" id="menu">
+            <li class="kse-Head__menu-item kse-Head__menu-item--category" id="categoryItem">
+              <a href="#" id="categoryBtn">
+                Categories <span class="kse-Head__menu-arrow">
+                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="451.847px"
+                    height="451.847px" viewBox="0 0 451.847 451.847" xml:space="preserve">
+                    <g>
+                      <path fill="#54b047" d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751
+      c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0
+      c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z">
+                      </path>
+                    </g>
+                  </svg>
+                </span>
+              </a>
+            </li>
+            <li class="kse-Head__menu-item"><a href="#">Special Offers</a></li>
+            <li class="kse-Head__menu-item"><a href="#">Savings Voyage</a></li>
+            <li class="kse-Head__menu-item"><a href="#">Brand Partners</a></li>
+            <li class="kse-Head__menu-item"><a href="#">Bundles</a></li>
+            <li class="kse-Head__menu-item"><a href="#">Promotions</a></li>
+            <li class="kse-Head__menu-item"><a href="#">Recipes</a></li>
+            <li class="kse-Head__menu-item"><a href="#">Merchandise</a></li>
+          </ul>
+
+        </div>
+
+        <!-- RIGHT: ACTIONS + BUTTON -->
+        <div class="kse-Head__right">
+
+          <!-- Icons + User -->
+          <div class="kse-Head__actions">
+            <div class="kse-Head__icn">
+              <svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26.74 26.91">
+                <g id="Layer_1-2" data-name="Layer_1">
+                  <g>
+                    <path class="cls-1"
+                      d="M2.98,19.93l-.18-.3c-1.18-1.95-1.8-4.2-1.8-6.48,0-.16,0-.33.01-.49C1.3,5.87,6.82.6,13.57.6s12.39,5.37,12.56,12.23c0,.11,0,.19,0,.28,0,6.96-5.64,12.59-12.57,12.59-2.12,0-4.22-.54-6.07-1.56l-.29-.16-6.26,2,2.03-6.04Z" />
+                    <path class="cls-1"
+                      d="M20.2,16.06c-.36-.18-2.1-1.04-2.43-1.15-.33-.12-.56-.18-.8.18-.24.35-.92,1.15-1.13,1.39-.21.24-.41.27-.77.09-.35-.18-1.5-.55-2.86-1.76-1.05-.94-1.77-2.1-1.98-2.45-.2-.35-.02-.55.16-.72.16-.16.35-.42.54-.62.05-.06.09-.12.13-.17.08-.13.14-.25.22-.42.12-.24.06-.44-.03-.62s-.8-1.93-1.1-2.64c-.29-.71-.59-.59-.8-.59s-.44-.03-.68-.03-.62.09-.95.44c-.33.35-1.24,1.22-1.24,2.96,0,.41.07.82.18,1.21.36,1.25,1.13,2.28,1.27,2.46.18.23,2.46,3.93,6.07,5.36,3.62,1.41,3.62.94,4.27.88.65-.05,2.1-.85,2.4-1.69.3-.83.3-1.54.21-1.69-.09-.14-.33-.23-.68-.41Z" />
+                  </g>
+                </g>
+              </svg>
+            </div>
+            <!-- User part -->
+            <div class="kse-Head__userWrap" id="headeruserToggle">
+              <div class="kse-Head__icn">
+                <svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26.39 26.39">
+                  <g id="Layer_1-2" data-name="Layer_1">
+                    <g>
+                      <g>
+                        <path class="cls-1"
+                          d="M5.66,23.24v-3.44c0-.74.3-1.4.86-1.91.46-.41,1.1-.73,1.85-.91,1.2-.29,2.93-.44,4.88-.42,1.74.02,3.51.17,4.75.41.75.15,1.4.46,1.88.9.56.51.85,1.18.85,1.93v3.44" />
+                        <path class="cls-1"
+                          d="M13.19.6C6.25.6.6,6.25.6,13.19s5.65,12.59,12.59,12.59,12.59-5.65,12.59-12.59S20.14.6,13.19.6Z" />
+                      </g>
+                      <circle class="cls-1" cx="13.19" cy="10.59" r="3.99" />
+                    </g>
+                  </g>
+                </svg>
+              </div>
+
+              <div class="kse-Head__user">Hi Name</div>
+
+              <!-- Dropdown -->
+              <div class="kse-Head__dropdown" id="headeruserDropdown">
+                <ul>
+                  <li><a href="#">Profile</a></li>
+                  <li><a href="#">Logout</a></li>
+                </ul>
+              </div>
+
+            </div>
+            <div class="kse-Head__cart">
+              <div class="kse-Head__icn">
+                <svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26.94 26.39">
+                  <g id="Layer_1-2" data-name="Layer_1">
+                    <g>
+                      <path class="cls-1"
+                        d="M.61.61c.93-.01,1.86-.01,2.8,0,.32,0,.5.22.6.62.27,1.1.54,2.2.8,3.31.02.07.04.15.07.23h.36c6.75,0,13.49,0,20.24,0,.15,0,.31,0,.44.04.34.11.48.42.38.81l-2.2,8.85c-.22,1.02-1.09,1.82-2.38,1.82-5.07-.02-10.14,0-15.21,0-.19,0-.39.02-.58.08-.5.16-.83.65-.79,1.14.04.56.43.98.98,1.07.15.02.3.03.45.03,5.73,0,11.45,0,17.18,0" />
+                      <line class="cls-1" x1="3.82" y1="9.09" x2="13.32" y2="9.09" />
+                      <line class="cls-1" x1=".6" y1="12.57" x2="10.1" y2="12.57" />
+                      <circle class="cls-1" cx="7.82" cy="23.32" r="2.47" />
+                      <circle class="cls-1" cx="21.59" cy="23.32" r="2.47" />
+                    </g>
+                  </g>
+                </svg>
+              </div> <span>3</span>
+            </div>
+          </div>
+
+          <!-- CTA -->
+          <a href="#" class="kse-btn kse-btn--header">ORDERING GUIDE</a>
+
+        </div>
+      </div>
+      <!-- MEGA MENU OUTSIDE HEADER MENU -->
+      <div class="kse-Head__megaWrap" id="megaMenu">
+        <span class="close-btn" id="closeBtn">✖</span>
+
+        <div class="kse-Head__mega">
+
+          <div class="kse-Head__mega-inner">
+
+            <div class="kse-Head__mega-col">
+              <h4>Chicken
+                <span class="kse-Head__subLink">
+                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    x="0px" y="0px" width="451.847px" height="451.847px" viewBox="0 0 451.847 451.847"
+                    xml:space="preserve">
+                    <g>
+                      <path
+                        d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751
+                    c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0
+                    c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z">
+                      </path>
+                    </g>
+                  </svg>
+                </span>
+              </h4>
+              <ul class="sub-items">
+                <li><a href="#">Fresh Chicken</a></li>
+                <li><a href="#">Frozen Chicken</a></li>
+              </ul>
+            </div>
+
+            <div class="kse-Head__mega-col">
+              <h4>Duck
+                <span class="kse-Head__subLink">
+                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    x="0px" y="0px" width="451.847px" height="451.847px" viewBox="0 0 451.847 451.847"
+                    xml:space="preserve">
+                    <g>
+                      <path
+                        d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751
+                    c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0
+                    c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z">
+                      </path>
+                    </g>
+                  </svg>
+                </span>
+              </h4>
+
+              <ul class="sub-items">
+                <li><a href="#">Whole Duck</a></li>
+                <li><a href="#">Cuts</a></li>
+              </ul>
+            </div>
+
+            <div class="kse-Head__mega-col">
+              <h4>Ready to Cook
+                <span class="kse-Head__subLink">
+                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    x="0px" y="0px" width="451.847px" height="451.847px" viewBox="0 0 451.847 451.847"
+                    xml:space="preserve">
+                    <g>
+                      <path
+                        d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751
+                    c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0
+                    c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z">
+                      </path>
+                    </g>
+                  </svg>
+                </span>
+              </h4>
+              <ul class="sub-items">
+                <li><a href="#">BBQ</a></li>
+                <li><a href="#">Marinated</a></li>
+              </ul>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="overlay" id="overlay"></div>
+  <!-- Heade End Here -->
+
+
+  <!-- Content -->
+  <div class="kse-meal">
+    <div class="content-wrapper">
+      <div class="kse-meal-hero">
+        <div class="kse-meal-hero__image">
+          <img src="../assets/images/meal-inspiration.png" alt="" />
+          <h2 class="kse-meal-hero__title">Meal Inspirations</h2>
+        </div>
+
+        <p class="kse-meal-hero__desc">
+          Elevate everyday cooking with recipes crafted to highlight<br class="desk-visible">the quality and taste of
+          Kee Song poultry and
+          products.
+        </p>
+      </div>
+      <div class="kse-meal-recipes">
+        <div class="kse-meal-recipes__grid">
+
+          <!-- CARD -->
+          <div class="kse-meal-recipes__card">
+            <div class="kse-meal-recipes__image">
+              <img src="../assets/images/jamie-olivers-chicken.png" />
+            </div>
+            <div class="kse-meal-recipes__content">
+
+              <h3 class="kse-meal-recipes__title">
+                Jamie Oliver's Chicken<br>in milk (simplified)
+              </h3>
+
+              <div class="kse-meal-recipes__actions">
+                <span class="kse-meal-recipes__share">SHARE</span>
+
+                <div class="kse-recipe-card__icons">
+                  <a href="#" class="kse-recipe-card__icon">
+                    <img src="../assets/images/fb.svg" class="icon-default" />
+                    <img src="../assets/images/fb-white.svg" class="icon-hover" />
+                  </a>
+                  <a href="#" class="kse-recipe-card__icon">
+                    <img src="../assets/images/ig.svg" class="icon-default" />
+                    <img src="../assets/images/ig-white.svg" class="icon-hover" />
+                  </a>
+                  <a href="#" class="kse-recipe-card__icon">
+                    <img src="../assets/images/tik.svg" class="icon-default" />
+                    <img src="../assets/images/tik-white.svg" class="icon-hover" />
+                  </a>
+                </div>
+
+                <a href="#" class="kse-btn kse-btn--sec">Recipe</a>
+              </div>
+            </div>
+          </div>
+          <div class="kse-meal-recipes__card">
+            <div class="kse-meal-recipes__image">
+              <img src="../assets/images/herbal-chicken.png" />
+            </div>
+
+            <div class="kse-meal-recipes__content">
+              <h3 class="kse-meal-recipes__title">Herbal Chicken Pot<br>(No Water Added)</h3>
+
+              <div class="kse-meal-recipes__actions">
+                <span class="kse-meal-recipes__share">SHARE</span>
+
+                <div class="kse-recipe-card__icons">
+                  <a href="#" class="kse-recipe-card__icon">
+                    <img src="../assets/images/fb.svg" class="icon-default" />
+                    <img src="../assets/images/fb-white.svg" class="icon-hover" />
+                  </a>
+                  <a href="#" class="kse-recipe-card__icon">
+                    <img src="../assets/images/ig.svg" class="icon-default" />
+                    <img src="../assets/images/ig-white.svg" class="icon-hover" />
+                  </a>
+                  <a href="#" class="kse-recipe-card__icon">
+                    <img src="../assets/images/tik.svg" class="icon-default" />
+                    <img src="../assets/images/tik-white.svg" class="icon-hover" />
+                  </a>
+                </div>
+
+                <a href="#" class="kse-btn kse-btn--sec">Recipe</a>
+              </div>
+            </div>
+          </div>
+          <div class="kse-meal-recipes__card">
+            <div class="kse-meal-recipes__image">
+              <img src="../assets/images/roasted-mandarin.png" />
+
+            </div>
+
+            <div class="kse-meal-recipes__content">
+              <h3 class="kse-meal-recipes__title">Roasted Mandarin<br>Orange Chicken</h3>
+
+              <div class="kse-meal-recipes__actions">
+                <span class="kse-meal-recipes__share">SHARE</span>
+
+                <div class="kse-recipe-card__icons">
+                  <a href="#" class="kse-recipe-card__icon">
+                    <img src="../assets/images/fb.svg" class="icon-default" />
+                    <img src="../assets/images/fb-white.svg" class="icon-hover" />
+                  </a>
+                  <a href="#" class="kse-recipe-card__icon">
+                    <img src="../assets/images/ig.svg" class="icon-default" />
+                    <img src="../assets/images/ig-white.svg" class="icon-hover" />
+                  </a>
+                  <a href="#" class="kse-recipe-card__icon">
+                    <img src="../assets/images/tik.svg" class="icon-default" />
+                    <img src="../assets/images/tik-white.svg" class="icon-hover" />
+                  </a>
+                </div>
+
+                <a href="#" class="kse-btn kse-btn--sec">Recipe</a>
+              </div>
+            </div>
+          </div>
+          <div class="kse-meal-recipes__card">
+            <div class="kse-meal-recipes__image">
+              <img src="../assets/images/salt-baked.png" />
+            </div>
+
+            <div class="kse-meal-recipes__content">
+              <h3 class="kse-meal-recipes__title">Salt Baked<br>Herbal Chicken</h3>
+
+              <div class="kse-meal-recipes__actions">
+                <span class="kse-meal-recipes__share">SHARE</span>
+
+                <div class="kse-recipe-card__icons">
+                  <a href="#" class="kse-recipe-card__icon">
+                    <img src="../assets/images/fb.svg" class="icon-default" />
+                    <img src="../assets/images/fb-white.svg" class="icon-hover" />
+                  </a>
+                  <a href="#" class="kse-recipe-card__icon">
+                    <img src="../assets/images/ig.svg" class="icon-default" />
+                    <img src="../assets/images/ig-white.svg" class="icon-hover" />
+                  </a>
+                  <a href="#" class="kse-recipe-card__icon">
+                    <img src="../assets/images/tik.svg" class="icon-default" />
+                    <img src="../assets/images/tik-white.svg" class="icon-hover" />
+                  </a>
+                </div>
+
+                <a href="#" class="kse-btn kse-btn--sec">Recipe</a>
+              </div>
+            </div>
+          </div>
+          <div class="kse-meal-recipes__card">
+            <div class="kse-meal-recipes__image">
+              <img src="../assets/images/braised-chicken.png" />
+            </div>
+
+            <div class="kse-meal-recipes__content">
+              <h3 class="kse-meal-recipes__title">Braised Chicken<br>with Abalone</h3>
+
+              <div class="kse-meal-recipes__actions">
+                <span class="kse-meal-recipes__share">SHARE</span>
+
+                <div class="kse-recipe-card__icons">
+                  <a href="#" class="kse-recipe-card__icon">
+                    <img src="../assets/images/fb.svg" class="icon-default" />
+                    <img src="../assets/images/fb-white.svg" class="icon-hover" />
+                  </a>
+                  <a href="#" class="kse-recipe-card__icon">
+                    <img src="../assets/images/ig.svg" class="icon-default" />
+                    <img src="../assets/images/ig-white.svg" class="icon-hover" />
+                  </a>
+                  <a href="#" class="kse-recipe-card__icon">
+                    <img src="../assets/images/tik.svg" class="icon-default" />
+                    <img src="../assets/images/tik-white.svg" class="icon-hover" />
+                  </a>
+                </div>
+
+                <a href="#" class="kse-btn kse-btn--sec">Recipe</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Content -->
+
+  <!-- Footer -->
+  <footer class="kse-footer">
+    <div class="content-wrapper">
+      <div class="kse-footer__brandwrapouter">
+        <!-- left -->
+        <div class="kse-footer__brandwrapleft"></div>
+        <!-- Right -->
+        <div class="kse-footer__brandwrap">
+          <!-- 1 -->
+          <div class="kse-footer__branditm kse-footer__branditm--a">
+            <img src="../assets/images/socotec-logo.png" alt="Socotec">
+          </div>
+          <!-- 2 -->
+          <div class="kse-footer__branditm kse-footer__branditm--b">
+            <img src="../assets/images/veterinary-logo.png" alt="veterinary">
+          </div>
+          <!-- 3 -->
+          <div class="kse-footer__branditm kse-footer__branditm--c">
+            <img src="../assets/images/otemchi-logo.png" alt="Otemchi">
+          </div>
+          <!-- 4 -->
+          <div class="kse-footer__branditm kse-footer__branditm--d">
+            <img src="../assets/images/mygap-logo.png" alt="myGap">
+          </div>
+          <!-- 5 -->
+          <div class="kse-footer__branditm kse-footer__branditm--e">
+            <img src="../assets/images/myOrganic.png" alt="myOrganic">
+          </div>
+          <!-- 6 -->
+          <div class="kse-footer__branditm kse-footer__branditm--f">
+            <img src="../assets/images/lowCarbon_logo.png" alt="lowCarbon">
+          </div>
+          <!-- 7 -->
+          <div class="kse-footer__branditm kse-footer__branditm--g">
+            <img src="../assets/images/lowe_logo.png" alt="lowe">
+          </div>
+          <!-- 8 -->
+          <div class="kse-footer__branditm kse-footer__branditm--h">
+            <img src="../assets/images/Halal-logo.png" alt="Halal">
+          </div>
+        </div>
+      </div>
+      <div class="kse-footer__innerwrap">
+        <!-- Left Logo -->
+        <div class="kse-footer__col kse-footer__col--a">
+          <a href="#" class="kse-footer__logo">
+            <img src="../assets/images/keesong.png" alt="KeeSongLogo">
+          </a>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="kse-footer__col kse-footer__col--b">
+          <h4 class="kse-footer__colhead">QUICK LINK</h4>
+
+          <div class="kse-footer__links">
+            <div>
+              <h5 class="kse-footer__colsubhead">CATEGORIES</h5>
+              <ul>
+                <li class="kse-footer__item">Fresh Poultry</li>
+                <li class="kse-footer__item">Frozen Poultry</li>
+                <li class="kse-footer__item">Chilled Selections</li>
+                <li class="kse-footer__item">Seafood Selections</li>
+                <li class="kse-footer__item">Red Meat Selections</li>
+                <li class="kse-footer__item">Marinated Selections</li>
+              </ul>
+            </div>
+
+            <div>
+              <h5 class="kse-footer__colsubhead invisible">.</h5>
+              <ul>
+                <li class="kse-footer__item">Ready to Cook</li>
+                <li class="kse-footer__item">Herbal Broths</li>
+                <li class="kse-footer__item">Sauces & Seasonings</li>
+                <li class="kse-footer__item">Snacks & Bites</li>
+                <li class="kse-footer__item">Curated Packs</li>
+                <li class="kse-footer__item">Value Bundles</li>
+              </ul>
+            </div>
+
+            <div>
+              <ul>
+                <li class="kse-footer__itemb">SPECIAL OFFERS</li>
+                <li class="kse-footer__itemb">SAKURA VOYAGE</li>
+                <li class="kse-footer__itemb">BRAND PARTNERS</li>
+                <li class="kse-footer__itemb">BUNDLES</li>
+                <li class="kse-footer__itemb">PROMOTIONS</li>
+                <li class="kse-footer__itemb">RECIPES</li>
+                <li class="kse-footer__itemb">MERCHANDISE</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact -->
+        <div class="kse-footer__col kse-footer__col--c">
+          <h4 class="kse-footer__colhead">CONTACT</h4>
+          <p class="kse-footer__contactmail">Email: <a href="mailto:contact@keesong.com">contact@keesong.com</a></p>
+          <p class="kse-footer__contactitm">Kee Song Food Corporation (S) Pte Ltd</p>
+          <p class="kse-footer__contactitm">26 Senoko Way Singapore 758048</p>
+          <p class="kse-footer__policyitm">
+            <a href="#">Kee Song</a>
+            <span class="divider">|</span>
+            <a href="#">Privacy Policy</a>
+          </p>
+        </div>
+
+        <!-- Social -->
+        <div class="kse-footer__col kse-footer__col--d">
+          <h4 class="kse-footer__colhead">CONNECT WITH US</h4>
+          <div class="kse-footer__sclicons">
+            <!-- Facebook -->
+            <a href="#" class="kse-footer__sclicn">
+              <img src="../assets/images/fb-white.svg" alt="Facebook" class="icon-default">
+              <img src="../assets/images/fb.svg" alt="Facebook" class="icon-hover">
+            </a>
+            <!-- Instagram -->
+            <a href="#" class="kse-footer__sclicn">
+              <img src="../assets/images/ig-white.svg" alt="Instagram" class="icon-default">
+              <img src="../assets/images/ig.svg" alt="Instagram" class="icon-hover">
+            </a>
+            <!-- TikTok -->
+            <a href="#" class="kse-footer__sclicn">
+              <img src="../assets/images/tik-white.svg" alt="TikTok" class="icon-default">
+              <img src="../assets/images/tik.svg" alt="TikTok" class="icon-hover">
+            </a>
+          </div>
+          <div class="kse-footer__saklogo">
+            <img src="../assets/images/Sakura_voyage_logob.png" alt="SakuraVoyage" class="sakura-logo">
+          </div>
+        </div>
+      </div>
+      <!-- copyright -->
+      <p class="kse-footer__copyright">
+        Copyright © Kee Song Food Corporation (S) Pte Ltd. All Rights Reserved 2026
+      </p>
+    </div>
+  </footer>
+
+  <!-- body content end -->
+
+  <!-- scripts -->
+  <script src="../assets/js/jquery.slim.min.js"></script>
+  <script src="../assets/js/aos.js"></script>
+  <script src="../assets/js/slick.min.js"></script>
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/script.js"></script>
+  <!-- scripts -->
+</body>
+
+</html>
