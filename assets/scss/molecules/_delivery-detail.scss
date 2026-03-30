@@ -1,0 +1,148 @@
+.kse-delivery-detail {
+   padding: 30px;
+   border-radius: 12px;
+   background: linear-gradient(to right, #fde9ed 0%, #fef3f5 50%, #fde9ed 100%);
+   margin: 30px 0;
+   font-family: "Acumin Variable Concept";
+
+   &__title {
+      color: #f14a50;
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 24px;
+   }
+
+   &__grid {
+      display: flex;
+      gap: 36px;
+      padding: 10px 24px;
+   }
+
+   &__col {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+   }
+
+   &__subtitle {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: #414141;
+   }
+
+   &__label {
+      font-size: 13px;
+      font-weight: 600;
+
+      color: #414141;
+   }
+
+   input {
+      width: 100%;
+      padding: 10px;
+      border-radius: 6px;
+      border: none;
+      background: #fff;
+      font-size: 14px;
+      margin-bottom: 10px;
+   }
+
+   &__row {
+      display: flex;
+      gap: 12px;
+      input {
+         margin-bottom: 4px;
+      }
+   }
+
+   &__note {
+      font-family: "Acumin Variable";
+      font-size: 11px;
+      color: #808285;
+      margin-top: -4px;
+      margin-bottom: 4px;
+      width: calc(50% - 6px);
+      margin-left: auto;
+   }
+
+   &__billing-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+
+   &__checkbox {
+      font-family: "Acumin Variable";
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      color: #414141;
+
+      input {
+         width: 20px;
+         height: 20px;
+         accent-color: #f14a50;
+         cursor: pointer;
+         margin-bottom: 0;
+      }
+   }
+   &__half {
+      max-width: calc(50% - 6px);
+   }
+
+   &__cta {
+      margin: 40px 0 30px;
+      display: flex;
+      justify-content: center;
+
+      .kse-btn {
+         font-size: 20px;
+         min-width: 220px;
+      }
+   }
+}
+@include tablet {
+   .kse-delivery-detail {
+      padding: 24px 20px;
+      &__grid {
+         gap: 24px;
+         padding: 10px;
+      }
+   }
+}
+@include mobile {
+   .kse-delivery-detail {
+      padding: 24px 20px;
+      &__grid {
+         flex-direction: column;
+         gap: 24px;
+         padding: 0px;
+      }
+
+      &__billing-head {
+         flex-direction: column;
+         align-items: flex-start;
+         gap: 8px;
+      }
+      &__row {
+         flex-direction: column;
+      }
+      &__note {
+         width: 100%;
+         margin-left: 0;
+      }
+      &__half {
+         max-width: 100%;
+      }
+      &__cta {
+         margin: 20px 0;
+
+         .kse-btn {
+            width: 100%;
+         }
+      }
+   }
+}

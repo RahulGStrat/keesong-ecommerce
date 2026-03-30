@@ -23,6 +23,8 @@
 @import "molecules/pdp-navtabs";
 @import "molecules/pdp-greatwith";
 @import "molecules/product-sorting";
+@import "molecules/brand-partner-tile";
+@import "molecules/delivery-detail";
 
 // organisms
 @import "organisms/header";
@@ -32,11 +34,12 @@
 @import "organisms/recipe-slider";
 @import "organisms/your-basket";
 @import "organisms/featured-favourites";
-@import 'organisms/Promotions';
-@import 'organisms/pdp-prodcutsection';
+@import "organisms/Promotions";
+@import "organisms/pdp-prodcutsection";
 @import "organisms/your-basket";
 @import "organisms/pdp";
 @import "organisms/plp";
 @import "organisms/CatQuickSel";
+@import "organisms/brand-partner";
 
 // pages
