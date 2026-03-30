@@ -106,6 +106,44 @@
         margin-top: -2px;
       }
     }
+    &-sub{
+      display: none;
+      position: absolute;
+      left: 0px;
+      top:30px;
+      padding: 10px;
+      background: #fff;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      min-width: 200px;
+
+      &.active{
+        display: block;
+      }
+
+      ul {
+      list-style: none;
+      padding: 0;
+
+        li {
+          margin-bottom: 6px;
+          &::after{
+            display: none;
+          }
+
+          a {
+            text-decoration: none;
+            font-size: 14px;
+            color: #666666;
+            font-family: "Acumin Variable";
+
+            &:hover {
+              color: #ff4d4d;
+            }
+          }
+        }
+      }
+
+    }
   }
 
   &__menu-item--category {
@@ -415,6 +453,33 @@
     .sub-items {
       display: none;
     }
+
+    &__menu {
+      position: absolute;
+      top: 85px;
+      left: 0;
+      width: 100%;
+      background: white;
+      flex-direction: column;
+      display: none;
+      padding: 0px 16px 16px;
+      gap: 0px;
+
+      &.active {
+        display: flex !important;
+      }
+
+      &-item {
+        padding: 10px 0;
+      }
+
+      li::after {
+        display: none;
+      }
+      &-sub{
+        position: unset;
+      }
+    }
   }
 }
 
@@ -445,6 +510,9 @@
 
       li::after {
         display: none;
+      }
+      &-sub{
+        position: unset;
       }
     }
 
