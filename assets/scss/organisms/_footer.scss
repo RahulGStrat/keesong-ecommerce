@@ -1,5 +1,5 @@
 .kse-footer {
-    background: $primary-color;
+    background-color: #fbd2d3;
     padding: 30px 0px;
     color: #fff;
     font-family: Arial, sans-serif;
@@ -47,9 +47,10 @@
 
     &__colsubhead {
         font-size: 16px;
+        color: #58595b;
         font-weight: 700;
         margin-bottom: 10px;
-        font-family: "Acumin Variable";
+        font-family: "Acumin Pro Condensed";
 
         &.invisible {
             visibility: hidden;
@@ -67,16 +68,18 @@
     }
 
     &__item {
-        font-size: 14px;
+        font-size: 15px;
+        color: #58595b;
         margin-bottom: 6px;
         cursor: pointer;
         transition: 0.3s;
-        font-family: "Acumin Pro Condensed";
+        font-family: "Acumin Variable";
     }
 
     &__itemb {
         font-size: 16px;
-        font-family: "Acumin Variable";
+        color: #58595b;
+        font-family: "Acumin Pro Condensed";
         margin-bottom: 6px;
         cursor: pointer;
         transition: 0.3s;
@@ -97,7 +100,7 @@
         bottom: -2px;
         width: 0%;
         height: 1px;
-        background-color: #fff;
+        background-color: #58595b;
         transition: width 0.3s ease;
     }
 
@@ -108,13 +111,13 @@
 
     &__contactmail {
         font-size: 16px;
-        color: #fff;
+        color: #58595b;
         font-family: "Acumin Variable";
         margin-bottom: 25px;
 
         a {
             text-decoration: none;
-            color: #fff;
+            color: #58595b;
 
             &:hover {
                 text-decoration: underline;
@@ -124,12 +127,13 @@
 
     &__contactitm {
         font-size: 16px;
-        color: #fff;
+        color: #58595b;
         font-family: "Acumin Variable";
     }
 
     &__policyitm {
         font-size: 16px;
+        color: #58595b;
         font-family: "Acumin Variable";
         margin-top: 25px;
         font-weight: 600;
@@ -142,7 +146,7 @@
         a {
             position: relative;
             display: inline-block;
-            color: #fff;
+            color: #58595b;
             text-decoration: none;
 
             &::after {
@@ -152,7 +156,7 @@
                 bottom: -2px;
                 width: 0%;
                 height: 1px;
-                background: #fff;
+                background: #58595b;
                 transition: width 0.3s ease;
             }
 
@@ -202,13 +206,60 @@
 
     &__saklogo img {
         width: 130px;
-        margin-top: 80px;
+        margin-top: 60px;
     }
 
     &__copyright {
         font-size: 11px;
         margin-top: 20px;
         opacity: 0.9;
+        color: #4d4d4f;
+    }
+
+    &__brandwrapouter {
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    &__brandwrapleft {
+        width: 19%;
+    }
+
+    &__brandwrap {
+        width: 81%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 30px;
+    }
+
+    &__branditm {
+        width: 110px;
+
+        img {
+            width: 100%;
+        }
+
+        &--b {
+            width: 65px;
+        }
+
+        &--d {
+            width: 85px;
+        }
+
+        &--f {
+            width: 85px;
+        }
+
+        &--g {
+            width: 65px;
+        }
+
+        &--h {
+            width: 65px;
+        }
     }
 }
 
@@ -234,6 +285,26 @@
 
         &__saklogo img {
             margin-top: 60px;
+        }
+
+        &__branditm {
+            width: 90px;
+
+            &--b {
+                width: 70px;
+            }
+
+            &--f {
+                width: 80px;
+            }
+
+            &--g {
+                width: 70px;
+            }
+
+            &--h {
+                width: 70px;
+            }
         }
     }
 }
@@ -289,6 +360,15 @@
 
         &__saklogo img {
             margin-top: 40px;
+        }
+
+        &__brandwrapouter {
+            align-items: flex-start;
+            flex-direction: column;
+        }
+
+        &__brandwrap {
+            gap: 20px;
         }
     }
 }
@@ -347,6 +427,34 @@
 
         &__saklogo img {
             margin-top: 40px;
+        }
+
+        &__brandwrapouter {
+            align-items: flex-start;
+            flex-direction: column;
+        }
+
+        &__brandwrap {
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            width: 100%;
+        }
+
+        &__branditm {
+            width: 90px;
+
+            &--b {
+                width: 60px;
+            }
+
+            &--g {
+                width: 65px;
+            }
+
+            &--h {
+                width: 60px;
+            }
         }
     }
 }

@@ -59,5 +59,19 @@
       &__card--sm .kse-offer__title {
          font-size: 28px;
       }
+
+      &__title {
+         font-size: 24px;
+      }
+
+      &__card {
+         padding: 24px;
+      }
+
+      &__cta {
+         .kse-btn {
+            font-size: 14px;
+         }
+      }
    }
 }
