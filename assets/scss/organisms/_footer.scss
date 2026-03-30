@@ -64,7 +64,10 @@
 
     &__links ul {
         list-style: none;
-        padding: 0;
+    }
+
+    &__quicklinks {
+        padding-right: 15px;
     }
 
     &__item {
