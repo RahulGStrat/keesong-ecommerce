@@ -36,3 +36,10 @@
       font-size: 16px;
    }
 }
+@include mobile {
+   .kse-meal-hero {
+      &__title {
+         font-size: 28px;
+      }
+   }
+}
