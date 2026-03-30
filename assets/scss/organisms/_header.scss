@@ -289,15 +289,15 @@
     display: block;
     font-family: "Acumin Variable Concept";
     font-size: 14px;
-
-    &:hover {
-      color: #f14a50;
-      font-weight: 600;
-    }
   }
 
   &__dropdown li:hover {
     background: #f2f2f2;
+
+    &:hover a {
+      color: #f14a50;
+      font-weight: 600;
+    }
   }
 
   &__dropdown.active {
