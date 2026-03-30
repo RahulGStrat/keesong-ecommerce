@@ -1,0 +1,33 @@
+.kse-bptile {
+  padding: 40px 32px;
+  background-color: #f7f5f2;
+  border-radius: 14px;
+
+  &__out {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+  }
+  &__brandlogo {
+    width: 50%;
+    height: auto;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  &__para {
+    text-align: center;
+    font-size: 20px;
+    line-height: 30px;
+    color: #414141;
+  }
+  &__btn {
+    width: 60%;
+    a {
+      width: 100%;
+    }
+  }
+}
