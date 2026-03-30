@@ -5,6 +5,26 @@
    overflow: hidden;
    font-family: Arial, sans-serif;
 
+   &--b {
+      border-radius: 4px;
+
+      .kse-PdTile__image {
+         border-radius: 24px;
+      }
+
+      .kse-PdTile__badge {
+         top: 0;
+      }
+
+      .kse-PdTile__desc {
+         display: none;
+      }
+
+      .kse-PdTile__price {
+         margin: 8px 0px;
+      }
+   }
+
    &__image-wrapper {
       position: relative;
    }
@@ -12,7 +32,6 @@
    &__image {
       width: 100%;
       display: block;
-      border-bottom: 1px solid #ddd;
    }
 
    &__badge {
