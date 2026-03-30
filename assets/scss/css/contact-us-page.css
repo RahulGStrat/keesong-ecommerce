@@ -1,0 +1,12 @@
+.kse-contactuspage__out {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  width: 100%;
+}
+.kse-contactuspage .kse-findus, .kse-contactuspage .kse-contactus {
+  width: calc(50% - 16px);
+}
+.kse-contactuspage .kse-btn {
+  width: 40%;
+}
