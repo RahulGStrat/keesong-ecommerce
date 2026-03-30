@@ -86,3 +86,15 @@
     padding: 5px 24px !important;
   }
 }
+
+@include mobile {
+  .kse-offer-card {
+    .kse-btn--whtpill {
+      width: 45%;
+    }
+
+    &__content {
+      align-items: center;
+    }
+  }
+}
