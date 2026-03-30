@@ -2,7 +2,7 @@
   .breadcrumb-wrapper {
     padding: 24px 0 12px 0 ;
     border-bottom: 1px solid #ddd;
-    font-family: "Acumin Variable";
+    font-family: "Acumin Variable Concept";
   }
 
   .custom-breadcrumb {
@@ -19,6 +19,7 @@
   .custom-breadcrumb .breadcrumb-item a {
     text-decoration: none;
     color: #121212;
+    transition: 0.2s all ease-in-out;
 
     &:hover {
       color: #f14a50;

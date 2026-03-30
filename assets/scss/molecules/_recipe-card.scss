@@ -69,8 +69,34 @@
 
    &__cta {
       margin-top: 8px;
+
       .kse-btn--sec {
          width: 100%;
+      }
+   }
+
+
+   // second card
+   &--b {
+      .kse-recipe-card__share {
+         display: flex;
+         align-items: center;
+         justify-content: flex-start;
+         gap: 35px;
+         margin: 20px 0px;
+      }
+
+      .kse-recipe-card__share-text {
+         font-size: 16px;
+         text-transform: uppercase;
+         color: #f05b72;
+         font-family: "Acumin Pro Condensed";
+         margin-bottom: unset;
+      }
+
+      .kse-recipe-card__image {
+         margin-bottom: 20px;
+         border-radius: 28px;
       }
    }
 }
