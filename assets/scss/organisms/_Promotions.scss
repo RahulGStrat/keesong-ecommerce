@@ -5,6 +5,11 @@
     &__list {
         display: flex;
         gap: 30px;
+        flex: 1;
+
+        .kse-PdTile{
+            width: 25%;
+        }
     }
 
     &__main {
