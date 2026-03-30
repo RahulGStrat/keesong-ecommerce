@@ -4,6 +4,10 @@
     }
     &__contentMain{
         padding: 30px 0px 30px 0;
+
+        .kse-CatQuickSel__item--label {
+            font-family: "Acumin Variable Concept";
+        }
     }
     &__filter{
         margin-right: 15px;
