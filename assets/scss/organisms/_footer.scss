@@ -243,7 +243,7 @@
         &--b {
             width: 70px;
         }
-        
+
         &--f {
             width: 80px;
         }
@@ -280,6 +280,26 @@
 
         &__saklogo img {
             margin-top: 60px;
+        }
+
+        &__branditm {
+            width: 90px;
+
+            &--b {
+                width: 70px;
+            }
+
+            &--f {
+                width: 80px;
+            }
+
+            &--g {
+                width: 70px;
+            }
+
+            &--h {
+                width: 70px;
+            }
         }
     }
 }
@@ -335,6 +355,15 @@
 
         &__saklogo img {
             margin-top: 40px;
+        }
+
+        &__brandwrapouter {
+            align-items: flex-start;
+            flex-direction: column;
+        }
+
+        &__brandwrap {
+            gap: 20px;
         }
     }
 }
@@ -393,6 +422,34 @@
 
         &__saklogo img {
             margin-top: 40px;
+        }
+
+        &__brandwrapouter {
+            align-items: flex-start;
+            flex-direction: column;
+        }
+
+        &__brandwrap {
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            width: 100%;
+        }
+
+        &__branditm {
+            width: 90px;
+
+            &--b {
+                width: 60px;
+            }
+
+            &--g {
+                width: 65px;
+            }
+
+            &--h {
+                width: 60px;
+            }
         }
     }
 }
