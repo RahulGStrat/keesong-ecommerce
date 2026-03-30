@@ -70,7 +70,7 @@
     &__item {
         font-size: 15px;
         color: #58595b;
-        margin-bottom: 6px;
+        margin-bottom: 4px;
         cursor: pointer;
         transition: 0.3s;
         font-family: "Acumin Variable";
@@ -80,7 +80,7 @@
         font-size: 16px;
         color: #58595b;
         font-family: "Acumin Pro Condensed";
-        margin-bottom: 6px;
+        margin-bottom: 4px;
         cursor: pointer;
         transition: 0.3s;
     }
@@ -242,19 +242,23 @@
         }
 
         &--b {
-            width: 70px;
+            width: 65px;
+        }
+
+        &--d {
+            width: 85px;
         }
 
         &--f {
-            width: 80px;
+            width: 85px;
         }
 
         &--g {
-            width: 70px;
+            width: 65px;
         }
 
         &--h {
-            width: 70px;
+            width: 65px;
         }
     }
 }

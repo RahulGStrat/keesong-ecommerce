@@ -1,0 +1,45 @@
+.kse-meal-hero {
+   margin: 30px 0;
+   text-align: center;
+
+   &__image {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+
+      img {
+         width: 100%;
+         display: block;
+         transition: transform 0.4s ease;
+      }
+
+      &:hover img {
+         transform: scale(1.05);
+      }
+   }
+
+   &__title {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      font-family: "Begum";
+      font-size: 40px;
+      font-weight: 700;
+   }
+
+   &__desc {
+      margin-top: 20px;
+      max-width: 600px;
+      margin-inline: auto;
+      font-size: 16px;
+   }
+}
+@include mobile {
+   .kse-meal-hero {
+      &__title {
+         font-size: 28px;
+      }
+   }
+}
