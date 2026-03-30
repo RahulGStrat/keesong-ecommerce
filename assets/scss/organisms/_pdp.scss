@@ -13,17 +13,21 @@
   }
 
   .custom-breadcrumb .breadcrumb-item {
-    color: #000;
+    color: #121212;
   }
 
   .custom-breadcrumb .breadcrumb-item a {
     text-decoration: none;
-    color: #000;
+    color: #121212;
+
+    &:hover {
+      color: #f14a50;
+    }
   }
 
   .custom-breadcrumb .breadcrumb-item + .breadcrumb-item::before {
     content: ">";
-    color: #000;
+    color: #121212;
   }
 
   /* Active item */
