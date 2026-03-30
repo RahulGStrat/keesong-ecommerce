@@ -1,0 +1,36 @@
+.kse-findus {
+  .kse-heading {
+    color: #000;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #000;
+  }
+  &__text {
+    padding: 12px 0;
+    p {
+      font-family: "Acumin Pro Condensed";
+      font-size: 20px;
+      color: #414144;
+    }
+    span,
+    a {
+      font-family: "Acumin Variable";
+      color: #414144;
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+  &__img {
+    width: 35%;
+    img {
+        width: 100%;
+        border-radius: 12px;
+    }
+  }
+  &__map {
+    margin-top: 24px;
+    iframe {
+         border-radius: 12px;
+      height: 400px;
+     }
+  }
+}
