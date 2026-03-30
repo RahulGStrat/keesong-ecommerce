@@ -69,6 +69,7 @@
         text-transform: uppercase;
         color: #121212;
         font-family: "Acumin Pro Condensed";
+        transition: 0.2s all ease-in-out;
 
         &:hover {
           color: #f14a50;
@@ -210,6 +211,8 @@
   }
 
   &__user {
+    font-family: "Acumin Pro Condensed";
+    font-size: 16px;
     font-weight: 500;
     border-left: 1px solid #3f3f3f;
     padding-left: 7px;
@@ -258,7 +261,20 @@
     display: flex;
     align-items: center;
     gap: 6px;
+    transition: 0.2s all ease-in-out;
     cursor: pointer;
+
+    &:hover {
+      .kse-Head__icn svg {
+        stroke: #f14a50;
+        transition: 0.2s all ease-in-out;
+      }
+
+      .kse-Head__user {
+        transition: 0.2s all ease-in-out;
+        color: #f14a50;
+      }
+    }
   }
 
   &__dropdown {
