@@ -1,5 +1,5 @@
 .kse-footer {
-    background: $primary-color;
+    background-color: #fbd2d3;
     padding: 30px 0px;
     color: #fff;
     font-family: Arial, sans-serif;
@@ -47,9 +47,10 @@
 
     &__colsubhead {
         font-size: 16px;
+        color: #58595b;
         font-weight: 700;
         margin-bottom: 10px;
-        font-family: "Acumin Variable";
+        font-family: "Acumin Pro Condensed";
 
         &.invisible {
             visibility: hidden;
@@ -68,15 +69,17 @@
 
     &__item {
         font-size: 14px;
+        color: #58595b;
         margin-bottom: 6px;
         cursor: pointer;
         transition: 0.3s;
-        font-family: "Acumin Pro Condensed";
+        font-family: "Acumin Variable";
     }
 
     &__itemb {
         font-size: 16px;
-        font-family: "Acumin Variable";
+        color: #58595b;
+        font-family: "Acumin Pro Condensed";
         margin-bottom: 6px;
         cursor: pointer;
         transition: 0.3s;
@@ -97,7 +100,7 @@
         bottom: -2px;
         width: 0%;
         height: 1px;
-        background-color: #fff;
+        background-color: #58595b;
         transition: width 0.3s ease;
     }
 
@@ -108,13 +111,13 @@
 
     &__contactmail {
         font-size: 16px;
-        color: #fff;
+        color: #58595b;
         font-family: "Acumin Variable";
         margin-bottom: 25px;
 
         a {
             text-decoration: none;
-            color: #fff;
+            color: #58595b;
 
             &:hover {
                 text-decoration: underline;
@@ -124,12 +127,13 @@
 
     &__contactitm {
         font-size: 16px;
-        color: #fff;
+        color: #58595b;
         font-family: "Acumin Variable";
     }
 
     &__policyitm {
         font-size: 16px;
+        color: #58595b;
         font-family: "Acumin Variable";
         margin-top: 25px;
         font-weight: 600;
@@ -142,7 +146,7 @@
         a {
             position: relative;
             display: inline-block;
-            color: #fff;
+            color: #58595b;
             text-decoration: none;
 
             &::after {
@@ -152,7 +156,7 @@
                 bottom: -2px;
                 width: 0%;
                 height: 1px;
-                background: #fff;
+                background: #58595b;
                 transition: width 0.3s ease;
             }
 
