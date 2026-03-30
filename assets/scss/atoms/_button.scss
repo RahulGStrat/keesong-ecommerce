@@ -9,7 +9,7 @@
       text-decoration: none;
       background: linear-gradient(90deg, #f14e54 0%, #f36a6f 40%, #f68a8e 100%);
       border: 2px solid #ffffff;
-      border-radius: 5px;
+      border-radius: 24px;
       transition: background 3s ease-in-out;
       transition: 0.6s all ease-in-out;
 
@@ -34,7 +34,7 @@
       text-align: center;
       background-color: $primary-color;
       border: 1px solid $primary-color;
-      border-radius: 14px;
+      border-radius: 28px;
 
       &:hover {
          color: #fff;
@@ -53,7 +53,7 @@
       text-align: center;
       text-decoration: none;
       background: linear-gradient(90deg, #f14e54 0%, #f36a6f 40%, #f68a8e 100%);
-      border-radius: 5px;
+      border-radius: 24px;
       transition: background 3s ease-in-out;
 
       &:hover {
@@ -65,12 +65,13 @@
       }
 
       &.cart {
-         text-align: left;
+         text-align: center;
          display: flex;
-         width: 10%;
+         width: 12%;
          align-items: center;
          padding: 8px 14px;
-         justify-content: space-between;
+         justify-content: center;
+         gap: 20px;
 
          img {
             width: 22px;
@@ -78,12 +79,12 @@
       }
 
       &.wishlist {
-         text-align: left;
+         text-align: center;
          display: flex;
-         width: 10%;
+         width: 12%;
          align-items: center;
          padding: 8px 14px;
-         justify-content: space-between;
+         justify-content: center;
          background: #fff !important;
          transition: 0.3s all;
          color: #121212;
@@ -105,7 +106,7 @@
       background-color: #fff !important;
       border: 2px solid #fff;
       padding: 8px 42px;
-      border-radius: 10px;
+      border-radius: 28px;
       color: #414141;
       font-size: 16px;
       transition: 0.3s all;
@@ -114,7 +115,6 @@
       &:hover {
          background-color: #f2f2f2 !important;
          border: 2px solid #b3b3b3;
-         border-radius: 10px;
          color: #414141;
       }
    }
