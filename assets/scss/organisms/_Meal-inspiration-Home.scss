@@ -2,6 +2,9 @@
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #c6c6c6;
+    
     .kse-recipe-card{
         width: calc(20% - 16px);
     }
