@@ -1,0 +1,38 @@
+.kse-MealInsp{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #c6c6c6;
+    
+    .kse-recipe-card{
+        width: calc(20% - 16px);
+    }
+    &__home{
+        .kse-catHead {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+@include tablet{
+    .kse-MealInsp{
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        .kse-recipe-card{
+            width: calc(33.33% - 16px);
+        }
+    }
+}
+
+@include mobile{
+    .kse-MealInsp{
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        .kse-recipe-card{
+            width: calc(100% - 0px);
+        }
+    }
+}
