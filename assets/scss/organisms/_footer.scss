@@ -214,6 +214,48 @@
         margin-top: 20px;
         opacity: 0.9;
     }
+
+    &__brandwrapouter {
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    &__brandwrapleft {
+        width: 19%;
+    }
+
+    &__brandwrap {
+        width: 81%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 30px;
+    }
+
+    &__branditm {
+        width: 110px;
+
+        img {
+            width: 100%;
+        }
+
+        &--b {
+            width: 70px;
+        }
+        
+        &--f {
+            width: 80px;
+        }
+
+        &--g {
+            width: 70px;
+        }
+
+        &--h {
+            width: 70px;
+        }
+    }
 }
 
 
