@@ -9,10 +9,11 @@
   }
   .kse-heading {
     margin-bottom: 0px;
-    width: 60%;
+    width: 50%;
   }
   &__para {
-    width: 40%;
+    width: 50%;
+    font-size: 20px;
   }
   &__tilesout {
     display: flex;
@@ -29,20 +30,20 @@
 @media (min-width: 1350px) and (max-width: 1400px) {
   .kse-brandpartner {
     .kse-heading {
-      width: 50%;
+      width: 40%;
     }
     &__para {
-      width: 50%;
+      width: 60%;
     }
   }
 }
 @media (min-width: 1200px) and (max-width: 1300px) {
   .kse-brandpartner {
     .kse-heading {
-      width: 50%;
+      width: 40%;
     }
     &__para {
-      width: 50%;
+      width: 60%;
     }
   }
 }
