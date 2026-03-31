@@ -19,6 +19,15 @@
       font-weight: 600;
       margin-bottom: 5px;
       min-height: 42px;
+      
+      a {
+         color: #000;
+         text-decoration: none;
+
+         &:hover {
+            color: #000;
+         }
+      }
    }
 
    &__share {
