@@ -98,11 +98,19 @@
    }
 
    &__title {
-      font-size: 13px;
-      font-weight: bold;
-      margin-bottom: 6px;
-      color: #222;
-      min-height: 55px;
+      a{
+         font-size: 13px;
+         font-weight: bold;
+         margin-bottom: 6px;
+         color: #222;
+         height: 55px;
+         overflow: hidden;
+         display: flex;
+         transition: ease-in 0.3s;
+         &:hover{
+            color:#f14a50;
+         }
+      }
    }
 
    &__desc {
@@ -137,6 +145,17 @@
       width: 100%;
       text-align: center;
       height: 35px;
+   }
+   &:hover{
+      .kse-PdTile__title a{
+         color: #f14a50;
+      }
+      .kse-btn{
+         background: linear-gradient(90deg, #f68a8e 0%,  #f36a6f 40%,  #f14e54 100%);
+      }
+      .kse-cart-btn{
+         background: #7d7d7d;
+      }
    }
 }
 
@@ -184,6 +203,7 @@
    display: flex;
    justify-content: center;
    align-items: center;
+   transition: ease-in 0.3s;
 
    img {
       width: 85%;
