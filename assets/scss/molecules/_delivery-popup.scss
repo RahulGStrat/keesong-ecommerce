@@ -1,0 +1,76 @@
+.kse-delivery-popup {
+   position: fixed;
+   inset: 0;
+   z-index: 999;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   &__overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+   }
+
+   &__modal {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: 800px;
+      margin: 0 20px;
+      border-radius: 12px;
+      background: #ffffff;
+      padding: 16px;
+   }
+
+   &__content {
+      border-radius: 10px;
+      padding: 40px 20px;
+      text-align: center;
+
+      background: radial-gradient(circle at center, #fef1f3 0%, #fcd9df 100%);
+   }
+
+   &__title {
+      font-family: "Begum";
+      font-size: 32px;
+      color: #f14a50;
+      font-weight: 700;
+      margin-bottom: 12px;
+   }
+
+   &__desc {
+      font-family: "Acumin Variable Concept";
+      font-size: 16px;
+      margin-bottom: 24px;
+   }
+
+   &__cta {
+      .kse-btn {
+         min-width: 220px;
+         font-size: 16px;
+         border-radius: 5px;
+      }
+   }
+}
+@include mobile {
+   .kse-delivery-popup {
+      &__content {
+         padding: 30px 16px;
+      }
+
+      &__title {
+         font-size: 24px;
+      }
+
+      &__desc {
+         font-size: 14px;
+      }
+
+      &__cta {
+         .kse-btn {
+            width: 100%;
+         }
+      }
+   }
+}
