@@ -1,4 +1,4 @@
-.kse-delivery-popup {
+.kse-checkout-popup {
    position: fixed;
    inset: 0;
    z-index: 999;
@@ -54,7 +54,7 @@
    }
 }
 @include mobile {
-   .kse-delivery-popup {
+   .kse-checkout-popup {
       &__content {
          padding: 30px 16px;
       }
