@@ -4,11 +4,13 @@
     flex-wrap: wrap;
     padding-bottom: 30px;
     border-bottom: 1px solid #c6c6c6;
-    
+
     .kse-recipe-card{
         width: calc(20% - 16px);
     }
     &__home{
+        padding: 40px 0px 0px 0px;
+        
         .kse-catHead {
             margin-bottom: 30px;
         }
