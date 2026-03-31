@@ -99,3 +99,20 @@
       }
    }
 }
+// custom devices
+// 125%
+@media (min-width: 1200px) and (max-width: 1299px) {
+   .kse-order-steps {
+      &__list {
+         margin: 0 316px;
+      }
+   }
+}
+// ipad Air
+@media (min-width: 800px) and (max-width: 999px) {
+   .kse-order-steps {
+      &__list {
+         margin: 0 20%;
+      }
+   }
+}
