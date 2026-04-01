@@ -31,7 +31,7 @@
       }
    }
 }
-@include mobile {
+@include mobile-tablet {
    .kse-checkout {
       &__wrap {
          flex-direction: column;

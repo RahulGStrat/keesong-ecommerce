@@ -82,7 +82,7 @@
       transform: scale(1.05);
    }
 }
-@include mobile {
+@include mobile-tablet {
    .kse-paymentbox {
       flex-direction: column;
       align-items: flex-start;
