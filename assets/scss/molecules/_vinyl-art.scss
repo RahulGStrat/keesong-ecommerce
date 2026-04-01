@@ -2,8 +2,9 @@
    &.kse-tiny-cluck {
       background: #fff;
       border-radius: 0;
-      padding: 60px 30px;
       justify-content: center;
+      padding: 60px 30px;
+      margin: 10px 0 0;
       @include mobile {
          flex-direction: column-reverse;
          padding: 40px 20px;

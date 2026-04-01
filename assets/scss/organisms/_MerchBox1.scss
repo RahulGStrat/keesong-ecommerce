@@ -2,7 +2,20 @@
    display: flex;
    gap: 30px;
    border-bottom: 1px solid #a7a9ac;
-   padding: 40px 0;
+   padding: 60px 0;
+   margin: 0 20px;
+   &__banner {
+      background: linear-gradient(
+         to right,
+         #fac6ce 0%,
+         #fef1f3 50%,
+         #fac6ce 100%
+      );
+      text-align: center;
+      padding: 40px 20px;
+      border-radius: 10px;
+      margin-top: 50px;
+   }
    &__imgBox {
       display: flex;
       align-items: center;
@@ -46,6 +59,7 @@
          font-weight: 500;
          font-size: 13px;
          font-family: "Acumin Pro Condensed";
+         color: #414141;
       }
    }
    .kse-btn--sec {
@@ -110,6 +124,12 @@
             width: 100%;
             margin-bottom: 15px;
          }
+      }
+      .kse-btn--sec {
+         min-width: 100%;
+      }
+      &__banner {
+         padding: 30px 16px;
       }
    }
 }
