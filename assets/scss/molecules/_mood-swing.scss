@@ -1,0 +1,23 @@
+.kse-mood-swing {
+   &.kse-tiny-cluck {
+      background: #f05b72;
+      color: #fff;
+
+      .kse-tiny-cluck__desc,
+      .kse-tiny-cluck__selection,
+      .kse-tiny-cluck__steps span {
+         color: #fff;
+      }
+
+      .kse-tiny-cluck__images {
+         max-width: 450px;
+      }
+
+      .kse-btn--whtpill {
+         width: 54%;
+         @include mobile {
+            width: 100%;
+         }
+      }
+   }
+}
