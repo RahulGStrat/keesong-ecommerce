@@ -1,5 +1,5 @@
 .kse-contactuspage {
-
+    padding: 40px 0;
     &__out {
         display: flex;
         justify-content: space-between;
@@ -11,5 +11,17 @@
     }
     .kse-btn {
         width: 40%;
+    }
+}
+
+@include mobile {
+    .kse-contactuspage {
+
+        &__out {
+            flex-direction: column;
+        }
+        .kse-findus, .kse-contactus {   
+            width: 100%;
+        }
     }
 }

@@ -1,7 +1,31 @@
-.kse-recipe-detail {
-   font-family: "Acumin Pro Condensed";
+.kse-recipe-popup {
+   position: fixed;
+   inset: 0;
+   z-index: 999;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   &__overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.6);
+   }
+   &__modal {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: 1000px;
+      max-height: 90vh;
+      overflow-x: hidden;
+      overflow-y: auto;
+      margin: 0 20px;
+      background: #fff;
+   }
+   &__inner {
+      font-family: "Acumin Pro Condensed";
+      padding: 10px 0;
+   }
 
-   /* HEADER */
    &__header {
       display: flex;
       justify-content: space-between;
@@ -23,16 +47,22 @@
       img {
          width: 40px;
          height: 40px;
+         transition: filter 0.3s ease;
+      }
+      &:hover {
+         img {
+            filter: brightness(1.5);
+         }
       }
    }
 
    &__hero {
       display: flex;
-      width: 87%;
+      width: 94%;
    }
 
    &__hero-img {
-      width: 40%;
+      width: 52%;
 
       img {
          width: 100%;
@@ -42,7 +72,7 @@
    }
 
    &__hero-content {
-      width: 60%;
+      width: 48%;
       background: #f05b72;
       display: flex;
       flex-direction: column;
@@ -65,7 +95,6 @@
       color: #680a38;
    }
 
-   /* BODY */
    &__body {
       display: flex;
       gap: 40px;
@@ -122,12 +151,18 @@
       }
    }
 
-   /* FOOTER */
    &__footer {
-      background: linear-gradient(to top, #fcd9df, #ffffff);
+      background: linear-gradient(
+         to right,
+         #fcd8de 0%,
+         #ffffff 20%,
+         #ffffff 80%,
+         #fcd8de 100%
+      );
       padding: 50px 0;
       margin: 30px 0;
    }
+
    &__footerwrap {
       position: relative;
    }
@@ -135,17 +170,20 @@
    &__link {
       font-size: 12px;
       color: #4d4d4f;
+      &:hover {
+         color: #121212;
+      }
    }
 
    &__duck {
       position: absolute;
       right: 20px;
       bottom: -65px;
-      width: 140px;
+      width: 130px;
    }
 }
 @include tablet {
-   .kse-recipe-detail {
+   .kse-recipe-popup {
       &__body {
          gap: 20px;
       }
@@ -153,14 +191,33 @@
 }
 
 @include mobile {
-   .kse-recipe-detail {
+   .kse-recipe-popup {
+      &__modal {
+         max-height: 95vh;
+         border-radius: 10px;
+      }
+
+      &__inner {
+         padding-bottom: 0px;
+      }
       &__hero {
          flex-direction: column;
+         width: 100%;
+         padding: 0 16px;
       }
 
       &__hero-img,
       &__hero-content {
          width: 100%;
+      }
+      &__hero-img {
+         img {
+            display: block;
+            border-radius: 20px 20px 0 0;
+         }
+      }
+      &__heading {
+         min-width: 100%;
       }
 
       &__hero-content {
@@ -174,6 +231,8 @@
 
       &__duck {
          width: 80px;
+         right: 0;
+         bottom: 22px;
       }
    }
 }
