@@ -25,9 +25,23 @@
    }
    &__calendar {
       width: 100%;
+      margin-bottom: 24px;
       img {
          width: 100%;
-         //  border-radius: 12px;
+      }
+   }
+}
+@include mobile {
+   .kse-checkout {
+      &__wrap {
+         flex-direction: column;
+      }
+      &__left,
+      &__right {
+         width: 100%;
+      }
+      &__subhead {
+         font-size: 18px;
       }
    }
 }
