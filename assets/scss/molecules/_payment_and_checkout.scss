@@ -37,20 +37,39 @@
         align-items: center;
         gap: 30px;
         flex-wrap: wrap;
+        justify-content: flex-end;
     }
 
     &__option {
         display: flex;
         align-items: center;
-        gap: 8px;
+        gap: 12px;
         cursor: pointer;
     }
 
     &__option input {
-        accent-color: #ff4d4d;
+        appearance: none;
+        width: 18px;
+        height: 18px;
+        border: 2px solid #cc7480;
+        /* soft red border */
+        border-radius: 50%;
+        background: #eee;
+        /* inner grey */
         cursor: pointer;
-        width: 14px;
-        height: 14px;
+        position: relative;
+    }
+
+    &__option input:checked::after {
+        content: "";
+        width: 8px;
+        height: 8px;
+        background: #cc7480;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 
     &__option img {
