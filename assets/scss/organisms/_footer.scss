@@ -459,5 +459,19 @@
                 width: 60px;
             }
         }
+
+        &__item,
+        &__itemb {
+            &::after {
+                display: none;
+            }
+        }
+
+        &__item,
+        &__itemb {
+            &:hover {
+                text-decoration: underline;
+            }
+        }
     }
 }
