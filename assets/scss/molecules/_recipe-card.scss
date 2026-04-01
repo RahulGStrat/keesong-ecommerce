@@ -11,6 +11,14 @@
          width: 100%;
          display: block;
       }
+
+      &:hover {
+         .kse-recipe-card__title {
+            a {
+               color: #f14a50;
+            }
+         }
+      }
    }
 
    &__title {
@@ -19,14 +27,15 @@
       font-weight: 600;
       margin-bottom: 5px;
       min-height: 42px;
-      
+
       a {
          font-family: "Begum";
          color: #000;
          text-decoration: none;
+         transition: ease-in 0.3s;
 
          &:hover {
-            color: #000;
+            color: #f14a50;
          }
       }
    }
@@ -108,8 +117,15 @@
          margin-bottom: 20px;
          border-radius: 28px;
       }
-      .kse-recipe-card__title{
+
+      .kse-recipe-card__title {
          font-size: 13px;
       }
+
+      &:hover {
+            .kse-recipe-card__title a {
+                color: #f14a50;
+            }
+        }
    }
 }
