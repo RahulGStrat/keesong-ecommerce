@@ -1,0 +1,179 @@
+.kse-recipe-detail {
+   font-family: "Acumin Pro Condensed";
+
+   /* HEADER */
+   &__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+   }
+
+   &__logo {
+      height: 50px;
+   }
+
+   &__actions {
+      display: flex;
+      gap: 12px;
+   }
+
+   &__icon {
+      padding: 0;
+      img {
+         width: 40px;
+         height: 40px;
+      }
+   }
+
+   &__hero {
+      display: flex;
+      width: 87%;
+   }
+
+   &__hero-img {
+      width: 40%;
+
+      img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+   }
+
+   &__hero-content {
+      width: 60%;
+      background: #f05b72;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      font-family: "Begum";
+      text-align: center;
+      padding: 40px;
+      border-radius: 0 40px 40px 0;
+   }
+
+   &__tag {
+      font-size: 14px;
+      margin-bottom: 10px;
+      color: #fff;
+   }
+
+   &__title {
+      font-size: 32px;
+      font-weight: 700;
+      color: #680a38;
+   }
+
+   /* BODY */
+   &__body {
+      display: flex;
+      gap: 40px;
+      padding: 40px 20px;
+   }
+
+   &__col {
+      flex: 1;
+   }
+
+   &__heading {
+      display: inline-flex;
+      align-items: center;
+      background: #eaebec;
+      color: #f05b72;
+      border-radius: 30px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      min-width: 300px;
+      p {
+         font-size: 22px;
+         padding-left: 20px;
+      }
+   }
+
+   &__heading-icon {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      background: #f05b72;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+         width: 40px;
+      }
+   }
+
+   &__content {
+      font-family: "Acumin Variable Concept";
+      font-size: 14px;
+      line-height: 1.6;
+      color: #4d4d4f;
+
+      ol {
+         padding-left: 16px;
+      }
+
+      li {
+         list-style-type: auto;
+         padding-left: 12px;
+         margin-bottom: 6px;
+      }
+   }
+
+   /* FOOTER */
+   &__footer {
+      background: linear-gradient(to top, #fcd9df, #ffffff);
+      padding: 50px 0;
+      margin: 30px 0;
+   }
+   &__footerwrap {
+      position: relative;
+   }
+
+   &__link {
+      font-size: 12px;
+      color: #4d4d4f;
+   }
+
+   &__duck {
+      position: absolute;
+      right: 20px;
+      bottom: -65px;
+      width: 140px;
+   }
+}
+@include tablet {
+   .kse-recipe-detail {
+      &__body {
+         gap: 20px;
+      }
+   }
+}
+
+@include mobile {
+   .kse-recipe-detail {
+      &__hero {
+         flex-direction: column;
+      }
+
+      &__hero-img,
+      &__hero-content {
+         width: 100%;
+      }
+
+      &__hero-content {
+         border-radius: 0 0 20px 20px;
+         text-align: center;
+      }
+
+      &__body {
+         flex-direction: column;
+      }
+
+      &__duck {
+         width: 80px;
+      }
+   }
+}
