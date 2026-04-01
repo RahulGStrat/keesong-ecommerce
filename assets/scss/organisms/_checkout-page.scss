@@ -1,14 +1,33 @@
-.kse-checkoutpg {
-    &__wrap {
-        display: flex;
-        gap: 30px;
-    }
+.kse-checkout {
+   margin: 50px 0;
+   &__wrap {
+      display: flex;
+      gap: 40px;
+   }
+   .kse-heading {
+      margin-bottom: 0;
+   }
 
-    &__left {
-        width: 65%;
-    }
+   &__left {
+      width: 65%;
+   }
 
-    &__right {
-        width: 35%;
-    }
+   &__right {
+      width: 35%;
+   }
+   &__subhead {
+      font-family: "Begum";
+      font-size: 22px;
+      color: #f14a50;
+      border-bottom: 1px solid #000;
+      padding-bottom: 30px;
+      margin-bottom: 30px;
+   }
+   &__calendar {
+      width: 100%;
+      img {
+         width: 100%;
+         //  border-radius: 12px;
+      }
+   }
 }
