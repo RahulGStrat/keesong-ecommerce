@@ -130,15 +130,19 @@
             display: none;
           }
 
+          &:hover {
+            background-color: #f2f2f2;
+
+            a {
+              color: #ff4d4d;
+            }
+          }
+
           a {
             text-decoration: none;
             font-size: 14px;
             color: #666666;
             font-family: "Acumin Variable";
-
-            &:hover {
-              color: #ff4d4d;
-            }
           }
         }
       }
