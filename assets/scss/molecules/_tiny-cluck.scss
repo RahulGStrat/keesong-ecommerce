@@ -86,14 +86,6 @@
       width: 54%;
       text-align: center;
    }
-   &--v2{
-      flex-direction: row-reverse;
-      background: #fff;
-
-      .kse-tiny-cluck__images{
-         max-width: unset;
-      }
-   }
 }
 
 @include tablet {
