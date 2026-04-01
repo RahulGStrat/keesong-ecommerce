@@ -24,4 +24,15 @@
   .form-label {
     font-size: 18px;
   }
+  .kse-btn {
+    border-radius: 6px;
+  }
+  .form-control:focus {
+    box-shadow: none;
+    border-color: #000;
+  }
+  .form-select:focus {
+    box-shadow: none;
+    border-color: #000;
+  }
 }
