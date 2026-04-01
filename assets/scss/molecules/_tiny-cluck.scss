@@ -30,7 +30,7 @@
    &__steps {
       display: flex;
       align-items: center;
-      gap: 14px;
+      gap: 16px;
       font-weight: 600;
       margin-bottom: 8px;
 
@@ -82,10 +82,16 @@
          }
       }
    }
+   .kse-btn--pri {
+      width: 54%;
+      text-align: center;
+   }
 }
 
 @include tablet {
    .kse-tiny-cluck {
+      gap: 20px;
+      padding: 60px;
       &__images {
          max-width: 420px;
       }
@@ -94,9 +100,12 @@
 @include mobile {
    .kse-tiny-cluck {
       flex-direction: column;
-      padding: 50px 30px;
+      padding: 50px 20px;
       &__images {
          max-width: 300px;
+      }
+      .kse-btn--pri {
+         width: 100%;
       }
    }
 }

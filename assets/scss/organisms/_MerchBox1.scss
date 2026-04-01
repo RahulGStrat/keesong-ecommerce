@@ -1,0 +1,138 @@
+.kse-mchB1 {
+   display: flex;
+   gap: 30px;
+   border-bottom: 1px solid #a7a9ac;
+   padding: 60px 0;
+   margin: 0 70px;
+   &__banner {
+      background: linear-gradient(
+         to right,
+         #fac6ce 0%,
+         #fef1f3 50%,
+         #fac6ce 100%
+      );
+      text-align: center;
+      padding: 40px 20px;
+      border-radius: 10px;
+      margin-top: 50px;
+   }
+   &__imgBox {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+   }
+   &__img {
+      width: 40%;
+      img {
+         width: 100%;
+      }
+      &.active {
+         opacity: 1;
+      }
+      &.hide {
+         opacity: 0.5;
+      }
+   }
+   &__body {
+      flex: 2;
+   }
+   &__cont {
+      margin-bottom: 15px;
+   }
+   &__title {
+      font-size: 28px;
+      color: #000;
+      font-weight: 700;
+      font-family: Georgia;
+      margin-bottom: 15px;
+   }
+   &__desc {
+      font-size: 13px;
+      color: #424242;
+   }
+   &__selColor {
+      display: flex;
+      gap: 5px;
+      margin-bottom: 15px;
+      &-text {
+         font-weight: 500;
+         font-size: 13px;
+         font-family: "Acumin Pro Condensed";
+         color: #414141;
+      }
+   }
+   .kse-btn--sec {
+      min-width: 200px;
+      max-width: 200px;
+   }
+   &--v2 {
+      flex-direction: column;
+      border-top: 1px solid #a7a9ac;
+      border-bottom: 1px solid #a7a9ac;
+
+      .kse-mchB1__body {
+         flex: unset;
+         display: flex;
+         justify-content: space-between;
+      }
+      .kse-mchB1__imgBox {
+         gap: 0;
+      }
+      .kse-mchB1__img {
+         width: 100%;
+         font-size: 0;
+      }
+      .kse-mchB1__cont {
+         width: 40%;
+         margin-bottom: 0px;
+      }
+      .kse-mchB1__actn {
+         display: flex;
+         flex-direction: column;
+         justify-content: flex-end;
+      }
+   }
+}
+
+@include tablet {
+   .kse-mchB1 {
+      margin: 0 60px;
+      &__imgBox {
+         width: 50%;
+      }
+      &--v2 {
+         .kse-mchB1__imgBox {
+            width: 100%;
+         }
+      }
+   }
+}
+@include mobile {
+   .kse-mchB1 {
+      flex-direction: column;
+      margin: 0 20px;
+
+      &__imgBox {
+         width: 100%;
+      }
+      &--v2 {
+         .kse-mchB1__imgBox {
+            width: 100%;
+         }
+         .kse-mchB1__body {
+            flex-direction: column;
+         }
+         .kse-mchB1__cont {
+            width: 100%;
+            margin-bottom: 15px;
+         }
+      }
+      .kse-btn--sec {
+         min-width: 100%;
+      }
+      &__banner {
+         padding: 30px 16px;
+      }
+   }
+}

@@ -1,0 +1,22 @@
+.kse-vinyl-art {
+   &.kse-tiny-cluck {
+      background: #fff;
+      border-radius: 0;
+      justify-content: center;
+      padding: 60px 30px;
+      margin: 10px 0 0;
+      @include mobile {
+         flex-direction: column-reverse;
+         padding: 40px 20px;
+      }
+      .kse-tiny-cluck__images {
+         max-width: 600px;
+         img {
+            width: 160px;
+            @include mobile-tablet {
+               width: 120px;
+            }
+         }
+      }
+   }
+}
