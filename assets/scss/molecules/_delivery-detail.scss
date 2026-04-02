@@ -108,6 +108,7 @@
    .kse-delivery-detail {
       padding: 24px 20px;
       &__grid {
+         flex-direction: column;
          gap: 24px;
          padding: 10px;
       }

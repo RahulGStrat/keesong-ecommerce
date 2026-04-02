@@ -9,11 +9,11 @@
    }
 
    &__left {
-      width: 65%;
+      flex: 2;
    }
 
    &__right {
-      width: 35%;
+      flex: 1;
    }
    &__subhead {
       font-family: "Begum";
@@ -31,14 +31,20 @@
       }
    }
 }
-@include mobile-tablet {
+@include tablet {
+   .kse-checkout {
+      &__wrap {
+         gap: 24px;
+      }
+      &__subhead {
+         font-size: 20px;
+      }
+   }
+}
+@include mobile {
    .kse-checkout {
       &__wrap {
          flex-direction: column;
-      }
-      &__left,
-      &__right {
-         width: 100%;
       }
       &__subhead {
          font-size: 18px;
