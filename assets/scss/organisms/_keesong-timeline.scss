@@ -12,6 +12,7 @@
       height: 100%;
       pointer-events: none;
       z-index: 1;
+      margin-top: -100px;
    }
 
    &__grid {
@@ -21,36 +22,46 @@
       grid-template-columns: repeat(5, 1fr);
       gap: 60px 20px;
       text-align: center;
+      margin-bottom: 40px;
    }
 
    &__item {
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: space-between;
       gap: 10px;
    }
 
    &__dot {
-      width: 12px;
-      height: 12px;
+      width: 20px;
+      height: 20px;
       background: #8b0000;
       border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      span {
+         width: 10px;
+         height: 10px;
+         background: #f14a50;
+         border-radius: 50%;
+      }
    }
 
    &__year {
-      font-size: 14px;
+      font-size: 26px;
       font-weight: 700;
       color: #8b0000;
    }
 
    &__text {
-      font-size: 12px;
       color: #414141;
-      max-width: 140px;
+      max-width: 200px;
    }
 
    img {
-      width: 40px;
+      height: 60px;
       margin-top: 10px;
    }
 }
@@ -70,7 +81,7 @@
       }
 
       &__svg {
-         display: none; // hide snake path in mobile
+         display: none;
       }
    }
 }
