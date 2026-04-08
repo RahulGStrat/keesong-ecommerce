@@ -1,0 +1,133 @@
+:root {
+   --primary-red: #f14a50;
+}
+
+.kse-timeline {
+   padding: 60px 0;
+   background:
+      radial-gradient(circle at top left, #fcdee3 0%, transparent 50%),
+      radial-gradient(circle at bottom right, #fcd8de 0%, transparent 50%),
+      radial-gradient(circle at center, #fde5ea 0%, transparent 60%), #fde5ea;
+   &__wrap {
+      position: relative;
+   }
+   #timeline-svg-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+      overflow: visible;
+   }
+   &__grid {
+      display: flex;
+      flex-wrap: wrap;
+      position: relative;
+      z-index: 1;
+   }
+   &__item {
+      width: 20%;
+      padding: 0px 15px 40px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+   }
+   .last-item {
+      width: 28%;
+      margin-left: 36%;
+      .kse-timeline__desc {
+         max-width: none;
+      }
+   }
+   &__dot {
+      width: 24px;
+      height: 24px;
+      background-color: #680a38;
+      border-radius: 50%;
+      margin-bottom: 8px;
+      position: relative;
+
+      &::after {
+         content: "";
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         width: 12px;
+         height: 12px;
+         border-radius: 50%;
+         background-color: $primary-color;
+      }
+   }
+   &__year {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: $primary-color;
+      margin-bottom: 4px;
+   }
+   &__desc {
+      font-size: 0.85rem;
+      line-height: 1.4;
+      color: #4d4d4f;
+      margin-bottom: 20px;
+      flex-grow: 1;
+      max-width: 170px;
+   }
+   &__list {
+      margin: 0;
+      padding-left: 18px;
+      li {
+         list-style-type: square;
+         &::marker {
+            font-size: 7px;
+         }
+      }
+   }
+   &__icon {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+      margin-top: auto;
+   }
+}
+
+@include tablet-pro {
+   .kse-timeline {
+      &__item {
+         width: 25%;
+      }
+   }
+}
+
+@include tablet {
+   .kse-timeline {
+      &__item {
+         width: 33.333%;
+      }
+      .last-item {
+         margin-left: 30%;
+      }
+   }
+}
+
+@include mobile {
+   .kse-timeline {
+      &__item {
+         width: 100%;
+         align-items: center;
+         text-align: center;
+      }
+      &__desc {
+         max-width: 90%;
+         .last-item & {
+            max-width: 90%;
+         }
+      }
+      .last-item {
+         margin-left: 0;
+      }
+   }
+}

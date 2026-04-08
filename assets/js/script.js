@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
    initPDP();
    initGreatWithToggle();
    initHeaderDropdown();
+   initTimelineSVG();
 });
 
 // =========================
@@ -31,16 +32,16 @@ function initMenu() {
    });
 
    document.querySelectorAll(".kse-Head__menu-sub").forEach((submenu) => {
-   submenu.addEventListener("click", (e) => {
-      if (window.innerWidth <= 768) {
-         e.stopPropagation();
+      submenu.addEventListener("click", (e) => {
+         if (window.innerWidth <= 768) {
+            e.stopPropagation();
 
-         // toggle mobile active
-         submenu.classList.toggle("mobile");
-         submenu.classList.toggle("active");
-      }
+            // toggle mobile active
+            submenu.classList.toggle("mobile");
+            submenu.classList.toggle("active");
+         }
+      });
    });
-});
    // category click
    if (categoryBtn) {
       categoryBtn.addEventListener("click", (e) => {
@@ -243,20 +244,130 @@ function initHeaderDropdown() {
 // AFTER 5 PRODUCT DIVIDER
 // =========================
 function insertDividers() {
-  const products = document.querySelectorAll('#product-list .kse-PdTile');
+   const products = document.querySelectorAll("#product-list .kse-PdTile");
 
-  products.forEach((product, index) => {
-    if ((index + 1) % 5 === 0 && (index + 1) !== products.length) {
-      const div = document.createElement('div');
-      div.className = 'custom-divider';
-      div.innerHTML = '';
+   products.forEach((product, index) => {
+      if ((index + 1) % 5 === 0 && index + 1 !== products.length) {
+         const div = document.createElement("div");
+         div.className = "custom-divider";
+         div.innerHTML = "";
 
-      product.after(div);
-    }
-  });
+         product.after(div);
+      }
+   });
 }
 
 // run only on desktop
 if (window.innerWidth >= 769) {
-  insertDividers();
+   insertDividers();
+}
+
+// ================================
+// TIMELINE SVG
+// ================================
+function initTimelineSVG() {
+   const grid = document.getElementById("kse-timeline__grid");
+   const svgContainer = document.getElementById("timeline-svg-container");
+
+   if (!grid || !svgContainer) return;
+
+   function drawSVGs() {
+      svgContainer.innerHTML = "";
+
+      const items = Array.from(
+         document.querySelectorAll(".kse-timeline__item"),
+      );
+      if (items.length === 0) return;
+
+      const gridRect = grid.getBoundingClientRect();
+
+      // Group items by row
+      const rows = [];
+      let currentRowTop = items[0].getBoundingClientRect().top;
+      let currentGroup = [];
+
+      items.forEach((item) => {
+         const rect = item.getBoundingClientRect();
+         if (Math.abs(rect.top - currentRowTop) > 20) {
+            rows.push(currentGroup);
+            currentGroup = [];
+            currentRowTop = rect.top;
+         }
+         currentGroup.push(item);
+      });
+      if (currentGroup.length > 0) rows.push(currentGroup);
+
+      const bounds = rows.map((rowItems) => {
+         const dot = rowItems[0].querySelector(".kse-timeline__dot");
+         const dotRect = dot.getBoundingClientRect();
+         const dotCenterY = dotRect.top + dotRect.height / 2 - gridRect.top;
+
+         return { dotCenterY };
+      });
+
+      const paddingX = 40;
+      const leftBoundary = 0 - paddingX;
+      const rightBoundary = gridRect.width + paddingX;
+
+      const wrapper = document.querySelector(".kse-timeline__wrap");
+      const wrapperRect = wrapper.getBoundingClientRect();
+      const screenStartX = -wrapperRect.left;
+      const screenEndX = window.innerWidth - wrapperRect.left;
+
+      const r = 30;
+      let d = "";
+
+      for (let i = 0; i < bounds.length; i++) {
+         const isRTL = i % 2 !== 0;
+         const current = bounds[i];
+         const next = bounds[i + 1];
+
+         const y = current.dotCenterY;
+
+         if (i === 0) {
+            d += `M ${screenStartX} ${y} `;
+         }
+
+         if (!isRTL) {
+            if (next) {
+               d += `L ${rightBoundary - r} ${y} `;
+               const nextY = next.dotCenterY;
+               d += `Q ${rightBoundary} ${y} ${rightBoundary} ${y + r} `;
+               d += `L ${rightBoundary} ${nextY - r} `;
+               d += `Q ${rightBoundary} ${nextY} ${rightBoundary - r} ${nextY} `;
+            } else {
+               d += `L ${screenEndX} ${y} `;
+            }
+         } else {
+            if (next) {
+               d += `L ${leftBoundary + r} ${y} `;
+               const nextY = next.dotCenterY;
+               d += `Q ${leftBoundary} ${y} ${leftBoundary} ${y + r} `;
+               d += `L ${leftBoundary} ${nextY - r} `;
+               d += `Q ${leftBoundary} ${nextY} ${leftBoundary + r} ${nextY} `;
+            } else {
+               d += `L ${screenStartX} ${y} `;
+            }
+         }
+      }
+
+      const path = document.createElementNS(
+         "http://www.w3.org/2000/svg",
+         "path",
+      );
+      path.setAttribute("d", d);
+      path.setAttribute("fill", "none");
+      path.setAttribute("stroke", "var(--primary-red)");
+      path.setAttribute("stroke-width", "4");
+      path.setAttribute("stroke-dasharray", "1 8");
+      path.setAttribute("stroke-linecap", "round");
+
+      svgContainer.appendChild(path);
+   }
+
+   // Initial draw
+   drawSVGs();
+
+   // Redraw on resize
+   window.addEventListener("resize", drawSVGs);
 }
