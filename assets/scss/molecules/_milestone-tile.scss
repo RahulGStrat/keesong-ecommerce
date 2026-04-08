@@ -1,0 +1,30 @@
+.milestone-tile {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__contentouter {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__year {
+    font-size: 32px;
+    font-weight: bold;
+    font-family: "Acumin Pro Condensed";
+    color: $primary-color;
+  }
+  &__para {
+    font-size: 16px;
+    color: #000;
+    margin-top: 8px;
+   }
+   &__icon {
+     margin-top: 16px;
+    width: 6%;
+     img {
+         width: 100%;
+         height: auto;
+     }
+   }
+}
