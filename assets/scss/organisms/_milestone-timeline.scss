@@ -61,7 +61,7 @@
    }
    &__year {
       font-family: "Acumin Pro Condensed";
-      font-size: 26px;
+      font-size: 30px;
       font-weight: 700;
       color: $primary-color;
       margin-bottom: 4px;
@@ -84,7 +84,7 @@
       li {
          list-style-type: square;
          &::marker {
-            font-size: 7px;
+            font-size: 10px;
          }
       }
    }
