@@ -8,7 +8,7 @@
   }
 
   &__images {
-    width: 45%;
+    width: 50%;
 
     .main-img {
       position: relative;
@@ -64,10 +64,10 @@
   }
 
   &__details {
-    width: 55%;
+    width: 50%;
 
     .title {
-      font-size: 36px;
+      font-size: 32px;
       font-weight: 700;
       margin-bottom: 15px;
       font-family: begum;
@@ -88,7 +88,7 @@
       margin: 20px 0;
 
       .new {
-        font-size: 32px;
+        font-size: 26px;
         font-weight: bold;
         margin-right: 15px;
         font-family: "Acumin Pro Condensed";
@@ -97,7 +97,7 @@
       .old {
         text-decoration: line-through;
         color: #aaa;
-        font-size: 20px;
+        font-size: 18px;
       }
     }
 
@@ -106,7 +106,7 @@
       align-items: center;
       gap: 15px;
       margin: 20px 0;
-      margin-top: 80px;
+      margin-top: 50px;
       font-family: "Acumin Pro Condensed";
 
       .qty-box {
@@ -179,7 +179,7 @@
     }
     &__details {
       .quantity {
-        margin-top: 60px;
+        margin-top: 50px;
       }
     }
   }
@@ -202,7 +202,7 @@
     }
     &__details {
       .quantity {
-        margin-top: 60px;
+        margin-top: 40px;
       }
     }
   }
