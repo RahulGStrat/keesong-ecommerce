@@ -1,0 +1,26 @@
+.kse-home {
+    .kse-offer-card__text {
+        display: none;
+    }
+}
+
+@include tablet {
+    .kse-home {
+        .kse-voyage__content {
+            width: 100%;
+        }
+
+        .kse-voyage__content .kse-btn--reward {
+            width: 40%;
+            font-size: 16px;
+        }
+    }
+}
+
+@include mobile {
+    .kse-home {
+        .kse-voyage__content {
+            width: 100%;
+        }
+    }
+}
