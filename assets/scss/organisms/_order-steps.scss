@@ -11,7 +11,7 @@
       font-family: "Acumin Variable Concept";
       text-align: center;
       margin: 10px 0 70px;
-      font-size: 14px;
+      font-size: 16px;
    }
 
    &__list {
@@ -84,6 +84,7 @@
    .kse-order-steps {
       &__sub {
          margin: 10px 0;
+         font-size: 14px;
       }
       &__item,
       &__item--reverse {
