@@ -29,7 +29,7 @@
    }
    &__item {
       width: 20%;
-      padding: 0px 15px 40px;
+      padding: 0px 15px 20px;
       box-sizing: border-box;
       display: flex;
       flex-direction: column;
@@ -71,7 +71,6 @@
       font-size: 14px;
       line-height: 1.4;
       color: #4d4d4f;
-      margin-bottom: 20px;
       flex-grow: 1;
       max-width: 170px;
       .last-item & {
@@ -89,15 +88,19 @@
       }
    }
    &__icon {
-      width: 80px;
-      height: 80px;
+      width: 70px;
+      height: 70px;
       object-fit: contain;
       margin-top: auto;
+      margin-left: 16px;
    }
 }
 
 @include tablet-pro {
    .kse-timeline {
+      &__wrap {
+         margin: 0 50px;
+      }
       &__item {
          width: 25%;
       }
@@ -109,6 +112,9 @@
 
 @include tablet {
    .kse-timeline {
+      &__wrap {
+         margin: 0 40px;
+      }
       &__item {
          width: 33.333%;
       }
@@ -125,6 +131,10 @@
          width: 100%;
          align-items: center;
          text-align: center;
+      }
+      &__icon {
+         margin-bottom: 10px;
+         margin-left: 0;
       }
       &__desc {
          max-width: 90%;
