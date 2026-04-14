@@ -2,6 +2,25 @@
     .kse-offer-card__text {
         display: none;
     }
+
+    .kse-offer__subtitle {
+        font-family: "Acumin Variable Concept";
+    }
+
+    .kse-offer__note {
+        font-family: "Acumin Variable Concept";
+    }
+
+    .kse-voyage {
+        .kse-btn--reward {
+            padding: 0px 28px;
+            height: 46px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            line-height: 28px;
+        }
+    }
 }
 
 @include tablet {
@@ -14,6 +33,12 @@
             width: 40%;
             font-size: 16px;
         }
+
+        .kse-voyage {
+            .kse-btn--reward {
+                height: 40px;
+            }
+        }
     }
 }
 
@@ -21,6 +46,13 @@
     .kse-home {
         .kse-voyage__content {
             width: 100%;
+        }
+
+        .kse-voyage {
+            .kse-btn--reward {
+                line-height: 20px;
+                height: 32px;
+            }
         }
     }
 }
