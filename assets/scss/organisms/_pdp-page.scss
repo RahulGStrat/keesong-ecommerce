@@ -1,0 +1,38 @@
+.kse-pdp {
+    .pdp-productsec__details {
+        .kse-btn--sec.wishlist {
+            padding: 0px 14px;
+            height: 38px;
+        }
+    }
+
+    .kse-pdptabs {
+        .tab-pane {
+            font-family: "Acumin Variable Concept";
+            font-size: 16px;
+            width: 65%;
+            font-weight: 300;
+            color: #414141;
+        }
+    }
+}
+
+@include tablet {
+    .kse-pdp {
+        .kse-pdptabs {
+            .tab-pane {
+                width: 85%;
+            }
+        }
+    }
+}
+
+@include mobile {
+    .kse-pdp {
+        .kse-pdptabs {
+            .tab-pane {
+                width: 100%;
+            }
+        }
+    }
+}
