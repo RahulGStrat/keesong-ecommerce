@@ -260,3 +260,103 @@ function initHeaderDropdown() {
 // if (window.innerWidth >= 769) {
 //   insertDividers();
 // }
+
+
+// ========================================CALANDER===========================================
+  const monthYear = document.getElementById("kse-monthYear");
+  const datesContainer = document.getElementById("kse-dates");
+
+  let currentDate = new Date();
+  let selectedDate = null; // single selected date
+
+  function isSelected(year, month, day) {
+    return (
+      selectedDate &&
+      selectedDate.year === year &&
+      selectedDate.month === month &&
+      selectedDate.day === day
+    );
+  }
+
+  function selectDate(year, month, day) {
+    selectedDate = { year, month, day };
+  }
+
+  function renderCalendar() {
+    datesContainer.innerHTML = "";
+
+    const year = currentDate.getFullYear();
+    const month = currentDate.getMonth();
+
+    const today = new Date();
+    const isCurrentMonth =
+      today.getFullYear() === year &&
+      today.getMonth() === month;
+
+    const firstDay = new Date(year, month, 1).getDay();
+    const lastDate = new Date(year, month + 1, 0).getDate();
+    const prevLastDate = new Date(year, month, 0).getDate();
+
+    const months = ["JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV","DEC"];
+    monthYear.innerText = months[month] + " " + year;
+
+    /* PREV DAYS */
+    for (let i = firstDay; i > 0; i--) {
+      const div = document.createElement("div");
+      div.classList.add("kse-muted");
+      div.innerText = prevLastDate - i + 1;
+      datesContainer.appendChild(div);
+    }
+
+    /* CURRENT MONTH */
+    for (let i = 1; i <= lastDate; i++) {
+      const wrapper = document.createElement("div");
+      const inner = document.createElement("div");
+
+      inner.classList.add("kse-date");
+      inner.innerText = i;
+
+      // TODAY
+      if (isCurrentMonth && i === today.getDate()) {
+        inner.classList.add("kse-today");
+      }
+
+      // ACTIVE (single select)
+      if (isSelected(year, month, i)) {
+        inner.classList.add("active");
+      }
+
+      // CLICK
+      inner.addEventListener("click", () => {
+        selectDate(year, month, i);
+        renderCalendar();
+      });
+
+      wrapper.appendChild(inner);
+      datesContainer.appendChild(wrapper);
+    }
+
+    /* NEXT DAYS */
+    const total = datesContainer.children.length;
+    const nextDays = 42 - total;
+
+    for (let i = 1; i <= nextDays; i++) {
+      const div = document.createElement("div");
+      div.classList.add("kse-muted");
+      div.innerText = i;
+      datesContainer.appendChild(div);
+    }
+  }
+
+  /* NAVIGATION */
+  document.getElementById("kse-prev").onclick = () => {
+    currentDate.setMonth(currentDate.getMonth() - 1);
+    renderCalendar();
+  };
+
+  document.getElementById("kse-next").onclick = () => {
+    currentDate.setMonth(currentDate.getMonth() + 1);
+    renderCalendar();
+  };
+
+  renderCalendar();

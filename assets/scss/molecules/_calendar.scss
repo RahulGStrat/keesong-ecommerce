@@ -1,0 +1,82 @@
+/* Wrapper */
+.kse-calendar {
+  // width: 380px;
+  // margin: 40px auto;
+  // background: #f3f3f3;
+  // padding: 10px;
+  // border-radius: 14px;
+  width: 55%;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 15px;
+    border-bottom: 1.5px solid #bdbdbd;
+    color: #414141;
+
+    span {
+      cursor: pointer;
+      font-size: 28px;
+       color: #414141;
+    }
+  }
+
+  &__days,
+  &__dates {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+  }
+
+  &__days {
+    div {
+      font-size: 11px;
+      color: #000;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+  }
+
+  &__dates {
+    row-gap: 8px;
+
+    div {
+      // height: 38px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      color: #000;
+      font-weight: 600;
+    }
+  }
+
+  .kse-muted {
+    color: #bdbdbd;
+  }
+
+  .kse-date {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      border: 2px solid #27ae60;
+      cursor: pointer;
+    }
+
+    &.kse-today {
+      border: 2px solid #e74c3c;
+    }
+
+    &.kse-selected {
+    border: 2px solid #27ae60;
+  }
+  }
+}
