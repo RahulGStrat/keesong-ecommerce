@@ -3,4 +3,128 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &__card {
+        width: 380px;
+        padding: 30px;
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.75);
+        backdrop-filter: blur(12px);
+    }
+
+    &__tabs {
+        display: flex;
+        border-bottom: 1px solid #ddd;
+        margin-bottom: 20px;
+    }
+
+    &__tabs .tab {
+        flex: 1;
+        padding: 12px;
+        background: none;
+        border: none;
+        font-weight: 600;
+        color: #666;
+        cursor: pointer;
+        position: relative;
+    }
+
+    &__tabs .tab.active {
+        color: #000;
+    }
+
+    &__tabs .tab.active::after {
+        content: "";
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: #ef4444;
+    }
+
+    &__content {
+        display: none;
+    }
+
+    &__content.active {
+        display: block;
+    }
+
+    &__inputgroup {
+        position: relative;
+        margin-bottom: 15px;
+    }
+
+    &__inputgroup input {
+        width: 100%;
+        padding: 14px 45px 14px 14px;
+        border-radius: 6px;
+        border: none;
+        background: #f1f1f1;
+        font-size: 14px;
+        outline: none;
+    }
+
+    &__toggleye {
+        position: absolute;
+        right: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+    }
+
+    &__toggleye svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    &__eyeclosed {
+        display: none;
+    }
+
+    &__toggleye.active .kse-login__eyeopen {
+        display: none;
+    }
+
+    &__toggleye.active .kse-login__eyeclosed {
+        display: block;
+    }
+
+    &__forgottxt {
+        display: block;
+        font-size: 13px;
+        margin-bottom: 15px;
+        color: #333;
+        text-decoration: none;
+    }
+
+    &__terms {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        font-size: 13px;
+        margin: 15px 0;
+    }
+
+    &__terms input {
+        margin-top: 3px;
+    }
+
+    &__captcha {
+        background: #f1f1f1;
+        padding: 15px;
+        border-radius: 6px;
+        margin-bottom: 15px;
+    }
+
+    .captcha-box {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 14px;
+    }
 }
