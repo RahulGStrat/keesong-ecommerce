@@ -13,7 +13,7 @@
   }
 
   &__logo {
-    width: 90px;
+    width: 100px;
 
     img {
       width: 100%;
@@ -262,6 +262,8 @@
     align-items: flex-start;
     justify-content: space-between;
     gap: 13px;
+    padding-left: 10px;
+    border-left: 1.5px solid #231f20;
   }
 
   &__actions {
@@ -292,7 +294,7 @@
   &__user {
     font-family: "Acumin Pro Condensed";
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 600;
     border-left: 1px solid #3f3f3f;
     padding-left: 7px;
     margin-left: 5px;
@@ -448,6 +450,10 @@
     &__in {
       justify-content: space-between;
       padding: 0px 16px;
+    }
+
+    &__logo {
+      width: 90px;
     }
 
     &__left {
