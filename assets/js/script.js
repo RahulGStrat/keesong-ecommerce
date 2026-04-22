@@ -46,17 +46,26 @@ function initMenu() {
   // category click
   if (categoryBtn) {
     categoryBtn.addEventListener("click", (e) => {
-      e.preventDefault();
-      categoryBtn.classList.toggle("active");
+  e.preventDefault();
 
-      if (window.innerWidth > 769) {
-        megaMenu?.classList.toggle("active");
-        megaMenu?.classList.remove("mobile");
-      } else {
-        overlay?.classList.add("active");
-        megaMenu?.classList.add("active", "mobile");
-      }
-    });
+  const isOpen = megaMenu?.classList.contains("active");
+
+  if (isOpen) {
+    // CLOSE
+    closeMenu();
+  } else {
+    // OPEN
+    categoryBtn.classList.add("active");
+
+    if (window.innerWidth > 769) {
+      megaMenu?.classList.add("active");
+      megaMenu?.classList.remove("mobile");
+    } else {
+      overlay?.classList.add("active");
+      megaMenu?.classList.add("active", "mobile");
+    }
+  }
+});
   }
 
   function closeMenu() {
