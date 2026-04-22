@@ -1,0 +1,140 @@
+.kse-RaF {
+    font-family: "Acumin Pro Condensed";
+    &__head{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 40px;
+        overflow: hidden;
+        h2{
+            background-color: #000;
+            border-radius: 10px;
+            color: #fff;
+            font-size: 14px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 0px;
+            min-width: 300px;
+            font-family: "Acumin Pro Condensed";
+            position: relative;
+            &::before, &::after{
+                position: absolute;
+                content: "";
+                top: 20px;
+                height: 1px;
+                width: 999px;
+                background-color: #000;
+            }
+            &::before{
+                right: calc(100% + 25px);
+            }
+            &::after{
+                left: calc(100% + 25px);
+            }
+        }
+    }
+    &__item {
+        border: none;
+        margin-bottom: 30px;
+        overflow: hidden;
+        border-radius: 10px !important;
+        background-color: #fff;
+    }
+
+    &__header {
+        background: #fbd2d3;
+        position: relative;
+        border-radius: 10px !important;
+        overflow: hidden;
+        font-family: "Acumin Variable Concept";
+    }
+
+    &__btn {
+        background: #fbd2d3;
+        font-weight: 600;
+        font-size: 16px;
+        color: #434141;
+        border: none;
+        box-shadow: none !important;
+
+            &:after {
+                width: 20px;
+                height: 20px;
+                background-image: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="UTF-8"%3F><svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25.95 25.95"><defs><style> .cls-1 { fill: none; stroke: %23686767; stroke-linecap: round; stroke-miterlimit: 10; stroke-width: 3.2px; } </style></defs><g id="Layer_3"><line class="cls-1" x1="12.97" y1="1.6" x2="12.97" y2="24.35"/><line class="cls-1" x1="1.6" y1="12.97" x2="24.35" y2="12.97"/></g></svg>');
+            }
+
+
+
+        &:not(.collapsed) {
+        background: #e9bcbc;
+        color: #434141;
+            &:after {
+                width: 20px;
+                height: 2px;
+                background-image: url('data:image/svg+xml,<svg width="26" height="4" viewBox="0 0 26 4" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.6 1.60001H24.35" stroke="%23686767" stroke-width="3.2" stroke-miterlimit="10" stroke-linecap="round"/></svg>');
+            }
+        }
+
+        &:focus {
+        box-shadow: none;
+        }
+    }
+
+    &__body {
+        background: #f7f7f7;
+        padding: 20px;
+        font-family: "Acumin Variable Concept";
+        font-size: 15px;
+        line-height: 22px;
+    }
+
+    &__table {
+        margin: 0;
+
+        &>:not(:first-child) {
+            border-top: 1px solid #e9bcbc;
+        }
+
+        th {
+        font-weight: 700;
+        color: #666;
+        font-size: 15px;
+        }
+
+        td {
+        vertical-align: middle;
+        }
+
+        a {
+        color: #666;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+            }
+        }
+        tbody{
+            td{
+                font-weight: normal;
+                font-family: "Acumin Variable";
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+@include mobile{
+    .kse-RaF {
+        &__head{
+            h2{
+                width: 100%;
+                min-width: 100%;
+                &::before,&::after{
+                    display: none;
+                }
+            }
+        }
+
+    }
+}
