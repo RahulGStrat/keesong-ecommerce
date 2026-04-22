@@ -1,5 +1,13 @@
 .kse-RaF {
     font-family: "Acumin Pro Condensed";
+    &__main{
+        background-color: #f6f6f6;
+    }
+    &__in{
+        width: 95%;
+        margin: 0px auto;
+        padding: 80px 0;
+    }
     &__head{
         display: flex;
         align-items: center;
@@ -40,6 +48,9 @@
         overflow: hidden;
         border-radius: 10px !important;
         background-color: #fff;
+        &:last-child{
+            margin-bottom: 0px;
+        }
     }
 
     &__header {
@@ -135,6 +146,8 @@
                 }
             }
         }
-
+        &__in{
+            padding: 40px 0;
+        }
     }
 }

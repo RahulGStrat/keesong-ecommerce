@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- styles -->
+    <link rel="stylesheet" href="../assets/css/aos.css">
+    <link rel="stylesheet" href="../assets/css/slick.css">
+    <link rel="stylesheet" href="../assets/css/slick-theme.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <!-- styles -->
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="../assets/images/keesong-favicon.png">
+    <title>Demo-Page</title>
+</head>
+
+<body>
+    <!-- body content start -->
+    <header class="kse-Head">
+
+        <div class="content-wrapper">
+
+            <div class="kse-Head__in">
+                <!-- LEFT: LOGO -->
+                <div class="kse-Head__left">
+                    <div class="kse-Head__hamburger" id="hamburger">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                    <div class="kse-Head__logo">
+                        <img src="../assets/images/keesong.png" alt="Kee Song">
+                    </div>
+                </div>
+
+                <!-- CENTER: SEARCH + MENU -->
+                <div class="kse-Head__center">
+                    <div class="kse-Head__searchwrap">
+                        <!-- Search -->
+                        <div class="kse-Head__search">
+                            <input type="text" placeholder="Search">
+                        </div>
+                        <!-- button -->
+                        <a href="#" class="kse-btn kse-btn--header">ORDERING GUIDE</a>
+                    </div>
+                    <!-- Menu -->
+                    <ul class="kse-Head__menu" id="menu">
+                        <li class="kse-Head__menu-item kse-Head__menu-item--category" id="categoryItem">
+                            <a href="#" id="categoryBtn">
+                                Categories <span class="kse-Head__menu-arrow">
+                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                        width="451.847px" height="451.847px" viewBox="0 0 451.847 451.847"
+                                        xml:space="preserve">
+                                        <g>
+                                            <path fill="#54b047" d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751
+      c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0
+      c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z">
+                                            </path>
+                                        </g>
+                                    </svg>
+                                </span>
+                            </a>
+                            <div class="kse-Head__menu-sub" id="megaMenu">
+                                <ul>
+                                    <li><a href="#">Fresh Poultry</a></li>
+                                    <li><a href="#">Frozen Poultry</a></li>
+                                    <li><a href="#">Chilled Selections</a></li>
+                                    <li><a href="#">Seafood Selections</a></li>
+                                    <li><a href="#">Red Meat Selections</a></li>
+                                    <li><a href="#">Marinated Selections</a></li>
+                                    <li><a href="#">Ready to Cook</a></li>
+                                    <li><a href="#">Sauces &amp; Seasonings</a></li>
+                                    <li><a href="#">Snacks &amp; Bites</a></li>
+                                    <li><a href="#">Value Packs Curated Bundles</a></li>
+                                </ul>
+                                <!-- <ul class="sub-items">
+                                    <li><a href="#">Fresh Chicken</a></li>
+                                    <li><a href="#">Frozen Chicken</a></li>
+                                </ul> -->
+                            </div>
+                        </li>
+                        <li class="kse-Head__menu-item"><a href="#">Special Offers</a></li>
+                        <li class="kse-Head__menu-item"><a href="#">Bundles</a></li>
+                        <li class="kse-Head__menu-item"><a href="#">Merchandise</a></li>
+                        <li class="kse-Head__menu-item"><a href="#">Recipes</a></li>
+                        <li class="kse-Head__menu-item"><a href="#">Brand Partners</a></li>
+                        <li class="kse-Head__menu-item"><a href="#">Sakura Voyage</a></li>
+                        <li class="kse-Head__menu-item"><a href="#">Contact Us</a></li>
+                    </ul>
+
+                </div>
+
+                <!-- RIGHT: ACTIONS + BUTTON -->
+                <div class="kse-Head__right">
+
+                    <!-- Icons + User -->
+                    <div class="kse-Head__actions">
+                        <a href="#" class="kse-Head__icn whatsapp">
+                            <svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26.74 26.91">
+                                <g id="Layer_1-2" data-name="Layer_1">
+                                    <g>
+                                        <path class="cls-1"
+                                            d="M2.98,19.93l-.18-.3c-1.18-1.95-1.8-4.2-1.8-6.48,0-.16,0-.33.01-.49C1.3,5.87,6.82.6,13.57.6s12.39,5.37,12.56,12.23c0,.11,0,.19,0,.28,0,6.96-5.64,12.59-12.57,12.59-2.12,0-4.22-.54-6.07-1.56l-.29-.16-6.26,2,2.03-6.04Z" />
+                                        <path class="cls-1"
+                                            d="M20.2,16.06c-.36-.18-2.1-1.04-2.43-1.15-.33-.12-.56-.18-.8.18-.24.35-.92,1.15-1.13,1.39-.21.24-.41.27-.77.09-.35-.18-1.5-.55-2.86-1.76-1.05-.94-1.77-2.1-1.98-2.45-.2-.35-.02-.55.16-.72.16-.16.35-.42.54-.62.05-.06.09-.12.13-.17.08-.13.14-.25.22-.42.12-.24.06-.44-.03-.62s-.8-1.93-1.1-2.64c-.29-.71-.59-.59-.8-.59s-.44-.03-.68-.03-.62.09-.95.44c-.33.35-1.24,1.22-1.24,2.96,0,.41.07.82.18,1.21.36,1.25,1.13,2.28,1.27,2.46.18.23,2.46,3.93,6.07,5.36,3.62,1.41,3.62.94,4.27.88.65-.05,2.1-.85,2.4-1.69.3-.83.3-1.54.21-1.69-.09-.14-.33-.23-.68-.41Z" />
+                                    </g>
+                                </g>
+                            </svg>
+                        </a>
+                        <!-- User part -->
+                        <div class="kse-Head__userWrap" id="headeruserToggle">
+                            <div class="kse-Head__icn">
+                                <svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26.39 26.39">
+                                    <g id="Layer_1-2" data-name="Layer_1">
+                                        <g>
+                                            <g>
+                                                <path class="cls-1"
+                                                    d="M5.66,23.24v-3.44c0-.74.3-1.4.86-1.91.46-.41,1.1-.73,1.85-.91,1.2-.29,2.93-.44,4.88-.42,1.74.02,3.51.17,4.75.41.75.15,1.4.46,1.88.9.56.51.85,1.18.85,1.93v3.44" />
+                                                <path class="cls-1"
+                                                    d="M13.19.6C6.25.6.6,6.25.6,13.19s5.65,12.59,12.59,12.59,12.59-5.65,12.59-12.59S20.14.6,13.19.6Z" />
+                                            </g>
+                                            <circle class="cls-1" cx="13.19" cy="10.59" r="3.99" />
+                                        </g>
+                                    </g>
+                                </svg>
+                            </div>
+
+                            <div class="kse-Head__user">Hi Name</div>
+
+                            <!-- Dropdown -->
+                            <div class="kse-Head__dropdown" id="headeruserDropdown">
+                                <ul>
+                                    <li><a href="#">Profile</a></li>
+                                    <li><a href="#">Logout</a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                        <div class="kse-Head__cart">
+                            <div class="kse-Head__icn">
+                                <svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26.94 26.39">
+                                    <g id="Layer_1-2" data-name="Layer_1">
+                                        <g>
+                                            <path class="cls-1"
+                                                d="M.61.61c.93-.01,1.86-.01,2.8,0,.32,0,.5.22.6.62.27,1.1.54,2.2.8,3.31.02.07.04.15.07.23h.36c6.75,0,13.49,0,20.24,0,.15,0,.31,0,.44.04.34.11.48.42.38.81l-2.2,8.85c-.22,1.02-1.09,1.82-2.38,1.82-5.07-.02-10.14,0-15.21,0-.19,0-.39.02-.58.08-.5.16-.83.65-.79,1.14.04.56.43.98.98,1.07.15.02.3.03.45.03,5.73,0,11.45,0,17.18,0" />
+                                            <line class="cls-1" x1="3.82" y1="9.09" x2="13.32" y2="9.09" />
+                                            <line class="cls-1" x1=".6" y1="12.57" x2="10.1" y2="12.57" />
+                                            <circle class="cls-1" cx="7.82" cy="23.32" r="2.47" />
+                                            <circle class="cls-1" cx="21.59" cy="23.32" r="2.47" />
+                                        </g>
+                                    </g>
+                                </svg>
+                            </div> <span>3</span>
+                        </div>
+                    </div>
+
+                    <!-- Free Delivery -->
+                    <a href="#" class="kse-Head__deliverytxt">
+                        <p>
+                            <strong>FREE DELIVERY</strong> FOR<br>
+                            ORDERS ABOVE <strong> S$59</strong>
+                        </p>
+                    </a>
+
+                </div>
+            </div>
+            <!-- MEGA MENU OUTSIDE HEADER MENU -->
+            <div class="kse-Head__megaWrap d-none" id="megaMenu">
+                <span class="close-btn" id="closeBtn">✖</span>
+
+                <div class="kse-Head__mega">
+
+                    <div class="kse-Head__mega-inner">
+
+                        <div class="kse-Head__mega-col">
+                            <h4>Chicken
+                                <span class="kse-Head__subLink">
+                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="451.847px"
+                                        height="451.847px" viewBox="0 0 451.847 451.847" xml:space="preserve">
+                                        <g>
+                                            <path
+                                                d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751
+                    c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0
+                    c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z">
+                                            </path>
+                                        </g>
+                                    </svg>
+                                </span>
+                            </h4>
+                            <ul class="sub-items">
+                                <li><a href="#">Fresh Chicken</a></li>
+                                <li><a href="#">Frozen Chicken</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="kse-Head__mega-col">
+                            <h4>Duck
+                                <span class="kse-Head__subLink">
+                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="451.847px"
+                                        height="451.847px" viewBox="0 0 451.847 451.847" xml:space="preserve">
+                                        <g>
+                                            <path
+                                                d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751
+                    c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0
+                    c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z">
+                                            </path>
+                                        </g>
+                                    </svg>
+                                </span>
+                            </h4>
+
+                            <ul class="sub-items">
+                                <li><a href="#">Whole Duck</a></li>
+                                <li><a href="#">Cuts</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="kse-Head__mega-col">
+                            <h4>Ready to Cook
+                                <span class="kse-Head__subLink">
+                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="451.847px"
+                                        height="451.847px" viewBox="0 0 451.847 451.847" xml:space="preserve">
+                                        <g>
+                                            <path
+                                                d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751
+                    c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0
+                    c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z">
+                                            </path>
+                                        </g>
+                                    </svg>
+                                </span>
+                            </h4>
+                            <ul class="sub-items">
+                                <li><a href="#">BBQ</a></li>
+                                <li><a href="#">Marinated</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="overlay d-none" id="overlay"></div>
+    <!-- Heade End Here -->
+
+    <!-- Content -->
+    <!-- Refer a Friend -->
+    <div class="kse-RaF__main">
+        <div class="kse-RaF__in">
+            <div class="content-wrapper">
+                <div class="kse-RaF__main">
+                    <!-- Summery -->
+                    <div class="kse-idSumry">
+
+                        <!-- Card 1 -->
+                        <div class="kse-idSumry__card kse-idSumry__card--pink">
+                            <div class="kse-idSumry__avatar">
+                                <img src="../assets/images/id-img.svg" alt="avatar">
+                            </div>
+                            <div class="kse-idSumry__text">
+                                <p class="kse-idSumry__idLbl">Membership ID</p>
+                                <h3 class="kse-idSumry__idNum">KS048103</h3>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="kse-idSumry__card kse-idSumry__card--white">
+                            <div class="kse-idSumry__points-out">
+                                <h2 class="kse-idSumry__points">
+                                    200 <span class="kse-idSumry__points-text">POINTS</span>
+                                </h2>
+                                <span class="kse-idSumry__eql">=</span>
+                                <span class="kse-idSumry__money">S$5</span>
+                            </div>
+                            <p class="kse-idSumry__desc">Available Points</p>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="kse-idSumry__card kse-idSumry__card--green">
+                            <h2 class="kse-idSumry__points">
+                                700 <span class="kse-idSumry__points-text">POINTS</span>
+                            </h2>
+                            <p class="kse-idSumry__desc">Total Points Earned</p>
+                        </div>
+
+                    </div>
+                    <!-- Summery End -->
+
+                    <div class="kse-RaF__head">
+                        <h2>Refer a Friend</h2>
+                    </div>
+                    <div class="accordion kse-RaF" id="kseRaFAccordion">
+
+                        <!-- How to Redeem -->
+                        <div class="accordion-item kse-RaF__item">
+                            <h2 class="accordion-header kse-RaF__header">
+                                <button class="accordion-button collapsed kse-RaF__btn" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#kseRaFZero">
+                                    How to Redeem
+                                </button>
+                            </h2>
+                            <div id="kseRaFZero" class="accordion-collapse collapse show"
+                                data-bs-parent="#kseRaFAccordion">
+                                <div class="accordion-body kse-RaF__body">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                    Lorem
+                                    Ipsum has been the industry's standard dummy text ever since the 1500s, when
+                                    an
+                                    unknown printer took a galley of type and scrambled it to make a type
+                                    specimen book.
+                                    It has survived not only five centuries, but also the leap into electronic
+                                    typesetting, remaining essentially unchanged. It was popularised in the
+                                    1960s with
+                                    the release of Letraset sheets containing Lorem Ipsum passages, and more
+                                    recently
+                                    with desktop publishing software like Aldus PageMaker including versions of
+                                    Lorem
+                                    Ipsum.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Points Earned -->
+                        <div class="accordion-item kse-RaF__item">
+                            <h2 class="accordion-header kse-RaF__header">
+                                <button class="accordion-button collapsed kse-RaF__btn" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#kseRaFOne">
+                                    Points Earned
+                                </button>
+                            </h2>
+                            <div id="kseRaFOne" class="accordion-collapse collapse" data-bs-parent="#kseRaFAccordion">
+                                <div class="accordion-body kse-RaF__body">
+
+                                    <table class="table kse-RaF__table">
+                                        <thead>
+                                            <tr>
+                                                <th>Month</th>
+                                                <th>Points Earned</th>
+                                                <th>Detail</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>April 2026</td>
+                                                <td>100</td>
+                                                <td><a href="#">View Details</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>April 2026</td>
+                                                <td>100</td>
+                                                <td><a href="#">View Details</a></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Points Redemption History -->
+                        <div class="accordion-item kse-RaF__item">
+                            <h2 class="accordion-header kse-RaF__header">
+                                <button class="accordion-button collapsed kse-RaF__btn" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#kseRaFTwo">
+                                    Points Redemption History
+                                </button>
+                            </h2>
+                            <div id="kseRaFTwo" class="accordion-collapse collapse" data-bs-parent="#kseRaFAccordion">
+                                <div class="accordion-body kse-RaF__body">
+                                    <div class="text-center">No Sakura Voyage points redeemed!</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Referrals -->
+                        <div class="accordion-item kse-RaF__item">
+                            <h2 class="accordion-header kse-RaF__header">
+                                <button class="accordion-button collapsed kse-RaF__btn" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#kseRaFThree">
+                                    Referrals
+                                </button>
+                            </h2>
+                            <div id="kseRaFThree" class="accordion-collapse collapse" data-bs-parent="#kseRaFAccordion">
+                                <div class="accordion-body kse-RaF__body">
+                                    <div class="text-center">No referral</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Refer a Friend End-->
+    <div class="kse-acBox__main">
+        <div class="kse-acBox__in">
+            <div class="content-wrapper">
+                <div class="kse-acBox__out">
+                    <!-- 1 -->
+                    <div class="kse-acBox">
+                        <div class="kse-acBox__header">
+                            <h2 class="kse-acBox__title">Personal Information</h2>
+                        </div>
+
+                        <div class="kse-acBox__body">
+
+                            <div class="kse-acBox__pi">
+                                <div class="kse-acBox__pi-form">
+                                    <div class="kse-acBox__pi-group">
+                                        <label class="kse-acBox__pi-label">Email</label>
+                                        <input type="email" class="kse-acBox__pi-input" value="xxxxxxxxxx@gmail.com"
+                                            disabled>
+                                    </div>
+                                    <div class="kse-acBox__pi-group">
+                                        <label class="kse-acBox__pi-label">Name <span
+                                                class="kse-acBox__pi-required">*</span></label>
+                                        <input type="text" class="kse-acBox__pi-input">
+                                    </div>
+                                    <div class="kse-acBox__pi-group">
+                                        <label class="kse-acBox__pi-label">
+                                            Mobile Number <span class="kse-acBox__pi-required">*</span>
+                                        </label>
+                                        <div class="kse-acBox__pi-mobile">
+                                            <span class="kse-acBox__pi-mobile-code">+65</span>
+                                            <input type="text" class="kse-acBox__pi-input">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--  -->
+                                <div class="kse-acBox__pi-btm">
+                                    <div class="">
+                                        <!-- Info Text -->
+                                        <p class="kse-acBox__pi-info">
+                                            To update your email address, please contact our admin via WhatsApp at +65
+                                            XXXX XXXX.
+                                        </p>
+
+                                        <!-- Mandatory -->
+                                        <p class="kse-acBox__pi-mandatory">
+                                            * Mandatory Information
+                                        </p>
+                                    </div>
+                                    <button class="kse-acBox__addBtn">
+
+                                        <span class="kse-acBox__icon kse-acBox__icon--save">
+                                            <svg id="Layer_2" xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 27.79 26.36">
+                                                <g id="Layer_3">
+                                                    <g>
+                                                        <path class="cls-1"
+                                                            d="M2.89,11.06c-.58-.65-.58-1.66,0-2.31.65-.65,1.66-.65,2.31,0l7.07,7V1.66c0-.94.72-1.66,1.59-1.66.94,0,1.66.72,1.66,1.66v14.09l7.07-7c.65-.65,1.66-.65,2.31,0,.58.65.58,1.66,0,2.31l-9.89,9.74c-.65.65-1.66.65-2.24,0L2.89,11.06Z" />
+                                                        <path class="cls-1"
+                                                            d="M27.79,15.1v11.26H0v-11.26l3.18,3.18v4.84h21.44v-4.84l3.18-3.18Z" />
+                                                    </g>
+                                                </g>
+                                            </svg>
+                                        </span>
+                                        <span class="kse-acBox__btnText">Save</span>
+                                    </button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 2 -->
+                    <div class="kse-acBox">
+                        <div class="kse-acBox__header">
+                            <h2 class="kse-acBox__title">Password Setting</h2>
+                        </div>
+
+                        <div class="kse-acBox__body">
+                            <p class="kse-acBox__empty">To chnage your password. <a href="#"
+                                    class="kse-acBox__body-link">Click
+                                    Here</a></p>
+                        </div>
+                    </div>
+                    <!-- 3 -->
+                    <div class="kse-acBox">
+                        <div class="kse-acBox__header">
+                            <h2 class="kse-acBox__title">My Addresses</h2>
+                        </div>
+
+                        <div class="kse-acBox__body">
+                            <p class="kse-acBox__empty">No available addresses!</p>
+
+                            <button class="kse-acBox__addBtn">
+
+                                <span class="kse-acBox__icon">
+                                    <svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25.95 25.95">
+                                        <g id="Layer_3">
+                                            <line class="cls-1" x1="12.97" y1="1.6" x2="12.97" y2="24.35" />
+                                            <line class="cls-1" x1="1.6" y1="12.97" x2="24.35" y2="12.97" />
+                                        </g>
+                                    </svg>
+                                </span>
+                                <span class="kse-acBox__btnText">Add new</span>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- 4 -->
+                    <div class="kse-acBox">
+                        <div class="kse-acBox__header">
+                            <h2 class="kse-acBox__title">My Cards</h2>
+                        </div>
+
+                        <div class="kse-acBox__body">
+                            <p class="kse-acBox__empty">No available cards</p>
+
+                            <button class="kse-acBox__addBtn">
+
+                                <span class="kse-acBox__icon">
+                                    <svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25.95 25.95">
+                                        <g id="Layer_3">
+                                            <line class="cls-1" x1="12.97" y1="1.6" x2="12.97" y2="24.35" />
+                                            <line class="cls-1" x1="1.6" y1="12.97" x2="24.35" y2="12.97" />
+                                        </g>
+                                    </svg>
+                                </span>
+                                <span class="kse-acBox__btnText">Add new / manage card</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Content -->
+
+    <!-- Footer -->
+    <footer class="kse-footer">
+        <div class="content-wrapper">
+            <div class="kse-footer__brandwrapouter">
+                <!-- left -->
+                <div class="kse-footer__brandwrapleft"></div>
+                <!-- Right -->
+                <div class="kse-footer__brandwrap">
+                    <!-- 1 -->
+                    <div class="kse-footer__branditm kse-footer__branditm--a">
+                        <img src="../assets/images/socotec-logo.png" alt="Socotec">
+                    </div>
+                    <!-- 2 -->
+                    <div class="kse-footer__branditm kse-footer__branditm--b">
+                        <img src="../assets/images/veterinary-logo.png" alt="veterinary">
+                    </div>
+                    <!-- 3 -->
+                    <!-- <div class="kse-footer__branditm kse-footer__branditm--c">
+                        <img src="../assets/images/otemchi-logo.png" alt="USOtemchi">
+                    </div> -->
+                    <!-- 4 -->
+                    <div class="kse-footer__branditm kse-footer__branditm--d">
+                        <img src="../assets/images/mygap-logo.png" alt="myGap">
+                    </div>
+                    <!-- 5 -->
+                    <div class="kse-footer__branditm kse-footer__branditm--e">
+                        <img src="../assets/images/myOrganic.png" alt="myOrganic">
+                    </div>
+                    <!-- 6 -->
+                    <div class="kse-footer__branditm kse-footer__branditm--f">
+                        <img src="../assets/images/lowCarbon_logo.png" alt="lowCarbon">
+                    </div>
+                    <!-- 7 -->
+                    <div class="kse-footer__branditm kse-footer__branditm--g">
+                        <img src="../assets/images/lowe_logo.png" alt="lowe">
+                    </div>
+                    <!-- 8 -->
+                    <div class="kse-footer__branditm kse-footer__branditm--h">
+                        <img src="../assets/images/Halal-logo.png" alt="Halal">
+                    </div>
+                </div>
+            </div>
+            <div class="kse-footer__innerwrap">
+                <!-- Left Logo -->
+                <div class="kse-footer__col kse-footer__col--a">
+                    <a href="#" class="kse-footer__logo">
+                        <img src="../assets/images/keesong.png" alt="KeeSongLogo">
+                    </a>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="kse-footer__col kse-footer__col--b">
+                    <h4 class="kse-footer__colhead">QUICK LINK</h4>
+
+                    <div class="kse-footer__links">
+                        <div>
+                            <h5 class="kse-footer__colsubhead">CATEGORIES</h5>
+                            <ul>
+                                <li class="kse-footer__item"><a href="#">Fresh Poultry</a></li>
+                                <li class="kse-footer__item"><a href="#">Frozen Poultry</a></li>
+                                <li class="kse-footer__item"><a href="#">Chilled Selections</a></li>
+                                <li class="kse-footer__item"><a href="#">Seafood Selections</a></li>
+                                <li class="kse-footer__item"><a href="#">Red Meat Selections</a></li>
+                                <li class="kse-footer__item"><a href="#">Marinated Selections</a></li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h5 class="kse-footer__colsubhead invisible">.</h5>
+                            <ul>
+                                <li class="kse-footer__item"><a href="#">Ready to Cook</a></li>
+                                <li class="kse-footer__item"><a href="#">Sauces & Seasonings</a></li>
+                                <li class="kse-footer__item"><a href="#">Snacks & Bites</a></li>
+                                <li class="kse-footer__item"><a href="#">Value packs /<br>Curated Bundles</a></li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <ul class="kse-footer__quicklinks">
+                                <li class="kse-footer__itemb"><a href="#">SPECIAL OFFERS</a></li>
+                                <li class="kse-footer__itemb"><a href="#">BUNDLES</a></li>
+                                <li class="kse-footer__itemb"><a href="#">MERCHANDISE</a></li>
+                                <li class="kse-footer__itemb"><a href="#">RECIPES</a></li>
+                                <li class="kse-footer__itemb"><a href="#">BRAND PARTNERS</a></li>
+                                <li class="kse-footer__itemb"><a href="#">SAKURA VOYAGE</a></li>
+                                <li class="kse-footer__itemb"><a href="#">CONTACT US</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact -->
+                <div class="kse-footer__col kse-footer__col--c">
+                    <h4 class="kse-footer__colhead">CONTACT</h4>
+                    <p class="kse-footer__contactmail">Email: <a
+                            href="mailto:contact@keesong.com">contact@keesong.com</a></p>
+                    <p class="kse-footer__contactitm">Kee Song Food Corporation (S) Pte Ltd</p>
+                    <p class="kse-footer__contactitm">26 Senoko Way Singapore 758048</p>
+                    <p class="kse-footer__policyitm">
+                        <a href="#">Kee Song</a>
+                        <span class="divider">|</span>
+                        <a href="#">Privacy Policy</a>
+                    </p>
+                </div>
+
+                <!-- Social -->
+                <div class="kse-footer__col kse-footer__col--d">
+                    <h4 class="kse-footer__colhead">CONNECT WITH US</h4>
+                    <div class="kse-footer__sclicons">
+                        <!-- Facebook -->
+                        <a href="#" class="kse-footer__sclicn">
+                            <img src="../assets/images/fb-white.svg" alt="Facebook" class="icon-default">
+                            <img src="../assets/images/fb.svg" alt="Facebook" class="icon-hover">
+                        </a>
+                        <!-- Instagram -->
+                        <a href="#" class="kse-footer__sclicn">
+                            <img src="../assets/images/ig-white.svg" alt="Instagram" class="icon-default">
+                            <img src="../assets/images/ig.svg" alt="Instagram" class="icon-hover">
+                        </a>
+                        <!-- TikTok -->
+                        <a href="#" class="kse-footer__sclicn">
+                            <img src="../assets/images/tik-white.svg" alt="TikTok" class="icon-default">
+                            <img src="../assets/images/tik.svg" alt="TikTok" class="icon-hover">
+                        </a>
+                    </div>
+                    <a href="#" class="kse-footer__saklogo">
+                        <img src="../assets/images/Sakura_voyage_logob.png" alt="SakuraVoyage" class="sakura-logo">
+                    </a>
+                </div>
+            </div>
+            <!-- copyright -->
+            <p class="kse-footer__copyright">
+                Copyright © Kee Song Food Corporation (S) Pte Ltd. All Rights Reserved 2026. This website is 2026
+                Powered by <a href="#" target="_blank">Concept Lab Communications</a>.
+            </p>
+        </div>
+    </footer>
+
+    <!-- body content end -->
+
+    <!-- scripts -->
+    <script src="../assets/js/jquery.slim.min.js"></script>
+    <script src="../assets/js/aos.js"></script>
+    <script src="../assets/js/slick.min.js"></script>
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <!-- scripts -->
+</body>
+
+</html>

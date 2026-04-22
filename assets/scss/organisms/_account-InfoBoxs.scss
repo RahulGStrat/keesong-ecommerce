@@ -3,6 +3,31 @@
   border-radius: 16px;
   overflow: hidden;
   background-color: #fff;
+  margin-bottom: 50px;
+  &:last-child{
+    margin-bottom: 0px;
+  }
+
+  &__main{
+      background-color: #ffffff;
+      position: relative;
+
+      &::before{
+        width: 65px;
+        height: 65px;
+        left: 50%;
+        background-color: #f6f6f6;
+        position: absolute;
+        content: "";
+        transform: translate(-50%, -33px) rotate(45deg);
+      }
+
+    }
+    &__in{
+        width: 95%;
+        margin: 0px auto;
+        padding: 100px 0;
+    }
 
   &__header {
     padding: 15px 24px;
@@ -252,6 +277,14 @@
       }
       &__addBtn{
         margin: 20px 0px 0px;
+      }
+      &__main{
+        &::before{
+          display: none;
+        }
+      }
+      &__in{
+        padding: 40px 0;
       }
     }
 }
