@@ -14,7 +14,7 @@
     <!-- styles -->
     <!-- favicon -->
     <link rel="icon" type="image/png" href="../assets/images/keesong-favicon.png">
-    <title>Demo-Page</title>
+    <title>Keesong</title>
 </head>
 
 <body>
@@ -373,8 +373,9 @@
                 </div>
 
                 <!-- Phone -->
-                <div class="kse-login__inputgroup">
-                    <input type="tel" placeholder="+65 Phone number">
+                <div class="kse-login__inputgroup kse-phone">
+                    <span class="kse-phone__prefix">+65</span>
+                    <input type="tel" placeholder="Phone number">
                 </div>
 
                 <!-- Password -->
@@ -479,10 +480,7 @@
 
                 <!-- reCAPTCHA (placeholder) -->
                 <div class="kse-login__captcha">
-                    <div class="captcha-box">
-                        <input type="checkbox">
-                        <span>I'm not a robot</span>
-                    </div>
+                    <img src="../assets/images/kse-Captcha.png" alt="captcha">
                 </div>
 
                 <!-- Sign Up -->
@@ -491,7 +489,7 @@
                 <p class="kse-login__or">Or</p>
 
                 <!-- Social Login -->
-                <a href="#" class="kse-btn kse-btn--header">Login with Facebook</a>
+                <a href="#" class="kse-btn kse-btn--header kse-btn--scllogin">Login with Facebook</a>
 
             </div>
 
