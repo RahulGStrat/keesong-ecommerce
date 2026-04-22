@@ -588,6 +588,7 @@
 
     &__searchwrap {
       flex-direction: column;
+      gap: 10px;
 
       .kse-btn--header {
         width: 80% !important;
@@ -604,6 +605,7 @@
     &__left {
       flex-direction: column-reverse;
       align-items: flex-start;
+      justify-content: space-between;
       gap: 10px;
     }
 
