@@ -1,0 +1,111 @@
+.kse-idSumry {
+  display: flex;
+  gap: 10px;
+
+  &__card {
+    flex: 1;
+    border-radius: 16px;
+    padding: 30px;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    font-family: "Acumin Pro Condensed";
+
+    &--pink {
+      background: #e67c7c;
+    }
+
+    &--white {
+      background: #fff;
+      color: #333;
+    }
+
+    &--green {
+      background: #53a848;
+    }
+  }
+
+  &__avatar {
+    width: 90px;
+    height: 90px;
+    padding: 15px;
+    margin: 0 auto 7px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    overflow: hidden;
+    background-color: #E44A73;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__idLbl {
+    font-size: 20px;
+    margin: 0;
+  }
+
+  &__idNum {
+    font-size: 20px;
+    margin: -3px 0 0;
+    font-weight: bold;
+  }
+
+  &__points {
+    font-size: 60px;
+    font-weight: bold;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #E44A73;
+
+    span {
+        font-size: 24px;
+        color: #E44A73;
+        margin-top: -10px;
+    }
+
+    &-out{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+  }
+
+    &__eql{
+        margin: 0px 10px;
+        font-size: 40px;
+        color: #E44A73;
+    }
+
+    &__money{
+        font-size: 42px;
+        color: #E44A73;
+    }
+
+    &__desc {
+    font-size: 18px;
+    margin-top: 10px;
+    }
+    .kse-idSumry__card--green{
+        .kse-idSumry__points, .kse-idSumry__points-text{
+            color: #fff;
+        }
+    }
+}
+
+@include mobile{
+    .kse-idSumry {
+        flex-direction: column;
+    }
+}

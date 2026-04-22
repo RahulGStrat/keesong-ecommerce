@@ -1,0 +1,257 @@
+.kse-acBox {
+  border: 2px solid #f3bcbc;
+  border-radius: 16px;
+  overflow: hidden;
+  background-color: #fff;
+
+  &__header {
+    padding: 15px 24px;
+    border-bottom: 2px solid #f3bcbc;
+    background-color: #fff;
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 600;
+    color: #454141;
+    font-family: "Acumin Variable Concept";
+  }
+
+  &__body {
+    padding: 30px 24px;
+    font-family: "Acumin Variable Concept";
+    color: #757373;
+
+    &-link{
+        color: #757373;
+        font-weight: 600;
+        &:hover{
+            text-decoration: underline;
+            color: #333;
+        }
+    }
+  }
+
+  &__empty {
+    margin: 0;
+    font-size: 16px;
+    color: #777;
+    font-family: "Acumin Variable Concept";
+  }
+
+  &__addBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background-color: #fbd2d3;
+    border: none;
+    padding: 12px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #686767;
+    transition: all 0.3s ease;
+    margin-left: auto;
+    margin-top: -22px;
+    font-family: "Acumin Pro Condensed";
+    min-width: 250px;
+
+    &:hover {
+      background-color: #ffe2e3;
+    }
+  }
+
+  &__icon {
+    width:20px;
+    &--save{
+      svg{
+        fill: #686767 !important;
+        stroke: none !important;
+      }
+    }
+    svg{
+        width: 100%;
+        fill: none;
+        stroke: #686767;
+        stroke-width: 3.3px;
+    }
+  }
+
+  &__btnText {
+    font-weight: 500;
+  }
+
+
+  &__pi {
+
+    &-form{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 50px;
+      margin-bottom: 50px;
+    }
+
+    &-group {
+      display: flex;
+      align-items: center;
+      width: calc(50% - 25px)
+    }
+
+    &-label {
+      display: block;
+      font-size: 16px;
+      color: #7a7878;
+      font-weight: 500;
+      min-width: 25%;
+    }
+
+    &-required {
+      color: #e53935;
+      margin-left: 2px;
+    }
+
+    &-input {
+      width: 100%;
+      height: 44px;
+      border: none;
+      border-radius: 6px;
+      background: #f3f3f3;
+      padding: 0 12px;
+      font-size: 14px;
+      color: #333;
+
+      &:disabled {
+        color: #8a8a8a;
+      }
+
+      &:focus {
+        outline: none;
+        background: #e8e8e8;
+      }
+    }
+
+    // Mobile input with prefix
+    &-mobile {
+      display: flex;
+      align-items: center;
+      background: #efefef;
+      border-radius: 6px;
+      overflow: hidden;
+      flex: 1;
+      width: 100%;
+
+      &-code {
+        background: #8c8c8c;
+        color: #fff;
+        padding: 5px 14px 0;
+        height: 44px;
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+      }
+
+      .kse-acBox__pi-input {
+        background: transparent;
+        flex: 1;
+        border-radius: 0;
+      }
+    }
+
+    &-info {
+      font-size: 16px;
+      color: #6f6f6f;
+      margin: 10px 0 6px;
+    }
+
+    &-mandatory {
+      font-size: 16px;
+      color: #e53935;
+      margin-bottom: 20px;
+    }
+
+    &-action {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    &-btn {
+      background: #e8bcbc;
+      color: #555;
+      border: none;
+      border-radius: 6px;
+      padding: 12px 28px;
+      font-size: 15px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+      transition: 0.2s ease;
+
+      &:hover {
+        background: #dca9a9;
+      }
+
+      .kse-acBox__pi-icon {
+        font-size: 18px;
+      }
+    }
+    &-btm{
+      display: flex;
+      align-items: flex-start;
+      .kse-acBox__addBtn{
+        margin-top: 0px;
+      }
+    }
+  }
+
+}
+
+@include mobile-tablet{
+    .kse-acBox{
+      &__pi{
+        &-form{
+          flex-direction: column;
+
+          .kse-acBox__pi-group{
+            width: calc(100% - 0px);
+          }
+        }
+        &-btm{
+          gap: 50px;
+        }
+      }
+    }
+}
+
+@include mobile{
+    .kse-acBox{
+      &__pi{
+        &-form{
+          flex-direction: column;
+          gap: 25px;
+          margin-bottom: 20px;
+
+          .kse-acBox__pi-group{
+            width: calc(100% - 0px);
+          }
+        }
+        &-group{
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: flex-start;
+        }
+        &-btm{
+          flex-direction: column;
+          gap: 10px;
+          .kse-acBox__addBtn{
+            margin-left: 0px;
+          }
+        }
+      }
+      &__addBtn{
+        margin: 20px 0px 0px;
+      }
+    }
+}
