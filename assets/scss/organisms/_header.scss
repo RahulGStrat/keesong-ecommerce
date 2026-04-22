@@ -366,6 +366,7 @@
   &__actions {
     .whatsapp {
       transition: 0.2s all ease-in-out;
+
       &:hover {
         svg {
           stroke: #25D366;
@@ -419,6 +420,25 @@
   }
 }
 
+@include tablet-pro {
+  .kse-Head {
+    &__menu li a {
+      font-size: 13px;
+    }
+
+    &__menu li {
+      &::after {
+        right: -13px;
+      }
+    }
+
+    &__deliverytxt {
+      font-size: 14px;
+      line-height: 12px;
+    }
+  }
+}
+
 @include mobile-tablet {
   .kse-Head {
     .content-wrapper {
@@ -437,11 +457,20 @@
     }
 
     &__search {
-      display: none;
+      width: 70%;
     }
 
-    &__center {
-      flex: 0;
+    &__searchwrap .kse-btn--header {
+      width: 30% !important;
+      font-size: 14px !important;
+    }
+
+    &__right {
+      gap: 6px;
+    }
+
+    &__deliverytxt {
+      font-size: 14px;
     }
 
     &__hamburger {
@@ -542,9 +571,57 @@
       padding: 0px;
     }
 
+    &__logo {
+      width: 60px;
+    }
+
+    &__icn {
+      width: 15px;
+    }
+
+    &__user {
+      font-size: 12px;
+      line-height: 18px;
+      padding-top: 2px;
+      margin-left: 0;
+    }
+
+    &__searchwrap {
+      flex-direction: column;
+
+      .kse-btn--header {
+        width: 80% !important;
+        font-size: 13px !important;
+        padding: 0;
+        height: 28px;
+      }
+    }
+
+    &__search {
+      width: 100%;
+    }
+
+    &__left {
+      flex-direction: column-reverse;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    &__actions {
+      gap: 6px;
+    }
+
+    &__in {
+      gap: 8px;
+    }
+
+    &__deliverytxt {
+      font-size: 12px;
+    }
+
     &__menu {
       position: absolute;
-      top: 85px;
+      top: 120px;
       left: 0;
       width: 100%;
       background: white;
