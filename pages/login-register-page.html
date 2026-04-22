@@ -14,7 +14,7 @@
     <!-- styles -->
     <!-- favicon -->
     <link rel="icon" type="image/png" href="../assets/images/keesong-favicon.png">
-    <title>Demo-Page</title>
+    <title>Keesong</title>
 </head>
 
 <body>
@@ -38,12 +38,14 @@
 
                 <!-- CENTER: SEARCH + MENU -->
                 <div class="kse-Head__center">
-
-                    <!-- Search -->
-                    <div class="kse-Head__search">
-                        <input type="text" placeholder="Search">
+                    <div class="kse-Head__searchwrap">
+                        <!-- Search -->
+                        <div class="kse-Head__search">
+                            <input type="text" placeholder="Search">
+                        </div>
+                        <!-- button -->
+                        <a href="#" class="kse-btn kse-btn--header">ORDERING GUIDE</a>
                     </div>
-
                     <!-- Menu -->
                     <ul class="kse-Head__menu" id="menu">
                         <li class="kse-Head__menu-item kse-Head__menu-item--category" id="categoryItem">
@@ -82,10 +84,11 @@
                         </li>
                         <li class="kse-Head__menu-item"><a href="#">Special Offers</a></li>
                         <li class="kse-Head__menu-item"><a href="#">Bundles</a></li>
-                        <li class="kse-Head__menu-item"><a href="#">Recipes</a></li>
                         <li class="kse-Head__menu-item"><a href="#">Merchandise</a></li>
+                        <li class="kse-Head__menu-item"><a href="#">Recipes</a></li>
                         <li class="kse-Head__menu-item"><a href="#">Brand Partners</a></li>
                         <li class="kse-Head__menu-item"><a href="#">Sakura Voyage</a></li>
+                        <li class="kse-Head__menu-item"><a href="#">Contact Us</a></li>
                     </ul>
 
                 </div>
@@ -95,7 +98,7 @@
 
                     <!-- Icons + User -->
                     <div class="kse-Head__actions">
-                        <div class="kse-Head__icn">
+                        <a href="#" class="kse-Head__icn whatsapp">
                             <svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26.74 26.91">
                                 <g id="Layer_1-2" data-name="Layer_1">
                                     <g>
@@ -106,7 +109,7 @@
                                     </g>
                                 </g>
                             </svg>
-                        </div>
+                        </a>
                         <!-- User part -->
                         <div class="kse-Head__userWrap" id="headeruserToggle">
                             <div class="kse-Head__icn">
@@ -154,8 +157,13 @@
                         </div>
                     </div>
 
-                    <!-- CTA -->
-                    <a href="#" class="kse-btn kse-btn--header">ORDERING GUIDE</a>
+                    <!-- Free Delivery -->
+                    <a href="#" class="kse-Head__deliverytxt">
+                        <p>
+                            <strong>FREE DELIVERY</strong> FOR<br>
+                            ORDERS ABOVE <strong> S$59</strong>
+                        </p>
+                    </a>
 
                 </div>
             </div>
@@ -373,8 +381,9 @@
                 </div>
 
                 <!-- Phone -->
-                <div class="kse-login__inputgroup">
-                    <input type="tel" placeholder="+65 Phone number">
+                <div class="kse-login__inputgroup kse-phone">
+                    <span class="kse-phone__prefix">+65</span>
+                    <input type="tel" placeholder="Phone number">
                 </div>
 
                 <!-- Password -->
@@ -479,10 +488,7 @@
 
                 <!-- reCAPTCHA (placeholder) -->
                 <div class="kse-login__captcha">
-                    <div class="captcha-box">
-                        <input type="checkbox">
-                        <span>I'm not a robot</span>
-                    </div>
+                    <img src="../assets/images/kse-Captcha.png" alt="captcha">
                 </div>
 
                 <!-- Sign Up -->
@@ -491,7 +497,7 @@
                 <p class="kse-login__or">Or</p>
 
                 <!-- Social Login -->
-                <a href="#" class="kse-btn kse-btn--header">Login with Facebook</a>
+                <a href="#" class="kse-btn kse-btn--header kse-btn--scllogin">Login with Facebook</a>
 
             </div>
 

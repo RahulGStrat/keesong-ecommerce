@@ -28,13 +28,31 @@
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    justify-content: space-between;
+    gap: 15px;
+  }
+
+  &__searchwrap {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    .kse-btn--header {
+      width: 20% !important;
+      height: 38px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 15px !important;
+    }
   }
 
   &__search {
+    width: 80%;
+
     input {
       width: 100%;
-      padding: 10px;
+      padding: 8px;
       border: none;
       background: #f2f2f2;
       border-radius: 4px;
@@ -46,6 +64,18 @@
       &:focus {
         outline: none;
       }
+    }
+  }
+
+  &__deliverytxt {
+    color: #f14a50;
+    font-size: 16px;
+    line-height: 14px;
+    font-family: "Acumin Pro Condensed";
+    text-decoration: none;
+
+    &:hover {
+      color: #d4373d;
     }
   }
 
@@ -65,10 +95,11 @@
 
       a {
         text-decoration: none;
-        font-size: 16px;
+        font-size: 15px;
         text-transform: uppercase;
         color: #121212;
         font-family: "Acumin Pro Condensed";
+        font-weight: 600;
         transition: 0.2s all ease-in-out;
 
         &:hover {
@@ -83,7 +114,7 @@
       &::after {
         content: "|";
         position: absolute;
-        right: -27px;
+        right: -22px;
         color: #121212;
       }
 
@@ -106,28 +137,30 @@
         margin-top: -2px;
       }
     }
-    &-sub{
+
+    &-sub {
       display: none;
       position: absolute;
       left: 0px;
-      top:30px;
+      top: 30px;
       padding: 10px;
       background: #fff;
       box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
       min-width: 210px;
 
-      &.active{
+      &.active {
         display: block;
       }
 
       ul {
-      list-style: none;
-      padding: 0;
+        list-style: none;
+        padding: 0;
 
         li {
           margin-bottom: 6px;
           transition: 0.3s all ease-in-out;
-          &::after{
+
+          &::after {
             display: none;
           }
 
@@ -226,9 +259,9 @@
     flex: 0 0 auto;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: flex-start;
     justify-content: space-between;
-    gap: 8px;
+    gap: 13px;
   }
 
   &__actions {
@@ -330,6 +363,19 @@
     }
   }
 
+  &__actions {
+    .whatsapp {
+      transition: 0.2s all ease-in-out;
+
+      &:hover {
+        svg {
+          stroke: #25D366;
+          transition: 0.2s all ease-in-out;
+        }
+      }
+    }
+  }
+
   &__dropdown {
     position: absolute;
     top: 135%;
@@ -374,6 +420,25 @@
   }
 }
 
+@include tablet-pro {
+  .kse-Head {
+    &__menu li a {
+      font-size: 13px;
+    }
+
+    &__menu li {
+      &::after {
+        right: -13px;
+      }
+    }
+
+    &__deliverytxt {
+      font-size: 14px;
+      line-height: 12px;
+    }
+  }
+}
+
 @include mobile-tablet {
   .kse-Head {
     .content-wrapper {
@@ -392,11 +457,20 @@
     }
 
     &__search {
-      display: none;
+      width: 70%;
     }
 
-    &__center {
-      flex: 0;
+    &__searchwrap .kse-btn--header {
+      width: 30% !important;
+      font-size: 14px !important;
+    }
+
+    &__right {
+      gap: 6px;
+    }
+
+    &__deliverytxt {
+      font-size: 14px;
     }
 
     &__hamburger {
@@ -483,7 +557,8 @@
       li::after {
         display: none;
       }
-      &-sub{
+
+      &-sub {
         position: unset;
       }
     }
@@ -496,9 +571,57 @@
       padding: 0px;
     }
 
+    &__logo {
+      width: 60px;
+    }
+
+    &__icn {
+      width: 15px;
+    }
+
+    &__user {
+      font-size: 12px;
+      line-height: 18px;
+      padding-top: 2px;
+      margin-left: 0;
+    }
+
+    &__searchwrap {
+      flex-direction: column;
+
+      .kse-btn--header {
+        width: 80% !important;
+        font-size: 13px !important;
+        padding: 0;
+        height: 28px;
+      }
+    }
+
+    &__search {
+      width: 100%;
+    }
+
+    &__left {
+      flex-direction: column-reverse;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    &__actions {
+      gap: 6px;
+    }
+
+    &__in {
+      gap: 8px;
+    }
+
+    &__deliverytxt {
+      font-size: 12px;
+    }
+
     &__menu {
       position: absolute;
-      top: 85px;
+      top: 120px;
       left: 0;
       width: 100%;
       background: white;
@@ -518,7 +641,8 @@
       li::after {
         display: none;
       }
-      &-sub{
+
+      &-sub {
         position: unset;
       }
     }
