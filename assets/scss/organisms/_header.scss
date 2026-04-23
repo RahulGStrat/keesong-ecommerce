@@ -310,6 +310,10 @@
     align-items: center;
     gap: 3px;
 
+    span {
+      color: #121212;
+    }
+
   }
 
   &__btn {
@@ -378,6 +382,17 @@
           stroke: #25D366;
           transition: 0.2s all ease-in-out;
         }
+      }
+    }
+  }
+
+  &__cart .kse-Head__icn{
+    transition: 0.2s all ease-in-out;
+
+    &:hover {
+      svg {
+        stroke: #f14a50;
+        transition: 0.2s all ease-in-out;
       }
     }
   }
