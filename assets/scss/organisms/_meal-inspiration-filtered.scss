@@ -1,0 +1,17 @@
+.kse-meal-outer {
+    background: linear-gradient(180deg,
+            #ffffff 0%,
+            #fef5f6 25%,
+            #fce2e6 50%);
+    display: flex;
+    gap: 20px;
+
+    .kse-meal-filter {
+        width: 25%;
+        padding: 24px 0px 24px 24px;
+
+        .accordion-item {
+            background-color: unset;
+        }
+    }
+}

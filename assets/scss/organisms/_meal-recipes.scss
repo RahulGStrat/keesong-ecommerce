@@ -1,6 +1,6 @@
 .kse-meal-recipes {
    padding: 20px 20px 40px;
-   background: linear-gradient(to top, #fde5e8 0%, #ffffff 80%);
+   width: 75%;
    margin-bottom: 60px;
 
    &:hover .kse-meal-recipes__image:hover~.kse-meal-recipes__content .kse-meal-recipes__title a {
@@ -15,7 +15,7 @@
    }
 
    &__card {
-      width: calc(20% - 16px);
+      width: calc(25% - 16px);
       background: #fff;
       border-radius: 10px;
       display: flex;
