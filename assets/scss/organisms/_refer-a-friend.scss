@@ -1,7 +1,7 @@
 .kse-RaF {
-    font-family: "Acumin Pro Condensed";
+    font-family: 'Myriad Pro';
     &__main{
-        background-color: #f6f6f6;
+        background-color: #f3f3f3;
     }
     &__in{
         width: 95%;
@@ -25,6 +25,7 @@
             padding: 14px 0px;
             min-width: 300px;
             font-family: "Acumin Pro Condensed";
+            font-weight: 600;
             position: relative;
             &::before, &::after{
                 position: absolute;
@@ -98,6 +99,12 @@
         font-family: "Acumin Variable Concept";
         font-size: 15px;
         line-height: 22px;
+        color: #757373;
+
+        .text-center {
+            color: #414141;
+            font-weight: 600;
+        }
     }
 
     &__table {
@@ -115,6 +122,7 @@
 
         td {
         vertical-align: middle;
+        font-family: "Acumin Variable Concept";
         }
 
         a {
@@ -128,7 +136,8 @@
         tbody{
             td{
                 font-weight: normal;
-                font-family: "Acumin Variable";
+                font-family: "Acumin Variable Concept"; 
+                color: #757373;
                 font-size: 14px;
             }
         }

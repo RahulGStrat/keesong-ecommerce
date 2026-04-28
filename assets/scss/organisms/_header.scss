@@ -13,7 +13,7 @@
   }
 
   &__logo {
-    width: 90px;
+    width: 100px;
 
     img {
       width: 100%;
@@ -73,6 +73,10 @@
     line-height: 14px;
     font-family: "Acumin Pro Condensed";
     text-decoration: none;
+
+    p {
+      font-family: "Acumin Pro Condensed";
+    }
 
     &:hover {
       color: #d4373d;
@@ -262,6 +266,8 @@
     align-items: flex-start;
     justify-content: space-between;
     gap: 13px;
+    padding-left: 10px;
+    border-left: 1.5px solid #231f20;
   }
 
   &__actions {
@@ -292,7 +298,7 @@
   &__user {
     font-family: "Acumin Pro Condensed";
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 600;
     border-left: 1px solid #3f3f3f;
     padding-left: 7px;
     margin-left: 5px;
@@ -303,6 +309,10 @@
     display: flex;
     align-items: center;
     gap: 3px;
+
+    span {
+      color: #121212;
+    }
 
   }
 
@@ -372,6 +382,17 @@
           stroke: #25D366;
           transition: 0.2s all ease-in-out;
         }
+      }
+    }
+  }
+
+  &__cart .kse-Head__icn{
+    transition: 0.2s all ease-in-out;
+
+    &:hover {
+      svg {
+        stroke: #f14a50;
+        transition: 0.2s all ease-in-out;
       }
     }
   }
@@ -448,6 +469,10 @@
     &__in {
       justify-content: space-between;
       padding: 0px 16px;
+    }
+
+    &__logo {
+      width: 90px;
     }
 
     &__left {

@@ -13,7 +13,7 @@
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    font-family: "Acumin Pro Condensed";
+    font-family: 'Myriad Pro';
 
     &--pink {
       background: #e67c7c;
@@ -27,6 +27,10 @@
     &--green {
       background: #53a848;
     }
+  }
+
+  &__idLbl {
+    font-weight: 600;
   }
 
   &__avatar {
@@ -68,45 +72,54 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    color: #E44A73;
+    color: #f14a50;
+    font-family: "Acumin Pro Condensed";
 
     span {
-        font-size: 24px;
-        color: #E44A73;
-        margin-top: -10px;
+      font-size: 24px;
+      color: #f14a50;
+      margin-top: -10px;
+      font-weight: 600;
     }
 
-    &-out{
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    &-out {
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
   }
 
-    &__eql{
-        margin: 0px 10px;
-        font-size: 40px;
-        color: #E44A73;
-    }
+  &__eql {
+    margin: 0px 10px;
+    font-size: 40px;
+    color: #f14a50;
+    font-weight: 600;
+  }
 
-    &__money{
-        font-size: 42px;
-        color: #E44A73;
-    }
+  &__money {
+    font-size: 42px;
+    color: #f14a50;
+    font-weight: 600;
+  }
 
-    &__desc {
+  &__desc {
     font-size: 18px;
     margin-top: 10px;
+    font-weight: 600;
+
+  }
+
+  .kse-idSumry__card--green {
+
+    .kse-idSumry__points,
+    .kse-idSumry__points-text {
+      color: #fff;
     }
-    .kse-idSumry__card--green{
-        .kse-idSumry__points, .kse-idSumry__points-text{
-            color: #fff;
-        }
-    }
+  }
 }
 
-@include mobile{
-    .kse-idSumry {
-        flex-direction: column;
-    }
+@include mobile {
+  .kse-idSumry {
+    flex-direction: column;
+  }
 }
