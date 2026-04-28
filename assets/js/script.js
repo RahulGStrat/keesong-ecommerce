@@ -417,10 +417,10 @@ function initPasswordToggle() {
          // Toggle input type
          input.type = input.type === "password" ? "text" : "password";
 
-         // Toggle icon state
-         toggle.classList.toggle("active");
-      });
-   });
+      // Toggle icon state
+      toggle.classList.toggle('active');
+    });
+  });
 }
 // Recipe popup slider
 function initRecipePopupSlider() {
