@@ -105,11 +105,15 @@
       background: linear-gradient(to top, #fde5e8 0%, #ffffff 100%);
 
       &__card {
-         width: 100%;
+         width: calc(100% - 24px);
       }
 
       &__title {
          font-size: 18px;
+      }
+
+      &__grid {
+         justify-content: center;
       }
    }
 }
