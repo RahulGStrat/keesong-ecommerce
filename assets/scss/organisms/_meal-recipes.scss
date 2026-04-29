@@ -8,6 +8,11 @@
       transition: ease-in 0.3s;
    }
 
+   .kse-meal-recipes__card:has(.kse-btn:hover) .kse-meal-recipes__title a {
+      color: #f14a50;
+      transition: ease-in 0.3s;
+   }
+
    &__grid {
       display: flex;
       gap: 20px;

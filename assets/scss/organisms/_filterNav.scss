@@ -60,3 +60,26 @@
         }
     }
 }
+
+@include tablet {
+    .kse-filterNav {
+        &__heading {
+            font-size: 14px;
+        }
+
+        &__list {
+            font-size: 16px;
+        }
+    }
+}
+@include mobile {
+    .kse-filterNav {
+        &__heading {
+            font-size: 14px;
+        }
+
+        &__list {
+            font-size: 16px;
+        }
+    }
+}

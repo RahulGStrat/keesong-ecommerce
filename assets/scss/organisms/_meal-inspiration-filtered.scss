@@ -26,3 +26,35 @@
         }
     }
 }
+
+@include tablet-pro {
+    .kse-meal-outer {
+        .kse-meal-recipes__card {
+            width: calc(33.33% - 16px);
+        }
+    }
+}
+
+@include tablet {
+    .kse-meal-outer {
+        .kse-meal-recipes__card {
+            width: calc(50% - 16px);
+        }
+    }
+}
+
+@include mobile {
+    .kse-meal-outer {
+        flex-direction: column;
+        gap: 0;
+
+        .kse-meal-filter {
+            width: 100%;
+            padding: 20px;
+        }
+
+        .kse-meal-recipes {
+            width: 100%;
+        }
+    }
+}

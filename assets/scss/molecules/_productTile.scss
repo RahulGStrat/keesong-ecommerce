@@ -107,6 +107,7 @@
          display: flex;
          transition: ease-in 0.3s;
          font-family: "Begum";
+
          &:hover {
             color: #f14a50;
          }
@@ -133,6 +134,15 @@
       color: #414141;
       font-family: "Acumin Variable Concept";
       padding-bottom: 10px;
+      display: flex;
+      flex-direction: column;
+   }
+
+   &__oldprice {
+      text-decoration: line-through;
+      color: #b3b3b3;
+      font-weight: 400;
+      font-size: 13px;
    }
 
    &__actions {
@@ -146,18 +156,19 @@
       text-align: center;
       height: 35px;
    }
+
    &:hover {
       .kse-PdTile__title a {
          color: #f14a50;
       }
+
       .kse-btn {
-         background: linear-gradient(
-            90deg,
-            #f68a8e 0%,
-            #f36a6f 40%,
-            #f14e54 100%
-         );
+         background: linear-gradient(90deg,
+               #f68a8e 0%,
+               #f36a6f 40%,
+               #f14e54 100%);
       }
+
       .kse-cart-btn {
          background: #7d7d7d;
          // background: linear-gradient(90deg, #f14e54 0%, #f36a6f 40%, #f68a8e 100%);
