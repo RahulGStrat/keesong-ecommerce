@@ -96,10 +96,17 @@
       color: #680a38;
    }
    &__subtitle {
+      font-family: "Acumin Variable Concept";
       font-size: 16px;
       color: #fff;
-      margin-top: 12px;
-      font-family: "Acumin Variable Concept";
+      text-wrap: balance;
+      margin: 12px 0;
+   }
+   &__note {
+      font-family: "Acumin Pro Condensed";
+      font-size: 14px;
+      font-weight: 600;
+      color: #fff;
    }
    &__stats {
       margin-top: auto;
@@ -183,6 +190,7 @@
          padding-left: 12px;
          margin-bottom: 14px;
          line-height: 1.4;
+         text-wrap: balance;
       }
       p {
          margin-bottom: 14px;
