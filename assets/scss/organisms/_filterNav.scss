@@ -3,7 +3,7 @@
     font-family: "Acumin Pro Condensed";
     &__heading{
         font-family: "Acumin Pro Condensed";
-        font-size: 16px;
+        font-size: 17px;
         font-weight: 600;
         margin-bottom: 15px;
     }
@@ -20,7 +20,7 @@
         background-color: transparent !important;
         border-radius: 0px;
         font-family: "Acumin Pro Condensed";
-        font-size: 18px;
+        font-size: 19px;
         font-weight: 600;
         margin-bottom: 10px;
 
@@ -43,20 +43,43 @@
         gap: 10px;
         margin-bottom: 10px;
         padding-bottom: 10px;
-        border-bottom: 1px solid #ccc;
+        border-bottom: 1.5px solid #ccc;
         &-input{
             margin-top: 0px;
             border-radius: 2px !important;
             height: 15px;
             width: 15px;
+            accent-color: #f14a50;
         }
         &-label{
-            line-height: 18px;
-            font-size: 16px;
+            font-size: 15px;
             height: 15px;
             display: flex;
             font-weight: 500;
-            font-family: "Acumin Pro Condensed";
+            font-family: "Acumin Variable Concept";
+        }
+    }
+}
+
+@include tablet {
+    .kse-filterNav {
+        &__heading {
+            font-size: 14px;
+        }
+
+        &__list {
+            font-size: 16px;
+        }
+    }
+}
+@include mobile {
+    .kse-filterNav {
+        &__heading {
+            font-size: 14px;
+        }
+
+        &__list {
+            font-size: 16px;
         }
     }
 }

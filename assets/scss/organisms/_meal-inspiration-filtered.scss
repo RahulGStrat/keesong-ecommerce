@@ -5,6 +5,7 @@
             #fce2e6 50%);
     display: flex;
     gap: 20px;
+    margin-bottom: 40px;
 
     .kse-meal-filter {
         width: 25%;
@@ -12,6 +13,48 @@
 
         .accordion-item {
             background-color: unset;
+        }
+
+        .kse-filterNav__check-label {
+            font-size: 14px;
+        }
+    }
+
+    .kse-meal-recipes {
+        .kse-meal-recipes__title a {
+            font-size: 14px;
+        }
+    }
+}
+
+@include tablet-pro {
+    .kse-meal-outer {
+        .kse-meal-recipes__card {
+            width: calc(33.33% - 16px);
+        }
+    }
+}
+
+@include tablet {
+    .kse-meal-outer {
+        .kse-meal-recipes__card {
+            width: calc(50% - 16px);
+        }
+    }
+}
+
+@include mobile {
+    .kse-meal-outer {
+        flex-direction: column;
+        gap: 0;
+
+        .kse-meal-filter {
+            width: 100%;
+            padding: 20px;
+        }
+
+        .kse-meal-recipes {
+            width: 100%;
         }
     }
 }

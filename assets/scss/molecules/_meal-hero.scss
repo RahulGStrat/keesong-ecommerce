@@ -37,6 +37,7 @@
       font-size: 16px;
    }
 }
+
 @include tablet {
    .kse-meal-hero {
       &__title {
@@ -44,10 +45,17 @@
       }
    }
 }
+
 @include mobile {
    .kse-meal-hero {
+      margin: 20px 0 10px;
+
       &__title {
          font-size: 28px;
       }
+
+      &__desc {
+         font-size: 12px;
+      } 
    }
 }
