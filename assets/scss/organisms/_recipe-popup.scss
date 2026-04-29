@@ -1,29 +1,29 @@
 .kse-recipe-popup {
-   position: fixed;
+   // position: fixed;
    inset: 0;
    z-index: 999;
    display: flex;
    align-items: center;
    justify-content: center;
-   &__overlay {
-      position: absolute;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.6);
-   }
-   &__modal {
-      position: relative;
-      z-index: 2;
-      width: 100%;
-      max-width: 1000px;
-      max-height: 90vh;
-      overflow-x: hidden;
-      overflow-y: auto;
-      margin: 0 20px;
-      background: #fff;
-   }
+
+   // &__overlay {
+   //    position: absolute;
+   //    inset: 0;
+   //    background: rgba(0, 0, 0, 0.6);
+   // }
+
+   // &__modal {
+   //    position: relative;
+   //    z-index: 2;
+   //    width: 100%;
+   //    overflow-x: hidden;
+   //    overflow-y: auto;
+   //    margin: 0 20px;
+   //    background: #fff;
+   // }
    &__inner {
       font-family: "Acumin Pro Condensed";
-      padding: 10px 0;
+      padding: 60px 0 40px;
    }
 
    &__header {
@@ -62,7 +62,7 @@
    }
 
    &__hero-img {
-      width: 52%;
+      width: 40%;
 
       img {
          width: 100%;
@@ -77,6 +77,7 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
+      align-items: center;
       gap: 7px;
       font-family: "Begum";
       text-align: center;
@@ -85,23 +86,27 @@
    }
 
    &__tag {
-      font-size: 14px;
+      font-size: 24px;
+      font-weight: 600;
       margin-bottom: 10px;
       color: #fff;
    }
 
    &__title {
-      font-size: 32px;
+      font-size: 36px;
       font-weight: 700;
       color: #680a38;
    }
+
    &__subtitle {
-      font-family: "Acumin Variable Concept";
-      font-size: 16px;
+      font-family: "Open Sans";
+      font-size: 18px;
       color: #fff;
       text-wrap: balance;
       margin: 12px 0;
+      width: 70%;
    }
+
    &__note {
       font-family: "Acumin Pro Condensed";
       font-size: 14px;
@@ -117,6 +122,7 @@
 
    &__stats-item {
       display: flex;
+      align-items: center;
       gap: 5px;
 
       img {
