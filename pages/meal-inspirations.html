@@ -270,139 +270,472 @@
                     products.
                 </p>
             </div>
-            <div class="kse-meal-filter">
-                
-            </div>
-            <div class="kse-meal-recipes">
-                <div class="kse-meal-recipes__grid">
+            <div class="kse-meal-outer">
+                <div class="kse-meal-filter">
+                    <div class="kse-filterNav__main">
+                        <div class="kse-filterNav__heading">FILTER BY</div>
+                        <div class="accordion kse-filterNav" id="filterAccordion">
 
-                    <!-- CARD -->
-                    <div class="kse-meal-recipes__card">
-                        <a href="#" class="kse-meal-recipes__image">
-                            <img src="../assets/images/jamie-olivers-chicken.png" />
-                        </a>
-                        <div class="kse-meal-recipes__content">
+                            <!-- Categories -->
+                            <div class="accordion-item kse-filterNav__item">
+                                <h2 class="" id="headingOne">
+                                    <button class="kse-filterNav__list accordion-button collapsed" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                                        CATEGORIES
+                                    </button>
+                                </h2>
 
-                            <h3 class="kse-meal-recipes__title">
-                                <a href="#">
-                                    Jamie Oliver's Chicken<br>in milk (simplified)
-                                </a>
-                            </h3>
+                                <div id="collapseOne" class="accordion-collapse collapse show"
+                                    data-bs-parent="#filterAccordion">
+                                    <div class="accordion-body p-0">
 
-                            <div class="kse-meal-recipes__actions">
-                                <span class="kse-meal-recipes__share">SHARE</span>
+                                        <div class="kse-filterNav__check">
+                                            <input class="kse-filterNav__check-input" type="checkbox" id="cat1">
+                                            <label class="kse-filterNav__check-label" for="cat1">Chinese</label>
+                                        </div>
 
-                                <div class="kse-recipe-card__icons">
-                                    <a href="#" class="kse-recipe-card__icon">
-                                        <img src="../assets/images/fb.svg" class="icon-default" />
-                                        <img src="../assets/images/fb-white.svg" class="icon-hover" />
-                                    </a>
-                                    <a href="#" class="kse-recipe-card__icon">
-                                        <img src="../assets/images/ig.svg" class="icon-default" />
-                                        <img src="../assets/images/ig-white.svg" class="icon-hover" />
-                                    </a>
-                                    <a href="#" class="kse-recipe-card__icon">
-                                        <img src="../assets/images/tik.svg" class="icon-default" />
-                                        <img src="../assets/images/tik-white.svg" class="icon-hover" />
-                                    </a>
+                                        <div class="kse-filterNav__check">
+                                            <input class="kse-filterNav__check-input" type="checkbox" id="cat2">
+                                            <label class="kse-filterNav__check-label" for="cat2">Western</label>
+                                        </div>
+
+                                        <div class="kse-filterNav__check">
+                                            <input class="kse-filterNav__check-input" type="checkbox" id="cat3">
+                                            <label class="kse-filterNav__check-label" for="cat3">Middle Eastern</label>
+                                        </div>
+
+                                        <div class="kse-filterNav__check">
+                                            <input class="kse-filterNav__check-input" type="checkbox" id="cat4">
+                                            <label class="kse-filterNav__check-label" for="cat4">Indian</label>
+                                        </div>
+
+                                        <div class="kse-filterNav__check">
+                                            <input class="kse-filterNav__check-input" type="checkbox" id="cat5">
+                                            <label class="kse-filterNav__check-label" for="cat5">Fusion</label>
+                                        </div>
+
+                                    </div>
                                 </div>
+                            </div>
 
-                                <a href="#" class="kse-btn kse-btn--sec">Recipe</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="kse-meal-recipes">
+                    <div class="kse-meal-recipes__grid">
+                        <!-- CARD -->
+                        <div class="kse-meal-recipes__card">
+                            <a href="#" class="kse-meal-recipes__image">
+                                <img src="../assets/images/jamie-olivers-chicken.png" />
+                            </a>
+                            <div class="kse-meal-recipes__content">
+
+                                <h3 class="kse-meal-recipes__title">
+                                    <a href="#">
+                                        Jamie Oliver's Chicken<br>in milk (simplified)
+                                    </a>
+                                </h3>
+
+                                <div class="kse-meal-recipes__actions">
+                                    <span class="kse-meal-recipes__share">SHARE</span>
+
+                                    <div class="kse-recipe-card__icons">
+                                        <a href="#" class="kse-recipe-card__icon">
+                                            <img src="../assets/images/fb.svg" class="icon-default" />
+                                            <img src="../assets/images/fb-white.svg" class="icon-hover" />
+                                        </a>
+                                        <a href="#" class="kse-recipe-card__icon">
+                                            <img src="../assets/images/ig.svg" class="icon-default" />
+                                            <img src="../assets/images/ig-white.svg" class="icon-hover" />
+                                        </a>
+                                        <a href="#" class="kse-recipe-card__icon">
+                                            <img src="../assets/images/tik.svg" class="icon-default" />
+                                            <img src="../assets/images/tik-white.svg" class="icon-hover" />
+                                        </a>
+                                    </div>
+
+                                    <a href="#" class="kse-btn kse-btn--sec">Recipe</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="kse-meal-recipes__card">
+                            <a href="#" class="kse-meal-recipes__image">
+                                <img src="../assets/images/herbal-chicken.png" />
+                            </a>
+
+                            <div class="kse-meal-recipes__content">
+                                <h3 class="kse-meal-recipes__title"><a href="#">Herbal Chicken Pot<br>(No Water
+                                        Added)</a>
+                                </h3>
+
+                                <div class="kse-meal-recipes__actions">
+                                    <span class="kse-meal-recipes__share">SHARE</span>
+
+                                    <div class="kse-recipe-card__icons">
+                                        <a href="#" class="kse-recipe-card__icon">
+                                            <img src="../assets/images/fb.svg" class="icon-default" />
+                                            <img src="../assets/images/fb-white.svg" class="icon-hover" />
+                                        </a>
+                                        <a href="#" class="kse-recipe-card__icon">
+                                            <img src="../assets/images/ig.svg" class="icon-default" />
+                                            <img src="../assets/images/ig-white.svg" class="icon-hover" />
+                                        </a>
+                                        <a href="#" class="kse-recipe-card__icon">
+                                            <img src="../assets/images/tik.svg" class="icon-default" />
+                                            <img src="../assets/images/tik-white.svg" class="icon-hover" />
+                                        </a>
+                                    </div>
+
+                                    <a href="#" class="kse-btn kse-btn--sec">Recipe</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="kse-meal-recipes__card">
+                            <a href="#" class="kse-meal-recipes__image">
+                                <img src="../assets/images/roasted-mandarin.png" />
+                            </a>
+
+                            <div class="kse-meal-recipes__content">
+                                <h3 class="kse-meal-recipes__title"><a href="#">Roasted Mandarin<br>Orange Chicken</a>
+                                </h3>
+
+                                <div class="kse-meal-recipes__actions">
+                                    <span class="kse-meal-recipes__share">SHARE</span>
+
+                                    <div class="kse-recipe-card__icons">
+                                        <a href="#" class="kse-recipe-card__icon">
+                                            <img src="../assets/images/fb.svg" class="icon-default" />
+                                            <img src="../assets/images/fb-white.svg" class="icon-hover" />
+                                        </a>
+                                        <a href="#" class="kse-recipe-card__icon">
+                                            <img src="../assets/images/ig.svg" class="icon-default" />
+                                            <img src="../assets/images/ig-white.svg" class="icon-hover" />
+                                        </a>
+                                        <a href="#" class="kse-recipe-card__icon">
+                                            <img src="../assets/images/tik.svg" class="icon-default" />
+                                            <img src="../assets/images/tik-white.svg" class="icon-hover" />
+                                        </a>
+                                    </div>
+
+                                    <a href="#" class="kse-btn kse-btn--sec">Recipe</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="kse-meal-recipes__card">
+                            <a href="#" class="kse-meal-recipes__image">
+                                <img src="../assets/images/salt-baked.png" />
+                            </a>
+
+                            <div class="kse-meal-recipes__content">
+                                <h3 class="kse-meal-recipes__title"><a href="#">Salt Baked<br>Herbal Chicken</a></h3>
+
+                                <div class="kse-meal-recipes__actions">
+                                    <span class="kse-meal-recipes__share">SHARE</span>
+
+                                    <div class="kse-recipe-card__icons">
+                                        <a href="#" class="kse-recipe-card__icon">
+                                            <img src="../assets/images/fb.svg" class="icon-default" />
+                                            <img src="../assets/images/fb-white.svg" class="icon-hover" />
+                                        </a>
+                                        <a href="#" class="kse-recipe-card__icon">
+                                            <img src="../assets/images/ig.svg" class="icon-default" />
+                                            <img src="../assets/images/ig-white.svg" class="icon-hover" />
+                                        </a>
+                                        <a href="#" class="kse-recipe-card__icon">
+                                            <img src="../assets/images/tik.svg" class="icon-default" />
+                                            <img src="../assets/images/tik-white.svg" class="icon-hover" />
+                                        </a>
+                                    </div>
+
+                                    <a href="#" class="kse-btn kse-btn--sec">Recipe</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="kse-meal-recipes__card">
+                            <a href="#" class="kse-meal-recipes__image">
+                                <img src="../assets/images/jamie-olivers-chicken.png" />
+                            </a>
+                            <div class="kse-meal-recipes__content">
+
+                                <h3 class="kse-meal-recipes__title">
+                                    <a href="#">
+                                        Jamie Oliver's Chicken<br>in milk (simplified)
+                                    </a>
+                                </h3>
+
+                                <div class="kse-meal-recipes__actions">
+                                    <span class="kse-meal-recipes__share">SHARE</span>
+
+                                    <div class="kse-recipe-card__icons">
+                                        <a href="#" class="kse-recipe-card__icon">
+                                            <img src="../assets/images/fb.svg" class="icon-default" />
+                                            <img src="../assets/images/fb-white.svg" class="icon-hover" />
+                                        </a>
+                                        <a href="#" class="kse-recipe-card__icon">
+                                            <img src="../assets/images/ig.svg" class="icon-default" />
+                                            <img src="../assets/images/ig-white.svg" class="icon-hover" />
+                                        </a>
+                                        <a href="#" class="kse-recipe-card__icon">
+                                            <img src="../assets/images/tik.svg" class="icon-default" />
+                                            <img src="../assets/images/tik-white.svg" class="icon-hover" />
+                                        </a>
+                                    </div>
+
+                                    <a href="#" class="kse-btn kse-btn--sec">Recipe</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="kse-meal-recipes__card">
+                            <a href="#" class="kse-meal-recipes__image">
+                                <img src="../assets/images/herbal-chicken.png" />
+                            </a>
+
+                            <div class="kse-meal-recipes__content">
+                                <h3 class="kse-meal-recipes__title"><a href="#">Herbal Chicken Pot<br>(No Water
+                                        Added)</a>
+                                </h3>
+
+                                <div class="kse-meal-recipes__actions">
+                                    <span class="kse-meal-recipes__share">SHARE</span>
+
+                                    <div class="kse-recipe-card__icons">
+                                        <a href="#" class="kse-recipe-card__icon">
+                                            <img src="../assets/images/fb.svg" class="icon-default" />
+                                            <img src="../assets/images/fb-white.svg" class="icon-hover" />
+                                        </a>
+                                        <a href="#" class="kse-recipe-card__icon">
+                                            <img src="../assets/images/ig.svg" class="icon-default" />
+                                            <img src="../assets/images/ig-white.svg" class="icon-hover" />
+                                        </a>
+                                        <a href="#" class="kse-recipe-card__icon">
+                                            <img src="../assets/images/tik.svg" class="icon-default" />
+                                            <img src="../assets/images/tik-white.svg" class="icon-hover" />
+                                        </a>
+                                    </div>
+
+                                    <a href="#" class="kse-btn kse-btn--sec">Recipe</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="kse-meal-recipes__card">
+                            <a href="#" class="kse-meal-recipes__image">
+                                <img src="../assets/images/roasted-mandarin.png" />
+                            </a>
+
+                            <div class="kse-meal-recipes__content">
+                                <h3 class="kse-meal-recipes__title"><a href="#">Roasted Mandarin<br>Orange Chicken</a>
+                                </h3>
+
+                                <div class="kse-meal-recipes__actions">
+                                    <span class="kse-meal-recipes__share">SHARE</span>
+
+                                    <div class="kse-recipe-card__icons">
+                                        <a href="#" class="kse-recipe-card__icon">
+                                            <img src="../assets/images/fb.svg" class="icon-default" />
+                                            <img src="../assets/images/fb-white.svg" class="icon-hover" />
+                                        </a>
+                                        <a href="#" class="kse-recipe-card__icon">
+                                            <img src="../assets/images/ig.svg" class="icon-default" />
+                                            <img src="../assets/images/ig-white.svg" class="icon-hover" />
+                                        </a>
+                                        <a href="#" class="kse-recipe-card__icon">
+                                            <img src="../assets/images/tik.svg" class="icon-default" />
+                                            <img src="../assets/images/tik-white.svg" class="icon-hover" />
+                                        </a>
+                                    </div>
+
+                                    <a href="#" class="kse-btn kse-btn--sec">Recipe</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="kse-meal-recipes__card">
+                            <a href="#" class="kse-meal-recipes__image">
+                                <img src="../assets/images/salt-baked.png" />
+                            </a>
+
+                            <div class="kse-meal-recipes__content">
+                                <h3 class="kse-meal-recipes__title"><a href="#">Salt Baked<br>Herbal Chicken</a></h3>
+
+                                <div class="kse-meal-recipes__actions">
+                                    <span class="kse-meal-recipes__share">SHARE</span>
+
+                                    <div class="kse-recipe-card__icons">
+                                        <a href="#" class="kse-recipe-card__icon">
+                                            <img src="../assets/images/fb.svg" class="icon-default" />
+                                            <img src="../assets/images/fb-white.svg" class="icon-hover" />
+                                        </a>
+                                        <a href="#" class="kse-recipe-card__icon">
+                                            <img src="../assets/images/ig.svg" class="icon-default" />
+                                            <img src="../assets/images/ig-white.svg" class="icon-hover" />
+                                        </a>
+                                        <a href="#" class="kse-recipe-card__icon">
+                                            <img src="../assets/images/tik.svg" class="icon-default" />
+                                            <img src="../assets/images/tik-white.svg" class="icon-hover" />
+                                        </a>
+                                    </div>
+
+                                    <a href="#" class="kse-btn kse-btn--sec">Recipe</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="kse-meal-recipes__card">
+                            <a href="#" class="kse-meal-recipes__image">
+                                <img src="../assets/images/salt-baked.png" />
+                            </a>
+
+                            <div class="kse-meal-recipes__content">
+                                <h3 class="kse-meal-recipes__title"><a href="#">Salt Baked<br>Herbal Chicken</a></h3>
+
+                                <div class="kse-meal-recipes__actions">
+                                    <span class="kse-meal-recipes__share">SHARE</span>
+
+                                    <div class="kse-recipe-card__icons">
+                                        <a href="#" class="kse-recipe-card__icon">
+                                            <img src="../assets/images/fb.svg" class="icon-default" />
+                                            <img src="../assets/images/fb-white.svg" class="icon-hover" />
+                                        </a>
+                                        <a href="#" class="kse-recipe-card__icon">
+                                            <img src="../assets/images/ig.svg" class="icon-default" />
+                                            <img src="../assets/images/ig-white.svg" class="icon-hover" />
+                                        </a>
+                                        <a href="#" class="kse-recipe-card__icon">
+                                            <img src="../assets/images/tik.svg" class="icon-default" />
+                                            <img src="../assets/images/tik-white.svg" class="icon-hover" />
+                                        </a>
+                                    </div>
+
+                                    <a href="#" class="kse-btn kse-btn--sec">Recipe</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="kse-meal-recipes__card">
+                            <a href="#" class="kse-meal-recipes__image">
+                                <img src="../assets/images/jamie-olivers-chicken.png" />
+                            </a>
+                            <div class="kse-meal-recipes__content">
+
+                                <h3 class="kse-meal-recipes__title">
+                                    <a href="#">
+                                        Jamie Oliver's Chicken<br>in milk (simplified)
+                                    </a>
+                                </h3>
+
+                                <div class="kse-meal-recipes__actions">
+                                    <span class="kse-meal-recipes__share">SHARE</span>
+
+                                    <div class="kse-recipe-card__icons">
+                                        <a href="#" class="kse-recipe-card__icon">
+                                            <img src="../assets/images/fb.svg" class="icon-default" />
+                                            <img src="../assets/images/fb-white.svg" class="icon-hover" />
+                                        </a>
+                                        <a href="#" class="kse-recipe-card__icon">
+                                            <img src="../assets/images/ig.svg" class="icon-default" />
+                                            <img src="../assets/images/ig-white.svg" class="icon-hover" />
+                                        </a>
+                                        <a href="#" class="kse-recipe-card__icon">
+                                            <img src="../assets/images/tik.svg" class="icon-default" />
+                                            <img src="../assets/images/tik-white.svg" class="icon-hover" />
+                                        </a>
+                                    </div>
+
+                                    <a href="#" class="kse-btn kse-btn--sec">Recipe</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="kse-meal-recipes__card">
+                            <a href="#" class="kse-meal-recipes__image">
+                                <img src="../assets/images/herbal-chicken.png" />
+                            </a>
+
+                            <div class="kse-meal-recipes__content">
+                                <h3 class="kse-meal-recipes__title"><a href="#">Herbal Chicken Pot<br>(No Water
+                                        Added)</a>
+                                </h3>
+
+                                <div class="kse-meal-recipes__actions">
+                                    <span class="kse-meal-recipes__share">SHARE</span>
+
+                                    <div class="kse-recipe-card__icons">
+                                        <a href="#" class="kse-recipe-card__icon">
+                                            <img src="../assets/images/fb.svg" class="icon-default" />
+                                            <img src="../assets/images/fb-white.svg" class="icon-hover" />
+                                        </a>
+                                        <a href="#" class="kse-recipe-card__icon">
+                                            <img src="../assets/images/ig.svg" class="icon-default" />
+                                            <img src="../assets/images/ig-white.svg" class="icon-hover" />
+                                        </a>
+                                        <a href="#" class="kse-recipe-card__icon">
+                                            <img src="../assets/images/tik.svg" class="icon-default" />
+                                            <img src="../assets/images/tik-white.svg" class="icon-hover" />
+                                        </a>
+                                    </div>
+
+                                    <a href="#" class="kse-btn kse-btn--sec">Recipe</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="kse-meal-recipes__card">
+                            <a href="#" class="kse-meal-recipes__image">
+                                <img src="../assets/images/roasted-mandarin.png" />
+                            </a>
+
+                            <div class="kse-meal-recipes__content">
+                                <h3 class="kse-meal-recipes__title"><a href="#">Roasted Mandarin<br>Orange Chicken</a>
+                                </h3>
+
+                                <div class="kse-meal-recipes__actions">
+                                    <span class="kse-meal-recipes__share">SHARE</span>
+
+                                    <div class="kse-recipe-card__icons">
+                                        <a href="#" class="kse-recipe-card__icon">
+                                            <img src="../assets/images/fb.svg" class="icon-default" />
+                                            <img src="../assets/images/fb-white.svg" class="icon-hover" />
+                                        </a>
+                                        <a href="#" class="kse-recipe-card__icon">
+                                            <img src="../assets/images/ig.svg" class="icon-default" />
+                                            <img src="../assets/images/ig-white.svg" class="icon-hover" />
+                                        </a>
+                                        <a href="#" class="kse-recipe-card__icon">
+                                            <img src="../assets/images/tik.svg" class="icon-default" />
+                                            <img src="../assets/images/tik-white.svg" class="icon-hover" />
+                                        </a>
+                                    </div>
+
+                                    <a href="#" class="kse-btn kse-btn--sec">Recipe</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="kse-meal-recipes__card">
+                            <a href="#" class="kse-meal-recipes__image">
+                                <img src="../assets/images/salt-baked.png" />
+                            </a>
+
+                            <div class="kse-meal-recipes__content">
+                                <h3 class="kse-meal-recipes__title"><a href="#">Salt Baked<br>Herbal Chicken</a></h3>
+
+                                <div class="kse-meal-recipes__actions">
+                                    <span class="kse-meal-recipes__share">SHARE</span>
+
+                                    <div class="kse-recipe-card__icons">
+                                        <a href="#" class="kse-recipe-card__icon">
+                                            <img src="../assets/images/fb.svg" class="icon-default" />
+                                            <img src="../assets/images/fb-white.svg" class="icon-hover" />
+                                        </a>
+                                        <a href="#" class="kse-recipe-card__icon">
+                                            <img src="../assets/images/ig.svg" class="icon-default" />
+                                            <img src="../assets/images/ig-white.svg" class="icon-hover" />
+                                        </a>
+                                        <a href="#" class="kse-recipe-card__icon">
+                                            <img src="../assets/images/tik.svg" class="icon-default" />
+                                            <img src="../assets/images/tik-white.svg" class="icon-hover" />
+                                        </a>
+                                    </div>
+
+                                    <a href="#" class="kse-btn kse-btn--sec">Recipe</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="kse-meal-recipes__card">
-                        <a href="#" class="kse-meal-recipes__image">
-                            <img src="../assets/images/herbal-chicken.png" />
-                        </a>
-
-                        <div class="kse-meal-recipes__content">
-                            <h3 class="kse-meal-recipes__title"><a href="#">Herbal Chicken Pot<br>(No Water Added)</a>
-                            </h3>
-
-                            <div class="kse-meal-recipes__actions">
-                                <span class="kse-meal-recipes__share">SHARE</span>
-
-                                <div class="kse-recipe-card__icons">
-                                    <a href="#" class="kse-recipe-card__icon">
-                                        <img src="../assets/images/fb.svg" class="icon-default" />
-                                        <img src="../assets/images/fb-white.svg" class="icon-hover" />
-                                    </a>
-                                    <a href="#" class="kse-recipe-card__icon">
-                                        <img src="../assets/images/ig.svg" class="icon-default" />
-                                        <img src="../assets/images/ig-white.svg" class="icon-hover" />
-                                    </a>
-                                    <a href="#" class="kse-recipe-card__icon">
-                                        <img src="../assets/images/tik.svg" class="icon-default" />
-                                        <img src="../assets/images/tik-white.svg" class="icon-hover" />
-                                    </a>
-                                </div>
-
-                                <a href="#" class="kse-btn kse-btn--sec">Recipe</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="kse-meal-recipes__card">
-                        <a href="#" class="kse-meal-recipes__image">
-                            <img src="../assets/images/roasted-mandarin.png" />
-                        </a>
-
-                        <div class="kse-meal-recipes__content">
-                            <h3 class="kse-meal-recipes__title"><a href="#">Roasted Mandarin<br>Orange Chicken</a></h3>
-
-                            <div class="kse-meal-recipes__actions">
-                                <span class="kse-meal-recipes__share">SHARE</span>
-
-                                <div class="kse-recipe-card__icons">
-                                    <a href="#" class="kse-recipe-card__icon">
-                                        <img src="../assets/images/fb.svg" class="icon-default" />
-                                        <img src="../assets/images/fb-white.svg" class="icon-hover" />
-                                    </a>
-                                    <a href="#" class="kse-recipe-card__icon">
-                                        <img src="../assets/images/ig.svg" class="icon-default" />
-                                        <img src="../assets/images/ig-white.svg" class="icon-hover" />
-                                    </a>
-                                    <a href="#" class="kse-recipe-card__icon">
-                                        <img src="../assets/images/tik.svg" class="icon-default" />
-                                        <img src="../assets/images/tik-white.svg" class="icon-hover" />
-                                    </a>
-                                </div>
-
-                                <a href="#" class="kse-btn kse-btn--sec">Recipe</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="kse-meal-recipes__card">
-                        <a href="#" class="kse-meal-recipes__image">
-                            <img src="../assets/images/salt-baked.png" />
-                        </a>
-
-                        <div class="kse-meal-recipes__content">
-                            <h3 class="kse-meal-recipes__title"><a href="#">Salt Baked<br>Herbal Chicken</a></h3>
-
-                            <div class="kse-meal-recipes__actions">
-                                <span class="kse-meal-recipes__share">SHARE</span>
-
-                                <div class="kse-recipe-card__icons">
-                                    <a href="#" class="kse-recipe-card__icon">
-                                        <img src="../assets/images/fb.svg" class="icon-default" />
-                                        <img src="../assets/images/fb-white.svg" class="icon-hover" />
-                                    </a>
-                                    <a href="#" class="kse-recipe-card__icon">
-                                        <img src="../assets/images/ig.svg" class="icon-default" />
-                                        <img src="../assets/images/ig-white.svg" class="icon-hover" />
-                                    </a>
-                                    <a href="#" class="kse-recipe-card__icon">
-                                        <img src="../assets/images/tik.svg" class="icon-default" />
-                                        <img src="../assets/images/tik-white.svg" class="icon-hover" />
-                                    </a>
-                                </div>
-
-                                <a href="#" class="kse-btn kse-btn--sec">Recipe</a>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
             </div>
         </div>

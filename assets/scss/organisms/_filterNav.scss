@@ -43,12 +43,13 @@
         gap: 10px;
         margin-bottom: 10px;
         padding-bottom: 10px;
-        border-bottom: 1px solid #ccc;
+        border-bottom: 1.5px solid #ccc;
         &-input{
             margin-top: 0px;
             border-radius: 2px !important;
             height: 15px;
             width: 15px;
+            accent-color: #f14a50;
         }
         &-label{
             line-height: 18px;
