@@ -16,6 +16,19 @@
       &:hover img {
          transform: scale(1.05);
       }
+
+      &::after {
+         content: "";
+         position: absolute;
+         inset: 0;
+
+         background: linear-gradient(to right,
+               rgba(0, 0, 0, 0.6) 0%,
+               rgba(0, 0, 0, 0.3) 40%,
+               rgba(0, 0, 0, 0) 100%);
+
+         z-index: 1;
+      }
    }
 
    &__title {
@@ -27,6 +40,7 @@
       font-family: "Begum";
       font-size: 50px;
       font-weight: 700;
+      z-index: 2;
    }
 
    &__desc {
@@ -56,6 +70,6 @@
 
       &__desc {
          font-size: 12px;
-      } 
+      }
    }
 }
