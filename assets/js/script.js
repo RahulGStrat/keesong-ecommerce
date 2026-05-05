@@ -20,65 +20,67 @@ document.addEventListener("DOMContentLoaded", function () {
 function initMenu() {
    const hamburger = document.getElementById("hamburger");
    const menu = document.getElementById("menu");
-   const categoryBtn = document.getElementById("categoryBtn");
-   const megaMenu = document.getElementById("megaMenu");
    const overlay = document.getElementById("overlay");
    const closeBtn = document.getElementById("closeBtn");
 
+   // Select ALL dropdown toggles based on your existing classes
+   // This grabs the <a> tag directly inside the category/dropdown <li>
+   const dropdownToggles = document.querySelectorAll(
+      ".kse-Head__menu-item--category > a",
+   );
+
    if (!hamburger || !menu) return;
 
-   // hamburger
+   // Hamburger Menu Logic
    hamburger.addEventListener("click", () => {
       menu.classList.toggle("active");
       hamburger.classList.toggle("active");
    });
 
-   document.querySelectorAll(".kse-Head__menu-sub").forEach((submenu) => {
-      submenu.addEventListener("click", (e) => {
-         if (window.innerWidth <= 768) {
-            e.stopPropagation();
-
-            // toggle mobile active
-            submenu.classList.toggle("mobile");
-            submenu.classList.toggle("active");
-         }
-      });
-   });
-   // category click
-   if (categoryBtn) {
-      categoryBtn.addEventListener("click", (e) => {
+   // Handle ALL Dropdown Clicks
+   dropdownToggles.forEach((btn) => {
+      btn.addEventListener("click", (e) => {
          e.preventDefault();
 
-         const isOpen = megaMenu?.classList.contains("active");
+         // The dropdown menu is the next sibling element after the <a> tag
+         const megaMenu = btn.nextElementSibling;
+         const isOpen = btn.classList.contains("active");
 
-         if (isOpen) {
-            // CLOSE
-            closeMenu();
-         } else {
-            // OPEN
-            categoryBtn.classList.add("active");
+         // Close everything first so we don't have multiple menus open
+         closeAllMenus();
+
+         // If the clicked menu wasn't already open, open it now
+         if (!isOpen && megaMenu) {
+            btn.classList.add("active");
 
             if (window.innerWidth > 769) {
-               megaMenu?.classList.add("active");
-               megaMenu?.classList.remove("mobile");
+               megaMenu.classList.add("active");
+               megaMenu.classList.remove("mobile");
             } else {
                overlay?.classList.add("active");
-               megaMenu?.classList.add("active", "mobile");
+               megaMenu.classList.add("active", "mobile");
             }
          }
       });
-   }
+   });
 
-   function closeMenu() {
+   // Helper function to close all dropdowns at once
+   function closeAllMenus() {
       overlay?.classList.remove("active");
-      megaMenu?.classList.remove("active", "mobile");
-      categoryBtn?.classList.remove("active");
+
+      // Remove active states from all buttons
+      dropdownToggles.forEach((btn) => btn.classList.remove("active"));
+
+      // Remove active states from all dropdown submenus
+      document.querySelectorAll(".kse-Head__menu-sub").forEach((menu) => {
+         menu.classList.remove("active", "mobile");
+      });
    }
 
-   overlay?.addEventListener("click", closeMenu);
-   closeBtn?.addEventListener("click", closeMenu);
+   overlay?.addEventListener("click", closeAllMenus);
+   closeBtn?.addEventListener("click", closeAllMenus);
 
-   // accordion
+   // Accordion logic (Mobile)
    document.querySelectorAll(".kse-Head__mega-col h4").forEach((title) => {
       title.addEventListener("click", () => {
          if (window.innerWidth <= 768) {
@@ -93,19 +95,21 @@ function initMenu() {
       });
    });
 
-   // outside click
+   // Outside click handler
    document.addEventListener("click", (e) => {
-      if (!e.target.closest("#categoryBtn") && !e.target.closest("#megaMenu")) {
-         megaMenu?.classList.remove("active");
-         categoryBtn?.classList.remove("active");
+      // If the user clicks outside of any dropdown wrapper, close all menus
+      if (!e.target.closest(".kse-Head__menu-item--category")) {
+         closeAllMenus();
       }
    });
 
-   // resize reset
+   // Resize reset
    window.addEventListener("resize", () => {
       if (window.innerWidth > 768) {
          overlay?.classList.remove("active");
-         megaMenu?.classList.remove("mobile");
+         document.querySelectorAll(".kse-Head__menu-sub").forEach((menu) => {
+            menu.classList.remove("mobile");
+         });
       }
    });
 }
@@ -417,10 +421,10 @@ function initPasswordToggle() {
          // Toggle input type
          input.type = input.type === "password" ? "text" : "password";
 
-      // Toggle icon state
-      toggle.classList.toggle('active');
-    });
-  });
+         // Toggle icon state
+         toggle.classList.toggle("active");
+      });
+   });
 }
 // Recipe popup slider
 function initRecipePopupSlider() {
