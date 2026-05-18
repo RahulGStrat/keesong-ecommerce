@@ -219,12 +219,12 @@ function initPDP() {
 // PDP / ARTICLE TOGGLE
 // =========================
 function initGreatWithToggle() {
-   const toggleBtns = document.querySelectorAll(".kse-greatwith .toggle-icon, .kse-article__sidebar .toggle-icon");
+   const toggleBtns = document.querySelectorAll(".kse-greatwith .toggle-icon, .kse-article-sidebar .toggle-icon");
    
    if (!toggleBtns.length) return;
 
    toggleBtns.forEach(toggleBtn => {
-      const parent = toggleBtn.closest('.kse-greatwith, .kse-article__sidebar');
+      const parent = toggleBtn.closest('.kse-greatwith, .kse-article-sidebar');
       const list = parent.querySelector('.kse-greatwith__list, .kse-article__sidebar-list');
 
       if (!list) return;
