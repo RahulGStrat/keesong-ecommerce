@@ -85,6 +85,23 @@
          gap: 20px;
       }
    }
+   /* Shared Tablet & iPad Pro Footer Mixin */
+   @mixin shared-tablet-footer {
+      &__footer {
+         grid-row: 4;
+         margin-top: 20px;
+         display: block;
+
+         &::before {
+            margin-left: 24px;
+            margin-right: 24px;
+         }
+      }
+
+      &__footer-inner {
+         padding: 34px 24px 0;
+      }
+   }
 
    /* Tablet (768px - 1023px) */
    @include tablet {
@@ -122,20 +139,7 @@
          margin-bottom: 40px;
       }
 
-      &__footer {
-         grid-row: 4;
-         margin-top: 20px;
-         display: block;
-
-         &::before {
-            margin-left: 24px;
-            margin-right: 24px;
-         }
-      }
-
-      &__footer-inner {
-         padding: 34px 24px 0;
-      }
+      @include shared-tablet-footer;
    }
 
    /* Desktop (1024px+) */
@@ -202,20 +206,7 @@
 
    /* iPad Pro Portrait Refinement (1024px - 1199px) */
    @include tablet-pro {
-      &__footer {
-         grid-row: 4;
-         margin-top: 20px;
-         display: block;
-
-         &::before {
-            margin-left: 24px;
-            margin-right: 24px;
-         }
-      }
-
-      &__footer-inner {
-         padding: 34px 24px 0;
-      }
+      @include shared-tablet-footer;
    }
 
    /* Ultra-Wide Desktop (1900px+) */
