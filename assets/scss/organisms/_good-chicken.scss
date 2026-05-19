@@ -1,0 +1,58 @@
+.kse-goodchkn {
+    background-color: #680a38;
+    min-height: 100vh;
+    &__out {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        width: 100%;
+        gap: 32px;
+    }
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 40%;
+
+        .kse-btn {
+            width: 50%;
+            text-align: center;
+            padding: 12px 4px;
+        }
+    }
+    &__head {
+        font-size: 60px;
+        color: #fff;
+        font-weight: 600;
+        margin-bottom: 20px;
+        text-align: center;
+        font-family: "Accumin";
+    }
+    &__tilesout {
+        display: flex;
+        gap: 20px;
+        width: 60%;
+    }
+    &__tilesection {
+        width: 100%;
+        display: flex;
+        gap: 26px;
+        justify-content: space-between;
+    }
+    .kse-PdTile {
+        width: calc(33.3% - 12px);
+    }
+    .kse-PdTile__title {
+        color: #fff;
+        font-size: 18px;
+        font-family: "Acumin";
+        font-weight: 600;
+    }
+    .kse-PdTile__price {
+        color: #fff;
+        font-size: 16px;
+        padding-top: 24px;
+        padding-bottom: 0px;
+    }
+} 
