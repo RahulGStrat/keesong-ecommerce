@@ -141,11 +141,11 @@
    .kse-article-grid {
       grid-template-columns:
          minmax(0, 1fr)
-         minmax(240px, 340px)
-         minmax(24px, 48px)
-         minmax(400px, 644px)
-         minmax(24px, 48px)
          minmax(240px, 320px)
+         minmax(24px, 32px)
+         minmax(400px, 620px)
+         minmax(24px, 48px)
+         minmax(240px, 300px)
          minmax(48px, 1fr);
    }
 
@@ -185,6 +185,8 @@
    
    .kse-article-footer__inner {
       grid-column: 4 / 5;
+      padding-left: 48px;
+      padding-right: 48px;
    }
 }
 
