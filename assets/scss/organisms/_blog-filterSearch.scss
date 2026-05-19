@@ -1,0 +1,124 @@
+.kse-blogfiltercard {
+    width: 100%;
+    max-width: 420px;
+    background: rgba(255, 255, 255, 0.92);
+    border-radius: 24px;
+    padding: 40px 36px;
+
+    &__title {
+        font-size: 48px;
+        line-height: 1.05;
+        font-weight: 700;
+        color: #2d3945;
+        margin-bottom: 42px;
+    }
+
+    &__formgrp {
+        margin-bottom: 22px;
+
+        label {
+            display: block;
+            font-size: 15px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+    }
+
+    &__cstmselect {
+        width: 100%;
+        padding: 16px 20px;
+        border: 2px solid #ff4454;
+        border-radius: 16px;
+        background: #fff;
+        font-size: 16px;
+        color: #666;
+        cursor: pointer;
+        outline: none;
+        transition: 0.25s ease;
+        appearance: base-select;
+
+        &::picker(select) {
+            appearance: base-select;
+        }
+
+        &:focus {
+            box-shadow: 0 0 0 4px rgba(255, 68, 84, 0.12);
+        }
+
+        &::picker-icon {
+            color: #555;
+            transition: 0.25s rotate;
+        }
+
+        &:open::picker-icon {
+            rotate: 180deg;
+        }
+
+        // dropdown
+        &::picker(select) {
+            border: none;
+            margin-top: 8px;
+            border-radius: 16px;
+            overflow: hidden;
+            background: #fff;
+            opacity: 0;
+            transition: all 0.2s ease allow-discrete;
+        }
+
+        // open
+        &:open::picker(select) {
+            opacity: 1;
+        }
+
+        &::picker(select) {
+            transform: translateY(10px);
+            transition:
+                opacity 0.2s ease,
+                transform 0.2s ease,
+                overlay 0.2s allow-discrete,
+                display 0.2s allow-discrete;
+        }
+
+        &:open::picker(select) {
+            transform: translateY(0);
+        }
+
+        option {
+            padding: 16px 20px;
+            background: #fff;
+            color: #2d3945;
+            font-size: 16px;
+            border-bottom: 1px solid #ececec;
+            transition: 0.2s ease;
+        }
+
+        option:last-of-type {
+            border-bottom: none;
+        }
+
+        option:hover,
+        option:focus {
+            background: #ff4454;
+            color: #fff;
+        }
+
+        option:checked {
+            background: #ff4454;
+            color: #fff;
+        }
+    }
+
+    &__submit {
+        width: 100%;
+        padding: 18px 20px;
+        border: none;
+        border-radius: 14px;
+        background: #ff4454;
+        color: #fff;
+        font-size: 18px;
+        font-weight: 600;
+        cursor: pointer;
+        margin-top: 18px;
+        transition: 0.25s ease;
+    }
+}
