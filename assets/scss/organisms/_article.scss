@@ -33,6 +33,9 @@
       background: #f7f6f4;
       padding: 32px 24px;
       border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
    }
 
    &__content {
@@ -239,6 +242,21 @@
          padding: 34px 32px 0;
       }
    }
+   // 125%
+   @media (min-width: 1200px) and (max-width: 1300px) {
+      .kse-article {
+         &__title {
+            font-size: 30px;
+         }
+      }
+   }
+   @include mobile {
+      .kse-article {
+         &__title {
+            font-size: 30px;
+         }
+      }
+   }
 
    /* Reusable UI Components inside the grid */
 
@@ -254,7 +272,7 @@
 
    &__title {
       font-family: "Begum";
-      font-size: 46px;
+      font-size: 40px;
       line-height: 1;
       color: #f25768;
       font-weight: 700;
