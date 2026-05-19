@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
    initLoginTabs();
    initPasswordToggle();
    initRecipePopupSlider();
+   initGreatChickenSlider();
 });
 
 // =========================
@@ -219,13 +220,17 @@ function initPDP() {
 // PDP / ARTICLE TOGGLE
 // =========================
 function initGreatWithToggle() {
-   const toggleBtns = document.querySelectorAll(".kse-greatwith .toggle-icon, .kse-article__sidebar .toggle-icon");
-   
+   const toggleBtns = document.querySelectorAll(
+      ".kse-greatwith .toggle-icon, .kse-article__sidebar .toggle-icon",
+   );
+
    if (!toggleBtns.length) return;
 
-   toggleBtns.forEach(toggleBtn => {
-      const parent = toggleBtn.closest('.kse-greatwith, .kse-article__sidebar');
-      const list = parent.querySelector('.kse-greatwith__list, .kse-article__sidebar-list');
+   toggleBtns.forEach((toggleBtn) => {
+      const parent = toggleBtn.closest(".kse-greatwith, .kse-article__sidebar");
+      const list = parent.querySelector(
+         ".kse-greatwith__list, .kse-article__sidebar-list",
+      );
 
       if (!list) return;
 
@@ -466,6 +471,41 @@ function initRecipePopupSlider() {
          {
             breakpoint: 480,
             settings: { slidesToShow: 1 },
+         },
+      ],
+   });
+}
+// =========================================
+// GREAT CHICKEN SLIDER
+// =========================================
+
+function initGreatChickenSlider() {
+   const $slider = $(".kse-great-chicken__slider");
+
+   if (!$slider.length) return;
+
+   $slider.slick({
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      infinite: false,
+      arrows: true,
+      dots: false,
+      speed: 600,
+      prevArrow: $(".kse-great-chicken__arrow--prev"),
+      nextArrow: $(".kse-great-chicken__arrow--next"),
+
+      responsive: [
+         {
+            breakpoint: 1024,
+            settings: {
+               slidesToShow: 2,
+            },
+         },
+         {
+            breakpoint: 768,
+            settings: {
+               slidesToShow: 1,
+            },
          },
       ],
    });
