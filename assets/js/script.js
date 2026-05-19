@@ -216,22 +216,28 @@ function initPDP() {
 }
 
 // =========================
-// PDP TOGGLE
+// PDP / ARTICLE TOGGLE
 // =========================
 function initGreatWithToggle() {
-   const toggleBtn = document.querySelector(".kse-greatwith .toggle-icon");
-   const list = document.querySelector(".kse-greatwith__list");
+   const toggleBtns = document.querySelectorAll(".kse-greatwith .toggle-icon, .kse-article-sidebar .toggle-icon");
+   
+   if (!toggleBtns.length) return;
 
-   if (!toggleBtn || !list) return;
+   toggleBtns.forEach(toggleBtn => {
+      const parent = toggleBtn.closest('.kse-greatwith, .kse-article-sidebar');
+      const list = parent.querySelector('.kse-greatwith__list, .kse-article__sidebar-list');
 
-   let isOpen = true;
+      if (!list) return;
 
-   toggleBtn.addEventListener("click", function (e) {
-      e.preventDefault();
+      let isOpen = true;
 
-      isOpen = !isOpen;
-      list.style.display = isOpen ? "flex" : "none";
-      toggleBtn.classList.toggle("rotated", !isOpen);
+      toggleBtn.addEventListener("click", function (e) {
+         e.preventDefault();
+
+         isOpen = !isOpen;
+         list.style.display = isOpen ? "" : "none";
+         toggleBtn.classList.toggle("rotated", !isOpen);
+      });
    });
 }
 
