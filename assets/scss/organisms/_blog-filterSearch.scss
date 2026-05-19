@@ -1,7 +1,8 @@
 .kse-blogfiltercard {
     width: 100%;
     max-width: 420px;
-    background: rgba(255, 255, 255, 0.92);
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(2px);
     border-radius: 24px;
     padding: 40px 36px;
 
@@ -27,7 +28,7 @@
     &__cstmselect {
         width: 100%;
         padding: 16px 20px;
-        border: 2px solid #ff4454;
+        border: 2px solid #fff;
         border-radius: 16px;
         background: #fff;
         font-size: 16px;
