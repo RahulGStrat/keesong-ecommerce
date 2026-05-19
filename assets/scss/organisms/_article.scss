@@ -86,8 +86,8 @@
       }
    }
 
-   /* Tablet Layout Mixin */
-   @mixin article-tablet-layout {
+   /* Tablet (768px - 1023px) */
+   @include tablet {
       &__grid {
          grid-template-columns: 24px minmax(0, 1fr) 24px 240px 24px;
          row-gap: 24px;
@@ -136,11 +136,6 @@
       &__footer-inner {
          padding: 34px 24px 0;
       }
-   }
-
-   /* Tablet (768px - 1023px) */
-   @include tablet {
-      @include article-tablet-layout;
    }
 
    /* Desktop (1024px+) */
@@ -207,25 +202,19 @@
 
    /* iPad Pro Portrait Refinement (1024px - 1199px) */
    @include tablet-pro {
+      &__footer {
+         grid-row: 4;
+         margin-top: 20px;
+         display: block;
+
+         &::before {
+            margin-left: 24px;
+            margin-right: 24px;
+         }
+      }
+
       &__footer-inner {
-         padding-top: 24px;
-      }
-
-      &__date {
-         font-size: 18px;
-      }
-
-      &__share {
-         gap: 12px;
-
-         span {
-            font-size: 18px;
-         }
-
-         a {
-            width: 28px;
-            height: 28px;
-         }
+         padding: 34px 24px 0;
       }
    }
 
