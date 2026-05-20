@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,11 +12,12 @@
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="../assets/css/style.css" />
     <!-- styles -->
-     <!-- favicon -->
+    <!-- favicon -->
     <link rel="icon" type="image/png" href="../assets/images/keesong-favicon.png">
     <title>Document</title>
-  </head>
-  <body>
+</head>
+
+<body>
     <header class="kse-Head">
 
         <div class="content-wrapper">
@@ -268,6 +270,84 @@
     </header>
     <div class="overlay d-none" id="overlay"></div>
     <!-- body content start -->
+    <!-- Blog Filter form -->
+    <div class="kse-blogfiltercard__outer" style="background-image: url(../assets/images/blogfiltercard_bg.png);">
+        <div class="content-wrapper">
+            <div class="kse-blogfiltercard">
+
+                <h1 class="kse-blogfiltercard__title">
+                    What are you looking for?
+                </h1>
+
+                <!-- FIELD 1 -->
+
+                <div class="kse-blogfiltercard__formgrp">
+
+                    <label>
+                        I am looking for chicken for my
+                    </label>
+
+                    <select class="kse-blogfiltercard__cstmselect">
+
+                        <option value="" selected disabled hidden>
+                            -- Select --
+                        </option>
+                        <option value="home">Home</option>
+                        <option value="restaurant">Restaurant</option>
+                        <option value="farm">Farm</option>
+
+                    </select>
+
+                </div>
+
+                <!-- FIELD 2 -->
+
+                <div class="kse-blogfiltercard__formgrp">
+
+                    <label>
+                        I prefer
+                    </label>
+                    <select class="kse-blogfiltercard__cstmselect">
+
+                        <option value="" selected disabled hidden>
+                            -- Select --
+                        </option>
+
+                        <option value="Fresh Chicken">Fresh Chicken</option>
+                        <option value="Frozen Chicken">Frozen Chicken</option>
+                        <option value="Organic Chicken">Organic Chicken</option>
+
+                    </select>
+
+                </div>
+
+                <!-- FIELD 3 -->
+
+                <div class="kse-blogfiltercard__formgrp">
+
+                    <label>
+                        From
+                    </label>
+                    <select class="kse-blogfiltercard__cstmselect">
+
+                        <option value="" selected disabled hidden>
+                            -- Select --
+                        </option>
+
+                        <option value="Singapore">Singapore</option>
+                        <option value="Malaysia">Malaysia</option>
+                    </select>
+
+                </div>
+
+                <!-- BUTTON -->
+
+                <a href="#" class="kse-btn kse-btn--header">Explore Now</a>
+
+            </div>
+        </div>
+    </div>
+    <!-- Great Chicken is made better -->
      
     <!-- body content end -->
     <footer class="kse-footer">
@@ -415,5 +495,6 @@
     <script src="../assets/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/js/script.js"></script>
     <!-- scripts -->
-  </body>
+</body>
+
 </html>
