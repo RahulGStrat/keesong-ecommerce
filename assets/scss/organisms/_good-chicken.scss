@@ -99,7 +99,7 @@
         &__out {
             flex-direction: column;
             min-height: auto;
-            padding: 24px 0;
+            padding: 40px 0;
         }
         &__content {
             width: 100%;
@@ -115,9 +115,10 @@
         }
         &__tilesection {
            flex-wrap: wrap;
+           justify-content: center;
         }
         .kse-PdTile {
-            width: calc(50% - 16px);
+            width: 80%;
         }
     }
 }

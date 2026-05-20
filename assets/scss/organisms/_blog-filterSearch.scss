@@ -154,3 +154,12 @@
         font-size: 18px;
     }
 }
+
+@include mobile {
+    .kse-blogfiltercard {
+        max-width: unset;
+        width: calc(100% - 32px);
+        left: 0;
+        margin: 0 16px;
+    }
+}

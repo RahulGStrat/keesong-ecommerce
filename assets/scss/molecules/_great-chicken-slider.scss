@@ -206,14 +206,14 @@
    }
 
    @include mobile {
-      padding: 70px 0;
+      padding: 40px 0;
 
       &__heading {
          margin-bottom: 40px;
       }
 
       &__title {
-         font-size: 40px;
+         font-size: 28px;
 
          br {
             display: none;
@@ -221,7 +221,7 @@
       }
 
       &__description {
-         font-size: 16px;
+         font-size: 14px;
       }
 
       &__wrapper {
@@ -239,7 +239,7 @@
       }
 
       &__item-title {
-         font-size: 22px;
+         font-size: 16px;
 
          br {
             display: none;
@@ -248,6 +248,7 @@
 
       &__button {
          width: 100%;
+         font-size: 16px;
       }
    }
 }
