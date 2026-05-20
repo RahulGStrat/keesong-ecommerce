@@ -10,10 +10,11 @@
 
     &__title {
         text-align: center;
-        font-size: 72px;
-        line-height: 1;
+        font-family: "Begum";
+        font-size: 52px;
+        line-height: 60px;
         font-weight: 700;
-        color: #ff4454;
+        color: #f14a50;
         margin-bottom: 60px;
     }
 
@@ -52,20 +53,22 @@
 
         span {
             display: block;
-            font-size: 16px;
-            line-height: 1.2;
+            font-size: 24px;
+            font-family: 'Acumin Pro Condensed';
+            line-height: 30px;
             font-weight: 700;
             color: #fff;
             margin-bottom: 14px;
         }
 
         h3 {
-            font-size: 42px;
-            line-height: 1.1;
-            font-weight: 700;
+            font-size: 28px;
+            line-height: 34px;
+            font-family: "Begum";
+            font-weight: 500;
             color: #fff;
             margin: 0;
-            max-width: 520px;
+            max-width: 460px;
         }
     }
 
@@ -76,12 +79,13 @@
         display: flex;
         flex-direction: column;
         gap: 16px;
+        justify-content: space-between;
     }
 
     &__sidecard {
         display: flex;
         gap: 16px;
-        align-items: flex-start;
+        align-items: center;
     }
 
     &__sideimg {
@@ -99,19 +103,21 @@
     }
 
     &__content {
-        padding-top: 8px;
+        // padding-top: 8px;
 
         span {
             display: block;
-            font-size: 14px;
-            line-height: 1.2;
+            font-size: 18px;
+            font-family: 'Acumin Pro Condensed';
+            line-height: 26px;
             font-weight: 700;
             color: #5a1630;
             margin-bottom: 10px;
         }
 
         h4 {
-            font-size: 22px;
+            font-size: 18px;
+            font-family: "Begum";
             line-height: 1.2;
             font-weight: 400;
             color: #5a1630;
@@ -124,7 +130,7 @@
         align-items: center;
         justify-content: center;
         min-width: 120px;
-        height: 44px;
+        height: 34px;
         border: 1px solid #ff4454;
         border-radius: 10px;
         font-size: 16px;
@@ -191,8 +197,8 @@
         padding: 60px 0;
 
         &__title {
-            font-size: 40px;
-            margin-bottom: 40px;
+            font-size: 28px;
+            margin-bottom: 34px;
         }
 
         &__maincard {
