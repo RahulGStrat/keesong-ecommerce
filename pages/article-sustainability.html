@@ -12,7 +12,9 @@
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="../assets/css/style.css" />
     <!-- styles -->
-    <title>Article Cards</title>
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="../assets/images/keesong-favicon.png">
+    <title>Article</title>
 </head>
 
 <body>
@@ -266,260 +268,130 @@
             </div>
         </div>
     </header>
-    <div class="overlay d-none" id="overlay"></div>
     <!-- body content start -->
-    <section class="kse-articles-cards">
-
-        <!-- HERO -->
-        <div class="kse-articles-cards__hero">
-            <img src="../assets/images/article-card-banner.webp" alt="Ordering Guide">
-        </div>
-
-        <!-- CONTENT -->
-        <div class="container">
-
-            <!-- SEARCH -->
-            <div class="kse-articles-cards__search">
-                <input type="text" placeholder="Search" class="kse-articles-cards__search-input">
+    <section class="kse-article">
+        <div class="kse-article__grid">
+            <div class="kse-article__hero-image">
+                <img src="../assets/images/article-page1.png" alt="">
             </div>
 
-            <!-- GRID -->
-            <div class="kse-articles-cards__grid">
+            <div class="kse-article__main-column">
+                <section class="kse-article__hero-content">
+                    <span class="kse-article__tag">
+                        SUSTAINABILITY IN ACTION
+                    </span>
 
-                <!-- CARD 1-->
-                <div class="kse-articles-cards__card">
-                    <div class="kse-articles-cards__image">
-                        <img src="../assets/images/article-page1.png" alt="Health & Wellness">
+                    <h1 class="kse-article__title">
+                        Farming with Heart:<br class="desk-visible">
+                        Kee Song’s Commitment<br class="desk-visible">
+                        to a Sustainable Future
+                    </h1>
+                </section>
+
+                <!-- CONTENT -->
+                <section class="kse-article__content">
+
+
+                    <div class="kse-article__full-image">
+                        <img src="../assets/images/article-page-1.1.png" alt="">
                     </div>
 
-                    <div class="kse-articles-cards__content">
-                        <span class="kse-articles-cards__tag">
-                            HEALTH & WELLNESS
-                        </span>
 
-                        <h3 class="kse-articles-cards__title">
-                            Eat Well, Live Well:<br>
-                            The Power of<br>
-                            Antibiotic-Free Poultry<br>
-                            in Balanced Nutrition
-                        </h3>
+                    <p>
+                        Sustainability is an essential part of modern food production. At Kee Song, it is integrated
+                        into daily operations and long-term planning.
+                    </p>
 
-                        <a href="#" class="kse-btn kse-btn--outline">
-                            Read More
-                        </a>
+                    <p>
+                        Efforts to reduce reliance on antibiotics, implement probiotic-based feeding systems, and
+                        optimise resource usage all contribute to a more responsible approach to farming. These
+                        practices support not only the health of the animals but also the environment.
+                    </p>
+
+                    <p>
+                        Choosing sustainably produced poultry is a simple way for consumers to contribute to a larger
+                        impact. It reflects an awareness of how food choices affect both personal health and the world
+                        around us.
+                    </p>
+                </section>
+
+                <!-- FULL WIDTH FOOTER SPANNING LAYOUT -->
+                <footer class="kse-article__footer">
+                    <div class="kse-article__footer-inner">
+                        <p class="kse-article__date">
+                            Published on: 20 May 2026
+                        </p>
+
+                        <div class="kse-article__share">
+                            <span>Share:</span>
+
+                            <div class="kse-recipe-card__icons">
+                                <a href="#" class="kse-recipe-card__icon">
+                                    <img src="../assets/images/tik.svg" class="icon-default">
+                                    <img src="../assets/images/tik-white.svg" class="icon-hover">
+                                </a>
+                                <a href="#" class="kse-recipe-card__icon">
+                                    <img src="../assets/images/fb.svg" class="icon-default">
+                                    <img src="../assets/images/fb-white.svg" class="icon-hover">
+                                </a>
+                                <a href="#" class="kse-recipe-card__icon">
+                                    <img src="../assets/images/ig.svg" class="icon-default">
+                                    <img src="../assets/images/ig-white.svg" class="icon-hover">
+                                </a>
+                            </div>
+                        </div>
                     </div>
+                </footer>
+            </div>
+
+            <!-- SIDEBAR -->
+            <aside class="kse-article__sidebar">
+
+                <div class="kse-article__sidebar-header">
+                    <h3>OTHER ARTICLES</h3>
+                    <a class="toggle-icon">
+                        <img src="../assets/images/kse-recipe_dropdwon.svg" alt="angle">
+                    </a>
                 </div>
 
-                <!-- CARD 2-->
-                <div class="kse-articles-cards__card">
-                    <div class="kse-articles-cards__image">
-                        <img src="../assets/images/article-card2.png" alt="Health & Wellness">
-                    </div>
+                <div class="kse-article__sidebar-list">
 
-                    <div class="kse-articles-cards__content">
-                        <span class="kse-articles-cards__tag">
-                            HEALTH & WELLNESS
-                        </span>
-
-                        <h3 class="kse-articles-cards__title">
-                            Why Quality Protein<br>
-                            Matters: Choosing<br>
-                            Healthier Chicken for<br>
-                            a Healthier You
-                        </h3>
-
-                        <a href="#" class="kse-btn kse-btn--outline">
-                            Read More
-                        </a>
-                    </div>
-                </div>
-
-                <!-- CARD 3-->
-                <div class="kse-articles-cards__card">
-                    <div class="kse-articles-cards__image">
-                        <img src="../assets/images/article-card3.png" alt="Recipe Inspirations">
-                    </div>
-
-                    <div class="kse-articles-cards__content">
-                        <span class="kse-articles-cards__tag">
-                            RECIPE INSPIRATIONS
-                        </span>
-
-                        <h3 class="kse-articles-cards__title">
-                            Easy and Healthy<br>
-                            Chicken Recipes for<br>
-                            Busy Weeknight Meals
-                        </h3>
-
-                        <a href="#" class="kse-btn kse-btn--outline">
-                            Read More
-                        </a>
-                    </div>
-                </div>
-
-                <!-- CARD 4 -->
-                <div class="kse-articles-cards__card">
-                    <div class="kse-articles-cards__image">
-                        <img src="../assets/images/great-chicken2.png" alt="Recipe Inspirations">
-                    </div>
-
-                    <div class="kse-articles-cards__content">
-                        <span class="kse-articles-cards__tag">
-                            RECIPE INSPIRATIONS
-                        </span>
-
-                        <h3 class="kse-articles-cards__title">
-                            5 Simple Ways to<br>
-                            Elevate your Meals:<br>
-                            The Kee Song Way
-                        </h3>
-
-                        <a href="#" class="kse-btn kse-btn--outline">
-                            Read More
-                        </a>
-                    </div>
-                </div>
-
-                <!-- CARD 5 -->
-                <div class="kse-articles-cards__card">
-                    <div class="kse-articles-cards__image">
-                        <img src="../assets/images/great-chicken3.png" alt="Product Spotlight">
-                    </div>
-
-                    <div class="kse-articles-cards__content">
-                        <span class="kse-articles-cards__tag">
-                            PRODUCT SPOTLIGHT
-                        </span>
-
-                        <h3 class="kse-articles-cards__title">
-                            The Sakura Chicken<br>
-                            Difference: Why it is<br>
-                            Naturally Better
-                        </h3>
-
-                        <a href="#" class="kse-btn kse-btn--outline">
-                            Read More
-                        </a>
-                    </div>
-                </div>
-
-                <!-- CARD 6 -->
-                <div class="kse-articles-cards__card">
-                    <div class="kse-articles-cards__image">
-                        <img src="../assets/images/great-chicken1.png" alt="From Farm to Table">
-                    </div>
-
-                    <div class="kse-articles-cards__content">
-                        <span class="kse-articles-cards__tag">
-                            FROM FARM TO TABLE
-                        </span>
-
-                        <h3 class="kse-articles-cards__title">
-                            From Yong Peng<br>
-                            to Your Plate:<br>
-                            The Kee Song Story
-                        </h3>
-
-                        <a href="#" class="kse-btn kse-btn--outline">
-                            Read More
-                        </a>
-                    </div>
-                </div>
-
-                <!-- CARD 7 -->
-                <div class="kse-articles-cards__card">
-                    <div class="kse-articles-cards__image">
-                        <img src="../assets/images/article-card7.png" alt="Cooking Tips">
-                    </div>
-
-                    <div class="kse-articles-cards__content">
-                        <span class="kse-articles-cards__tag">
+                    <div class="kse-article__card">
+                        <div class="kse-article__card-image">
+                            <img src="../assets/images/great-chicken1.png" alt="">
+                        </div>
+                        <span class="kse-article__card-tag">
                             COOKING TIPS & TECHNIQUES
                         </span>
 
-                        <h3 class="kse-articles-cards__title">
+                        <h3 class="kse-article__card-title">
                             Mastering the<br>
                             Art of Cooking<br>
                             Poultry Perfectly
                         </h3>
-
-                        <a href="#" class="kse-btn kse-btn--outline">
+                        <a href="#" class="kse-article__card-btn">
                             Read More
                         </a>
                     </div>
-                </div>
 
-                <!-- CARD 8 -->
-                <div class="kse-articles-cards__card">
-                    <div class="kse-articles-cards__image">
-                        <img src="../assets/images/article-page3.png" alt="Sustainability">
-                    </div>
-
-                    <div class="kse-articles-cards__content">
-                        <span class="kse-articles-cards__tag">
+                    <div class="kse-article__card">
+                        <div class="kse-article__card-image">
+                            <img src="../assets/images/article-page3.png" alt="">
+                        </div>
+                        <span class="kse-article__card-tag">
                             SUSTAINABILITY IN ACTION
                         </span>
-
-                        <h3 class="kse-articles-cards__title">
-                            Farming with Heart:<br>
-                            Kee Song's Commitment<br>
-                            to a Sustainable Future
+                        <h3 class="kse-article__card-title">
+                            Farming with Heart:<br> Kee Song’s Commitment<br> to a Sustainable Future
                         </h3>
-
-                        <a href="#" class="kse-btn kse-btn--outline">
+                        <a href="#" class="kse-article__card-btn">
                             Read More
                         </a>
                     </div>
+
                 </div>
 
-                <!-- CARD 9 -->
-                <div class="kse-articles-cards__card">
-                    <div class="kse-articles-cards__image">
-                        <img src="../assets/images/article-card9.png" alt="Innovation">
-                    </div>
-
-                    <div class="kse-articles-cards__content">
-                        <span class="kse-articles-cards__tag">
-                            INNOVATION IN POULTRY
-                        </span>
-
-                        <h3 class="kse-articles-cards__title">
-                            From Tech to Taste:<br>
-                            How Innovation<br>
-                            Shapes Better-Tasting,<br>
-                            Better-Quality Poultry
-                        </h3>
-
-                        <a href="#" class="kse-btn kse-btn--outline">
-                            Read More
-                        </a>
-                    </div>
-                </div>
-
-                <!-- CARD 10 -->
-                <div class="kse-articles-cards__card">
-                    <div class="kse-articles-cards__image">
-                        <img src="../assets/images/article-card10.png" alt="Food Trends">
-                    </div>
-
-                    <div class="kse-articles-cards__content">
-                        <span class="kse-articles-cards__tag">
-                            FOOD TRENDS & INSIGHTS
-                        </span>
-
-                        <h3 class="kse-articles-cards__title">
-                            Mindful Eating:<br>
-                            Why Natural Poultry<br>
-                            is Preferred
-                        </h3>
-
-                        <a href="#" class="kse-btn kse-btn--outline">
-                            Read More
-                        </a>
-                    </div>
-                </div>
-
-            </div>
+            </aside>
         </div>
     </section>
     <!-- body content end -->
@@ -661,6 +533,7 @@
             </p>
         </div>
     </footer>
+
     <!-- scripts -->
     <script src="../assets/js/jquery.slim.min.js"></script>
     <script src="../assets/js/aos.js"></script>

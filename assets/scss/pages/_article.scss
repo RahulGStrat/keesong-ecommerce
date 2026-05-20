@@ -270,7 +270,7 @@
    @media (min-width: 1024px) {
       &__grid {
          grid-template-columns:
-            minmax(0, 1fr) minmax(240px, 320px) minmax(24px, 32px) minmax(400px, 620px) minmax(24px, 48px) minmax(240px, 300px) minmax(48px, 1fr);
+            minmax(0, 1fr) minmax(220px, 280px) minmax(20px, 28px) minmax(520px, 760px) minmax(24px, 48px) minmax(240px, 300px) minmax(48px, 1fr);
          row-gap: 0;
       }
 
@@ -287,7 +287,7 @@
       &__hero-content {
          grid-column: 3 / 5;
          grid-row: 1;
-         padding: 76px 32px;
+         padding: 64px 40px;
          border-radius: 0 12px 12px 0;
       }
 
