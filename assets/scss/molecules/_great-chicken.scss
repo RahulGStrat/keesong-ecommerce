@@ -1,23 +1,16 @@
 .kse-great-chicken {
-   padding: 120px 0;
-   background-color: #f8ecef;
+   padding: 100px 0;
+   background: linear-gradient(
+      to bottom,
+      #fde9ec 0%,
+      #fef5f6 50%,
+      #fde9ec 100%
+   );
    overflow: hidden;
-
-   @include mobile-tablet {
-      padding: 90px 0;
-   }
-
-   @include mobile {
-      padding: 70px 0;
-   }
 
    &__heading {
       text-align: center;
       margin-bottom: 60px;
-
-      @include mobile {
-         margin-bottom: 40px;
-      }
    }
 
    &__title {
@@ -27,18 +20,6 @@
       font-weight: 700;
       color: #ef4b4b;
       margin-bottom: 20px;
-
-      @include tablet {
-         font-size: 56px;
-      }
-
-      @include mobile {
-         font-size: 40px;
-
-         br {
-            display: none;
-         }
-      }
    }
 
    &__description {
@@ -46,20 +27,13 @@
       font-size: 20px;
       line-height: 1.4;
       color: #000;
-
-      @include mobile {
-         font-size: 16px;
-      }
    }
 
    &__wrapper {
       position: relative;
       padding: 0 55px;
-
-      @include mobile {
-         padding: 0 30px;
-      }
    }
+
    &__tag {
       font-family: "Acumin Pro Condensed";
       font-size: 20px;
@@ -70,20 +44,13 @@
       margin-bottom: 20px;
       display: block;
    }
+
    &__image {
       img {
          width: 100%;
          height: 300px;
          object-fit: cover;
          display: block;
-
-         @include tablet {
-            height: 260px;
-         }
-
-         @include mobile {
-            height: 240px;
-         }
       }
    }
 
@@ -120,41 +87,15 @@
       display: flex;
       flex-direction: column;
       flex-grow: 1;
-
-      @include mobile {
-         padding: 24px 20px 28px;
-      }
    }
 
    &__item-title {
       font-family: "Begum";
-      font-size: 26px;
+      font-size: 22px;
       line-height: 1.15;
       font-weight: 400;
       color: #7b1530;
       margin-bottom: 30px;
-
-      @include tablet-pro {
-         br {
-            display: none;
-         }
-      }
-
-      @include tablet {
-         font-size: 24px;
-
-         br {
-            display: none;
-         }
-      }
-
-      @include mobile {
-         font-size: 22px;
-
-         br {
-            display: none;
-         }
-      }
    }
 
    &__button {
@@ -176,10 +117,6 @@
       &:hover {
          background-color: #ef4b4b;
          color: #ffffff;
-      }
-
-      @include mobile {
-         width: 100%;
       }
    }
 
@@ -203,8 +140,8 @@
          content: "";
          width: 18px;
          height: 18px;
-         border-top: 2px solid #6f6f72;
-         border-right: 2px solid #6f6f72;
+         border-top: 2px solid #4d4d4f;
+         border-right: 2px solid #4d4d4f;
          display: block;
          position: absolute;
          top: 50%;
@@ -230,6 +167,83 @@
       &.slick-disabled {
          opacity: 0.3;
          pointer-events: none;
+      }
+   }
+   @include tablet-pro {
+      &__item-title {
+         br {
+            display: none;
+         }
+      }
+   }
+
+   @include tablet {
+      &__title {
+         font-size: 56px;
+      }
+
+      &__image {
+         img {
+            height: 260px;
+         }
+      }
+
+      &__item-title {
+         font-size: 24px;
+
+         br {
+            display: none;
+         }
+      }
+   }
+
+   @include mobile-tablet {
+      padding: 90px 0;
+   }
+
+   @include mobile {
+      padding: 70px 0;
+
+      &__heading {
+         margin-bottom: 40px;
+      }
+
+      &__title {
+         font-size: 40px;
+
+         br {
+            display: none;
+         }
+      }
+
+      &__description {
+         font-size: 16px;
+      }
+
+      &__wrapper {
+         padding: 0 30px;
+      }
+
+      &__image {
+         img {
+            height: 240px;
+         }
+      }
+
+      &__content {
+         padding: 24px 20px 28px;
+      }
+
+      &__item-title {
+         font-size: 22px;
+
+         br {
+            display: none;
+         }
+      }
+
+      &__button {
+         width: 100%;
       }
    }
 }
