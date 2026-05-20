@@ -1,6 +1,6 @@
 .kse-blogfiltercard {
     width: 100%;
-    max-width: 460px;
+    max-width: 400px;
     background: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(2px);
     border-radius: 24px;
@@ -21,11 +21,11 @@
 
     &__title {
         font-family: "Acumin Variable Concept";
-        font-size: 32px;
-        line-height: 40px;
+        font-size: 28px;
+        line-height: 36px;
         font-weight: 700;
         color: #414141;
-        margin-bottom: 34px;
+        margin-bottom: 28px;
     }
 
     &__formgrp {
@@ -83,7 +83,7 @@
         }
 
         &:focus {
-            box-shadow: 0 0 0 4px rgba(255, 68, 84, 0.12);
+            box-shadow: none;
         }
 
         &::picker-icon {
