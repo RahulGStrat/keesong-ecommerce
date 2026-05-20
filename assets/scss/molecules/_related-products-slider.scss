@@ -1,0 +1,157 @@
+.kse-related-products {
+   padding: 60px 0 100px;
+   background-color: #680a38;
+   overflow: hidden;
+
+   &__heading {
+      margin-bottom: 50px;
+      padding-left: 60px;
+
+      .kse-heading {
+         color: #ffffff;
+      }
+   }
+
+   &__wrapper {
+      position: relative;
+      padding: 0 60px;
+   }
+
+   &__slider {
+      overflow: hidden;
+
+      .slick-list {
+         margin: 0 -18px;
+      }
+
+      .slick-track {
+         display: flex;
+      }
+
+      .slick-slide {
+         margin: 0 18px;
+         height: inherit !important;
+      }
+   }
+
+   &__item {
+      height: 100%;
+   }
+
+   .kse-PdTile {
+      width: 100%;
+   }
+
+   .kse-PdTile__title {
+      margin-top: 24px;
+
+      a {
+         color: #ffffff;
+         font-size: 18px;
+         line-height: 1.2;
+         font-family: "Begum";
+         font-weight: 600;
+         transition: 0.3s ease;
+         height: 65px;
+      }
+   }
+
+   .kse-PdTile__price {
+      color: #ffffff;
+      font-size: 18px;
+      font-weight: 700;
+      margin-top: 16px;
+      margin-bottom: 22px;
+   }
+
+   .kse-PdTile__badge {
+      background-color: #5fc247;
+   }
+
+   .kse-btn--sec {
+      width: 100%;
+      justify-content: center;
+   }
+
+   &__arrow {
+      width: 40px;
+      height: 40px;
+      border: 0;
+      background-color: transparent;
+      position: absolute;
+      top: 34%;
+      transform: translateY(-50%);
+      z-index: 5;
+      cursor: pointer;
+
+      &::before {
+         content: "";
+         width: 18px;
+         height: 18px;
+         border-top: 2px solid #ffffff;
+         border-right: 2px solid #ffffff;
+         display: block;
+         position: absolute;
+         top: 50%;
+         left: 50%;
+      }
+
+      &--prev {
+         left: -10px;
+
+         &::before {
+            transform: translate(-50%, -50%) rotate(-135deg);
+         }
+      }
+
+      &--next {
+         right: -10px;
+
+         &::before {
+            transform: translate(-50%, -50%) rotate(45deg);
+         }
+      }
+
+      &.slick-disabled {
+         opacity: 0.3;
+         pointer-events: none;
+      }
+   }
+
+   @include tablet {
+      &__wrapper {
+         padding: 0 50px;
+      }
+      &__heading {
+         padding-left: 50px;
+      }
+   }
+
+   @include mobile-tablet {
+      padding: 80px 0;
+   }
+
+   @include mobile {
+      padding: 60px 0;
+
+      &__heading {
+         margin-bottom: 40px;
+         padding-left: 34px;
+      }
+
+      &__wrapper {
+         padding: 0 34px;
+      }
+
+      .kse-PdTile__title {
+         a {
+            font-size: 16px;
+            height: auto;
+         }
+      }
+
+      .kse-PdTile__price {
+         font-size: 16px;
+      }
+   }
+}

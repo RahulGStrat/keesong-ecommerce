@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
    initRecipePopupSlider();
    initGreatChickenSlider();
    initFavouriteRecipesSlider();
+   initRelatedProductsSlider();
 });
 
 // =========================
@@ -539,6 +540,56 @@ function initFavouriteRecipesSlider() {
 
       prevArrow: $(".kse-favourite-recipes__arrow--prev"),
       nextArrow: $(".kse-favourite-recipes__arrow--next"),
+
+      responsive: [
+         {
+            breakpoint: 1024,
+            settings: {
+               slidesToShow: 3,
+            },
+         },
+         {
+            breakpoint: 768,
+            settings: {
+               slidesToShow: 2,
+            },
+         },
+         {
+            breakpoint: 576,
+            settings: {
+               slidesToShow: 1,
+            },
+         },
+      ],
+   });
+}
+// =========================================
+// RELATED PRODUCTS SLIDER
+// =========================================
+
+function initRelatedProductsSlider() {
+   const $wrapper = $(".kse-related-products__wrapper");
+
+   if (!$wrapper.length) return;
+
+   const $slider = $wrapper.find(".kse-related-products__slider");
+
+   if (!$slider.length) return;
+
+   if ($slider.hasClass("slick-initialized")) return;
+
+   $slider.slick({
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      infinite: true,
+      autoplay: true,
+      autoplaySpeed: 3000,
+      speed: 800,
+      arrows: true,
+      dots: false,
+
+      prevArrow: $(".kse-related-products__arrow--prev"),
+      nextArrow: $(".kse-related-products__arrow--next"),
 
       responsive: [
          {
