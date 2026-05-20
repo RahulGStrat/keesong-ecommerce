@@ -34,7 +34,8 @@
 @import "molecules/vinyl-art";
 @import "molecules/milestone-tile";
 @import "molecules/calendar";
-@import "molecules/great-chicken";
+@import "molecules/great-chicken-slider";
+@import "molecules/favourite-recipes-slider";
 
 // organisms
 @import "organisms/header";
@@ -73,9 +74,10 @@
 @import "organisms/filterNav";
 @import "organisms/meal-inspiration-filtered";
 @import "organisms/forgot-password";
-@import "organisms/article";
 @import "organisms/good-chicken";
 @import "organisms/blog-filterSearch";
 @import "organisms/feataured_articles";
 
 // pages
+@import "organisms/article";
+@import "pages/article-cards";

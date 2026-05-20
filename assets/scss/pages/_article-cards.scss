@@ -1,0 +1,183 @@
+.kse-articles-cards {
+   padding-bottom: 100px;
+
+   &__hero {
+      img {
+         width: 100%;
+         height: 250px;
+         object-fit: cover;
+         display: block;
+      }
+   }
+
+   &__search {
+      padding: 70px 0 50px;
+   }
+
+   &__search-input {
+      font-family: "Acumin Variable Concept";
+      width: 100%;
+      height: 48px;
+      border: 1px solid #f14a50;
+      border-radius: 4px;
+      background-color: transparent;
+      padding: 0 16px;
+      font-size: 16px;
+      color: #000;
+      outline: none;
+
+      &::placeholder {
+         color: #a0a0a0;
+      }
+   }
+
+   &__grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 40px 16px;
+   }
+
+   &__card {
+      background-color: #f7f6f4;
+      border-radius: 8px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+   }
+
+   &__image {
+      img {
+         width: 100%;
+         height: 220px;
+         object-fit: cover;
+         display: block;
+      }
+   }
+
+   &__content {
+      padding: 24px 20px 28px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      text-align: center;
+   }
+
+   &__tag {
+      font-family: "Acumin Pro Condensed";
+      font-size: 18px;
+      line-height: 1;
+      font-weight: 700;
+      color: #680a38;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      display: block;
+   }
+
+   &__title {
+      font-family: "Begum";
+      font-size: 20px;
+      line-height: 1.2;
+      font-weight: 400;
+      color: #6f1d46;
+      margin-bottom: 30px;
+      flex-grow: 1;
+   }
+
+   .kse-btn {
+      &--outline {
+         margin-top: auto;
+      }
+   }
+
+   @include tablet-pro {
+      &__title {
+         br {
+            display: none;
+         }
+      }
+   }
+
+   @include tablet {
+      &__grid {
+         grid-template-columns: repeat(3, 1fr);
+      }
+
+      &__image {
+         img {
+            height: 180px;
+         }
+      }
+
+      &__title {
+         font-size: 18px;
+
+         br {
+            display: none;
+         }
+      }
+   }
+
+   @include mobile-tablet {
+      padding-bottom: 80px;
+
+      &__search {
+         padding: 50px 0 40px;
+      }
+
+      &__grid {
+         grid-template-columns: repeat(2, 1fr);
+      }
+   }
+
+   @include mobile {
+      padding-bottom: 70px;
+
+      &__hero {
+         img {
+            height: 160px;
+         }
+      }
+
+      &__search {
+         padding: 40px 0 30px;
+      }
+
+      &__grid {
+         gap: 20px 12px;
+      }
+
+      &__image {
+         img {
+            height: 120px;
+         }
+      }
+
+      &__content {
+         padding: 16px 10px 18px;
+      }
+
+      &__tag {
+         font-size: 10px;
+         margin-bottom: 12px;
+      }
+
+      &__title {
+         font-size: 12px;
+         margin-bottom: 18px;
+
+         br {
+            display: none;
+         }
+      }
+
+      .kse-btn {
+         &--outline {
+            min-width: 100%;
+            height: 34px;
+            font-size: 12px;
+            padding: 6px 10px;
+         }
+      }
+   }
+}
