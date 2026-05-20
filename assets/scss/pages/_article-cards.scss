@@ -90,6 +90,14 @@
       }
    }
 
+   @include tablet-pro {
+      &__title {
+         br {
+            display: none;
+         }
+      }
+   }
+
    @include tablet {
       &__grid {
          grid-template-columns: repeat(3, 1fr);
