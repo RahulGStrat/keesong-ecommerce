@@ -40,10 +40,30 @@
       min-height: 100%;
       display: flex !important;
       flex-direction: column;
+      &:has(.kse-favourite-recipes__image a:hover) {
+         .kse-favourite-recipes__title a {
+            color: #f14a50;
+         }
+      }
+
+      &:has(.kse-favourite-recipes__title a:hover) {
+         .kse-favourite-recipes__title a {
+            color: #f14a50;
+         }
+      }
+
+      &:has(.kse-favourite-recipes__link:hover) {
+         .kse-favourite-recipes__title a {
+            color: #f14a50;
+         }
+      }
    }
 
    &__image {
       background-color: #ffffff;
+      a {
+         display: block;
+      }
       img {
          width: 100%;
          height: 270px;
@@ -70,6 +90,10 @@
       font-weight: 700;
       color: #680a38;
       margin-bottom: 20px;
+      a {
+         color: #680a38;
+         transition: color 0.3s ease;
+      }
    }
 
    &__meta {
