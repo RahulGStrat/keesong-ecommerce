@@ -12,9 +12,7 @@
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="../assets/css/style.css" />
     <!-- styles -->
-    <!-- favicon -->
-    <link rel="icon" type="image/png" href="../assets/images/keesong-favicon.png">
-    <title>Article</title>
+    <title>Article Cards</title>
 </head>
 
 <body>
@@ -268,153 +266,260 @@
             </div>
         </div>
     </header>
+    <div class="overlay d-none" id="overlay"></div>
     <!-- body content start -->
-    <section class="kse-article">
-        <div class="kse-article__grid">
-            <div class="kse-article__hero-image">
-                <img src="../assets/images/apron-1.png" alt="">
+    <section class="kse-articles-cards">
+
+        <!-- HERO -->
+        <div class="kse-articles-cards__hero">
+            <img src="../assets/images/ordering-guide.png" alt="Ordering Guide">
+        </div>
+
+        <!-- CONTENT -->
+        <div class="container">
+
+            <!-- SEARCH -->
+            <div class="kse-articles-cards__search">
+                <input type="text" placeholder="Search" class="kse-articles-cards__search-input">
             </div>
 
-            <div class="kse-article__main-column">
-                <section class="kse-article__hero-content">
-                    <span class="kse-article__tag">
-                        HEALTH & WELLNESS
-                    </span>
-                    <h1 class="kse-article__title">
-                        Eat Well, Live Well:<br class="desk-visible"> The Power of Antibiotic-Free<br
-                            class="desk-visible"> Poultry in Balanced
-                        Nutrition
-                    </h1>
-                </section>
+            <!-- GRID -->
+            <div class="kse-articles-cards__grid">
 
-                <!-- CONTENT -->
-                <section class="kse-article__content">
-
-                    <p>
-                        In today’s fast-paced world, wellness has become a conscious choice shaped by the decisions
-                        we make every day. Among these, the food we consume plays a defining role in how we feel,
-                        perform, and sustain our long-term health. At the heart of every nourishing meal lies one
-                        essential element: clean, high-quality protein.
-                    </p>
-
-                    <p>
-                        Chicken remains a staple across many households, valued for its versatility and nutritional
-                        benefits. Yet, not all chicken is created equal. The difference lies in how it is raised.
-                        Choosing antibiotic-free poultry is no longer just a preference; it is a reflection of a
-                        more informed and intentional lifestyle. Sakura Chicken by Kee Song is raised under a strict
-                        <strong>No Antibiotics Ever</strong> standard, ensuring that every cut is clean, natural,
-                        and aligned with modern expectations of food safety and quality.
-                    </p>
-
-                    <div class="kse-article__full-image">
-                        <img src="../assets/images/chicken-alfredo.png" alt="">
+                <!-- CARD -->
+                <div class="kse-articles-cards__card">
+                    <div class="kse-articles-cards__image">
+                        <img src="../assets/images/great-chicken1.png" alt="Health & Wellness">
                     </div>
 
-                    <p>
-                        What further distinguishes Sakura Chicken is its proprietary lactobacillus-based feeding
-                        method. This natural probiotic approach supports the wellbeing of the chickens, resulting in
-                        meat that is more tender, lower in fat, and refined in flavour. The difference is subtle yet
-                        unmistakable, with a clean taste that complements both simple and refined dishes.
-                    </p>
+                    <div class="kse-articles-cards__content">
+                        <span class="kse-articles-cards__tag">
+                            HEALTH & WELLNESS
+                        </span>
 
-                    <p>
-                        Lean protein plays a vital role in daily nutrition. It supports muscle development,
-                        strengthens the immune system, and provides sustained energy throughout the day. When paired
-                        with whole grains and fresh vegetables, it forms the foundation of a balanced diet that is
-                        both practical and nourishing.
-                    </p>
+                        <h3 class="kse-articles-cards__title">
+                            Eat Well, Live Well:
+                            The Power of
+                            Antibiotic-Free Poultry
+                            in Balanced Nutrition
+                        </h3>
 
-                    <p>
-                        A well-composed meal does not need to be complicated. A portion of Sakura Chicken, combined
-                        with grains such as brown rice or quinoa and a selection of seasonal greens, creates a plate
-                        that is wholesome and satisfying. Cooking methods such as steaming, grilling, or light
-                        roasting allow the natural quality of the ingredient to stand out without the need for heavy
-                        seasoning.
-                    </p>
-
-                    <p>
-                        Choosing better ingredients is a simple yet meaningful step towards better living. Sakura
-                        Chicken is available across leading retailers and online platforms, offering a convenient
-                        way to bring quality and care into everyday meals.
-                    </p>
-
-                </section>
-
-                <!-- FULL WIDTH FOOTER SPANNING LAYOUT -->
-                <footer class="kse-article__footer">
-                    <div class="kse-article__footer-inner">
-                        <p class="kse-article__date">
-                            Published on: 20 May 2026
-                        </p>
-
-                        <div class="kse-article__share">
-                            <span>Share:</span>
-
-                            <div class="kse-recipe-card__icons">
-                                <a href="#" class="kse-recipe-card__icon">
-                                    <img src="../assets/images/tik.svg" class="icon-default">
-                                    <img src="../assets/images/tik-white.svg" class="icon-hover">
-                                </a>
-                                <a href="#" class="kse-recipe-card__icon">
-                                    <img src="../assets/images/fb.svg" class="icon-default">
-                                    <img src="../assets/images/fb-white.svg" class="icon-hover">
-                                </a>
-                                <a href="#" class="kse-recipe-card__icon">
-                                    <img src="../assets/images/ig.svg" class="icon-default">
-                                    <img src="../assets/images/ig-white.svg" class="icon-hover">
-                                </a>
-                            </div>
-                        </div>
+                        <a href="#" class="kse-btn kse-btn--outline">
+                            Read More
+                        </a>
                     </div>
-                </footer>
-            </div>
-
-            <!-- SIDEBAR -->
-            <aside class="kse-article__sidebar">
-
-                <div class="kse-article__sidebar-header">
-                    <h3>OTHER ARTICLES</h3>
-                    <a class="toggle-icon">
-                        <img src="../assets/images/kse-recipe_dropdwon.svg" alt="angle">
-                    </a>
                 </div>
 
-                <div class="kse-article__sidebar-list">
+                <!-- CARD -->
+                <div class="kse-articles-cards__card">
+                    <div class="kse-articles-cards__image">
+                        <img src="../assets/images/great-chicken1.png" alt="Health & Wellness">
+                    </div>
 
-                    <div class="kse-article__card">
-                        <div class="kse-article__card-image">
-                            <img src="../assets/images/apron-2.png" alt="">
-                        </div>
-                        <span class="kse-article__card-tag">
+                    <div class="kse-articles-cards__content">
+                        <span class="kse-articles-cards__tag">
+                            HEALTH & WELLNESS
+                        </span>
+
+                        <h3 class="kse-articles-cards__title">
+                            Why Quality Protein
+                            Matters: Choosing
+                            Healthier Chicken for
+                            a Healthier You
+                        </h3>
+
+                        <a href="#" class="kse-btn kse-btn--outline">
+                            Read More
+                        </a>
+                    </div>
+                </div>
+
+                <!-- CARD -->
+                <div class="kse-articles-cards__card">
+                    <div class="kse-articles-cards__image">
+                        <img src="../assets/images/great-chicken1.png" alt="Recipe Inspirations">
+                    </div>
+
+                    <div class="kse-articles-cards__content">
+                        <span class="kse-articles-cards__tag">
+                            RECIPE INSPIRATIONS
+                        </span>
+
+                        <h3 class="kse-articles-cards__title">
+                            Easy and Healthy
+                            Chicken Recipes for
+                            Busy Weeknight Meals
+                        </h3>
+
+                        <a href="#" class="kse-btn kse-btn--outline">
+                            Read More
+                        </a>
+                    </div>
+                </div>
+
+                <!-- CARD -->
+                <div class="kse-articles-cards__card">
+                    <div class="kse-articles-cards__image">
+                        <img src="../assets/images/great-chicken1.png" alt="Recipe Inspirations">
+                    </div>
+
+                    <div class="kse-articles-cards__content">
+                        <span class="kse-articles-cards__tag">
+                            RECIPE INSPIRATIONS
+                        </span>
+
+                        <h3 class="kse-articles-cards__title">
+                            5 Simple Ways to
+                            Elevate your Meals:
+                            The Kee Song Way
+                        </h3>
+
+                        <a href="#" class="kse-btn kse-btn--outline">
+                            Read More
+                        </a>
+                    </div>
+                </div>
+
+                <!-- CARD -->
+                <div class="kse-articles-cards__card">
+                    <div class="kse-articles-cards__image">
+                        <img src="../assets/images/great-chicken1.png" alt="Product Spotlight">
+                    </div>
+
+                    <div class="kse-articles-cards__content">
+                        <span class="kse-articles-cards__tag">
+                            PRODUCT SPOTLIGHT
+                        </span>
+
+                        <h3 class="kse-articles-cards__title">
+                            The Sakura Chicken
+                            Difference: Why it is
+                            Naturally Better
+                        </h3>
+
+                        <a href="#" class="kse-btn kse-btn--outline">
+                            Read More
+                        </a>
+                    </div>
+                </div>
+
+                <!-- CARD -->
+                <div class="kse-articles-cards__card">
+                    <div class="kse-articles-cards__image">
+                        <img src="../assets/images/great-chicken1.png" alt="From Farm to Table">
+                    </div>
+
+                    <div class="kse-articles-cards__content">
+                        <span class="kse-articles-cards__tag">
                             FROM FARM TO TABLE
                         </span>
-                        <h3 class="kse-article__card-title">
-                            From Yong Peng<br> to Your Plate:<br> The Kee Song
-                            Story
+
+                        <h3 class="kse-articles-cards__title">
+                            From Yong Peng
+                            to Your Plate:
+                            The Kee Song Story
                         </h3>
-                        <a href="#" class="kse-article__card-btn">
+
+                        <a href="#" class="kse-btn kse-btn--outline">
                             Read More
                         </a>
                     </div>
-
-                    <div class="kse-article__card">
-                        <div class="kse-article__card-image">
-                            <img src="../assets/images/apron-3.png" alt="">
-                        </div>
-                        <span class="kse-article__card-tag">
-                            SUSTAINABILITY IN ACTION
-                        </span>
-                        <h3 class="kse-article__card-title">
-                            Farming with Heart:<br> Kee Song’s Commitment<br> to a Sustainable Future
-                        </h3>
-                        <a href="#" class="kse-article__card-btn">
-                            Read More
-                        </a>
-                    </div>
-
                 </div>
 
-            </aside>
+                <!-- CARD -->
+                <div class="kse-articles-cards__card">
+                    <div class="kse-articles-cards__image">
+                        <img src="../assets/images/great-chicken1.png" alt="Cooking Tips">
+                    </div>
+
+                    <div class="kse-articles-cards__content">
+                        <span class="kse-articles-cards__tag">
+                            COOKING TIPS & TECHNIQUES
+                        </span>
+
+                        <h3 class="kse-articles-cards__title">
+                            Mastering the
+                            Art of Cooking
+                            Poultry Perfectly
+                        </h3>
+
+                        <a href="#" class="kse-btn kse-btn--outline">
+                            Read More
+                        </a>
+                    </div>
+                </div>
+
+                <!-- CARD -->
+                <div class="kse-articles-cards__card">
+                    <div class="kse-articles-cards__image">
+                        <img src="../assets/images/great-chicken1.png" alt="Sustainability">
+                    </div>
+
+                    <div class="kse-articles-cards__content">
+                        <span class="kse-articles-cards__tag">
+                            SUSTAINABILITY IN ACTION
+                        </span>
+
+                        <h3 class="kse-articles-cards__title">
+                            Farming with Heart:
+                            Kee Song’s Commitment
+                            to a Sustainable Future
+                        </h3>
+
+                        <a href="#" class="kse-btn kse-btn--outline">
+                            Read More
+                        </a>
+                    </div>
+                </div>
+
+                <!-- CARD -->
+                <div class="kse-articles-cards__card">
+                    <div class="kse-articles-cards__image">
+                        <img src="../assets/images/great-chicken1.png" alt="Innovation">
+                    </div>
+
+                    <div class="kse-articles-cards__content">
+                        <span class="kse-articles-cards__tag">
+                            INNOVATION IN POULTRY
+                        </span>
+
+                        <h3 class="kse-articles-cards__title">
+                            From Tech to Taste:
+                            How Innovation
+                            Shapes Better-Tasting,
+                            Better-Quality Poultry
+                        </h3>
+
+                        <a href="#" class="kse-btn kse-btn--outline">
+                            Read More
+                        </a>
+                    </div>
+                </div>
+
+                <!-- CARD -->
+                <div class="kse-articles-cards__card">
+                    <div class="kse-articles-cards__image">
+                        <img src="../assets/images/great-chicken1.png" alt="Food Trends">
+                    </div>
+
+                    <div class="kse-articles-cards__content">
+                        <span class="kse-articles-cards__tag">
+                            FOOD TRENDS & INSIGHTS
+                        </span>
+
+                        <h3 class="kse-articles-cards__title">
+                            Mindful Eating:
+                            Why Natural Poultry
+                            is Preferred
+                        </h3>
+
+                        <a href="#" class="kse-btn kse-btn--outline">
+                            Read More
+                        </a>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </section>
     <!-- body content end -->
@@ -556,7 +661,6 @@
             </p>
         </div>
     </footer>
-
     <!-- scripts -->
     <script src="../assets/js/jquery.slim.min.js"></script>
     <script src="../assets/js/aos.js"></script>
