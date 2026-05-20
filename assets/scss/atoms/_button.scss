@@ -169,19 +169,19 @@
       }
    }
 
-   &--viewalldeals {
-      background: transparent;
-      border: 1px solid $primary-color;
-      color: $primary-color;
-      padding: 8px 42px;
-      border-radius: 8px !important;
-      font-size: 16px;
-      font-weight: 600;
-      font-family: "Acumin Pro Condensed";
-      text-decoration: none;
-      border-radius: 24px;
-      transition: background 3s ease-in-out;
-      display: inline-block;
+    &--viewalldeals {
+        background: transparent;
+        border: 1px solid $primary-color;
+        color: $primary-color;
+        padding: 8px 42px;
+        border-radius: 8px !important;
+        font-size: 16px;
+        font-weight: 600;
+        font-family: "Acumin Pro Condensed";
+        text-decoration: none;
+        border-radius: 24px;
+        transition: background .3s ease-in-out;
+        display: inline-block;
 
       &:hover {
          color: #ffffff;
@@ -189,6 +189,7 @@
          border: 1px solid $primary-color;
       }
    }
+   
    &--outline {
       display: inline-flex;
       align-items: center;
