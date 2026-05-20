@@ -212,7 +212,7 @@
 
     @media (max-width: 767px) {
 
-        padding: 60px 0;
+        padding: 40px 0;
 
         &__title {
             font-size: 28px;
@@ -220,19 +220,29 @@
         }
 
         &__maincard {
-            min-height: 420px;
+            min-height: unset;
         }
 
         &__overlay {
             padding: 24px;
 
+            span {
+                font-size: 18px;
+                line-height: 24px;
+            }
+
             h3 {
-                font-size: 30px;
+                font-size: 16px;
+                line-height: 22px;
             }
         }
 
         &__sidecard {
             flex-direction: column;
+        }
+
+        &__sidecards {
+            gap: 24px;
         }
 
         &__sideimg {
