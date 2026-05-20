@@ -15,7 +15,7 @@
 
    &__title {
       font-family: "Begum";
-      font-size: 72px;
+      font-size: 52px;
       line-height: 0.95;
       font-weight: 700;
       color: #ef4b4b;
@@ -57,6 +57,10 @@
    &__slider {
       overflow: hidden;
 
+      .slick-list {
+         margin: 0 -8px;
+      }
+
       .slick-track {
          display: flex;
          align-items: stretch;
@@ -78,7 +82,7 @@
       height: 100%;
       display: flex !important;
       flex-direction: column;
-      margin: 0 10px;
+      margin: 0 8px;
    }
 
    &__content {
