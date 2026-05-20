@@ -1,13 +1,12 @@
 .kse-goodchkn {
     background-color: #680a38;
-    min-height: 100vh;
     &__out {
         display: flex;
         align-items: center;
         justify-content: center;
-        min-height: 100vh;
         width: 100%;
         gap: 32px;
+        padding: 90px 0px;
     }
     &__content {
         display: flex;
@@ -22,7 +21,8 @@
         }
     }
     &__head {
-        font-size: 60px;
+        font-size: 52px;
+        line-height: 1;
         color: #fff;
         font-weight: 600;
         margin-bottom: 20px;
@@ -39,6 +39,10 @@
         display: flex;
         gap: 26px;
         justify-content: space-between;
+
+        .kse-PdTile__title a {
+            color: #fff;
+        }
     }
     .kse-PdTile {
         width: calc(33.3% - 12px);
@@ -52,7 +56,6 @@
     .kse-PdTile__price {
         color: #fff;
         font-size: 16px;
-        padding-top: 24px;
         padding-bottom: 0px;
     }
 } 
