@@ -1,0 +1,227 @@
+.kse-featuredarticles {
+    padding: 80px 0;
+    background: #f5f5f5;
+
+    .content-wrapper {
+        max-width: 1120px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    &__title {
+        text-align: center;
+        font-size: 72px;
+        line-height: 1;
+        font-weight: 700;
+        color: #ff4454;
+        margin-bottom: 60px;
+    }
+
+    &__wrapper {
+        display: flex;
+        gap: 24px;
+        align-items: stretch;
+    }
+
+    /* LEFT CARD */
+
+    &__maincard {
+        width: 58%;
+        position: relative;
+        border-radius: 24px;
+        overflow: hidden;
+        min-height: 560px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+    }
+
+    &__overlay {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        padding: 40px;
+        background: linear-gradient(to top,
+                rgba(0, 0, 0, 0.75),
+                rgba(0, 0, 0, 0));
+
+        span {
+            display: block;
+            font-size: 16px;
+            line-height: 1.2;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 14px;
+        }
+
+        h3 {
+            font-size: 42px;
+            line-height: 1.1;
+            font-weight: 700;
+            color: #fff;
+            margin: 0;
+            max-width: 520px;
+        }
+    }
+
+    /* RIGHT SIDE */
+
+    &__sidecards {
+        width: 42%;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    &__sidecard {
+        display: flex;
+        gap: 16px;
+        align-items: flex-start;
+    }
+
+    &__sideimg {
+        width: 180px;
+        flex-shrink: 0;
+        border-radius: 16px;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            display: block;
+        }
+    }
+
+    &__content {
+        padding-top: 8px;
+
+        span {
+            display: block;
+            font-size: 14px;
+            line-height: 1.2;
+            font-weight: 700;
+            color: #5a1630;
+            margin-bottom: 10px;
+        }
+
+        h4 {
+            font-size: 22px;
+            line-height: 1.2;
+            font-weight: 400;
+            color: #5a1630;
+            margin-bottom: 18px;
+        }
+    }
+
+    &__btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 120px;
+        height: 44px;
+        border: 1px solid #ff4454;
+        border-radius: 10px;
+        font-size: 16px;
+        line-height: 1;
+        font-weight: 600;
+        color: #ff4454;
+        text-decoration: none;
+        transition: 0.25s ease;
+
+        &:hover {
+            background: #ff4454;
+            color: #fff;
+        }
+    }
+
+    /* BOTTOM BUTTON */
+
+    &__bottom {
+        margin-top: 50px;
+        text-align: center;
+    }
+
+    &__viewall {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 360px;
+        height: 60px;
+        border: 1px solid #ff4454;
+        border-radius: 12px;
+        font-size: 20px;
+        line-height: 1;
+        font-weight: 700;
+        color: #ff4454;
+        text-decoration: none;
+        transition: 0.25s ease;
+
+        &:hover {
+            background: #ff4454;
+            color: #fff;
+        }
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 991px) {
+
+        &__wrapper {
+            flex-direction: column;
+        }
+
+        &__maincard,
+        &__sidecards {
+            width: 100%;
+        }
+
+        &__title {
+            font-size: 52px;
+        }
+    }
+
+    @media (max-width: 767px) {
+
+        padding: 60px 0;
+
+        &__title {
+            font-size: 40px;
+            margin-bottom: 40px;
+        }
+
+        &__maincard {
+            min-height: 420px;
+        }
+
+        &__overlay {
+            padding: 24px;
+
+            h3 {
+                font-size: 30px;
+            }
+        }
+
+        &__sidecard {
+            flex-direction: column;
+        }
+
+        &__sideimg {
+            width: 100%;
+
+            img {
+                height: 240px;
+            }
+        }
+
+        &__viewall {
+            width: 100%;
+            min-width: unset;
+        }
+    }
+}
