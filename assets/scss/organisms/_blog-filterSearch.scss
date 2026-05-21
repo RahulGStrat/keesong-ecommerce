@@ -1,170 +1,172 @@
 .kse-blogfiltercard {
-   width: 100%;
-   max-width: 400px;
-   background: rgba(255, 255, 255, 0.7);
-   backdrop-filter: blur(2px);
-   border-radius: 24px;
-   padding: 40px 30px;
+    width: 100%;
+    max-width: 400px;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(2px);
+    border-radius: 24px;
+    padding: 40px 30px;
 
-   &__outer {
-      width: 100%;
-      min-height: 650px;
-      display: flex;
-      align-items: center;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      padding: 80px 0;
-   }
+    &__outer {
+        width: 100%;
+        min-height: 650px;
+        display: flex;
+        align-items: center;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 80px 0;
+    }
 
-   &__title {
-      font-family: "Acumin Variable Concept";
-      font-size: 28px;
-      line-height: 36px;
-      font-weight: 700;
-      color: #414141;
-      margin-bottom: 28px;
-   }
+    &__title {
+        font-family: "Acumin Variable Concept";
+        font-size: 28px;
+        line-height: 36px;
+        font-weight: 700;
+        color: #414141;
+        margin-bottom: 28px;
+    }
 
-   &__formgrp {
-      position: relative;
-      margin-bottom: 22px;
+    &__formgrp {
+        position: relative;
+        margin-bottom: 22px;
 
-      label {
-         display: block;
-         margin-bottom: 10px;
-         font-size: 16px;
-         font-family: "Acumin Variable Concept";
-         color: #414141;
-      }
-   }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 16px;
+            font-family: "Acumin Variable Concept";
+            color: #414141;
+        }
+    }
 
-   &__cstmselect {
-      position: relative;
-      box-sizing: border-box;
-      width: 100%;
-      height: 52px;
-      padding: 0 50px 0 20px;
-      border: 2px solid #fff;
-      border-radius: 8px;
-      background: #fff;
-      font-size: 16px;
-      font-family: "Acumin Variable Concept";
-      color: #414141;
-      outline: none;
-      cursor: pointer;
-      transition:
-         border-color 0.25s ease,
-         border-radius 0.2s ease;
-      display: flex;
-      align-items: center;
-      user-select: none;
-      overflow: visible;
+    &__cstmselect {
+        position: relative;
+        box-sizing: border-box;
+        width: 100%;
+        height: 40px;
+        padding: 0 50px 0 20px;
+        border: 2px solid #fff;
+        border-radius: 8px;
+        background: #fff;
+        font-size: 15px;
+        font-weight: 300;
+        font-family: "Acumin Variable Concept";
+        color: #414141;
+        outline: none;
+        cursor: pointer;
+        transition:
+            border-color 0.25s ease,
+            border-radius 0.2s ease;
+        display: flex;
+        align-items: center;
+        user-select: none;
+        overflow: visible;
 
-      &:focus {
-         border-color: #f14a50;
-         box-shadow: none;
-      }
+        &:focus {
+            border-color: #f14a50;
+            box-shadow: none;
+        }
 
-      &.open {
-         border-color: #f14a50;
-         border-bottom-left-radius: 0;
-         border-bottom-right-radius: 0;
+        &.open {
+            border-color: #f14a50;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
 
-         .kse-blogfiltercard__cstmselect-arrow {
-            transform: rotate(180deg);
-         }
+            .kse-blogfiltercard__cstmselect-arrow {
+                transform: rotate(180deg);
+            }
 
-         .kse-blogfiltercard__cstmselect-panel {
-            opacity: 1;
-            visibility: visible;
-         }
-      }
-   }
+            .kse-blogfiltercard__cstmselect-panel {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
 
-   &__cstmselect-text {
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      flex: 1;
+    &__cstmselect-text {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        flex: 1;
 
-      &.kse-placeholder {
-         color: #a0a0a0;
-      }
-   }
+        &.kse-placeholder {
+            color: #a0a0a0;
+        }
+    }
 
-   &__cstmselect-arrow {
-      position: absolute;
-      right: 20px;
-      transition: transform 0.3s ease;
-      pointer-events: none;
-   }
+    &__cstmselect-arrow {
+        position: absolute;
+        right: 20px;
+        transition: transform 0.3s ease;
+        pointer-events: none;
+    }
 
-   &__cstmselect-panel {
-      position: absolute;
-      top: calc(100% - 2px);
-      left: -1px;
-      width: calc(100% + 3px);
-      padding: 0;
-      margin: 0;
-      box-sizing: border-box;
-      background: #fff;
-      border: 2px solid #f14a50;
-      border-top: none;
-      border-radius: 0 0 8px 8px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-      z-index: 100;
-      opacity: 0;
-      visibility: hidden;
-      overflow: hidden;
-      transition:
-         opacity 0.25s ease,
-         visibility 0.25s ease;
-   }
+    &__cstmselect-panel {
+        position: absolute;
+        top: calc(100% - 2px);
+        left: -2px;
+        width: calc(100% + 3.2px);
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        background: #fff;
+        border: 2px solid #f14a50;
+        border-top: none;
+        border-radius: 0 0 8px 8px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        z-index: 100;
+        opacity: 0;
+        visibility: hidden;
+        overflow: hidden;
+        transition:
+            opacity 0.25s ease,
+            visibility 0.25s ease;
+    }
 
-   &__cstmselect-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      max-height: 250px;
-      overflow-y: auto;
-      scrollbar-width: thin;
-   }
+    &__cstmselect-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        max-height: 250px;
+        overflow-y: auto;
+        scrollbar-width: thin;
+    }
 
-   &__cstmselect-item {
-      padding: 14px 20px;
-      font-size: 16px;
-      font-family: "Acumin Variable Concept";
-      color: #414141;
-      cursor: pointer;
-      transition: all 0.2s ease;
-      box-sizing: border-box;
+    &__cstmselect-item {
+        padding: 10px 20px;
+        font-size: 15px;
+        font-weight: 300;
+        font-family: "Acumin Variable Concept";
+        color: #414141;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        box-sizing: border-box;
 
-      &:hover,
-      &.focus {
-         background: #fff1f2;
-      }
+        &:hover,
+        &.focus {
+            background: #fff1f2;
+        }
 
-      &.selected {
-         background: #f14a50;
-         color: #fff;
-      }
+        &.selected {
+            background: #f14a50;
+            color: #fff;
+        }
 
-      &:last-child {
-         border-bottom-left-radius: 8px;
-         border-bottom-right-radius: 8px;
-      }
-   }
+        &:last-child {
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+        }
+    }
 
-   .kse-btn {
-      width: 100%;
-      border-radius: 6px;
-      font-size: 18px;
-   }
+    .kse-btn {
+        width: 100%;
+        border-radius: 6px;
+        font-size: 18px;
+    }
 }
 
 @include mobile {
-   .kse-blogfiltercard {
-      max-width: 100%;
-   }
+    .kse-blogfiltercard {
+        max-width: 100%;
+    }
 }

@@ -275,76 +275,92 @@
         <div class="content-wrapper">
             <div class="kse-blogfiltercard">
 
-                <h1 class="kse-blogfiltercard__title">
-                    What are you looking for?
-                </h1>
+            <h1 class="kse-blogfiltercard__title">
+                What are you looking for?
+            </h1>
 
-                <!-- FIELD 1 -->
+            <!-- FIELD 1 -->
 
-                <div class="kse-blogfiltercard__formgrp">
+            <div class="kse-blogfiltercard__formgrp">
 
-                    <label>
-                        I am looking for chicken for my
-                    </label>
+                <label id="kse-label-1">
+                    I am looking for chicken for my
+                </label>
 
-                    <select class="kse-blogfiltercard__cstmselect">
-
-                        <option value="" selected disabled hidden>
-                            -- Select --
-                        </option>
-                        <option value="home">Home</option>
-                        <option value="restaurant">Restaurant</option>
-                        <option value="farm">Farm</option>
-
-                    </select>
-
+                <div class="kse-blogfiltercard__cstmselect" tabindex="0" role="combobox" aria-expanded="false" aria-haspopup="listbox" aria-labelledby="kse-label-1">
+                    <span class="kse-blogfiltercard__cstmselect-text kse-placeholder">-- Select --</span>
+                    <svg class="kse-blogfiltercard__cstmselect-arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.5 5.25L7 8.75L10.5 5.25" stroke="#414141" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <input type="hidden" name="chicken_for" value="">
+                    
+                    <div class="kse-blogfiltercard__cstmselect-panel">
+                        <ul class="kse-blogfiltercard__cstmselect-list" role="listbox" aria-labelledby="kse-label-1">
+                            <li class="kse-blogfiltercard__cstmselect-item" role="option" aria-selected="false" data-value="home">Home</li>
+                            <li class="kse-blogfiltercard__cstmselect-item" role="option" aria-selected="false" data-value="restaurant">Restaurant</li>
+                            <li class="kse-blogfiltercard__cstmselect-item" role="option" aria-selected="false" data-value="farm">Farm</li>
+                        </ul>
+                    </div>
                 </div>
-
-                <!-- FIELD 2 -->
-
-                <div class="kse-blogfiltercard__formgrp">
-
-                    <label>
-                        I prefer
-                    </label>
-                    <select class="kse-blogfiltercard__cstmselect">
-
-                        <option value="" selected disabled hidden>
-                            -- Select --
-                        </option>
-
-                        <option value="Fresh Chicken">Fresh Chicken</option>
-                        <option value="Frozen Chicken">Frozen Chicken</option>
-                        <option value="Organic Chicken">Organic Chicken</option>
-
-                    </select>
-
-                </div>
-
-                <!-- FIELD 3 -->
-
-                <div class="kse-blogfiltercard__formgrp">
-
-                    <label>
-                        From
-                    </label>
-                    <select class="kse-blogfiltercard__cstmselect">
-
-                        <option value="" selected disabled hidden>
-                            -- Select --
-                        </option>
-
-                        <option value="Singapore">Singapore</option>
-                        <option value="Malaysia">Malaysia</option>
-                    </select>
-
-                </div>
-
-                <!-- BUTTON -->
-
-                <a href="#" class="kse-btn kse-btn--header">Explore Now</a>
 
             </div>
+
+            <!-- FIELD 2 -->
+
+            <div class="kse-blogfiltercard__formgrp">
+
+                <label id="kse-label-2">
+                    I prefer
+                </label>
+                
+                <div class="kse-blogfiltercard__cstmselect" tabindex="0" role="combobox" aria-expanded="false" aria-haspopup="listbox" aria-labelledby="kse-label-2">
+                    <span class="kse-blogfiltercard__cstmselect-text kse-placeholder">-- Select --</span>
+                    <svg class="kse-blogfiltercard__cstmselect-arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.5 5.25L7 8.75L10.5 5.25" stroke="#414141" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <input type="hidden" name="preference" value="">
+                    
+                    <div class="kse-blogfiltercard__cstmselect-panel">
+                        <ul class="kse-blogfiltercard__cstmselect-list" role="listbox" aria-labelledby="kse-label-2">
+                            <li class="kse-blogfiltercard__cstmselect-item" role="option" aria-selected="false" data-value="Fresh Chicken">Fresh Chicken</li>
+                            <li class="kse-blogfiltercard__cstmselect-item" role="option" aria-selected="false" data-value="Frozen Chicken">Frozen Chicken</li>
+                            <li class="kse-blogfiltercard__cstmselect-item" role="option" aria-selected="false" data-value="Organic Chicken">Organic Chicken</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- FIELD 3 -->
+
+            <div class="kse-blogfiltercard__formgrp">
+
+                <label id="kse-label-3">
+                    From
+                </label>
+                
+                <div class="kse-blogfiltercard__cstmselect" tabindex="0" role="combobox" aria-expanded="false" aria-haspopup="listbox" aria-labelledby="kse-label-3">
+                    <span class="kse-blogfiltercard__cstmselect-text kse-placeholder">-- Select --</span>
+                    <svg class="kse-blogfiltercard__cstmselect-arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.5 5.25L7 8.75L10.5 5.25" stroke="#414141" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <input type="hidden" name="location" value="">
+                    
+                    <div class="kse-blogfiltercard__cstmselect-panel">
+                        <ul class="kse-blogfiltercard__cstmselect-list" role="listbox" aria-labelledby="kse-label-3">
+                            <li class="kse-blogfiltercard__cstmselect-item" role="option" aria-selected="false" data-value="Singapore">Singapore</li>
+                            <li class="kse-blogfiltercard__cstmselect-item" role="option" aria-selected="false" data-value="Malaysia">Malaysia</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- BUTTON -->
+
+            <a href="#" class="kse-btn kse-btn--header">Explore Now</a>
+
+        </div>
         </div>
     </div>
     <!-- Great Chicken is made better -->
