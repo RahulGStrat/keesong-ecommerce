@@ -620,7 +620,7 @@ function initRelatedProductsSlider() {
 // =========================================
 function initCustomDropdown() {
    const dropdowns = document.querySelectorAll(
-      ".kse-blogfiltercard__cstmselect",
+      ".kse-blogfiltercard__dropdown",
    );
 
    if (!dropdowns.length) return;
@@ -630,12 +630,14 @@ function initCustomDropdown() {
       dropdowns.forEach((dropdown) => {
          if (dropdown !== except) {
             dropdown.classList.remove("open");
-            dropdown.setAttribute("aria-expanded", "false");
+            const trigger = dropdown.querySelector(".kse-blogfiltercard__cstmselect");
+            if (trigger) trigger.setAttribute("aria-expanded", "false");
          }
       });
    };
 
    dropdowns.forEach((dropdown) => {
+      const trigger = dropdown.querySelector(".kse-blogfiltercard__cstmselect");
       const text = dropdown.querySelector(
          ".kse-blogfiltercard__cstmselect-text",
       );
@@ -677,7 +679,7 @@ function initCustomDropdown() {
          closeAllDropdowns(dropdown);
 
          dropdown.classList.add("open");
-         dropdown.setAttribute("aria-expanded", "true");
+         if (trigger) trigger.setAttribute("aria-expanded", "true");
 
          const selectedItem = dropdown.querySelector(
             ".kse-blogfiltercard__cstmselect-item.selected",
@@ -691,7 +693,7 @@ function initCustomDropdown() {
 
       const closeDropdown = () => {
          dropdown.classList.remove("open");
-         dropdown.setAttribute("aria-expanded", "false");
+         if (trigger) trigger.setAttribute("aria-expanded", "false");
 
          focusedIndex = -1;
 
@@ -734,7 +736,7 @@ function initCustomDropdown() {
 
          closeDropdown();
 
-         dropdown.focus();
+         if (trigger) trigger.focus();
       };
 
       // Click
@@ -753,63 +755,65 @@ function initCustomDropdown() {
       });
 
       // Keyboard
-      dropdown.addEventListener("keydown", (e) => {
-         switch (e.key) {
-            case "Enter":
-            case " ":
-               e.preventDefault();
+      if (trigger) {
+         trigger.addEventListener("keydown", (e) => {
+            switch (e.key) {
+               case "Enter":
+               case " ":
+                  e.preventDefault();
 
-               if (isDropdownOpen() && focusedIndex >= 0) {
-                  selectItem(items[focusedIndex]);
-               } else {
-                  openDropdown();
-               }
+                  if (isDropdownOpen() && focusedIndex >= 0) {
+                     selectItem(items[focusedIndex]);
+                  } else {
+                     openDropdown();
+                  }
 
-               break;
+                  break;
 
-            case "Escape":
-               closeDropdown();
-               break;
+               case "Escape":
+                  closeDropdown();
+                  break;
 
-            case "ArrowDown":
-               e.preventDefault();
+               case "ArrowDown":
+                  e.preventDefault();
 
-               if (!isDropdownOpen()) {
-                  openDropdown();
-                  focusedIndex = 0;
-               } else {
-                  focusedIndex = (focusedIndex + 1) % items.length;
-               }
+                  if (!isDropdownOpen()) {
+                     openDropdown();
+                     focusedIndex = 0;
+                  } else {
+                     focusedIndex = (focusedIndex + 1) % items.length;
+                  }
 
-               updateFocus();
+                  updateFocus();
 
-               break;
+                  break;
 
-            case "ArrowUp":
-               e.preventDefault();
+               case "ArrowUp":
+                  e.preventDefault();
 
-               if (!isDropdownOpen()) {
-                  openDropdown();
-                  focusedIndex = items.length - 1;
-               } else {
-                  focusedIndex =
-                     (focusedIndex - 1 + items.length) % items.length;
-               }
+                  if (!isDropdownOpen()) {
+                     openDropdown();
+                     focusedIndex = items.length - 1;
+                  } else {
+                     focusedIndex =
+                        (focusedIndex - 1 + items.length) % items.length;
+                  }
 
-               updateFocus();
+                  updateFocus();
 
-               break;
+                  break;
 
-            case "Tab":
-               closeDropdown();
-               break;
-         }
-      });
+               case "Tab":
+                  closeDropdown();
+                  break;
+            }
+         });
+      }
    });
 
    // Outside click
    document.addEventListener("click", (e) => {
-      if (!e.target.closest(".kse-blogfiltercard__cstmselect")) {
+      if (!e.target.closest(".kse-blogfiltercard__dropdown")) {
          closeAllDropdowns();
       }
    });
