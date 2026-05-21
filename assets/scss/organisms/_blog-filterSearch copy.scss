@@ -1,0 +1,193 @@
+.kse-blogfiltercards {
+    width: 100%;
+    max-width: 400px;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(2px);
+    border-radius: 24px;
+    padding: 40px 30px;
+    overflow: visible;
+
+    &__outer {
+        width: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        min-height: 650px;
+        display: flex;
+        align-items: center;
+        overflow: visible;
+        padding: 20% 0;
+    }
+
+    &__title {
+        font-family: "Acumin Variable Concept";
+        font-size: 28px;
+        line-height: 36px;
+        font-weight: 700;
+        color: #414141;
+        margin-bottom: 28px;
+    }
+
+    &__formgrp {
+        margin-bottom: 22px;
+        position: relative;
+        overflow: visible;
+
+        label {
+            display: block;
+            font-size: 16px;
+            font-family: "Acumin Variable Concept";
+            color: #414141;
+            margin-bottom: 10px;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            right: 20px;
+            top: 45px;
+            width: 14px;
+            height: 14px;
+            background-image: url('/assets/images/ks-form-dwnarrow.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            pointer-events: none;
+            transition: transform 0.25s ease;
+        }
+
+        &:has(.kse-blogfiltercard__cstmselect:open)::after {
+            transform: rotate(180deg);
+        }
+    }
+
+    &__cstmselect {
+        width: 100%;
+        padding: 8px 20px;
+        border: 2px solid #fff;
+        border-radius: 8px;
+        background: #fff;
+        font-size: 16px;
+        font-family: "Acumin Variable Concept";
+        color: #414141;
+        cursor: pointer;
+        outline: none;
+        transition: 0.25s ease;
+        appearance: base-select;
+
+        &:has(option[value=""]:checked) {
+            color: #a0a0a0;
+        }
+
+        &::picker(select) {
+            appearance: base-select;
+            position-area: bottom;
+            margin-block-start: 0;
+            inset: auto;
+        }
+
+        &:focus {
+            box-shadow: none;
+        }
+
+        &::picker-icon {
+            opacity: 0;
+        }
+
+        // dropdown
+        &::picker(select) {
+            border: none;
+            margin-top: 0; // remove gap
+            border-radius: 0 0 10px 10px; // remove top radius
+            overflow: hidden;
+            background: #fff;
+            opacity: 0;
+            transform: translateY(0); // prevent shifting gap
+            transition:
+                opacity 0.2s ease,
+                transform 0.2s ease,
+                overlay 0.2s allow-discrete,
+                display 0.2s allow-discrete;
+        }
+
+        // open
+        &:open {
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+
+        &:open::picker(select) {
+            opacity: 1;
+        }
+
+        &::picker(select) {
+            appearance: base-select;
+
+            position-area: bottom;
+            margin-block-start: 0;
+            inset: auto;
+
+            border: none;
+            margin-top: 0;
+            border-radius: 0 0 10px 10px;
+            overflow: hidden;
+            background: #fff;
+
+            opacity: 0;
+            transform: translateY(10px);
+
+            transition:
+                opacity 0.2s ease,
+                transform 0.2s ease,
+                overlay 0.2s allow-discrete,
+                display 0.2s allow-discrete;
+        }
+
+        &:open::picker(select) {
+            transform: translateY(0);
+        }
+
+        option {
+            padding: 8px 20px;
+            background: #fff;
+            color: #2d3945;
+            font-size: 15px;
+            font-weight: 300;
+            border-bottom: 1px solid #ececec;
+            transition: 0.2s ease;
+        }
+
+        option:last-of-type {
+            border-bottom: none;
+        }
+
+        option:hover,
+        option:focus {
+            background: #ff4454;
+            color: #fff;
+        }
+
+        option:checked {
+            background: #ff4454;
+            color: #fff;
+        }
+
+        option::checkmark {
+            display: none;
+        }
+    }
+
+    .kse-btn {
+        width: 100%;
+        border-radius: 6px;
+        font-size: 18px;
+    }
+}
+
+@include mobile {
+    .kse-blogfiltercard {
+        max-width: unset;
+        width: 100%;
+    }
+}
