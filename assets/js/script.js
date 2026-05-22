@@ -637,6 +637,7 @@ function initCustomDropdown() {
    };
 
    dropdowns.forEach((dropdown) => {
+      dropdown.classList.remove("open");
       const trigger = dropdown.querySelector(".kse-blogfiltercard__cstmselect");
       const text = dropdown.querySelector(
          ".kse-blogfiltercard__cstmselect-text",
@@ -740,18 +741,18 @@ function initCustomDropdown() {
       };
 
       // Click
-      dropdown.addEventListener("click", (e) => {
-         e.stopPropagation();
-
-         const clickedItem = e.target.closest(
-            ".kse-blogfiltercard__cstmselect-item",
-         );
-
-         if (clickedItem) {
-            selectItem(clickedItem);
-         } else {
+      if (trigger) {
+         trigger.addEventListener("click", (e) => {
+            e.preventDefault();
             toggleDropdown();
-         }
+         });
+      }
+
+      items.forEach((item) => {
+         item.addEventListener("click", (e) => {
+            e.preventDefault();
+            selectItem(item);
+         });
       });
 
       // Keyboard
