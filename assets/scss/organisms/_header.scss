@@ -87,8 +87,9 @@
   &__menu {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 16px;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -97,6 +98,8 @@
 
     li {
       position: relative;
+      display: flex;
+      align-items: center;
 
       a {
         text-decoration: none;
@@ -116,15 +119,10 @@
         }
       }
 
-      &::after {
+      &:not(:last-child)::after {
         content: "|";
-        position: absolute;
-        right: -22px;
+        margin-left: 12px;
         color: #121212;
-      }
-
-      &:last-child::after {
-        display: none;
       }
     }
 
@@ -444,14 +442,16 @@
 
 @include tablet-pro {
   .kse-Head {
+    &__menu {
+      gap: 12px;
+    }
+
     &__menu li a {
       font-size: 13px;
     }
 
-    &__menu li {
-      &::after {
-        right: -13px;
-      }
+    &__menu li:not(:last-child)::after {
+      margin-left: 12px;
     }
 
     &__deliverytxt {
@@ -580,7 +580,7 @@
         padding: 10px 0;
       }
 
-      li::after {
+      li:not(:last-child)::after {
         display: none;
       }
 
@@ -666,7 +666,7 @@
         padding: 10px 0;
       }
 
-      li::after {
+      li:not(:last-child)::after {
         display: none;
       }
 
