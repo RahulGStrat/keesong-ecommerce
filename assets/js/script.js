@@ -14,6 +14,8 @@ document.addEventListener("DOMContentLoaded", function () {
    initRecipePopupSlider();
    initGreatChickenSlider();
    initFavouriteRecipesSlider();
+   initRelatedProductsSlider();
+   initCustomDropdown();
 });
 
 // =========================
@@ -560,5 +562,260 @@ function initFavouriteRecipesSlider() {
             },
          },
       ],
+   });
+}
+// =========================================
+// RELATED PRODUCTS SLIDER
+// =========================================
+
+function initRelatedProductsSlider() {
+   const $wrapper = $(".kse-related-products__wrapper");
+
+   if (!$wrapper.length) return;
+
+   const $slider = $wrapper.find(".kse-related-products__slider");
+
+   if (!$slider.length) return;
+
+   if ($slider.hasClass("slick-initialized")) return;
+
+   $slider.slick({
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      infinite: true,
+      autoplay: true,
+      autoplaySpeed: 3000,
+      speed: 800,
+      arrows: true,
+      dots: false,
+
+      prevArrow: $(".kse-related-products__arrow--prev"),
+      nextArrow: $(".kse-related-products__arrow--next"),
+
+      responsive: [
+         {
+            breakpoint: 1024,
+            settings: {
+               slidesToShow: 3,
+            },
+         },
+         {
+            breakpoint: 768,
+            settings: {
+               slidesToShow: 2,
+            },
+         },
+         {
+            breakpoint: 576,
+            settings: {
+               slidesToShow: 1,
+            },
+         },
+      ],
+   });
+}
+
+// =========================================
+// CUSTOM DROPDOWN
+// =========================================
+function initCustomDropdown() {
+   const dropdowns = document.querySelectorAll(
+      ".kse-blogfiltercard__dropdown",
+   );
+
+   if (!dropdowns.length) return;
+
+   // Close all dropdowns
+   const closeAllDropdowns = (except = null) => {
+      dropdowns.forEach((dropdown) => {
+         if (dropdown !== except) {
+            dropdown.classList.remove("open");
+            const trigger = dropdown.querySelector(".kse-blogfiltercard__cstmselect");
+            if (trigger) trigger.setAttribute("aria-expanded", "false");
+         }
+      });
+   };
+
+   dropdowns.forEach((dropdown) => {
+      dropdown.classList.remove("open");
+      const trigger = dropdown.querySelector(".kse-blogfiltercard__cstmselect");
+      const text = dropdown.querySelector(
+         ".kse-blogfiltercard__cstmselect-text",
+      );
+      const hiddenInput = dropdown.querySelector("input[type='hidden']");
+      const list = dropdown.querySelector(
+         ".kse-blogfiltercard__cstmselect-list",
+      );
+      const items = dropdown.querySelectorAll(
+         ".kse-blogfiltercard__cstmselect-item",
+      );
+
+      let focusedIndex = -1;
+
+      // Helpers
+      const isDropdownOpen = () => dropdown.classList.contains("open");
+
+      const removeFocus = () => {
+         items.forEach((item) => {
+            item.classList.remove("focus");
+         });
+      };
+
+      const updateFocus = () => {
+         removeFocus();
+
+         if (focusedIndex >= 0 && focusedIndex < items.length) {
+            const item = items[focusedIndex];
+
+            item.classList.add("focus");
+
+            item.scrollIntoView({
+               block: "nearest",
+            });
+         }
+      };
+
+      // Open / Close
+      const openDropdown = () => {
+         closeAllDropdowns(dropdown);
+
+         dropdown.classList.add("open");
+         if (trigger) trigger.setAttribute("aria-expanded", "true");
+
+         const selectedItem = dropdown.querySelector(
+            ".kse-blogfiltercard__cstmselect-item.selected",
+         );
+
+         if (selectedItem) {
+            focusedIndex = Array.from(items).indexOf(selectedItem);
+            updateFocus();
+         }
+      };
+
+      const closeDropdown = () => {
+         dropdown.classList.remove("open");
+         if (trigger) trigger.setAttribute("aria-expanded", "false");
+
+         focusedIndex = -1;
+
+         removeFocus();
+      };
+
+      const toggleDropdown = () => {
+         if (isDropdownOpen()) {
+            closeDropdown();
+         } else {
+            openDropdown();
+         }
+      };
+
+      // Select item
+      const selectItem = (item) => {
+         const value = item.dataset.value;
+         const label = item.textContent;
+
+         // Hidden input
+         if (hiddenInput) {
+            hiddenInput.value = value;
+         }
+
+         // Visible text
+         if (text) {
+            text.textContent = label;
+            text.classList.remove("kse-placeholder");
+         }
+
+         // Remove old selected
+         items.forEach((i) => {
+            i.classList.remove("selected");
+            i.setAttribute("aria-selected", "false");
+         });
+
+         // Add new selected
+         item.classList.add("selected");
+         item.setAttribute("aria-selected", "true");
+
+         closeDropdown();
+
+         if (trigger) trigger.focus();
+      };
+
+      // Click
+      if (trigger) {
+         trigger.addEventListener("click", (e) => {
+            e.preventDefault();
+            toggleDropdown();
+         });
+      }
+
+      items.forEach((item) => {
+         item.addEventListener("click", (e) => {
+            e.preventDefault();
+            selectItem(item);
+         });
+      });
+
+      // Keyboard
+      if (trigger) {
+         trigger.addEventListener("keydown", (e) => {
+            switch (e.key) {
+               case "Enter":
+               case " ":
+                  e.preventDefault();
+
+                  if (isDropdownOpen() && focusedIndex >= 0) {
+                     selectItem(items[focusedIndex]);
+                  } else {
+                     openDropdown();
+                  }
+
+                  break;
+
+               case "Escape":
+                  closeDropdown();
+                  break;
+
+               case "ArrowDown":
+                  e.preventDefault();
+
+                  if (!isDropdownOpen()) {
+                     openDropdown();
+                     focusedIndex = 0;
+                  } else {
+                     focusedIndex = (focusedIndex + 1) % items.length;
+                  }
+
+                  updateFocus();
+
+                  break;
+
+               case "ArrowUp":
+                  e.preventDefault();
+
+                  if (!isDropdownOpen()) {
+                     openDropdown();
+                     focusedIndex = items.length - 1;
+                  } else {
+                     focusedIndex =
+                        (focusedIndex - 1 + items.length) % items.length;
+                  }
+
+                  updateFocus();
+
+                  break;
+
+               case "Tab":
+                  closeDropdown();
+                  break;
+            }
+         });
+      }
+   });
+
+   // Outside click
+   document.addEventListener("click", (e) => {
+      if (!e.target.closest(".kse-blogfiltercard__dropdown")) {
+         closeAllDropdowns();
+      }
    });
 }

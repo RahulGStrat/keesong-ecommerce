@@ -1,161 +1,204 @@
+*,
+*::before,
+*::after {
+   box-sizing: border-box;
+}
 .kse-blogfiltercard {
-    width: 100%;
-    max-width: 400px;
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(2px);
-    border-radius: 24px;
-    padding: 40px 30px;
+   width: 100%;
+   max-width: 400px;
+   background: rgba(255, 255, 255, 0.7);
+   backdrop-filter: blur(2px);
+   border-radius: 24px;
+   padding: 40px 30px;
 
-    &__outer {
-        width: 100%;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        position: relative;
-        min-height: 650px;
-        display: flex;
-        align-items: center;
-    }
+   &__outer {
+      width: 100%;
+      min-height: 650px;
+      display: flex;
+      align-items: center;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding: 80px 0;
+   }
 
-    &__title {
-        font-family: "Acumin Variable Concept";
-        font-size: 28px;
-        line-height: 36px;
-        font-weight: 700;
-        color: #414141;
-        margin-bottom: 28px;
-    }
+   &__title {
+      font-family: "Acumin Variable Concept";
+      font-size: 28px;
+      line-height: 36px;
+      font-weight: 700;
+      color: #414141;
+      margin-bottom: 28px;
+   }
 
-    &__formgrp {
-        margin-bottom: 22px;
-        position: relative;
+   &__formgrp {
+      position: relative;
+      margin-bottom: 22px;
 
-        label {
-            display: block;
-            font-size: 16px;
-            font-family: "Acumin Variable Concept";
-            color: #414141;
-            margin-bottom: 10px;
-        }
+      label {
+         display: block;
+         margin-bottom: 10px;
+         font-size: 16px;
+         font-family: "Acumin Variable Concept";
+         color: #414141;
+      }
+   }
 
-        &::after {
-            content: "";
-            position: absolute;
-            right: 20px;
-            top: 53px;
-            width: 14px;
-            height: 14px;
-            background-image: url('/assets/images/ks-form-dwnarrow.png');
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: contain;
-            pointer-events: none;
-            transition: transform 0.25s ease;
-        }
+   &__dropdown {
+      position: relative;
+      width: 100%;
 
-        &:has(.kse-blogfiltercard__cstmselect:open)::after {
+      &.open {
+         z-index: 20;
+
+         .kse-blogfiltercard__cstmselect {
+            border-color: #f14a50;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            border-bottom: 0;
+         }
+
+         .kse-blogfiltercard__cstmselect-arrow {
             transform: rotate(180deg);
-        }
-    }
+         }
 
-    &__cstmselect {
-        width: 100%;
-        padding: 16px 20px;
-        border: 2px solid #fff;
-        border-radius: 8px;
-        background: #fff;
-        font-size: 16px;
-        font-family: "Acumin Variable Concept";
-        color: #414141;
-        cursor: pointer;
-        outline: none;
-        transition: 0.25s ease;
-        appearance: base-select;
-
-        &:has(option[value=""]:checked) {
-            color: #a0a0a0;
-        }
-
-        &::picker(select) {
-            appearance: base-select;
-        }
-
-        &:focus {
-            box-shadow: none;
-        }
-
-        &::picker-icon {
-            opacity: 0;
-        }
-
-        // dropdown
-        &::picker(select) {
-            border: none;
-            margin-top: 8px;
-            border-radius: 16px;
-            overflow: hidden;
-            background: #fff;
-            opacity: 0;
-            transition: all 0.2s ease allow-discrete;
-        }
-
-        // open
-        &:open::picker(select) {
+         .kse-blogfiltercard__cstmselect-panel {
             opacity: 1;
-        }
+            visibility: visible;
+            pointer-events: auto;
+         }
+      }
+   }
 
-        &::picker(select) {
-            transform: translateY(10px);
-            transition:
-                opacity 0.2s ease,
-                transform 0.2s ease,
-                overlay 0.2s allow-discrete,
-                display 0.2s allow-discrete;
-        }
+   &__cstmselect {
+      position: relative;
+      width: 100%;
+      height: 40px;
 
-        &:open::picker(select) {
-            transform: translateY(0);
-        }
+      display: flex;
+      align-items: center;
 
-        option {
-            padding: 16px 20px;
-            background: #fff;
-            color: #2d3945;
-            font-size: 16px;
-            border-bottom: 1px solid #ececec;
-            transition: 0.2s ease;
-        }
+      padding: 0 50px 0 20px;
 
-        option:last-of-type {
-            border-bottom: none;
-        }
+      background: #fff;
 
-        option:hover,
-        option:focus {
-            background: #ff4454;
-            color: #fff;
-        }
+      border: 2px solid #fff;
+      border-radius: 8px;
 
-        option:checked {
-            background: #ff4454;
-            color: #fff;
-        }
+      box-sizing: border-box;
 
-        option::checkmark {
-            display: none;
-        }
-    }
+      font-size: 15px;
+      font-weight: 300;
+      font-family: "Acumin Variable Concept";
 
-    .kse-btn {
-        width: 100%;
-        border-radius: 6px;
-        font-size: 18px;
-    }
+      color: #414141;
+
+      cursor: pointer;
+
+      transition:
+         border-color 0.25s ease,
+         border-radius 0.2s ease;
+
+      user-select: none;
+
+      &:focus {
+         border-color: #f14a50;
+      }
+   }
+
+   &__cstmselect-text {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      flex: 1;
+
+      &.kse-placeholder {
+         color: #a0a0a0;
+      }
+   }
+
+   &__cstmselect-arrow {
+      position: absolute;
+      right: 20px;
+      transition: transform 0.3s ease;
+      pointer-events: none;
+   }
+
+   &__cstmselect-panel {
+      position: absolute;
+
+      top: 100%;
+
+      left: 0;
+      width: 100%;
+
+      background: #fff;
+
+      border: 2px solid #f14a50;
+      border-top: none;
+
+      border-radius: 0 0 8px 8px;
+
+      box-sizing: border-box;
+
+      overflow: hidden;
+
+      z-index: 15;
+
+      opacity: 0;
+      visibility: hidden;
+
+      pointer-events: none;
+
+      transition:
+         opacity 0.2s ease,
+         visibility 0.2s ease;
+   }
+
+   &__cstmselect-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      max-height: 250px;
+      overflow-y: auto;
+      scrollbar-width: thin;
+   }
+
+   &__cstmselect-item {
+      padding: 10px 20px;
+      font-size: 15px;
+      font-weight: 300;
+      font-family: "Acumin Variable Concept";
+      color: #414141;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      box-sizing: border-box;
+
+      &:hover,
+      &.focus {
+         background: #fff1f2;
+      }
+
+      &.selected {
+         background: #f14a50;
+         color: #fff;
+      }
+
+      &:last-child {
+         border-bottom-left-radius: 8px;
+         border-bottom-right-radius: 8px;
+      }
+   }
+
+   .kse-btn {
+      width: 100%;
+      border-radius: 6px;
+      font-size: 18px;
+   }
 }
 
 @include mobile {
-    .kse-blogfiltercard {
-        max-width: unset;
-        width: 100%;
-    }
+   .kse-blogfiltercard {
+      max-width: 100%;
+   }
 }

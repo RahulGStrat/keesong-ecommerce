@@ -46,6 +46,7 @@
     }
     .kse-PdTile {
         width: calc(33.3% - 12px);
+        background-color: transparent !important;
     }
     .kse-PdTile__title {
         color: #fff;
@@ -54,7 +55,7 @@
         font-weight: 600;
     }
     .kse-PdTile__price {
-        color: #fff;
+        color: #fff !important;
         font-size: 16px;
         padding-bottom: 0px;
     }

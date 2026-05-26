@@ -3,8 +3,134 @@
    width: 100%;
    overflow-x: hidden;
 
+   .content-wrapper {
+      @media (max-width: 1023px) {
+         padding-left: 0;
+         padding-right: 0;
+      }
+   }
+
    &__main-column {
       display: contents;
+   }
+
+   &__recipetitle {
+      font-size: 22px;
+      color: #680a38;
+      font-family: "Begum";
+      font-weight: 700;
+      padding-bottom: 24px;
+   }
+
+   &__recipe {
+      padding: 32px 0;
+      border-top: 1px solid #2d2d2d;
+      border-bottom: 1px solid #2d2d2d;
+      margin-top: 20px;
+
+      &--b {
+         border-top: unset;
+      }
+
+      &--c {
+         border-top: unset;
+         margin-bottom: 50px;
+      }
+   }
+
+   &__image {
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 24px;
+
+      img {
+         width: 100%;
+         display: block;
+         object-fit: cover;
+      }
+   }
+
+   &__recipecontent {
+      width: 100%;
+   }
+
+   &__meta {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 18px;
+   }
+
+   &__metaitem {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+
+      img {
+         width: 18px;
+         height: 18px;
+         object-fit: contain;
+      }
+
+      span {
+         font-family: "Acumin Variable Concept";
+         font-size: 16px;
+         line-height: 1.2;
+         color: #680a38;
+
+         strong {
+            color: #61b44b;
+            font-weight: 700;
+         }
+      }
+
+      &.time {
+         span {
+            color: #f14a50;
+         }
+      }
+
+      &.moderate {
+         strong {
+            color: #f68b1f;
+            font-weight: 700;
+         }
+      }
+   }
+
+   &__divider {
+      width: 1px;
+      height: 16px;
+      background: #d3d3d3;
+   }
+
+   &__desc {
+      font-family: "Acumin Variable Concept";
+      font-size: 18px;
+      line-height: 1.55;
+      color: #4d4d4f;
+      margin-bottom: 20px;
+   }
+
+   &__nutrition {
+      font-family: "Acumin Variable Concept";
+      font-size: 18px;
+      line-height: 1.55;
+      color: #4d4d4f;
+      margin-bottom: 20px;
+
+      strong {
+         font-weight: 700;
+      }
+   }
+
+   &__text {
+      font-family: "Acumin Variable Concept";
+      font-size: 20px;
+      line-height: 1.55;
+      color: #4d4d4f;
+      margin-bottom: 0;
    }
 
    /* Mobile (Default) */
@@ -19,6 +145,7 @@
    &__hero-image {
       grid-column: 1 / -1;
       grid-row: 1;
+
       img {
          width: 100%;
          height: 100%;
@@ -44,7 +171,7 @@
 
       p {
          font-family: "Acumin Variable Concept";
-         font-size: 20px;
+         font-size: 18px;
          line-height: 1.55;
          color: #4d4d4f;
          margin-bottom: 42px;
@@ -88,6 +215,7 @@
          gap: 20px;
       }
    }
+
    /* Shared Tablet & iPad Pro Footer Mixin */
    @mixin shared-tablet-footer {
       &__footer {
@@ -149,22 +277,34 @@
    @media (min-width: 1024px) {
       &__grid {
          grid-template-columns:
-            minmax(0, 1fr)
-            minmax(220px, 280px)
-            minmax(20px, 28px)
-            minmax(520px, 760px)
-            minmax(24px, 48px)
-            minmax(240px, 300px)
-            minmax(48px, 1fr);
+            minmax(0, 1fr) minmax(30px, 280px) minmax(20px, 28px)
+            minmax(520px, 760px) minmax(24px, 48px) minmax(100px, 300px);
          row-gap: 0;
       }
 
       &__hero-image {
          grid-column: 1 / 3;
          grid-row: 1;
-         background-color: #f7f6f4;
+         position: relative;
+         z-index: 1;
+
+         &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            width: calc(100% + max(40px, 50vw - 580px));
+            background-color: #f7f6f4;
+            z-index: -1;
+         }
 
          img {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            width: calc(100% + max(40px, 50vw - 580px));
             border-radius: 0 12px 12px 0;
          }
       }
@@ -177,9 +317,9 @@
       }
 
       &__content {
-         grid-column: 4 / 5;
+         grid-column: 3 / 5;
          grid-row: 2;
-         padding: 56px 0 0;
+         padding: 56px 0px 0 40px;
       }
 
       &__sidebar {
@@ -202,21 +342,25 @@
       }
 
       &__footer-inner {
-         grid-column: 4 / 5;
-         padding: 34px 0 0;
+         grid-column: 3 / 5;
+         padding: 34px 0px 0px 40px;
       }
    }
 
    /* iPad Pro Portrait Refinement (1024px - 1199px) */
    @include tablet-pro {
+      &__grid {
+         grid-template-columns:
+            minmax(0, 1fr) minmax(100px, 280px) minmax(20px, 28px)
+            minmax(520px, 760px) minmax(24px, 48px) minmax(140px, 300px);
+      }
       @include shared-tablet-footer;
    }
 
-   /* Ultra-Wide Desktop (1900px+) */
-   @media (min-width: 1900px) {
+   /* Ultra-Wide Desktop (1680px+ - Below 90%) */
+   @media (min-width: 1680px) {
       &__hero-image {
          grid-column: 1 / 2;
-         background-color: #f7f6f4;
       }
 
       &__hero-content {
@@ -226,7 +370,7 @@
 
       &__content {
          grid-column: 2 / 5;
-         padding: 56px 32px 0;
+         padding: 56px 40px 0;
       }
 
       &__footer {
@@ -239,25 +383,28 @@
 
       &__footer-inner {
          grid-column: 2 / 5;
-         padding: 34px 32px 0;
+         padding: 34px 40px 0;
       }
    }
+
    // 125%
    @media (min-width: 1200px) and (max-width: 1300px) {
-      .kse-article {
-         &__title {
-            font-size: 30px;
-         }
+      &__title {
+         font-size: 30px;
+      }
+      &__grid {
+         grid-template-columns:
+            minmax(0, 1fr) minmax(100px, 280px) minmax(20px, 28px)
+            minmax(520px, 760px) minmax(24px, 48px) minmax(100px, 300px);
       }
    }
+
    @include mobile {
-      .kse-article {
-         &__title {
-            font-size: 30px;
-         }
-         &__grid {
-            row-gap: 0;
-         }
+      &__title {
+         font-size: 30px;
+      }
+      &__full-image {
+         margin: 30px 0 12px;
       }
    }
 
@@ -275,7 +422,7 @@
 
    &__title {
       font-family: "Begum";
-      font-size: 40px;
+      font-size: 34px;
       line-height: 1;
       color: #f25768;
       font-weight: 700;
@@ -394,7 +541,7 @@
       font-family: "Acumin Pro Condensed";
       width: 154px;
       height: 44px;
-      border: 2px solid #f25768;
+      border: 1px solid #f25768;
       border-radius: 6px;
       display: flex;
       align-items: center;

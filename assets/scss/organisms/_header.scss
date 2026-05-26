@@ -1,740 +1,737 @@
 .kse-Head {
-  background: #fff;
-  width: 100%;
-  font-family: Arial, sans-serif;
-  position: relative;
+   background: #fff;
+   width: 100%;
+   font-family: Arial, sans-serif;
+   position: relative;
+   padding-bottom: 20px;
 
-  &__in {
-    padding: 15px 0px;
-    display: flex;
-    align-items: normal;
-    gap: 20px;
-    position: relative;
-  }
+   &__in {
+      padding: 15px 0px;
+      display: flex;
+      align-items: normal;
+      gap: 12px;
+      position: relative;
+   }
 
-  &__logo {
-    width: 100px;
+   &__logo {
+      width: 100px;
 
-    img {
-      width: 100%;
-    }
-  }
+      img {
+         width: 100%;
+      }
+   }
 
-  &__left {
-    flex: 0 0 auto;
-  }
+   &__left {
+      flex: 0 0 auto;
+   }
 
-  &__center {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 15px;
-  }
+   &__center {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 15px;
+   }
 
-  &__searchwrap {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-
-    .kse-btn--header {
-      width: 20% !important;
-      height: 38px;
+   &__searchwrap {
       display: flex;
       align-items: center;
-      justify-content: center;
-      font-size: 15px !important;
-    }
-  }
+      gap: 20px;
 
-  &__search {
-    width: 80%;
-
-    input {
-      width: 100%;
-      padding: 8px;
-      border: none;
-      background: #f2f2f2;
-      border-radius: 4px;
-      font-size: 14px;
-      font-family: "Acumin Variable Concept";
-      color: #121212;
-      line-height: 24px;
-
-      &:focus {
-        outline: none;
+      .kse-btn--header {
+         width: 20% !important;
+         height: 38px;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         font-size: 15px !important;
       }
-    }
-  }
+   }
 
-  &__deliverytxt {
-    color: #f14a50;
-    font-size: 16px;
-    line-height: 14px;
-    font-family: "Acumin Pro Condensed";
-    text-decoration: none;
+   &__search {
+      width: 80%;
 
-    p {
+      input {
+         width: 100%;
+         padding: 8px;
+         border: none;
+         background: #f2f2f2;
+         border-radius: 4px;
+         font-size: 14px;
+         font-family: "Acumin Variable Concept";
+         color: #121212;
+         line-height: 24px;
+
+         &:focus {
+            outline: none;
+         }
+      }
+   }
+
+   &__deliverytxt {
+      color: #f14a50;
+      font-size: 16px;
+      line-height: 14px;
       font-family: "Acumin Pro Condensed";
-    }
+      text-decoration: none;
 
-    &:hover {
-      color: #d4373d;
-    }
-  }
+      p {
+         font-family: "Acumin Pro Condensed";
+      }
 
-  &__menu {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 16px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    position: relative;
-    z-index: 4;
+      &:hover {
+         color: #d4373d;
+      }
+   }
 
-    li {
+   &__menu {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 12px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
       position: relative;
+      z-index: 4;
 
-      a {
-        text-decoration: none;
-        font-size: 15px;
-        text-transform: uppercase;
-        color: #121212;
-        font-family: "Acumin Pro Condensed";
-        font-weight: 600;
-        transition: 0.2s all ease-in-out;
+      li {
+         position: relative;
+         display: flex;
+         align-items: center;
 
-        &:hover {
-          color: #f14a50;
-        }
+         a {
+            text-decoration: none;
+            font-size: 15px;
+            text-transform: uppercase;
+            color: #121212;
+            font-family: "Acumin Pro Condensed";
+            font-weight: 600;
+            transition: 0.2s all ease-in-out;
 
-        &.active {
-          color: #f14a50;
-        }
+            &:hover {
+               color: #f14a50;
+            }
+
+            &.active {
+               color: #f14a50;
+            }
+         }
+
+         &:not(:last-child)::after {
+            content: "|";
+            margin-left: 12px;
+            color: #121212;
+         }
       }
 
-      &::after {
-        content: "|";
-        position: absolute;
-        right: -22px;
-        color: #121212;
+      &-arrow {
+         display: inline-block;
+         transition: 0.3s;
+         margin-left: 3px;
+         // position: absolute;
+         right: 0px;
+         top: 8px;
+
+         svg {
+            width: 10px;
+            height: 10px;
+            margin-top: -2px;
+         }
       }
 
-      &:last-child::after {
-        display: none;
+      &-sub {
+         display: none;
+         position: absolute;
+         left: 0px;
+         top: 30px;
+         padding: 10px;
+         background: #fff;
+         box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+         min-width: 240px;
+
+         &.active {
+            display: block;
+         }
+
+         ul {
+            list-style: none;
+            padding: 0;
+
+            li {
+               margin-bottom: 6px;
+               transition: 0.3s all ease-in-out;
+
+               &::after {
+                  display: none;
+               }
+
+               &:hover {
+                  background-color: #f2f2f2;
+                  border-radius: 5px;
+                  padding-left: 4px;
+
+                  a {
+                     color: #ff4d4d;
+                  }
+               }
+
+               a {
+                  text-decoration: none;
+                  font-size: 14px;
+                  color: #666666;
+                  font-family: "Acumin Pro Condensed";
+               }
+            }
+         }
       }
-    }
+   }
 
-    &-arrow {
-      display: inline-block;
-      transition: 0.3s;
-      margin-left: 3px;
-      // position: absolute;
-      right: 0px;
-      top: 8px;
+   &__menu-item--category {
+      cursor: pointer;
 
-      svg {
-        width: 10px;
-        height: 10px;
-        margin-top: -2px;
+      // padding-right: 15px;
+      a.active .kse-Head__menu-arrow {
+         transform: rotate(180deg);
       }
-    }
+   }
 
-    &-sub {
+   &__subLink {
+      display: none;
+   }
+
+   .kse-Head__megaWrap {
+      width: 100%;
+      background: #fff;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
       display: none;
       position: absolute;
       left: 0px;
-      top: 30px;
-      padding: 10px;
-      background: #fff;
-      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-      min-width: 210px;
+      z-index: 10;
+   }
 
-      &.active {
-        display: block;
+   .kse-Head__megaWrap.active {
+      display: block;
+   }
+
+   .kse-Head__mega {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 25px 20px;
+   }
+
+   .kse-Head__mega-inner {
+      display: flex;
+      gap: 40px;
+   }
+
+   .kse-Head__mega-col {
+      flex: 1;
+
+      h4 {
+         margin-bottom: 10px;
+         font-size: 16px;
+         font-family: "Acumin Pro Condensed";
+         color: #121212;
       }
 
       ul {
-        list-style: none;
-        padding: 0;
+         list-style: none;
+         padding: 0;
 
-        li {
-          margin-bottom: 6px;
-          transition: 0.3s all ease-in-out;
-
-          &::after {
-            display: none;
-          }
-
-          &:hover {
-            background-color: #f2f2f2;
-            border-radius: 5px;
-            padding-left: 4px;
+         li {
+            margin-bottom: 6px;
 
             a {
-              color: #ff4d4d;
+               text-decoration: none;
+               font-size: 14px;
+               color: #666666;
+               font-family: "Acumin Variable";
+
+               &:hover {
+                  color: #ff4d4d;
+               }
             }
-          }
-
-          a {
-            text-decoration: none;
-            font-size: 14px;
-            color: #666666;
-            font-family: "Acumin Pro Condensed";
-          }
-        }
+         }
       }
+   }
 
-    }
-  }
+   &__right {
+      flex: 0 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 13px;
+      padding-left: 10px;
+      border-left: 1.5px solid #231f20;
+   }
 
-  &__menu-item--category {
-    cursor: pointer;
+   &__actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      margin-top: 10px;
+   }
 
-    // padding-right: 15px;
-    a.active .kse-Head__menu-arrow {
-      transform: rotate(180deg);
-    }
-  }
+   &__icn {
+      width: 22px;
 
-  &__subLink {
-    display: none;
-  }
+      svg {
+         fill: none;
+         fill-rule: evenodd;
+         stroke: #231f20;
+         stroke-linecap: round;
+         stroke-miterlimit: 10;
+         stroke-width: 1.2px;
+      }
+   }
 
-  .kse-Head__megaWrap {
-    width: 100%;
-    background: #fff;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-    display: none;
-    position: absolute;
-    left: 0px;
-    z-index: 10;
-  }
+   &__whatsp {
+      width: 22px;
+   }
 
-  .kse-Head__megaWrap.active {
-    display: block;
-  }
-
-  .kse-Head__mega {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 25px 20px;
-  }
-
-  .kse-Head__mega-inner {
-    display: flex;
-    gap: 40px;
-  }
-
-  .kse-Head__mega-col {
-    flex: 1;
-
-    h4 {
-      margin-bottom: 10px;
-      font-size: 16px;
+   &__user {
       font-family: "Acumin Pro Condensed";
-      color: #121212;
-    }
+      font-size: 16px;
+      font-weight: 600;
+      border-left: 1px solid #3f3f3f;
+      padding-left: 7px;
+      margin-left: 5px;
+   }
 
-    ul {
-      list-style: none;
-      padding: 0;
+   &__cart {
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 3px;
 
-      li {
-        margin-bottom: 6px;
-
-        a {
-          text-decoration: none;
-          font-size: 14px;
-          color: #666666;
-          font-family: "Acumin Variable";
-
-          &:hover {
-            color: #ff4d4d;
-          }
-        }
+      span {
+         color: #121212;
       }
-    }
-  }
+   }
 
-  &__right {
-    flex: 0 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 13px;
-    padding-left: 10px;
-    border-left: 1.5px solid #231f20;
-  }
+   &__btn {
+      background: #ff4d4d;
+      color: #fff;
+      padding: 8px 14px;
+      border-radius: 4px;
+      font-size: 12px;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-weight: 600;
 
-  &__actions {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 13px;
-    margin-top: 10px;
-  }
+      &:hover {
+         background: #e60023;
+      }
+   }
 
-  &__icn {
-    width: 22px;
+   .kse-btn--header {
+      width: 100%;
+      text-align: center;
+      padding: 5px 0px;
+      font-size: 14px;
+   }
 
-    svg {
-      fill: none;
-      fill-rule: evenodd;
-      stroke: #231f20;
-      stroke-linecap: round;
-      stroke-miterlimit: 10;
-      stroke-width: 1.2px;
-    }
-  }
+   &__hamburger {
+      display: none;
+      cursor: pointer;
+      // height: 25px;
+   }
 
-  &__whatsp {
-    width: 22px;
-  }
+   &__userWrap {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: 0.2s all ease-in-out;
+      cursor: pointer;
 
-  &__user {
-    font-family: "Acumin Pro Condensed";
-    font-size: 16px;
-    font-weight: 600;
-    border-left: 1px solid #3f3f3f;
-    padding-left: 7px;
-    margin-left: 5px;
-  }
+      &:hover {
+         .kse-Head__icn svg {
+            stroke: #f14a50;
+            transition: 0.2s all ease-in-out;
+         }
 
-  &__cart {
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    gap: 3px;
-
-    span {
-      color: #121212;
-    }
-
-  }
-
-  &__btn {
-    background: #ff4d4d;
-    color: #fff;
-    padding: 8px 14px;
-    border-radius: 4px;
-    font-size: 12px;
-    text-transform: uppercase;
-    text-decoration: none;
-    font-weight: 600;
-
-    &:hover {
-      background: #e60023;
-    }
-  }
-
-  .kse-btn--header {
-    width: 100%;
-    text-align: center;
-    padding: 5px 0px;
-    font-size: 14px;
-  }
-
-  &__hamburger {
-    display: none;
-    cursor: pointer;
-    // height: 25px;
-  }
-
-  &__userWrap {
-    position: relative;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    transition: 0.2s all ease-in-out;
-    cursor: pointer;
-
-    &:hover {
-      .kse-Head__icn svg {
-        stroke: #f14a50;
-        transition: 0.2s all ease-in-out;
+         .kse-Head__user {
+            transition: 0.2s all ease-in-out;
+            color: #f14a50;
+         }
       }
 
-      .kse-Head__user {
-        transition: 0.2s all ease-in-out;
-        color: #f14a50;
+      &:has(.kse-Head__dropdown.active) .kse-Head__user {
+         color: #f14a50;
       }
-    }
 
-    &:has(.kse-Head__dropdown.active) .kse-Head__user {
-      color: #f14a50;
-    }
+      &:has(.kse-Head__dropdown.active) .kse-Head__icn svg {
+         stroke: #f14a50;
+      }
+   }
 
-    &:has(.kse-Head__dropdown.active) .kse-Head__icn svg {
-      stroke: #f14a50;
-    }
-  }
+   &__actions {
+      .whatsapp {
+         transition: 0.2s all ease-in-out;
 
-  &__actions {
-    .whatsapp {
+         &:hover {
+            svg {
+               stroke: #25d366;
+               transition: 0.2s all ease-in-out;
+            }
+         }
+      }
+   }
+
+   &__cart .kse-Head__icn {
       transition: 0.2s all ease-in-out;
 
       &:hover {
-        svg {
-          stroke: #25D366;
-          transition: 0.2s all ease-in-out;
-        }
+         svg {
+            stroke: #f14a50;
+            transition: 0.2s all ease-in-out;
+         }
       }
-    }
-  }
+   }
 
-  &__cart .kse-Head__icn{
-    transition: 0.2s all ease-in-out;
+   &__dropdown {
+      position: absolute;
+      top: 135%;
+      right: -42px;
+      background: #fff;
+      border-radius: 6px;
+      min-width: 140px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+      display: none;
+      z-index: 999;
+   }
 
-    &:hover {
-      svg {
-        stroke: #f14a50;
-        transition: 0.2s all ease-in-out;
+   &__dropdown ul {
+      margin: 0;
+      padding: 8px 0;
+      list-style: none;
+   }
+
+   &__dropdown li {
+      padding: 10px 14px;
+   }
+
+   &__dropdown li a {
+      text-decoration: none;
+      color: #121212;
+      display: block;
+      font-family: "Acumin Variable Concept";
+      font-size: 14px;
+   }
+
+   &__dropdown li:hover {
+      background: #f2f2f2;
+
+      &:hover a {
+         color: #f14a50;
+         font-weight: 600;
       }
-    }
-  }
+   }
 
-  &__dropdown {
-    position: absolute;
-    top: 135%;
-    right: -42px;
-    background: #fff;
-    border-radius: 6px;
-    min-width: 140px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-    display: none;
-    z-index: 999;
-  }
-
-  &__dropdown ul {
-    margin: 0;
-    padding: 8px 0;
-    list-style: none;
-  }
-
-  &__dropdown li {
-    padding: 10px 14px;
-  }
-
-  &__dropdown li a {
-    text-decoration: none;
-    color: #121212;
-    display: block;
-    font-family: "Acumin Variable Concept";
-    font-size: 14px;
-  }
-
-  &__dropdown li:hover {
-    background: #f2f2f2;
-
-    &:hover a {
-      color: #f14a50;
-      font-weight: 600;
-    }
-  }
-
-  &__dropdown.active {
-    display: block;
-  }
+   &__dropdown.active {
+      display: block;
+   }
 }
 
 @include tablet-pro {
-  .kse-Head {
-    &__menu li a {
-      font-size: 13px;
-    }
-
-    &__menu li {
-      &::after {
-        right: -13px;
+   .kse-Head {
+      &__menu {
+         gap: 12px;
       }
-    }
 
-    &__deliverytxt {
-      font-size: 14px;
-      line-height: 12px;
-    }
-  }
+      &__menu li a {
+         font-size: 13px;
+      }
+
+      &__menu li:not(:last-child)::after {
+         margin-left: 12px;
+      }
+
+      &__deliverytxt {
+         font-size: 14px;
+         line-height: 12px;
+      }
+   }
 }
 
 @include mobile-tablet {
-  .kse-Head {
-    .content-wrapper {
-      padding: 0px;
-    }
-
-    &__in {
-      justify-content: space-between;
-      padding: 0px 16px;
-    }
-
-    &__logo {
-      width: 90px;
-    }
-
-    &__left {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-    }
-
-    &__search {
-      width: 70%;
-    }
-
-    &__searchwrap .kse-btn--header {
-      width: 30% !important;
-      font-size: 14px !important;
-    }
-
-    &__right {
-      gap: 6px;
-    }
-
-    &__deliverytxt {
-      font-size: 14px;
-    }
-
-    &__hamburger {
-      display: flex !important;
-      flex-direction: column;
-      gap: 6px;
-    }
-
-    &__in {
-      justify-content: space-between;
-      padding: 16px 16px;
-    }
-
-    &__subLink {
-      display: flex;
-      transition: all ease-in 0.3s;
-
-      svg {
-        width: 10px;
-        height: 10px;
-        transform: translate(0px, 4px);
-
-      }
-    }
-
-    &__mega-col {
-      h4 {
-        display: flex;
-        gap: 5px;
-        font-weight: 600;
+   .kse-Head {
+      .content-wrapper {
+         padding: 0px;
       }
 
-      &.active {
-        .kse-Head__subLink {
-          transform: rotate(180deg) translate(0px, 0px);
-        }
-      }
-    }
-
-    &__megaWrap.active {
-      position: fixed;
-      top: 20px;
-      left: 50%;
-      transform: translate(-50%, 0);
-      width: 90%;
-      max-height: 80vh;
-      overflow-y: auto;
-      border-radius: 8px;
-      z-index: 1000;
-    }
-
-    &__mega-inner {
-      flex-direction: column;
-      gap: 20px !important;
-    }
-
-    .close-btn {
-      display: block;
-    }
-
-    .sub-items {
-      display: none;
-    }
-
-    &__menu {
-      position: absolute;
-      top: 85px;
-      left: 0;
-      width: 100%;
-      background: white;
-      flex-direction: column;
-      display: none;
-      padding: 0px 16px 16px;
-      gap: 0px;
-
-      &.active {
-        display: flex !important;
+      &__in {
+         justify-content: space-between;
+         padding: 0px 16px;
       }
 
-      &-item {
-        padding: 10px 0;
+      &__logo {
+         width: 90px;
       }
 
-      li::after {
-        display: none;
+      &__left {
+         display: flex;
+         align-items: center;
+         gap: 15px;
       }
 
-      &-sub {
-        position: unset;
+      &__search {
+         width: 70%;
       }
-    }
-  }
+
+      &__searchwrap .kse-btn--header {
+         width: 30% !important;
+         font-size: 14px !important;
+      }
+
+      &__right {
+         gap: 6px;
+      }
+
+      &__deliverytxt {
+         font-size: 14px;
+      }
+
+      &__hamburger {
+         display: flex !important;
+         flex-direction: column;
+         gap: 6px;
+      }
+
+      &__in {
+         justify-content: space-between;
+         padding: 16px 16px;
+      }
+
+      &__subLink {
+         display: flex;
+         transition: all ease-in 0.3s;
+
+         svg {
+            width: 10px;
+            height: 10px;
+            transform: translate(0px, 4px);
+         }
+      }
+
+      &__mega-col {
+         h4 {
+            display: flex;
+            gap: 5px;
+            font-weight: 600;
+         }
+
+         &.active {
+            .kse-Head__subLink {
+               transform: rotate(180deg) translate(0px, 0px);
+            }
+         }
+      }
+
+      &__megaWrap.active {
+         position: fixed;
+         top: 20px;
+         left: 50%;
+         transform: translate(-50%, 0);
+         width: 90%;
+         max-height: 80vh;
+         overflow-y: auto;
+         border-radius: 8px;
+         z-index: 1000;
+      }
+
+      &__mega-inner {
+         flex-direction: column;
+         gap: 20px !important;
+      }
+
+      .close-btn {
+         display: block;
+      }
+
+      .sub-items {
+         display: none;
+      }
+
+      &__menu {
+         position: absolute;
+         top: 85px;
+         left: 0;
+         width: 100%;
+         background: white;
+         flex-direction: column;
+         display: none;
+         padding: 0px 16px 16px;
+         gap: 0px;
+
+         &.active {
+            display: flex !important;
+         }
+
+         &-item {
+            padding: 10px 0;
+         }
+
+         li:not(:last-child)::after {
+            display: none;
+         }
+
+         &-sub {
+            position: unset;
+         }
+      }
+   }
 }
 
 @include mobile {
-  .kse-Head {
-    .content-wrapper {
-      padding: 0px;
-    }
-
-    &__logo {
-      width: 60px;
-    }
-
-    &__icn {
-      width: 15px;
-    }
-
-    &__user {
-      font-size: 12px;
-      line-height: 18px;
-      padding-top: 2px;
-      margin-left: 0;
-    }
-
-    &__searchwrap {
-      flex-direction: column;
-      gap: 10px;
-
-      .kse-btn--header {
-        width: 80% !important;
-        font-size: 13px !important;
-        padding: 0;
-        height: 28px;
-      }
-    }
-
-    &__search {
-      width: 100%;
-    }
-
-    &__left {
-      flex-direction: column-reverse;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 10px;
-    }
-
-    &__actions {
-      gap: 6px;
-    }
-
-    &__in {
-      gap: 8px;
-    }
-
-    &__deliverytxt {
-      font-size: 12px;
-    }
-
-    &__menu {
-      position: absolute;
-      top: 120px;
-      left: 0;
-      width: 100%;
-      background: white;
-      flex-direction: column;
-      display: none;
-      padding: 0px 16px 16px;
-      gap: 0px;
-
-      &.active {
-        display: flex !important;
+   .kse-Head {
+      .content-wrapper {
+         padding: 0px;
       }
 
-      &-item {
-        padding: 10px 0;
+      &__logo {
+         width: 60px;
       }
 
-      li::after {
-        display: none;
+      &__icn {
+         width: 15px;
       }
 
-      &-sub {
-        position: unset;
+      &__user {
+         font-size: 12px;
+         line-height: 18px;
+         padding-top: 2px;
+         margin-left: 0;
       }
-    }
 
-    &__mega-col {
-      &.active {
+      &__searchwrap {
+         flex-direction: column;
+         gap: 10px;
 
-        // h4{
-        //   font-weight: 600;
-        // }
-        .sub-items {
-          display: block;
-        }
+         .kse-btn--header {
+            width: 80% !important;
+            font-size: 13px !important;
+            padding: 0;
+            height: 28px;
+         }
       }
-    }
-  }
+
+      &__search {
+         width: 100%;
+      }
+
+      &__left {
+         flex-direction: column-reverse;
+         align-items: flex-start;
+         justify-content: space-between;
+         gap: 10px;
+      }
+
+      &__actions {
+         gap: 6px;
+      }
+
+      &__in {
+         gap: 8px;
+      }
+
+      &__deliverytxt {
+         font-size: 12px;
+      }
+
+      &__menu {
+         position: absolute;
+         top: 120px;
+         left: 0;
+         width: 100%;
+         background: white;
+         flex-direction: column;
+         display: none;
+         padding: 0px 16px 16px;
+         gap: 0px;
+
+         &.active {
+            display: flex !important;
+         }
+
+         &-item {
+            padding: 10px 0;
+         }
+
+         li:not(:last-child)::after {
+            display: none;
+         }
+
+         &-sub {
+            position: unset;
+         }
+      }
+
+      &__mega-col {
+         &.active {
+            // h4{
+            //   font-weight: 600;
+            // }
+            .sub-items {
+               display: block;
+            }
+         }
+      }
+   }
 }
 
 .overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  display: none;
-  z-index: 999;
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: rgba(0, 0, 0, 0.6);
+   display: none;
+   z-index: 999;
 }
 
 .overlay.active {
-  display: block;
+   display: block;
 }
 
 .close-btn {
-  display: none;
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  cursor: pointer;
+   display: none;
+   position: absolute;
+   top: 10px;
+   right: 15px;
+   cursor: pointer;
 }
 
 .kse-Head__hamburger {
-  width: 32px;
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  cursor: pointer;
+   width: 32px;
+   display: none;
+   flex-direction: column;
+   justify-content: space-between;
+   cursor: pointer;
 }
 
 .kse-Head__hamburger .bar {
-  height: 4px;
-  width: 100%;
-  background: #333;
-  border-radius: 2px;
-  transition: 0.3s;
+   height: 4px;
+   width: 100%;
+   background: #333;
+   border-radius: 2px;
+   transition: 0.3s;
 }
 
 .kse-Head__hamburger.active .bar:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
+   transform: rotate(45deg) translate(5px, 5px);
 }
 
 .kse-Head__hamburger.active .bar:nth-child(2) {
-  opacity: 0;
+   opacity: 0;
 }
 
 .kse-Head__hamburger.active .bar:nth-child(3) {
-  transform: rotate(-45deg) translate(8px, -9px);
+   transform: rotate(-45deg) translate(8px, -9px);
 }

@@ -21,6 +21,9 @@
       border-radius: 12px;
       background: #ffffff;
       padding: 16px;
+      &.large {
+         max-width: 900px;
+      }
    }
 
    &__content {

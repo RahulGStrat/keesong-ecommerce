@@ -15,6 +15,12 @@
    &__card--lg {
       min-height: 300px;
       border-radius: 16px 16px 0 0;
+      .kse-offer__title,
+      .kse-offer__subtitle,
+      .kse-offer__discount,
+      .kse-offer__note {
+         padding-left: 42px;
+      }
    }
 
    &__card--sm {
