@@ -1,122 +1,132 @@
 .kse-order-review {
-   flex: 1;
-   padding: 20px;
-   border: 1px solid #c3c3c3;
-   border-radius: 5px;
-   height: fit-content;
-   font-family: "Acumin Variable Concept";
-   color: #121212;
+  flex: 1;
+  padding: 20px;
+  border: 1px solid #c3c3c3;
+  border-radius: 5px;
+  height: fit-content;
+  font-family: "Acumin Variable Concept";
+  color: #121212;
 
-   &__title {
-      font-size: 18px;
-      margin-bottom: 30px;
-   }
-   .bold {
-      font-weight: 600;
-   }
+  &__title {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+  .bold {
+    font-weight: 600;
+  }
 
-   &__row {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 14px;
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 14px;
 
-      &--total {
-         margin-top: 26px;
-         margin-bottom: 0;
+    &--total {
+      margin-top: 26px;
+      margin-bottom: 0;
+    }
+  }
+
+  &__totalsub {
+    font-size: 13px;
+    color: #b3b3b3;
+  }
+
+  &__promo {
+    display: flex;
+    margin-bottom: 20px;
+
+    input {
+      flex: 1;
+      padding: 8px;
+      font-size: 12px;
+      line-height: 16px;
+      border: 1px solid #c3c3c3;
+      border-radius: 5px 0 0 5px;
+    }
+
+    button {
+      padding: 8px 24px;
+      background: #414141;
+      color: #fff;
+      border: none;
+      border-radius: 0 5px 5px 0;
+      transition: 0.3s all;
+      &:hover {
+        background: #262626;
       }
-   }
+    }
+  }
 
-   &__totalsub {
-      font-size: 13px;
-      color: #b3b3b3;
-   }
+  &__note {
+    background: linear-gradient(
+      to right,
+      #fcdde2 0%,
+      #fef0f2 50%,
+      #fcdde2 100%
+    );
+    padding: 12px 20px;
+    font-size: 12px;
+    margin-bottom: 24px;
+    color: #000;
+  }
 
-   &__promo {
-      display: flex;
-      margin-bottom: 20px;
+  .kse-btn {
+    width: 100%;
+  }
+
+  .green-clr {
+    color: #1a8917;
+  }
+  &__flex-col {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  &__redeemks {
+    span {
+      margin-bottom: 12px;
+      display: inline-block;
+    }
+  }
+  &__radioout {
+    margin-bottom: 4px;
+    display: flex;
+    align-items: flex-start;
+    gap: 4px;
+  }
+  input[type="radio"],
+  input[type="checkbox"] {
+    accent-color: #f14a50;
+  }
+  sup {
+    font-size: 12px;
+  }
+  .margin {
+    margin-left: 18px;
+  }
+  .gift-title {
+    margin-bottom: 6px;
+  }
+}
+@include tablet {
+  .kse-order-review {
+    width: 100%;
+  }
+}
+@include mobile {
+  .kse-order-review {
+    &__promo {
+      flex-direction: column;
+      gap: 8px;
 
       input {
-         flex: 1;
-         padding: 8px;
-         font-size: 12px;
-         line-height: 16px;
-         border: 1px solid #c3c3c3;
-         border-radius: 5px 0 0 5px;
+        border-radius: 5px;
       }
 
       button {
-         padding: 8px 24px;
-         background: #414141;
-         color: #fff;
-         border: none;
-         border-radius: 0 5px 5px 0;
-         transition: 0.3s all;
-         &:hover {
-            background: #262626;
-         }
+        border-radius: 5px;
+        width: 100%;
       }
-   }
-
-   &__note {
-      background: linear-gradient(
-         to right,
-         #fcdde2 0%,
-         #fef0f2 50%,
-         #fcdde2 100%
-      );
-      padding: 12px 20px;
-      font-size: 12px;
-      margin-bottom: 24px;
-      color: #000;
-   }
-
-   .kse-btn {
-      width: 100%;
-   }
-
-   .green-clr {
-      color: #1a8917;
-   }
-   &__flex-col {
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-   }
-   &__redeemks {
-      span {
-         margin-bottom: 12px;
-         display: inline-block;
-      }
-   }
-   &__radioout {
-      margin-bottom: 4px;
-   }
-   input[type="radio"], input[type="checkbox"] {
-      accent-color: #f14a50;
-   }
-   sup {
-      font-size: 12px;
-   }
-}
-@include tablet {
-   .kse-order-review {
-      width: 100%;
-   }
-}
-@include mobile {
-   .kse-order-review {
-      &__promo {
-         flex-direction: column;
-         gap: 8px;
-
-         input {
-            border-radius: 5px;
-         }
-
-         button {
-            border-radius: 5px;
-            width: 100%;
-         }
-      }
-   }
+    }
+  }
 }
