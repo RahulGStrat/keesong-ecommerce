@@ -73,6 +73,30 @@
    .kse-btn {
       width: 100%;
    }
+
+   .green-clr {
+      color: #1a8917;
+   }
+   &__flex-col {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+   }
+   &__redeemks {
+      span {
+         margin-bottom: 12px;
+         display: inline-block;
+      }
+   }
+   &__radioout {
+      margin-bottom: 4px;
+   }
+   input[type="radio"], input[type="checkbox"] {
+      accent-color: #f14a50;
+   }
+   sup {
+      font-size: 12px;
+   }
 }
 @include tablet {
    .kse-order-review {
