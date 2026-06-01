@@ -8,16 +8,18 @@
   &__text {
     padding: 12px 0;
     p {
-      font-family: "Acumin Pro Condensed";
-      font-size: 20px;
+      font-family: "Acumin Variable Concept";
+      font-size: 16px;
       color: #414144;
+      font-weight: 600;
     }
     span,
     a {
-      font-family: "Acumin Variable";
+      font-family: "Acumin Variable Concept";
       color: #414144;
-      font-size: 20px;
-      line-height: 30px;
+      font-size: 16px;
+      line-height: 26px;
+      font-weight: 300F;
     }
   }
   &__img {

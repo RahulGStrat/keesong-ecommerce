@@ -1,36 +1,67 @@
 .kse-contactus {
- .kse-heading {
+  .kse-heading {
     color: #000;
     padding-bottom: 16px;
     border-bottom: 1px solid #000;
   }
+
   &__formhead {
-    font-family: "Acumin Pro Condensed";
+    font-family: "Acumin Variable Concept";
     font-size: 22px;
+    font-weight: 600;
     color: #000;
     margin-top: 12px;
   }
+
   &__para {
     margin-top: 12px;
-    font-size: 20px;
+    font-size: 16px;
+    font-family: "Acumin Variable Concept";
+    color: #414141;
   }
+
   &__subhead {
-    font-family: "Acumin Pro Condensed";
+    font-family: "Acumin Variable Concept";
     font-size: 20px;
-    color: #000;
+    color: #414141;
+    font-weight: 600;
     margin-top: 24px;
     margin-bottom: 18px;
   }
+
+  .form-select {
+    font-family: "Acumin Variable Concept";
+    font-size: 16px;
+    color: #414141;
+  }
+
   .form-label {
-    font-size: 18px;
+    font-size: 16px;
+    font-family: "Acumin Variable Concept";
+    color: #414141;
   }
+
+  .form-control {
+    font-size: 16px;
+    font-family: "Acumin Variable Concept";
+    color: #414141;
+
+    &::placeholder {
+      font-size: 16px;
+      font-family: "Acumin Variable Concept";
+      color: #414141;
+    }
+  }
+
   .kse-btn {
-    border-radius: 6px;
+    border-radius: 24px;
   }
+
   .form-control:focus {
     box-shadow: none;
     border-color: #000;
   }
+
   .form-select:focus {
     box-shadow: none;
     border-color: #000;
