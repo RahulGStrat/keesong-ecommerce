@@ -22,34 +22,37 @@
         width: 54%;
         padding: 24px 22px 22px;
         position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
     &__close {
         position: absolute;
-        top: 12px;
-        right: 12px;
-
-        width: 28px;
-        height: 28px;
-
+        top: 25px;
+        right: 25px;
+        width: 40px;
+        height: 40px;
         border-radius: 50%;
         background: transparent;
-
         display: flex;
         align-items: center;
         justify-content: center;
-
         font-size: 18px;
         line-height: 1;
-
         cursor: pointer;
+
+        &:hover {
+            transform: rotate(90deg) scale(1.08);
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+        }
     }
 
     &__title {
         font-size: 28px;
         font-weight: 600;
         line-height: 34px;
-        margin-bottom: 12px;
+        margin-bottom: 15px;
         font-family: "Begum";
     }
 
@@ -57,17 +60,18 @@
         font-size: 18px;
         font-family: "Acumin Variable Concept";
         line-height: 24px;
-        margin-bottom: 6px;
+        margin-bottom: 10px;
     }
 
     &__terms {
         display: block;
         font-family: "Acumin Variable Concept";
         font-size: 13px;
-        margin-bottom: 22px;
+        margin-bottom: 40px;
     }
 
     &__btn {
+        width: 45%;
         background-color: #fff;
         color: #f14a50;
         text-decoration: none;
@@ -77,6 +81,8 @@
         font-family: "Acumin Pro Condensed";
         border-radius: 24px;
         border: 1px solid #fff;
+        display: flex;
+        justify-content: center;
         transition:
             background-color 0.3s ease,
             color 0.3s ease,
@@ -119,6 +125,11 @@
 
     &.kse-popup--pink .kse-popup__title {
         color: #680a38;
+    }
+
+    &.kse-popup--pink .kse-popup__close {
+        border: 1px solid #fff;
+        color: #fff;
     }
 
     &.kse-popup--pink .kse-popup__desc,
@@ -194,5 +205,89 @@
     &.kse-popup--white .kse-popup__close {
         border: 1px solid #680a38;
         color: #680a38;
+    }
+}
+
+@include tablet-pro {
+    .kse-popup {
+        max-width: unset;
+        width: 75%;
+
+        &__title {
+            font-size: 24px;
+            line-height: 30px;
+        }
+
+        &__desc {
+            font-size: 15px;
+            line-height: 21px;
+        }
+
+        &__btn {
+            width: 45%;
+            font-size: 14px;
+        }
+    }
+}
+
+@include tablet {
+    .kse-popup {
+        max-width: unset;
+        width: 85%;
+
+        &__title {
+            font-size: 24px;
+            line-height: 30px;
+        }
+
+        &__desc {
+            font-size: 15px;
+            line-height: 21px;
+        }
+
+        &__btn {
+            width: 55%;
+            font-size: 14px;
+        }
+    }
+}
+
+@include mobile {
+    .kse-popup {
+        width: 100%;
+        max-width: unset;
+        flex-direction: column;
+
+        &__img {
+            width: 100%;
+        }
+
+        &__content {
+            width: 100%;
+            position: unset;
+        }
+
+        &__title {
+            font-size: 20px;
+            line-height: 26px;
+
+            br {
+                display: none;
+            }
+        }
+
+        &__desc {
+            font-size: 15px;
+            line-height: 21px;
+        }
+
+        &__btn {
+            width: 55%;
+            font-size: 14px;
+        }
+
+        &__close {
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+        }
     }
 }
