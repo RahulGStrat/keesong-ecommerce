@@ -287,7 +287,30 @@
         }
 
         &__close {
-            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+            border: 1px solid #680a38;
+            color: #680a38;
+            width: 35px;
+            height: 35px;
+        }
+
+        &.kse-popup--purple .kse-popup__close {
+            border: 1px solid #680a38;
+            color: #680a38;
+        }
+
+        &.kse-popup--green .kse-popup__close {
+            border: 1px solid #680a38;
+            color: #680a38;
+        }
+
+        &.kse-popup--pink .kse-popup__close {
+            border: 1px solid #680a38;
+            color: #680a38;
+        }
+
+        &.kse-popup--red .kse-popup__close {
+            border: 1px solid #680a38;
+            color: #680a38;
         }
     }
 }
