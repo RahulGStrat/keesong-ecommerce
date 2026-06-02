@@ -1,0 +1,192 @@
+.kse-privacy {
+    width: 100%;
+
+    padding: 40px 20px;
+    font-family: "Acumin Variable Concept";
+
+    &__outer {
+        background: #f7f5f2;
+        border-radius: 10px;
+    }
+
+    &__banner {
+        width: 100%;
+        background: #680a38;
+        border-radius: 10px;
+        padding: 42px 20px;
+        text-align: center;
+
+        h1 {
+            color: #ffffff;
+            font-size: 52px;
+            font-weight: 700;
+            line-height: 1.1;
+            font-family: "Begum";
+        }
+    }
+
+    &__content {
+        width: 100%;
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 70px 40px 90px;
+    }
+
+    &__section {
+        margin-bottom: 48px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        h2 {
+            color: #680a38;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 1.4;
+            margin-bottom: 18px;
+        }
+
+        h3 {
+            color: #680a38;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 1.5;
+            margin-top: 24px;
+            margin-bottom: 12px;
+        }
+
+        p {
+            color: #680a38;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1.8;
+            margin-bottom: 14px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        ul {
+            margin-top: 14px;
+            padding-left: 0;
+            list-style: none;
+
+            li {
+                position: relative;
+                padding-left: 20px;
+                color: #680a38;
+                font-size: 16px;
+                line-height: 1.8;
+                margin-bottom: 8px;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 11px;
+                    left: 0;
+                    width: 4px;
+                    height: 4px;
+                    background: #680a38;
+                }
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        a {
+            color: #680a38;
+            text-decoration: none;
+            transition: all 0.3s ease;
+
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+    }
+
+    .contact-details {
+        margin-top: 20px;
+
+        p {
+            margin-bottom: 8px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        strong {
+            font-weight: 700;
+        }
+    }
+}
+
+
+/* =========================
+   RESPONSIVE - MOVED LAST
+========================= */
+
+@media (max-width: 991px) {
+
+    .kse-privacy {
+
+        &__banner {
+
+            h1 {
+                font-size: 44px;
+            }
+        }
+
+        &__content {
+            padding: 55px 30px 70px;
+        }
+    }
+}
+
+
+@media (max-width: 767px) {
+
+    .kse-privacy {
+        padding: 20px 12px;
+
+        &__banner {
+            padding: 30px 20px;
+
+            h1 {
+                font-size: 34px;
+            }
+        }
+
+        &__content {
+            padding: 40px 20px 60px;
+        }
+
+        &__section {
+
+            h2 {
+                font-size: 20px;
+            }
+
+            h3 {
+                font-size: 17px;
+            }
+
+            p {
+                font-size: 15px;
+                line-height: 1.7;
+            }
+
+            ul {
+
+                li {
+                    font-size: 15px;
+                    line-height: 1.7;
+                }
+            }
+        }
+    }
+}
