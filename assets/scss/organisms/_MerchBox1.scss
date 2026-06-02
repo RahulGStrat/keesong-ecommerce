@@ -14,6 +14,11 @@
       text-align: center;
       padding: 40px 20px;
       border-radius: 10px;
+
+      p {
+         font-size: 16px;
+         font-family: "Acumin Variable Concept";
+      }
    }
    &__imgBox {
       display: flex;
@@ -133,6 +138,10 @@
       }
       &__banner {
          padding: 30px 16px;
+
+         p {
+            font-size: 14px;
+         }
       }
    }
 }
