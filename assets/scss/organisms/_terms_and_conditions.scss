@@ -1,9 +1,11 @@
 .kse-terms {
     width: 100%;
+    padding: 40px 0px;
     font-family: "Acumin Variable Concept";
 
     &__outer {
         background: #f2f2f2;
+        border-radius: 10px;
     }
 
     &__banner {
@@ -15,7 +17,7 @@
 
         h1 {
             color: #ffffff;
-            font-size: 58px;
+            font-size: 52px;
             font-weight: 700;
             line-height: 1.1;
             font-family: "Begum";
@@ -27,8 +29,8 @@
     }
 
     &__content {
-        width: 100%;
-        max-width: 860px;
+         width: 100%;
+        max-width: 980px;
         margin: 0 auto;
         padding: 70px 40px 90px;
     }
