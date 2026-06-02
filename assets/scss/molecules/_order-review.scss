@@ -16,6 +16,11 @@
     font-weight: 600;
   }
 
+  &__totalsub {
+    font-size: 13px !important;
+    color: #b3b3b3 !important;
+  }
+
   &__row {
     display: flex;
     justify-content: space-between;
@@ -30,11 +35,6 @@
       font-size: 15px;
       color: #414141;
     }
-  }
-
-  &__totalsub {
-    font-size: 13px;
-    color: #b3b3b3;
   }
 
   &__promo {
@@ -115,6 +115,7 @@
     input {
       width: 14px;
       height: 14px;
+      margin-top: 1px;
     }
 
     label {
