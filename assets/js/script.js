@@ -1,3 +1,58 @@
+// ============================Merchandise Product Slider=====================================/
+$('.mchBxslider1').slick({
+    slidesToShow: 2,
+    slidesToScroll: 2,
+    prevArrow: '.slider1-prev',
+    nextArrow: '.slider1-next',
+    responsive: [
+         {
+            breakpoint: 480,
+            settings: { slidesToShow: 1 },
+         },
+      ],
+});
+// -------------------------Slider 2-------------------
+$('.mchBxslider2').slick({
+    slidesToShow: 2,
+    slidesToScroll: 2,
+    prevArrow: '.slider2-prev',
+    nextArrow: '.slider2-next',
+    responsive: [
+         {
+            breakpoint: 480,
+            settings: { slidesToShow: 1 },
+         },
+      ],
+});
+// -------------------------Slider 3-------------------
+$('.mchBxslider3').slick({
+    slidesToShow: 2,
+    slidesToScroll: 2,
+    prevArrow: '.slider3-prev',
+    nextArrow: '.slider3-next',
+    responsive: [
+         {
+            breakpoint: 480,
+            settings: { slidesToShow: 1 },
+         },
+      ],
+});
+// -------------------------Slider 4-------------------
+$('.mchBxslider4').slick({
+    slidesToShow: 2,
+    slidesToScroll: 2,
+    prevArrow: '.slider4-prev',
+    nextArrow: '.slider4-next',
+
+    responsive: [
+         {
+            breakpoint: 480,
+            settings: { slidesToShow: 1 },
+         },
+      ],
+
+});
+
 // =========================
 // MAIN INIT
 // =========================

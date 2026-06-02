@@ -1,0 +1,278 @@
+
+// .custom-prev,
+// .custom-next{
+//     position:absolute;
+//     top:50%;
+//     transform:translateY(-50%);
+//     width:50px;
+//     height:50px;
+//     border:none;
+//     background:none;
+//     cursor:pointer;
+//     z-index:999;
+//     font-size:50px;
+//     color:#333;
+//     line-height:1;
+// }
+
+// .custom-prev{
+//     left:10px;
+// }
+
+// .custom-next{
+//     right:10px;
+// }
+
+
+
+/* RESPONSIVE */
+
+@media(max-width:991px){
+
+    .product-section{
+        flex-direction:column;
+    }
+
+    .left-content,
+    .right-content{
+        width:100%;
+    }
+
+    .left-box{
+        min-height:auto;
+        padding:40px;
+    }
+
+    .left-box h2{
+        font-size:40px;
+    }
+
+    .left-box p{
+        font-size:18px;
+    }
+
+    .custom-prev,
+    .custom-next{
+        display:none;
+    }
+}
+
+.kse-mchBx{
+    padding:80px 60px;
+    position:relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &__main{
+        padding: 0px;
+    }
+    &__in{
+        display:flex;
+        gap:10px;
+    }
+    &__leftCnt{
+        width:50%;
+        background:#ef5d76;
+        border-radius:25px;
+        padding:80px 70px;
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        &-in{
+            color:#fff;
+
+        }
+
+        &-title {
+            font-family: "Begum";
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+        &-desc {
+            font-family: "Acumin Variable Concept";
+            font-size: 14px;
+            font-weight: 300;
+            color: #fff;
+            line-height: 1.5;
+        }
+    }
+    &__RightCnt{
+        width:50%;
+    }
+    &__item{
+        margin: 0px 12px;
+        &-image{
+            background: #f2f2f2;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            margin-bottom: 15px;
+            position: relative;
+            height: 250px;
+            img{
+                width: 80%;
+                // height: 100%;
+            }
+        }
+        &-head{
+            font-family: "Begum";
+            font-size: 14px;
+            color: #000;
+            font-weight: 600;
+        }
+        &-desc{
+            font-family: "Begum";
+            font-size: 13px;
+            color: #000;
+            font-weight: 500;
+            margin-bottom:7px;
+        }
+        &-price{
+            font-family: "Begum";
+            font-size: 14px;
+            color: #000;
+            font-weight: 600;
+            margin-bottom:7px;
+        }
+        &-btn{
+            position: absolute;
+            right: 6px;
+            bottom: 6px;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            // background-color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            svg{
+                fill: #fff;
+                line{
+                    fill: none;
+                    stroke: #777;
+                    stroke-linecap: round;
+                    stroke-miterlimit: 10;
+                    stroke-width: .5px;
+                }
+            }
+        }
+        .kse-btn{
+            width: 100%;
+        }
+    }
+    &__slider{
+        &-arrow{
+            position:absolute;
+            top:50%;
+            transform:translateY(-50%);
+            border:none;
+            background:none;
+            cursor:pointer;
+            z-index:999;
+            color:#666;
+            left:25px;
+            width: 20px;
+            padding: 0px;
+            svg{
+                width: 20px;
+                height: 25px;
+                fill: none;
+                stroke: #000;
+                stroke-miterlimit: 10;
+            }
+            &--next{
+                left: unset;
+                transform: rotate(-180deg);
+                right:25px;
+            }
+        }
+    }
+    &.TinyCluck{
+        background-color: #f2f2f2;
+
+        .kse-mchBx__leftCnt{
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-color: transparent;
+        }
+        .kse-mchBx__leftCnt-title{
+            color: #000;
+        }
+        .kse-mchBx__leftCnt-desc{
+           color: #000;
+        }
+        .kse-mchBx__item-image{
+            border: 3px solid #fff;
+        }
+    }
+    &.Apron{
+        .kse-mchBx__leftCnt{
+            background-color: #680a38;
+        }
+        .kse-mchBx__item-image{
+            padding: 0px;
+            overflow: hidden;
+            img{
+                width: 100%;
+            }
+        }
+    }
+    &.ChickenVinyl{
+        .kse-btn{
+            border: 2px solid #fff;
+        }
+        .kse-mchBx__item-btn{
+            svg{
+                fill: #e59ac0;
+                line{
+                    stroke: #fff;
+                }
+            }
+        }
+    }
+}
+
+@include tablet{
+    .kse-mchBx{
+        &__in{
+            flex-direction: column;
+            gap: 30px;
+        }
+        &__leftCnt, &__RightCnt{
+            width: 100%;
+        }
+        &__slider-arrow{
+            top: unset;
+            bottom: 30%;
+        }
+    }
+}
+@include mobile{
+    .kse-mchBx{
+            padding: 30px 30px;
+        &__in{
+            flex-direction: column;
+            gap: 30px;
+        }
+        &__leftCnt, &__RightCnt{
+            width: 100%;
+        }
+        &__slider-arrow{
+            top: unset;
+            transform: translateY(0%);
+            bottom: 25%;
+            left: 10px;
+            &--next{
+                transform: rotate(-180deg);
+                left: unset;
+                right: 10px;
+            }
+        }
+    }
+}
