@@ -460,8 +460,15 @@ renderCalendar();
 function initLoginTabs() {
    const tabs = document.querySelectorAll(".kse-login__tabs .tab");
    const contents = document.querySelectorAll(".kse-login__content");
+   const tpTextA = document.querySelector(".kse-login__tptexta");
+   const tpTextB = document.querySelector(".kse-login__tptextb");
 
    if (!tabs.length || !contents.length) return;
+
+   if (tpTextA && tpTextB) {
+      tpTextA.classList.add("active");
+      tpTextB.classList.remove("active");
+   }
 
    tabs.forEach((tab) => {
       tab.addEventListener("click", () => {
@@ -472,6 +479,16 @@ function initLoginTabs() {
 
          const target = document.getElementById(tab.dataset.tab);
          if (target) target.classList.add("active");
+
+         if (tpTextA && tpTextB) {
+            if (tab.dataset.tab === "login") {
+               tpTextA.classList.add("active");
+               tpTextB.classList.remove("active");
+            } else {
+               tpTextB.classList.add("active");
+               tpTextA.classList.remove("active");
+            }
+         }
       });
    });
 }

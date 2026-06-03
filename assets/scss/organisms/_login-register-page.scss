@@ -8,13 +8,20 @@
    background-size: cover;
    padding-right: 13%;
 
-   &__tptext {
+   &__tptexta,
+   &__tptextb {
       font-size: 15px;
       color: #121212;
       font-family: "Acumin Variable Concept";
       padding: 18px 0 18px 0;
       text-align: center;
       width: 100%;
+      display: none;
+   }
+
+   &__tptexta.active,
+   &__tptextb.active {
+      display: block;
    }
 
    &__card {
