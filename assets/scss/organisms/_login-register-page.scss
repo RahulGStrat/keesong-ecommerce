@@ -1,16 +1,38 @@
 .kse-login {
-   min-height: 100vh;
+   min-height: 150vh;
    display: flex;
    justify-content: flex-end;
-   align-items: center;
+   align-items: flex-start;
    background-position: center;
    background-repeat: no-repeat;
    background-size: cover;
-   padding-right: 13%;
+
+   &__bannertxt {
+      font-size: 26px;
+      line-height: 32px;
+      color: #ffffff;
+      font-family: "Begum";
+      font-weight: 700;
+   }
+
+   &__registertxt {
+      font-size: 14px;
+      color: #404040;
+      font-family: "Acumin Variable Concept";
+      text-align: center;
+      margin: 20px 15px;
+   }
+
+   &__wrapper {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin: 90px 0 90px 0
+   }
 
    &__tptexta,
    &__tptextb {
-      font-size: 15px;
+      font-size: 16px;
       color: #121212;
       font-family: "Acumin Variable Concept";
       padding: 18px 0 18px 0;
@@ -25,22 +47,20 @@
    }
 
    &__card {
-      margin: 60px 0;
       width: 420px;
       padding: 25px;
       border-radius: 12px;
       background: rgba(255, 255, 255, 0.7);
       backdrop-filter: blur(2px);
+      margin-right: 8%;
    }
 
    &__note {
-      color: #414141;
-      font-size: 13px;
-      font-weight: 300;
+      font-size: 14px;
+      color: #404040;
       font-family: "Acumin Variable Concept";
-      line-height: 1;
-      margin-bottom: 4px;
-      display: inline-block;
+      text-align: center;
+      margin: 30px 15px 20px;
    }
 
    &__tabs {
@@ -259,7 +279,26 @@
       span {
          font-family: "Acumin Variable Concept";
          color: #414141;
-         font-weight: 300;
+      }
+   }
+
+   &__partnerterms {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 15px 0px 30px;
+      
+      a {
+         font-size: 14px;
+         color: #404040;
+         font-family: "Acumin Variable Concept";
+         text-align: center;
+         text-decoration: underline;
+
+         &:hover {
+            text-decoration: none;
+            color: #404040;
+         }
       }
    }
 
@@ -280,6 +319,7 @@
       font-size: 14px;
    }
 }
+
 
 @include mobile {
    .kse-login {
