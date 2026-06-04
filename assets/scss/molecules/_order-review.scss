@@ -151,6 +151,11 @@
         padding-top: 0;
       }
     }
+
+    input[type="radio"],
+    input[type="checkbox"] {
+      accent-color: #009900;
+    }
   }
 }
 
