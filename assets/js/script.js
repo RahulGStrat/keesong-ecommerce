@@ -54,50 +54,55 @@ $('.mchBxslider4').slick({
 });
 
 // =======================Conut Down Time====================
-let startHours = 24; // You can now freely change this to 20, 30, 40, etc.
-let totalSeconds;
+function initCountdownTimer() {
+    const countdownElement = document.getElementById("countdown");
+    if (!countdownElement) return;
 
-// 1. Get the previously saved time AND the previously saved start configuration
-let savedSeconds = localStorage.getItem("countdownSeconds");
-let savedStartHours = localStorage.getItem("savedStartHours");
+    const startHours = 24; // You can now freely change this to 20, 30, 40, etc.
+    let totalSeconds;
 
-// 2. If startHours in the code is DIFFERENT from last time, reset the timer
-if (savedStartHours !== String(startHours)) {
-    totalSeconds = startHours * 60 * 60;
-    localStorage.setItem("countdownSeconds", totalSeconds);
-    localStorage.setItem("savedStartHours", startHours); // Save the new configuration
-} else if (savedSeconds !== null) {
-    // Otherwise, if it's the same configuration, just resume from where it left off
-    totalSeconds = parseInt(savedSeconds, 10);
-} else {
-    // Fallback for the very first load
-    totalSeconds = startHours * 60 * 60;
-    localStorage.setItem("savedStartHours", startHours);
-}
+    // 1. Get the previously saved time AND the previously saved start configuration
+    const savedSeconds = localStorage.getItem("countdownSeconds");
+    const savedStartHours = localStorage.getItem("savedStartHours");
 
-function updateTimer() {
-    let days = Math.floor(totalSeconds / 86400);
-    let hours = Math.floor((totalSeconds % 86400) / 3600);
-    let minutes = Math.floor((totalSeconds % 3600) / 60);
-    let seconds = totalSeconds % 60;
-
-    document.getElementById("countdown").innerHTML =
-        `<strong>${days}</strong><small>D</small>
-         <strong>${String(hours).padStart(2,'0')}</strong><small>H</small>
-         <strong>${String(minutes).padStart(2,'0')}</strong><small>M</small>
-         <strong>${String(seconds).padStart(2,'0')}</strong><small>S</small>`;
-
-    if (totalSeconds > 0) {
-        totalSeconds--;
+    // 2. If startHours in the code is DIFFERENT from last time, reset the timer
+    if (savedStartHours !== String(startHours)) {
+        totalSeconds = startHours * 60 * 60;
         localStorage.setItem("countdownSeconds", totalSeconds);
+        localStorage.setItem("savedStartHours", startHours); // Save the new configuration
+    } else if (savedSeconds !== null) {
+        // Otherwise, if it's the same configuration, just resume from where it left off
+        totalSeconds = parseInt(savedSeconds, 10);
     } else {
-        localStorage.removeItem("countdownSeconds");
-        localStorage.removeItem("savedStartHours");
+        // Fallback for the very first load
+        totalSeconds = startHours * 60 * 60;
+        localStorage.setItem("savedStartHours", startHours);
     }
-}
 
-updateTimer();
-setInterval(updateTimer, 1000);
+    function updateTimer() {
+        const days = Math.floor(totalSeconds / 86400);
+        const hours = Math.floor((totalSeconds % 86400) / 3600);
+        const minutes = Math.floor((totalSeconds % 3600) / 60);
+        const seconds = totalSeconds % 60;
+
+        countdownElement.innerHTML =
+            `<strong>${days}</strong><small>D</small>
+             <strong>${String(hours).padStart(2,'0')}</strong><small>H</small>
+             <strong>${String(minutes).padStart(2,'0')}</strong><small>M</small>
+             <strong>${String(seconds).padStart(2,'0')}</strong><small>S</small>`;
+
+        if (totalSeconds > 0) {
+            totalSeconds--;
+            localStorage.setItem("countdownSeconds", totalSeconds);
+        } else {
+            localStorage.removeItem("countdownSeconds");
+            localStorage.removeItem("savedStartHours");
+        }
+    }
+
+    updateTimer();
+    setInterval(updateTimer, 1000);
+}
 // =======================Conut Down Time End====================
 
 // =========================
@@ -118,6 +123,7 @@ document.addEventListener("DOMContentLoaded", function () {
    initFavouriteRecipesSlider();
    initRelatedProductsSlider();
    initCustomDropdown();
+   initCountdownTimer();
 });
 
 // =========================
