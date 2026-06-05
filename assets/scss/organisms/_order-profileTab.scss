@@ -1,0 +1,177 @@
+// Variables
+$color-maroon: #5c0632;
+$color-grey: #bdc1c4;
+$color-white: #ffffff;
+
+.kse-OP {
+  border-bottom: none !important;
+  display: flex !important;
+  width: 100% !important;
+  overflow: hidden;
+  font-family: "Acumin Variable Concept";
+  position: relative;
+  &:before {
+    width: 50px;
+    height: 50px;
+    left: 50%;
+    background-color: #f3f3f3;
+    position: absolute;
+    content: "";
+    transform: translate(-50%, -30px) rotate(45deg);
+    z-index: 2;
+  }
+
+  &__item {
+    flex: 1;
+    margin-bottom: 0 !important;
+    &:first-child {
+      .kse-OP__link {
+        // justify-content: flex-end;
+        // padding-right: 20%;
+
+        .kse-OP__icon{
+          padding-left: 2px;
+        }
+        &.active {
+          background-color: $color-maroon !important;
+          color: $color-white !important;
+
+          .orderIcn-1{
+            stroke: #670a38;
+          }
+        }
+        &:not(.active) {
+          background-color: $color-grey !important;
+          color: $color-white !important;
+          // .kse-OP__icon svg {
+          //   stroke: $color-grey;
+          // }
+        }
+      }
+    }
+    &:last-child {
+      z-index: 1;
+      .kse-OP__link {
+        // padding-left: 20%;
+        &.active {
+          background-color: $color-maroon !important;
+          color: $color-white !important;
+
+          .proflIcn-2{
+            stroke: #670a38;
+          }
+        }
+
+        &:not(.active) {
+          background-color: $color-grey !important;
+          color: $color-white !important;
+
+          // .kse-OP__icon svg {
+          //   stroke: $color-grey;
+          // }
+        }
+      }
+    }
+  }
+
+  &__link {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 50px 20px;
+    border: none !important;
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 1px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+  &__icon {
+    background: $color-white;
+    border-radius: 50%;
+    width: 65px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      width: 45px;
+      height: 45px;
+      .orderIcn-1{
+        fill: none;
+        stroke: #bcbec0;
+        stroke-linecap: round;
+        stroke-miterlimit: 10;
+        stroke-width: 2px;
+      }
+      .proflIcn-1{
+        fill: #fff;
+      }
+      .proflIcn-2{
+        fill: none;
+        stroke: #bcbec0;
+        stroke-miterlimit: 10;
+        stroke-width: 2px;
+      }
+    }
+  }
+
+  &__text {
+    display: inline-block;
+    font-weight: 300;
+    font-size: 22px;
+  }
+  &__body{
+    padding: 60px;
+    &-in{
+      width: 85%;
+      margin: 0px auto;
+    }
+    .kse-RaF{
+      margin-bottom: 80px;
+    }
+  }
+  &__tc{
+    margin: 40px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    a{
+      font-size: 18px;
+      color: #757373;
+      &:hover{
+        color: #757373;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+@include tablet{
+  .kse-OP{
+    &__body{
+      padding: 30px;
+      &-in{
+        width: 100%;
+      }
+    }
+  }
+}
+
+@include mobile{
+  .kse-OP{
+    &__body{
+      padding: 16px;
+      &-in{
+        width: 100%;
+      }
+      .kse-RaF{
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
