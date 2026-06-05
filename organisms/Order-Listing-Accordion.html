@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- styles -->
+    <link rel="stylesheet" href="../assets/css/aos.css">
+    <link rel="stylesheet" href="../assets/css/slick.css">
+    <link rel="stylesheet" href="../assets/css/slick-theme.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <!-- styles -->
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- body content start -->
+
+<div class="kse-OL accordion" id="orderAccordion">
+
+  <div class="kse-OL__item accordion-item">
+
+    <div class="kse-OL__header accordion-header " id="headingOne">
+      <div class="kse-OL__info">
+        <div class="kse-OL__info-row">
+          <span class="kse-OL__order-number">Order number: <strong>KS1234567890</strong></span>
+
+          <button class="kse-OL__toggle-btn" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                  aria-expanded="true" aria-controls="collapseOne">
+                <span class="kse-OL__toggle-text">Show More</span>
+          </button>
+        </div>
+
+        <div class="kse-OL__info-details">
+          <span class="kse-OL__date">Placed on: May 24, 2026</span>
+          <span class="kse-OL__date">Delivered on: May 25, 2026</span>
+          <span class="kse-OL__status kse-OL__status--completed">Status: Order Completed</span>
+          <button class="kse-OL__reorder-btn">Reorder</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#orderAccordion">
+      <div class="kse-OL__content">
+        <div class="kse-OL__products">
+
+          <div class="kse-OL__product">
+            <div class="kse-OL__product-image-wrapper">
+              <img src="../assets/images/OL-pdct-1.png" alt="Fresh Sakura Chicken [Halal]" class="kse-OL__product-image">
+            </div>
+            <div class="kse-OL__product-details">
+              <h4 class="kse-OL__product-title">Fresh Sakura Chicken <br>[Halal] – 1.3kg</h4>
+              <p class="kse-OL__product-quantity">Quantity: 2</p>
+              <span class="kse-OL__product-price">S$14.00</span>
+            </div>
+          </div>
+
+          <div class="kse-OL__product">
+            <div class="kse-OL__product-image-wrapper">
+              <img src="../assets/images/OL-pdct-2.png" alt="Fresh Sakura Chicken [Non-Halal]" class="kse-OL__product-image">
+            </div>
+            <div class="kse-OL__product-details">
+              <h4 class="kse-OL__product-title">Fresh Sakura Chicken <br>[Non-Halal] – 1.3kg</h4>
+              <p class="kse-OL__product-quantity">Quantity: 2</p>
+              <span class="kse-OL__product-price">S$14.00</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="kse-OL__item accordion-item">
+
+    <div class="kse-OL__header accordion-header" id="headingTwo">
+      <div class="kse-OL__info">
+        <div class="kse-OL__info-row">
+          <span class="kse-OL__order-number">Order number: <strong>KS1234567890</strong></span>
+
+          <button class="kse-OL__toggle-btn collapsed" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                  aria-expanded="false" aria-controls="collapseTwo">
+            <span class="kse-OL__toggle-text">Show More</span>
+          </button>
+        </div>
+
+        <div class="kse-OL__info-details">
+          <span class="kse-OL__date">Placed on: May 24, 2026</span>
+          <span class="kse-OL__date">Cancelled on: May 25, 2026</span>
+          <span class="kse-OL__status kse-OL__status--cancelled">Status: Cancelled by Customer</span>
+          <button class="kse-OL__reorder-btn">Reorder</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#orderAccordion">
+      <div class="kse-OL__content">
+        <div class="kse-OL__products">
+          </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+    <!-- body content end -->
+
+    <!-- scripts -->
+    <script src="../assets/js/jquery.slim.min.js"></script>
+    <script src="../assets/js/aos.js"></script>
+    <script src="../assets/js/slick.min.js"></script>
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <!-- scripts -->
+  </body>
+</html>

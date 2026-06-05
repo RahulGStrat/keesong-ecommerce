@@ -1,0 +1,407 @@
+.kse-PointsBox{
+    font-family: "Acumin Variable Concept";
+    background-color: #fff;
+    border-radius: 10px;
+    padding-bottom: 10px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    &__main{
+        width: 100%;
+    }
+    &__in{
+        display: flex;
+        gap: 25px;
+    }
+    &__out{
+        width: 50%;
+    }
+    &__mainHead{
+        font-size: 20px;
+        text-align: center;
+        font-family: "Acumin Variable Concept";
+        margin-bottom: 60px;
+    }
+    &.sakura {
+        .kse-PointsBox__header{
+            background: #e8898f;
+        }
+        .kse-PointsBox__points{
+            background: #f4e6e6;
+            &-box{
+                background: #f54b55;
+            }
+        }
+        .kse-PointsBox__how-item-value.light{
+            background: #ea8d92;
+        }
+        .kse-PointsBox__how-item-value.normal{
+            background: #f54b55;
+        }
+    }
+    &.keesong {
+        .kse-PointsBox__header{
+            background: #56b348;
+        }
+        .kse-PointsBox__points{
+            flex-direction: row-reverse;
+            background: #eef7ed;
+            &-box{
+                background: #2f9449;
+                border-radius: 10px 0px 0px 10px;
+                text-align: right;
+            }
+        }
+        .kse-PointsBox__how-item-value.light{
+            background: #56b348;
+        }
+        .kse-PointsBox__how-item-value.normal{
+            background: #2f9449;
+        }
+        .kse-PointsBox__header-logo{
+            svg{
+                path{
+                    fill: none;
+                    stroke: #54b047;
+                    stroke-miterlimit: 10;
+                    stroke-width: 2px;
+                }
+            }
+        }
+    }
+
+    &__header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 25px;
+        color: #fff;
+        &-logowrap{
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        &-logo{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background-color:#fff;
+            border-radius: 50%;
+            svg{
+                fill: none;
+                // width: 35px;
+                height: 35px;
+                path{
+                    fill: none;
+                    stroke: #f68e92;
+                    stroke-miterlimit: 10;
+                    stroke-width: 2px;
+                }
+            }
+            &-text{
+                font-size: 24px;
+                font-weight: 600;
+                font-family: "Begum";
+                sup{
+                    transform: translate(0px, 8px);
+                    display: inline-flex;
+                }
+            }
+        }
+        &-date{
+            font-family: "Acumin Pro Condensed";
+            font-size: 16px;
+            margin-top: 5px;
+        }
+    }
+    &__desc{
+        // padding: 40px;
+        text-align: center;
+        line-height: 1.6;
+        min-height: 180px;
+        font-size: 14px;
+        color: #444;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    &__points{
+        display: flex;
+        min-height: 240px;
+        &-box{
+            width: 38%;
+            color: #fff;
+            padding: 25px;
+            border-radius: 0 10px 10px 0;
+        }
+        &-graph{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex: 1;
+            img{
+                width: 80%;
+            }
+        }
+        &-text{
+            font-size: 18px;
+            font-weight: 500;
+            // font-family: "Acumin Pro Condensed";
+        }
+        &-value{
+            font-size:85px;
+            font-weight: 600;
+            line-height: 100px;
+            font-family: "Acumin Pro Condensed";
+            margin-top: -16px;
+        }
+        &-label{
+            font-size: 20px;
+            font-weight: 700;
+            margin-top: -5px;
+            &-sub{
+                font-size: 14px;
+                margin-top: 8px;
+            }
+        }
+        &-end{
+            flex: 1;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            &-head{
+                font-size: 18px;
+                font-weight: 600;
+                margin-bottom: 5px;
+            }
+            &-count{
+                font-size: 20px;
+                font-weight: 600;
+            }
+            &-btn{
+                display: inline-block;
+                background: #f54b55;
+                color: #fff;
+                text-decoration: none;
+                padding: 12px 25px 10px;
+                border-radius: 4px;
+                margin-top: 10px;
+                &:hover{
+                    background: #ff5e69;
+                    color: #fff;
+                }
+            }
+        }
+    }
+    &__how{
+        padding: 40px 20px 0px;
+        &-heading{
+            text-align: center;
+            font-size: 22px;
+            font-weight: 600;
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+            border-bottom: 1px solid #f2b5b9;
+        }
+        &-box{
+            display: grid;
+            grid-template-columns: 25% 1fr 1fr;
+            gap: 30px;
+            align-items: center;
+            margin-bottom: 35px;
+        }
+        &-title{
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 1.2;
+            color: #000;
+            text-transform: uppercase;
+            align-self: flex-end;
+        }
+        &-item{
+            text-align: center;
+            &-head{
+                font-size: 14px;
+                color: #444;
+                margin-bottom: 8px;
+            }
+            &-value{
+                flex: 1;
+                color: #fff;
+                text-align: center;
+                padding: 12px 12px 10px 12px;
+                border-radius: 25px;
+                font-weight: bold;
+                display: inline-flex;
+                min-width: 100%;
+                justify-content: center;
+            }
+        }
+    }
+    &__termBox{
+        font-family: "Acumin Variable Concept";
+        font-size: 12px;
+        width: 40%;
+        &--rtl{
+            text-align: right;
+            margin-left: auto;
+        }
+        h3{
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #414141;
+        }
+        ul{
+            padding: 0px;
+            margin: 0px;
+        }
+        li{
+            margin-bottom: 12px;
+            line-height: 1.2;
+            position: relative;
+            padding-left: 15px;
+            &:last-child{
+                margin-bottom: 0px;
+            }
+            span{
+                position: relative;
+                &::before{
+                width: 3px;
+                height: 3px;
+                background-color: #414141;
+                content: "";
+                position: absolute;
+                left: -15px;
+                top: 4px;
+                border-radius: 50%;
+            }
+            }
+        }
+    }
+    &__graph{
+        margin-top: -70px;
+        &-in{
+            width: 55%;
+            margin: 0px auto;
+        }
+        img{
+            width: 100%;
+            margin: 0px auto;
+        }
+    }
+}
+@include tablet-pro{
+    .kse-PointsBox{
+        &__desc{
+            padding: 30px;
+        }
+    }
+}
+
+@include tablet{
+    .kse-PointsBox{
+        &__in{
+            flex-direction: column;
+        }
+        &__out{
+            width: 100%;
+        }
+        &__desc{
+            padding: 30px;
+        }
+        &__termBox{
+            width: 100%;
+            &--rtl{
+                text-align: left;
+            }
+        }
+        &__graph{
+            margin: 30px 0 0;
+            &-in{
+                width: 100%;
+            }
+        }
+    }
+}
+@include mobile{
+    .kse-PointsBox{
+        &__mainHead{
+            padding: 20px;
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+        &__header{
+            flex-direction: column;
+            &-logo{
+                width: 30px;
+                height: 30px;
+                svg{
+                    width: 20px;
+                    height: 20px;
+                }
+                &-text{
+                    font-size: 20px;
+                }
+            }
+        }
+        &__points{
+            flex-direction: column;
+            &-box{
+                width: 100%;
+                border-radius: 10px;
+                text-align: center !important;
+            }
+            &-end{
+                padding: 25px;
+                text-align: center;
+            }
+        }
+        &__how{
+            &-box{
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+
+            }
+            &-title{
+                justify-content: center;
+                align-self: center;
+            }
+            &-item{
+                &-head{
+                    margin-bottom: 3px;
+                }
+                &-value{
+                    margin-bottom: 10px;
+                }
+            }
+        }
+        &__in{
+            flex-direction: column;
+        }
+        &__out{
+            width: 100%;
+        }
+        &__desc{
+            padding: 30px;
+        }
+        &__termBox{
+            width: 100%;
+            &--rtl{
+                text-align: left;
+            }
+        }
+        &__graph{
+            margin: 30px 0 0;
+            &-in{
+                width: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,196 @@
+.kse-OL {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  font-family: "Acumin Variable Concept";
+  --bs-accordion-border-width: 0;
+
+  &__item {
+    background: #ffffff;
+    border: 0px solid #f0f0f0 !important;
+    margin-bottom: 24px;
+    overflow: hidden;
+    border-radius: 0px !important;
+  }
+
+  &__header {
+    background: #f9f9f9 !important;
+    padding: 16px 24px;
+    transition: background-color 0.25s ease-in-out;
+    border: 1px solid #f0f0f0 !important;
+    border-radius: 8px 8px 0 0!important;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap:1px;
+    width: 100%;
+
+    &-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &-details {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 14px;
+      color: #000;
+    }
+  }
+
+  &__order-number {
+    font-size: 14px;
+    color: #000000;
+    font-weight: 600;
+    strong{
+      font-weight: 600;
+    }
+  }
+
+  &__toggle-btn{
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    color: #ff4d4f !important;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 0;
+    width: auto;
+    padding-left: 10px;
+    position: relative;
+
+    &:hover {
+       color: #fa2326 !important;
+    }
+    &:after {
+      content: "";
+      background-size: 100%;
+      margin:0px;
+      position: absolute;
+      top: 3px;
+      left: -6px;
+      width: 10px;
+      height: 6px;
+      background-image: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="UTF-8"%3F><svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.66 8.54"><defs><style> .cls-1 { fill: none; stroke: %23f14a50; stroke-miterlimit: 10; } </style></defs><g id="Layer_3"><polyline class="cls-1" points="15.31 .35 7.83 7.83 .35 .35"/></g></svg>');
+      transition: transform 0.3s ease;
+    }
+    &:not(.collapsed)::after{
+      transform: rotate(-180deg);
+    }
+  }
+
+  &__status {
+    font-weight: 600;
+    &--completed, &--cancelled { color: #ff4d4f;}
+  }
+
+  &__reorder-btn {
+    border: none;
+    color: #000000;
+    cursor: pointer;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    background-repeat: no-repeat;
+    background-size: 10px;
+    padding-left: 15px;
+    position: relative;
+    &:before{
+      content: "";
+      position: absolute;
+      top: 2px;
+      left: 0;
+      background-image: url("../images/re-order.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 10px;
+      height: 10px;
+      transition: transform 0.3s ease;
+    }
+    &:hover {
+      color: #ff4d4f;
+      background-transform: rotate(180deg);
+
+      &:before{
+        transform: rotate(-180deg);
+      }
+
+    }
+  }
+
+  &__content {
+    padding: 32px 24px;
+    // border-top: 1px solid #f0f0f0;
+    background: #ffffff;
+    border: 1px solid #f0f0f0 !important;
+    border-top: 0px !important;
+    border-radius:0 0 8px 8px!important;
+  }
+
+  &__products {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+
+  &__product {
+    display: flex;
+    gap: 16px;
+    flex: 1;
+    min-width: 280px;
+
+    &-image-wrapper {
+      width: 140px;
+      height: 140px;
+      border-radius: 16px;
+      overflow: hidden;
+      background-color: #f5f5f5;
+      img { width: 100%; height: 100%; object-fit: cover; }
+    }
+
+    &-details {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    &-title {
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 1.3;
+      margin: 0 0 8px;
+      color: #000000;
+      font-family: "Begum";
+    }
+    &-quantity {
+      font-size: 14px;
+      color: #000;
+      margin: 4px 0 auto 0;
+    }
+    &-price {
+      font-size: 15px;
+      font-weight: 700;
+      color: #666666;
+    }
+  }
+}
+@include mobile{
+  .kse-OL{
+    &__header{
+      padding: 10px;
+    }
+    &__info{
+      &-details{
+        gap: 10px;
+      }
+    }
+    &__content{
+      padding: 20px 10px;
+    }
+  }
+}
