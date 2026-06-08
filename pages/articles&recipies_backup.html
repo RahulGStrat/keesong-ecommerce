@@ -271,122 +271,102 @@
     <div class="overlay d-none" id="overlay"></div>
     <!-- body content start -->
     <!-- Blog Filter form -->
-    <div class="kse-blogfiltercard__outer" style="background-image: url(../assets/images/blogfiltercard_bg.png);">
+     <div class="kse-blogfiltercard__outer" style="background-image: url(../assets/images/blogfiltercard_bg.png);">
         <div class="content-wrapper">
             <div class="kse-blogfiltercard">
 
-                <h1 class="kse-blogfiltercard__title">
-                    What are you looking for?
-                </h1>
+            <h1 class="kse-blogfiltercard__title">
+                What are you looking for?
+            </h1>
 
-                <!-- FIELD 1 -->
+            <!-- FIELD 1 -->
 
-                <div class="kse-blogfiltercard__formgrp">
+            <div class="kse-blogfiltercard__formgrp">
 
-                    <label id="kse-label-1">
-                        I am looking for chicken for my
-                    </label>
+                <label id="kse-label-1">
+                    I am looking for chicken for my
+                </label>
 
-                    <div class="kse-blogfiltercard__dropdown">
-                        <div class="kse-blogfiltercard__cstmselect" tabindex="0" role="combobox" aria-expanded="false"
-                            aria-haspopup="listbox" aria-labelledby="kse-label-1">
-                            <span class="kse-blogfiltercard__cstmselect-text kse-placeholder">-- Select --</span>
-                            <svg class="kse-blogfiltercard__cstmselect-arrow" width="14" height="14" viewBox="0 0 14 14"
-                                fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M3.5 5.25L7 8.75L10.5 5.25" stroke="#414141" stroke-width="1.5"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                            <input type="hidden" name="chicken_for" value="">
-                        </div>
-
-                        <div class="kse-blogfiltercard__cstmselect-panel">
-                            <ul class="kse-blogfiltercard__cstmselect-list" role="listbox"
-                                aria-labelledby="kse-label-1">
-                                <li class="kse-blogfiltercard__cstmselect-item" role="option" aria-selected="false"
-                                    data-value="home">Home</li>
-                                <li class="kse-blogfiltercard__cstmselect-item" role="option" aria-selected="false"
-                                    data-value="restaurant">Restaurant</li>
-                                <li class="kse-blogfiltercard__cstmselect-item" role="option" aria-selected="false"
-                                    data-value="farm">Farm</li>
-                            </ul>
-                        </div>
+                <div class="kse-blogfiltercard__dropdown">
+                    <div class="kse-blogfiltercard__cstmselect" tabindex="0" role="combobox" aria-expanded="false" aria-haspopup="listbox" aria-labelledby="kse-label-1">
+                        <span class="kse-blogfiltercard__cstmselect-text kse-placeholder">-- Select --</span>
+                        <svg class="kse-blogfiltercard__cstmselect-arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.5 5.25L7 8.75L10.5 5.25" stroke="#414141" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <input type="hidden" name="chicken_for" value="">
                     </div>
-
-                </div>
-
-                <!-- FIELD 2 -->
-
-                <div class="kse-blogfiltercard__formgrp">
-
-                    <label id="kse-label-2">
-                        I prefer
-                    </label>
-
-                    <div class="kse-blogfiltercard__dropdown">
-                        <div class="kse-blogfiltercard__cstmselect" tabindex="0" role="combobox" aria-expanded="false"
-                            aria-haspopup="listbox" aria-labelledby="kse-label-2">
-                            <span class="kse-blogfiltercard__cstmselect-text kse-placeholder">-- Select --</span>
-                            <svg class="kse-blogfiltercard__cstmselect-arrow" width="14" height="14" viewBox="0 0 14 14"
-                                fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M3.5 5.25L7 8.75L10.5 5.25" stroke="#414141" stroke-width="1.5"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                            <input type="hidden" name="preference" value="">
-                        </div>
-
-                        <div class="kse-blogfiltercard__cstmselect-panel">
-                            <ul class="kse-blogfiltercard__cstmselect-list" role="listbox"
-                                aria-labelledby="kse-label-2">
-                                <li class="kse-blogfiltercard__cstmselect-item" role="option" aria-selected="false"
-                                    data-value="Fresh Chicken">Fresh Chicken</li>
-                                <li class="kse-blogfiltercard__cstmselect-item" role="option" aria-selected="false"
-                                    data-value="Frozen Chicken">Frozen Chicken</li>
-                                <li class="kse-blogfiltercard__cstmselect-item" role="option" aria-selected="false"
-                                    data-value="Organic Chicken">Organic Chicken</li>
-                            </ul>
-                        </div>
+                    
+                    <div class="kse-blogfiltercard__cstmselect-panel">
+                        <ul class="kse-blogfiltercard__cstmselect-list" role="listbox" aria-labelledby="kse-label-1">
+                            <li class="kse-blogfiltercard__cstmselect-item" role="option" aria-selected="false" data-value="home">Home</li>
+                            <li class="kse-blogfiltercard__cstmselect-item" role="option" aria-selected="false" data-value="restaurant">Restaurant</li>
+                            <li class="kse-blogfiltercard__cstmselect-item" role="option" aria-selected="false" data-value="farm">Farm</li>
+                        </ul>
                     </div>
-
                 </div>
-
-                <!-- FIELD 3 -->
-
-                <div class="kse-blogfiltercard__formgrp">
-
-                    <label id="kse-label-3">
-                        From
-                    </label>
-
-                    <div class="kse-blogfiltercard__dropdown">
-                        <div class="kse-blogfiltercard__cstmselect" tabindex="0" role="combobox" aria-expanded="false"
-                            aria-haspopup="listbox" aria-labelledby="kse-label-3">
-                            <span class="kse-blogfiltercard__cstmselect-text kse-placeholder">-- Select --</span>
-                            <svg class="kse-blogfiltercard__cstmselect-arrow" width="14" height="14" viewBox="0 0 14 14"
-                                fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M3.5 5.25L7 8.75L10.5 5.25" stroke="#414141" stroke-width="1.5"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                            <input type="hidden" name="location" value="">
-                        </div>
-
-                        <div class="kse-blogfiltercard__cstmselect-panel">
-                            <ul class="kse-blogfiltercard__cstmselect-list" role="listbox"
-                                aria-labelledby="kse-label-3">
-                                <li class="kse-blogfiltercard__cstmselect-item" role="option" aria-selected="false"
-                                    data-value="Singapore">Singapore</li>
-                                <li class="kse-blogfiltercard__cstmselect-item" role="option" aria-selected="false"
-                                    data-value="Malaysia">Malaysia</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                </div>
-
-                <!-- BUTTON -->
-
-                <a href="#" class="kse-btn kse-btn--header">Explore Now</a>
 
             </div>
+
+            <!-- FIELD 2 -->
+
+            <div class="kse-blogfiltercard__formgrp">
+
+                <label id="kse-label-2">
+                    I prefer
+                </label>
+                
+                <div class="kse-blogfiltercard__dropdown">
+                    <div class="kse-blogfiltercard__cstmselect" tabindex="0" role="combobox" aria-expanded="false" aria-haspopup="listbox" aria-labelledby="kse-label-2">
+                        <span class="kse-blogfiltercard__cstmselect-text kse-placeholder">-- Select --</span>
+                        <svg class="kse-blogfiltercard__cstmselect-arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.5 5.25L7 8.75L10.5 5.25" stroke="#414141" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <input type="hidden" name="preference" value="">
+                    </div>
+                    
+                    <div class="kse-blogfiltercard__cstmselect-panel">
+                        <ul class="kse-blogfiltercard__cstmselect-list" role="listbox" aria-labelledby="kse-label-2">
+                            <li class="kse-blogfiltercard__cstmselect-item" role="option" aria-selected="false" data-value="Fresh Chicken">Fresh Chicken</li>
+                            <li class="kse-blogfiltercard__cstmselect-item" role="option" aria-selected="false" data-value="Frozen Chicken">Frozen Chicken</li>
+                            <li class="kse-blogfiltercard__cstmselect-item" role="option" aria-selected="false" data-value="Organic Chicken">Organic Chicken</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- FIELD 3 -->
+
+            <div class="kse-blogfiltercard__formgrp">
+
+                <label id="kse-label-3">
+                    From
+                </label>
+                
+                <div class="kse-blogfiltercard__dropdown">
+                    <div class="kse-blogfiltercard__cstmselect" tabindex="0" role="combobox" aria-expanded="false" aria-haspopup="listbox" aria-labelledby="kse-label-3">
+                        <span class="kse-blogfiltercard__cstmselect-text kse-placeholder">-- Select --</span>
+                        <svg class="kse-blogfiltercard__cstmselect-arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.5 5.25L7 8.75L10.5 5.25" stroke="#414141" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <input type="hidden" name="location" value="">
+                    </div>
+                    
+                    <div class="kse-blogfiltercard__cstmselect-panel">
+                        <ul class="kse-blogfiltercard__cstmselect-list" role="listbox" aria-labelledby="kse-label-3">
+                            <li class="kse-blogfiltercard__cstmselect-item" role="option" aria-selected="false" data-value="Singapore">Singapore</li>
+                            <li class="kse-blogfiltercard__cstmselect-item" role="option" aria-selected="false" data-value="Malaysia">Malaysia</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- BUTTON -->
+
+            <a href="#" class="kse-btn kse-btn--header">Explore Now</a>
+
+        </div>
         </div>
     </div>
     <!-- Great Chicken is made better -->
@@ -404,83 +384,111 @@
                 </p>
             </div>
 
-            <div class="kse-great-chicken__slider">
+            <div class="kse-great-chicken__wrapper">
 
-                <!-- ITEM -->
-                <div class="kse-great-chicken__item">
-                    <div class="kse-great-chicken__image">
-                        <img src="../assets/images/great-chicken1.png" alt="From Farm To Table" />
-                    </div>
+                <!-- LEFT ARROW -->
+                <button class="kse-great-chicken__arrow kse-great-chicken__arrow--prev">
+                </button>
 
-                    <div class="kse-great-chicken__content">
-                        <span class="kse-great-chicken__tag">
-                            FROM FARM TO TABLE
-                        </span>
+                <!-- SLIDER -->
+                <div class="kse-great-chicken__slider">
 
-                        <h3 class="kse-great-chicken__item-title">
-                            From Yong Peng <br />
-                            to Your Plate: <br />
-                            The Kee Song Story
-                        </h3>
-
-                        <a href="#" class="kse-great-chicken__button">
-                            Read More
-                        </a>
-                    </div>
-                </div>
-
-                <!-- ITEM -->
-                <div class="kse-great-chicken__item">
-                    <div class="kse-great-chicken__image">
-                        <img src="../assets/images/great-chicken2.png" alt="Recipe Inspirations" />
-                    </div>
-
-                    <div class="kse-great-chicken__content">
-                        <span class="kse-great-chicken__tag">
-                            RECIPE INSPIRATIONS
-                        </span>
-
-                        <h3 class="kse-great-chicken__item-title">
-                            5 Simple Ways to <br />
-                            Elevate your Meals <br />
-                            The Kee Song Way
-                        </h3>
-
-                        <a href="#" class="kse-great-chicken__button">
-                            Read More
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Poll Chart -->
-                <div class="kse-pollchartcard">
-                    <div class="kse-pollchartcard__inner">
-                        <div class="kse-pollchartcard__chart">
-                            <div class="kse-pollchartcard__option">
-                                <img class="kse-pollchartcard__image" src="../assets/images/kse_offer_1.png"
-                                    alt="{{option_1_title}}" />
-                                <h3 class="kse-pollchartcard__title">Fresh Chicken</h3>
-                                <div class="kse-pollchartcard__overlay" style="height: 20%;">
-                                    <span class="kse-pollchartcard__percentage">20%</span>
-                                </div>
-                            </div>
-                            <div class="kse-pollchartcard__option">
-                                <img class="kse-pollchartcard__image" src="../assets/images/kse_offer_2.png"
-                                    alt="{{option_2_title}}" />
-                                <h3 class="kse-pollchartcard__title">Frozen Chicken</h3>
-                                <div class="kse-pollchartcard__overlay" style="height: 40%;">
-                                    <span class="kse-pollchartcard__percentage">40%</span>
-                                </div>
-                            </div>
+                    <!-- ITEM -->
+                    <div class="kse-great-chicken__item">
+                        <div class="kse-great-chicken__image">
+                            <img src="../assets/images/great-chicken1.png" alt="From Farm To Table" />
                         </div>
-                        <h3>Select your favourite!</h3>
-                        <p class="kse-pollchartcard__votes">5 votes</p>
-                        <div class="kse-pollchartcard__actions">
-                            <button class="kse-pollchartcard__button">Fresh Chicken!</button>
-                            <button class="kse-pollchartcard__button">Frozen Chicken!</button>
+
+                        <div class="kse-great-chicken__content">
+                            <span class="kse-great-chicken__tag">
+                                FROM FARM TO TABLE
+                            </span>
+
+                            <h3 class="kse-great-chicken__item-title">
+                                From Yong Peng <br />
+                                to Your Plate: <br />
+                                The Kee Song Story
+                            </h3>
+
+                            <a href="#" class="kse-great-chicken__button">
+                                Read More
+                            </a>
                         </div>
                     </div>
+
+                    <!-- ITEM -->
+                    <div class="kse-great-chicken__item">
+                        <div class="kse-great-chicken__image">
+                            <img src="../assets/images/great-chicken2.png" alt="Recipe Inspirations" />
+                        </div>
+
+                        <div class="kse-great-chicken__content">
+                            <span class="kse-great-chicken__tag">
+                                RECIPE INSPIRATIONS
+                            </span>
+
+                            <h3 class="kse-great-chicken__item-title">
+                                5 Simple Ways to <br />
+                                Elevate your Meals <br />
+                                The Kee Song Way
+                            </h3>
+
+                            <a href="#" class="kse-great-chicken__button">
+                                Read More
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- ITEM -->
+                    <div class="kse-great-chicken__item">
+                        <div class="kse-great-chicken__image">
+                            <img src="../assets/images/great-chicken3.png" alt="Product Spotlight" />
+                        </div>
+
+                        <div class="kse-great-chicken__content">
+                            <span class="kse-great-chicken__tag">
+                                PRODUCT SPOTLIGHT
+                            </span>
+
+                            <h3 class="kse-great-chicken__item-title">
+                                The Sakura Chicken <br />
+                                Difference: Why it is <br />
+                                Naturally Better
+                            </h3>
+
+                            <a href="#" class="kse-great-chicken__button">
+                                Read More
+                            </a>
+                        </div>
+                    </div>
+                    <!-- ITEM -->
+                    <div class="kse-great-chicken__item">
+                        <div class="kse-great-chicken__image">
+                            <img src="../assets/images/great-chicken1.png" alt="Product Spotlight" />
+                        </div>
+
+                        <div class="kse-great-chicken__content">
+                            <span class="kse-great-chicken__tag">
+                                PRODUCT SPOTLIGHT
+                            </span>
+
+                            <h3 class="kse-great-chicken__item-title">
+                                The Sakura Chicken <br />
+                                Difference: Why it is <br />
+                                Naturally Better
+                            </h3>
+
+                            <a href="#" class="kse-great-chicken__button">
+                                Read More
+                            </a>
+                        </div>
+                    </div>
+
                 </div>
+
+                <!-- RIGHT ARROW -->
+                <button class="kse-great-chicken__arrow kse-great-chicken__arrow--next">
+                </button>
 
             </div>
         </div>

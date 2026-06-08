@@ -1,18 +1,25 @@
 .kse-pollchartcard {
   width: 100%;
-  background-color: $color-white;
+  background-color: #fff;
   overflow: hidden;
   font-family: "Acumin Variable Concept", "Acumin Variable";
+  margin: 0 8px;
+  border-radius: 10px;
 
   &__inner {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 32px;
 
     h3 {
-      font-size: 24px;
-      font-weight: 700;
+      font-size: 22px;
+      font-family: "Begum";
+      font-weight: 600;
       color: #680a38;
       line-height: 1.25;
-      margin: 28px 0 8px;
+      margin: 10px 0 8px;
       padding: 0 24px;
 
       @include mobile {
@@ -25,6 +32,7 @@
 
   &__chart {
     display: flex;
+    height: 300px;
     width: 100%;
     overflow: hidden;
   }
@@ -61,7 +69,7 @@
   &__percentage {
     color: #fff;
     font-family: "Acumin Variable";
-    font-size: 48px;
+    font-size: 24px;
     font-weight: 800;
     text-align: center;
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.35);
@@ -79,10 +87,11 @@
     left: 50%;
     transform: translateX(-50%);
     color: #fff !important;
-    font-size: 22px;
+    font-size: 18px !important;
     font-weight: 700;
     text-align: center;
     margin: 0;
+    padding: 0 10px !important;
     width: 90%;
     z-index: 2;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
@@ -95,8 +104,8 @@
   }
 
   &__votes {
-    font-size: 16px;
-    color: #757575;
+    font-size: 18px;
+    color: #414141;
     font-weight: 400;
     margin: 0 0 24px 0;
     padding: 0 24px;
@@ -123,10 +132,11 @@
   }
 
   &__button {
+    height: 52px;
     flex: 1;
     background-color: #fff;
-    color: #f14a50;
-    border: 1px solid #f14a50;
+    color: #414141;
+    border: 1px solid #414141;
     border-radius: 8px;
     padding: 14px 20px;
     font-size: 18px;
