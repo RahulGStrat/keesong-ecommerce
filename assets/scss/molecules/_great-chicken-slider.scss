@@ -20,6 +20,9 @@
       font-weight: 700;
       color: #f14a50;
       margin-bottom: 20px;
+      &.article-head {
+         margin-top: 70px;
+      }
    }
 
    &__description {

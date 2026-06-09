@@ -1,0 +1,100 @@
+.kse-product-finder {
+    width: 100%;
+    background-color: #fff;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 24px 0;
+    box-shadow: 0 2px 8px #00000080;
+
+    .kse-blogfiltercard__cstmselect {
+      border: 2px solid #e6e6e6;
+    }
+
+    &__wrapper {
+      align-items: end;
+      padding-bottom: 0;
+    }
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__results {
+        font-family: "Begum", serif;
+        font-size: 28px;
+        font-weight: 700;
+        color: #680a38;
+        padding-right: 32px;
+        border-right: 1px solid #d3d3d3;
+        white-space: nowrap;
+    }
+
+    &__content {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        padding: 0 32px;
+
+        label {
+            font-family: "Acumin Variable Concept", sans-serif;
+            font-size: 16px;
+            color: #4d4d4f;
+            white-space: nowrap;
+            margin-bottom: 0;
+        }
+    }
+
+    &__dropdown {
+        position: relative;
+        width: 100%;
+        max-width: 320px;
+    }
+
+    // Responsive rules consolidated
+    @include mobile {
+        &__inner {
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        &__results {
+            padding-right: 0;
+            border-right: none;
+            border-bottom: 1px solid #d3d3d3;
+            padding-bottom: 16px;
+            width: 100%;
+            text-align: center;
+        }
+
+        &__content {
+            flex-direction: column;
+            align-items: stretch;
+            padding: 0;
+            width: 100%;
+
+            label {
+                text-align: center;
+                white-space: normal;
+                margin-bottom: 10px;
+            }
+        }
+
+        &__dropdown {
+            max-width: 100%;
+        }
+
+        &__actions {
+            width: 100%;
+
+            .kse-btn {
+                width: 100%;
+                text-align: center;
+                box-sizing: border-box;
+            }
+        }
+    }
+}
