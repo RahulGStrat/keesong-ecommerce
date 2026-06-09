@@ -76,7 +76,7 @@
     pointer-events: none;
 
     @include mobile {
-      font-size: 36px;
+      font-size: 20px;
     }
   }
 
@@ -99,7 +99,7 @@
 
     @include mobile {
       top: 16px;
-      font-size: 18px;
+      font-size: 16px;
     }
   }
 
@@ -111,7 +111,7 @@
     padding: 0 24px;
 
     @include mobile {
-      font-size: 14px;
+      font-size: 16px;
       margin-bottom: 18px;
       padding: 0 16px;
     }
