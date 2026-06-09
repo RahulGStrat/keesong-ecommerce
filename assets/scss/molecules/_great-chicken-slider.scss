@@ -75,9 +75,14 @@
       }
    }
 
-   &__outer {
-      display: flex;
-   }
+    &__outer {
+       display: flex;
+       align-items: stretch;
+
+       .kse-great-chicken__item {
+          height: auto;
+       }
+    }
 
    &__item {
       background-color: #ffffff;
