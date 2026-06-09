@@ -8,43 +8,90 @@
 
     &__title {
         font-size: 14px;
-        font-weight: 600;
+        font-weight: 700;
         color: #121212;
         margin-bottom: 24px;
+        text-transform: uppercase;
     }
 
-    &__list {
-        list-style: none;
-        margin: 0;
-        padding: 0;
+    &__group {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
     }
 
-    &__listitm {
-        font-size: 14px;
-        font-family: "Acumin Variable Concept";
-        font-weight: 400;
-        color: #121212;
-        padding: 12px 14px;
-        cursor: pointer;
-        border-bottom: 1px solid #c1c0be;
-        transition: all 0.25s ease;
-        position: relative;
-
-        &.active {
-            background: #ffffff;
-            border-radius: 6px;
-            border-bottom: none;
-            font-weight: 600;
+    &__accordion {
+        &[open] {
+            .kse-filter__accordion-title {
+                background-color: #ffffff;
+            }
+            .kse-filter__accordion-icon {
+                transform: translateY(-50%) rotate(180deg);
+            }
         }
+    }
 
-        &:last-child {
-            border-bottom: none;
+    &__accordion-title,
+    &__link {
+        display: block;
+        background-color: transparent;
+        border-radius: 6px;
+        padding: 12px 30px 12px 14px;
+        font-size: 14px;
+        font-weight: 700;
+        color: #121212;
+        cursor: pointer;
+        position: relative;
+        text-decoration: none;
+        list-style: none;
+        line-height: 1.3;
+        transition: all 0.25s ease;
+
+        &::-webkit-details-marker {
+            display: none;
         }
 
         &:hover {
-            background: #ffffff;
-            border-radius: 6px;
-            font-weight: 600;
+            color: #121212;
+        }
+    }
+
+    &__link {
+        padding-right: 14px;
+        
+        &.active {
+            background-color: #ffffff;
+        }
+    }
+
+    &__accordion-icon {
+        position: absolute;
+        right: 14px;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: transform 0.3s ease;
+        pointer-events: none;
+    }
+
+    &__sublist {
+        list-style: none;
+        margin: 0;
+        padding: 12px 14px 4px 28px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        li a {
+            font-size: 13px;
+            color: #121212;
+            text-decoration: none;
+            font-weight: 400;
+            transition: all 0.25s ease;
+
+            &:hover {
+                font-weight: 600;
+                text-decoration: none;
+            }
         }
     }
 }
