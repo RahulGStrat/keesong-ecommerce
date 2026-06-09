@@ -55,6 +55,12 @@
     }
 
     // Responsive rules consolidated
+
+    @include tablet {
+      &__content {
+        flex-direction: column;
+      }
+    }
     @include mobile {
         &__inner {
             flex-direction: column;
