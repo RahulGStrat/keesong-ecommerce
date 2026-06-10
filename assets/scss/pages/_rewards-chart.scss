@@ -1,0 +1,205 @@
+.kse-rewards-chart {
+    position: relative;
+    width: 85%;
+    margin: 20px auto 0;
+    font-family: "Acumin Variable Concept", sans-serif;
+
+    &__svg-container {
+        position: relative;
+        width: 100%;
+        padding-bottom: 60%;
+    }
+
+    &__svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: visible;
+    }
+
+    &__track {
+        fill: none;
+        stroke: #bcbec0;
+        stroke-width: 6;
+    }
+
+    &__progress {
+        fill: none;
+        stroke: #54b047;
+        stroke-width: 6;
+        transition: stroke-dashoffset 1s ease-out;
+    }
+
+    &__milestone {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &--100 { left: 8%; top: 77%; }
+        &--700 { left: 20%; top: 36%; }
+        &--2000 { left: 50%; top: 15.6%; }
+        &--4000 { left: 92.4%; top: 84.4%; }
+    }
+
+    &__dot {
+        width: 16px;
+        height: 16px;
+        background-color: #fff;
+        border: 2px solid #54b047;
+        border-radius: 50%;
+        
+        &--active {
+            border-color: #54b047;
+        }
+    }
+
+    &__label {
+        position: absolute;
+        white-space: nowrap;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        .pts {
+            font-size: 12px;
+            font-weight: 700;
+            color: #54b047;
+        }
+        
+        .val {
+            font-size: 16px;
+            font-weight: 700;
+            color: #000;
+            line-height: 1.2;
+        }
+
+        &--left {
+            right: 23px;
+            top: 50%;
+            transform: translateY(-50%);
+            align-items: flex-end;
+        }
+
+        &--above-left {
+            bottom: 15px;
+            right: 15px;
+            align-items: flex-end;
+        }
+
+        &--above {
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        &--right {
+            left: 22px;
+            top: 50%;
+            transform: translateY(-50%);
+            align-items: flex-start;
+        }
+    }
+
+    &__center-text {
+        position: absolute;
+        bottom: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        width: 100%;
+    }
+
+    &__center-title {
+        color: #30874d;
+        font-size: 16px;
+        font-weight: 700;
+        margin-bottom: -5px;
+    }
+
+    &__center-value {
+        color: #30874d;
+        font-size: 80px;
+        font-weight: 700;
+        line-height: 0.9;
+        font-family: "Acumin Pro Condensed", sans-serif;
+    }
+
+    &__center-subtitle {
+        color: #30874d;
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 1;
+    }
+
+    &__center-subval {
+        color: #30874d;
+        font-size: 15px;
+        font-weight: 700;
+        margin-top: 5px;
+    }
+}
+
+@include tablet {
+    .kse-rewards-chart {
+        &__center-text {
+            bottom: 10px;
+        }
+    } 
+}
+
+@include tablet-pro {
+    .kse-rewards-chart {
+        width: 80%;
+        &__milestone {
+            &--100 { left: 8.4%; }
+            &--2000 { top: 13.6%; }
+            &--4000 { left: 92.5%; top: 87.5%; }
+        }
+        &__label {
+            .pts { font-size: 11px; }
+            .val { font-size: 14px; }
+        }
+        &__center-value {
+            font-size: 55px;
+        }
+        &__center-subtitle {
+            font-size: 16px;
+        } 
+        &__center-text {
+            bottom: -40px;
+        }  
+    } 
+}
+
+@include mobile {
+    .kse-rewards-chart {
+        width: 90%;
+        margin: 50px auto 30px;
+        &__svg-container {
+            padding-bottom: 55%;
+        }
+        &__label {
+            .pts { font-size: 11px; }
+            .val { font-size: 14px; }
+        }
+        &__center-value {
+            font-size: 55px;
+        }
+        &__center-subtitle {
+            font-size: 16px;
+        }
+        &__center-text {
+            bottom: -16px;
+        }
+        &__milestone {
+            &--100 { left: 8.4%; }
+            &--2000 { top: 13.6%; }
+            &--4000 { left: 92.5%; top: 87.5%; }
+        }
+    }
+}

@@ -177,7 +177,7 @@
         display: flex;
         min-height: 240px;
         &-box{
-            width: 38%;
+            width: 30%;
             color: #fff;
             padding: 25px;
             border-radius: 0 10px 10px 0;
@@ -187,6 +187,7 @@
             align-items: center;
             justify-content: center;
             flex: 1;
+            padding: 0 30px;
             img{
                 width: 80%;
             }
@@ -344,6 +345,7 @@
         }
     }
 }
+
 @include tablet-pro{
     .kse-PointsBox{
         &__desc{
@@ -452,5 +454,14 @@
                 width: 100%;
             }
         }
+        &.keesong {
+        .kse-PointsBox__points {
+            flex-direction: column-reverse;
+        }
+        .kse-PointsBox__points-box {
+            border-radius: 10px 10px 0 0;
+        }
+        } 
     }
+
 }

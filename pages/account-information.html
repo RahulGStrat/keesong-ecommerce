@@ -483,7 +483,66 @@
                                     </div>
                                 </div>
                                 <div class="kse-PointsBox__points-graph">
-                                    <img src="../assets/images/points-graph-green.png">
+                                    <div class="kse-rewards-chart">
+                                        <div class="kse-rewards-chart__svg-container">
+                                            <svg class="kse-rewards-chart__svg" viewBox="0 0 200 110">
+                                                <path class="kse-rewards-chart__track"
+                                                    d="M 15 100 A 85 85 0 0 1 185 100" />
+                                                <path class="kse-rewards-chart__progress"
+                                                    d="M 15 100 A 85 85 0 0 1 185 100"
+                                                    style="stroke-dasharray: 267.03; stroke-dashoffset: 200.28;" />
+                                            </svg>
+
+                                            <!-- Milestones -->
+                                            <!-- Milestone 100 -->
+                                            <div class="kse-rewards-chart__milestone kse-rewards-chart__milestone--100">
+                                                <div class="kse-rewards-chart__dot"></div>
+                                                <div class="kse-rewards-chart__label kse-rewards-chart__label--left">
+                                                    <span class="pts">100 PTS</span>
+                                                    <span class="val">$2.50</span>
+                                                </div>
+                                            </div>
+
+                                            <!-- Milestone 700 -->
+                                            <div class="kse-rewards-chart__milestone kse-rewards-chart__milestone--700">
+                                                <div class="kse-rewards-chart__dot kse-rewards-chart__dot--active">
+                                                </div>
+                                                <div
+                                                    class="kse-rewards-chart__label kse-rewards-chart__label--above-left">
+                                                    <span class="pts">700 PTS</span>
+                                                    <span class="val">$17.50</span>
+                                                </div>
+                                            </div>
+
+                                            <!-- Milestone 2000 -->
+                                            <div
+                                                class="kse-rewards-chart__milestone kse-rewards-chart__milestone--2000">
+                                                <div class="kse-rewards-chart__dot"></div>
+                                                <div class="kse-rewards-chart__label kse-rewards-chart__label--above">
+                                                    <span class="pts">2000 PTS</span>
+                                                    <span class="val">$50</span>
+                                                </div>
+                                            </div>
+
+                                            <!-- Milestone 4000 -->
+                                            <div
+                                                class="kse-rewards-chart__milestone kse-rewards-chart__milestone--4000">
+                                                <div class="kse-rewards-chart__dot"></div>
+                                                <div class="kse-rewards-chart__label kse-rewards-chart__label--right">
+                                                    <span class="pts">4000 PTS</span>
+                                                    <span class="val">$100</span>
+                                                </div>
+                                            </div>
+
+                                            <!-- Center Text -->
+                                            <div class="kse-rewards-chart__center-text">
+                                                <div class="kse-rewards-chart__center-title">You've Earned</div>
+                                                <div class="kse-rewards-chart__center-value">700</div>
+                                                <div class="kse-rewards-chart__center-subtitle">POINTS</div>
+                                                <div class="kse-rewards-chart__center-subval">= $17.50</div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <!-- PointsBox End -->
@@ -555,7 +614,64 @@
             <div class="kse-PointsBox__graph">
                 <div class="content-wrapper">
                     <div class="kse-PointsBox__graph-in">
-                        <img src="../assets/images/points-graph.png">
+                        <div class="kse-rewards-hub">
+                            <div class="kse-rewards-hub__svg-container">
+                                <svg class="kse-rewards-hub__svg" viewBox="0 0 200 110">
+                                    <!-- Inner Track -->
+                                    <path class="kse-rewards-hub__track" d="M 30 100 A 70 70 0 0 1 170 100" />
+                                    <!-- Inner Progress (Green, 25%) -->
+                                    <path class="kse-rewards-hub__progress kse-rewards-hub__progress--green"
+                                        d="M 30 100 A 70 70 0 0 1 170 100"
+                                        style="stroke-dasharray: 54.98 1000; stroke-dashoffset: 0;" />
+
+                                    <!-- Inner pointer -->
+                                    <line class="kse-rewards-hub__pointer" x1="25.8" y1="25.8" x2="46.3" y2="46.3" stroke="#54b047" stroke-width="0.5" />
+
+                                    <!-- Outer Track -->
+                                    <path class="kse-rewards-hub__track" d="M 10 100 A 90 90 0 0 1 190 100" />
+                                    <!-- Outer Progress (Red, 50%) -->
+                                    <path class="kse-rewards-hub__progress kse-rewards-hub__progress--red"
+                                        d="M 10 100 A 90 90 0 0 1 190 100"
+                                        style="stroke-dasharray: 141.37 1000; stroke-dashoffset: 0;" />
+
+                                    <!-- Outer pointer -->
+                                    <line class="kse-rewards-hub__pointer" x1="100" y1="-10" x2="100" y2="4" stroke="#f14a50" stroke-width="0.5" />
+                                </svg>
+
+                                <!-- Callouts -->
+                                <!-- Inner Callout -->
+                                <div class="kse-rewards-hub__callout kse-rewards-hub__callout--inner">
+                                    <div class="kse-rewards-hub__label">
+                                        <span class="pts pts--green">700 <small>PTS</small></span>
+                                        <span class="pts pts--black">3300 <small>PTS</small></span>
+                                        <span class="subtext">REMAINING TO REDEEM<br>KS REWARDS+</span>
+                                    </div>
+                                </div>
+
+                                <!-- Outer Callout -->
+                                <div class="kse-rewards-hub__callout kse-rewards-hub__callout--outer">
+                                    <div class="kse-rewards-hub__label">
+                                        <span class="pts pts--red">200 <small>PTS</small></span>
+                                        <span class="pts pts--black">25000 <small>PTS</small></span>
+                                        <span class="subtext">REMAINING TO<br>ENTER THE DRAW</span>
+                                    </div>
+                                </div>
+
+                                <!-- Center Text -->
+                                <div class="kse-rewards-hub__center-text">
+                                    Your<br>Rewards<br>Hub
+                                </div>
+
+                                <!-- Flag Icon -->
+                                <div class="kse-rewards-hub__flag">
+                                    <img src="../assets/images/flag.png" alt="flag">
+                                </div>
+                            </div>
+                            <div class="kse-rewards-hub__footer">
+                                Built for loyal shoppers and full carts. The more you<br>shop with us, the more
+                                rewarding it gets.
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -683,7 +799,8 @@
                                                 </div>
                                                 <div class="kse-OL__product-details">
                                                     <h4 class="kse-OL__product-title">Fresh Sakura Chicken
-                                                        <br>[Non-Halal] – 1.3kg</h4>
+                                                        <br>[Non-Halal] – 1.3kg
+                                                    </h4>
                                                     <p class="kse-OL__product-quantity">Quantity: 2</p>
                                                     <span class="kse-OL__product-price">S$14.00</span>
                                                 </div>

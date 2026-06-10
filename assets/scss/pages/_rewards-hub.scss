@@ -1,0 +1,169 @@
+.kse-rewards-hub {
+    position: relative;
+    width: 100%;
+    margin-top: 60px;
+    font-family: "Acumin Variable Concept", sans-serif;
+
+    &__svg-container {
+        position: relative;
+        width: 100%;
+        padding-bottom: 60%;
+    }
+
+    &__svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: visible;
+    }
+
+    &__track {
+        fill: none;
+        stroke: #bcbec0;
+        stroke-width: 12;
+    }
+
+    &__progress {
+        fill: none;
+        stroke-width: 12;
+        transition: stroke-dashoffset 1s ease-out;
+
+        &--red {
+            stroke: #f14a50;
+        }
+
+        &--green {
+            stroke: #54b047;
+        }
+    }
+
+
+    &__callout {
+        position: absolute;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &--inner {
+            left: 13%; top: 23%;
+            transform: translate(-50%, -100%);
+        }
+
+        &--outer {
+            left: 50%; top: -5%;
+            transform: translate(-50%, -100%);
+        }
+    }
+
+    &__label {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        line-height: 1.1;
+
+        .pts {
+            font-size: 20px;
+            font-weight: 700;
+            
+            &--green {
+                color: #54b047;
+                font-size: 15px;
+                margin-bottom: 2px;
+            }
+            &--red {
+                color: #f14a50;
+                font-size: 15px;
+                margin-bottom: 2px;
+            }
+            &--black {
+                color: #000;
+                margin-bottom: 4px;
+            }
+            small {
+                font-size: 12px;
+            }
+        }
+
+        .subtext {
+            font-size: 13px;
+            font-weight: 700;
+            color: #000;
+        }
+    }
+
+    &__center-text {
+        position: absolute;
+        bottom: 5px;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        font-size: 55px;
+        font-weight: 700;
+        line-height: 0.95;
+        color: #121212;
+    }
+
+    &__flag {
+        position: absolute;
+        bottom: 0;
+        right: 1%;
+        width: 120px;
+        height: 120px;
+        z-index: 5;
+    }
+
+    &__footer {
+        text-align: center;
+        font-size: 18px;
+        color: #000;
+        margin-top: 20px;
+        line-height: 1.4;
+    }
+}
+
+@include tablet {
+    .kse-rewards-hub {
+        margin-top: 18%;
+    }
+}
+
+@include mobile {
+    .kse-rewards-hub {
+        margin-top: 100px;
+        &__svg-container {
+            padding-bottom: 55%;
+        }
+
+        &__label {
+            .pts {
+                font-size: 16px;
+                &--green, &--red { font-size: 12px; }
+            }
+            .subtext { font-size: 10px; }
+        }
+        &__center-text {
+            font-size: 35px;
+            bottom: 20px;
+        }
+        &__footer {
+            font-size: 13px;
+            margin-top: 10px;
+        }
+        &__flag {
+            width: 75px;
+            height: 75px;
+        }
+        &__callout {
+            &--outer {
+                top: -12%;
+            }
+            &--inner {
+                top: 16%;
+            }
+        }
+    }
+}
