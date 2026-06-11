@@ -539,7 +539,7 @@
 
                         <!-- partner terms & conditions -->
                         <div class="kse-login__partnerterms">
-                            <a href="#" target="_blank">Partner Programme Terms & Conditions</a>
+                            <button type="button" id="partner-terms-trigger">Partner Programme Terms &amp; Conditions</button>
                         </div>
 
 
@@ -708,12 +708,139 @@
 
     <!-- body content end -->
 
+    <!-- Partner Terms Modal -->
+    <div class="kse-partner-terms-modal" id="kse-partner-terms-modal" role="dialog" aria-modal="true" aria-labelledby="partner-terms-title" tabindex="-1">
+        <div class="kse-partner-terms-modal__overlay" id="kse-partner-terms-overlay"></div>
+        <div class="kse-partner-terms-modal__dialog">
+            <button class="kse-partner-terms-modal__close" id="kse-partner-terms-close" aria-label="Close modal">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="15" y1="9" x2="9" y2="15"></line>
+                    <line x1="9" y1="9" x2="15" y2="15"></line>
+                </svg>
+            </button>
+            <div class="kse-partner-terms-modal__content">
+                <h2 id="partner-terms-title" class="kse-partner-terms-modal__title">Partner Member Programme &ndash; Terms &amp; Conditions</h2>
+                <ol class="kse-partner-terms-modal__list">
+                    <li>
+                        <strong>Eligibility</strong>
+                        <p>Partner Member benefits are available only to customers who register using a valid Partner Access Code issued by participating partners (e.g., hospitals, corporate partners, organisations, or affiliated companies).</p>
+                    </li>
+                    <li>
+                        <strong>Partner Access Code Usage</strong>
+                        <ul>
+                            <li>Each Partner Access Code may be unique to a specific partner programme.</li>
+                            <li>The code must be entered during registration or account activation.</li>
+                            <li>Kee Song reserves the right to verify the validity of any code submitted.</li>
+                            <li>Invalid, expired, or unauthorised codes will not qualify for partner benefits.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Partner Benefits</strong>
+                        <ul>
+                            <li>Eligible members may enjoy exclusive discounts on selected Sakura Chicken products as determined by Kee Song.</li>
+                            <li>Discount percentages, eligible products, and promotional mechanics may vary by partner programme.</li>
+                            <li>Benefits are strictly limited to products specified under the promotion.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Product Eligibility</strong>
+                        <ul>
+                            <li>Partner discounts apply only to selected Sakura Chicken products and do not apply to all products available on the platform.</li>
+                            <li>Excluded products may include non-Sakura products, bundles, promotional items, gift cards, or products otherwise stated.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Non-Stackable Promotions</strong>
+                        <p>Partner discounts cannot be combined with other promotional codes, vouchers, loyalty redemptions, membership discounts, or other offers unless otherwise stated.</p>
+                    </li>
+                    <li>
+                        <strong>Validity Period</strong>
+                        <ul>
+                            <li>Partner benefits are subject to the validity period determined by Kee Song and/or the respective partner organisation.</li>
+                            <li>Expired benefits or access codes will not be reinstated.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Non-Transferable</strong>
+                        <ul>
+                            <li>Partner benefits are personal and non-transferable.</li>
+                            <li>Sharing, selling, transferring, or misuse of access codes or member privileges is strictly prohibited.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Suspension or Removal of Benefits</strong>
+                        <p>Kee Song reserves the right to suspend, terminate, or revoke partner privileges without prior notice if:</p>
+                        <ul>
+                            <li>Fraudulent activity is detected;</li>
+                            <li>Terms are breached;</li>
+                            <li>Incorrect information is provided; or</li>
+                            <li>There is suspected misuse of the programme.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Programme Changes</strong>
+                        <p>Kee Song reserves the right to amend, modify, suspend, or terminate any partner programme, discount structure, eligible products, or these Terms &amp; Conditions at any time without prior notice.</p>
+                    </li>
+                    <li>
+                        <strong>Final Decision</strong>
+                        <p>In the event of any dispute, Kee Song Food Corporation (S) Pte Ltd reserves the right of final decision on all matters relating to the Partner Member Programme.</p>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
     <!-- scripts -->
     <script src="../assets/js/jquery.slim.min.js"></script>
     <script src="../assets/js/aos.js"></script>
     <script src="../assets/js/slick.min.js"></script>
     <script src="../assets/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const modal = document.getElementById('kse-partner-terms-modal');
+            const trigger = document.getElementById('partner-terms-trigger');
+            const closeBtn = document.getElementById('kse-partner-terms-close');
+            const overlay = document.getElementById('kse-partner-terms-overlay');
+            const body = document.body;
+
+            function openModal() {
+                modal.classList.add('is-open');
+                body.style.overflow = 'hidden';
+                modal.focus();
+            }
+
+            function closeModal() {
+                modal.classList.remove('is-open');
+                body.style.overflow = '';
+                if (trigger) {
+                    trigger.focus();
+                }
+            }
+
+            if (trigger) {
+                trigger.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    openModal();
+                });
+            }
+
+            if (closeBtn) {
+                closeBtn.addEventListener('click', closeModal);
+            }
+
+            if (overlay) {
+                overlay.addEventListener('click', closeModal);
+            }
+
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && modal.classList.contains('is-open')) {
+                    closeModal();
+                }
+            });
+        });
+    </script>
     <!-- scripts -->
 </body>
 
