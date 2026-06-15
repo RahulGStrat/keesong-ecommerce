@@ -231,6 +231,110 @@
     }
   }
 
+  &__address {
+    &-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+
+    &-card {
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 24px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 200px;
+      background-color: #fff;
+    }
+
+    &-delete {
+      position: absolute;
+      top: 24px;
+      right: 24px;
+      cursor: pointer;
+      color: #686767;
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: #e53935;
+      }
+
+      svg {
+        width: 20px;
+        height: 20px;
+        fill: none;
+        stroke: currentColor;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+    }
+
+    &-name {
+      font-size: 18px;
+      font-weight: 600;
+      color: #454141;
+      margin: 0 0 12px 0;
+      padding-right: 30px;
+    }
+
+    &-details {
+      margin: 0 0 15px 0;
+      line-height: 1.5;
+      color: #757373;
+    }
+
+    &-phone {
+      margin: 0 0 25px 0;
+      color: #757373;
+    }
+
+    &-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-top: auto;
+    }
+
+    &-edit {
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #686767;
+      font-weight: 600;
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: #333;
+      }
+
+      svg {
+        width: 18px;
+        height: 18px;
+        fill: none;
+        stroke: currentColor;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+    }
+
+    &-default {
+      background-color: #fbd2d3;
+      color: #454141;
+      padding: 6px 14px;
+      border-radius: 4px;
+      font-size: 14px;
+      font-weight: 600;
+      font-family: "Acumin Pro Condensed", sans-serif;
+    }
+  }
+
 }
 
 @include mobile-tablet{
@@ -245,6 +349,11 @@
         }
         &-btm{
           gap: 50px;
+        }
+      }
+      &__address{
+        &-list{
+          grid-template-columns: 1fr;
         }
       }
     }
