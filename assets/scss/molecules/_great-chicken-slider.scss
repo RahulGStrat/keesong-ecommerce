@@ -7,6 +7,11 @@
       #fde9ec 100%
    );
    overflow: hidden;
+   
+   // articles filter page style
+   &--articles {
+      padding-top: 40px !important;
+   }
 
    &__heading {
       text-align: center;
