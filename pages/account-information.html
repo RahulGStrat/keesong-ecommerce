@@ -1340,52 +1340,6 @@
     <script src="../assets/js/slick.min.js"></script>
     <script src="../assets/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/js/script.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Forgot Password Modal logic
-            const forgotModal = document.getElementById('kse-forgot-password-modal');
-            const forgotTrigger = document.getElementById('password-setting-trigger');
-            const forgotCloseBtn = document.getElementById('kse-forgot-password-close');
-            const forgotOverlay = document.getElementById('kse-forgot-password-overlay');
-            const body = document.body;
-
-            function openForgotModal() {
-                forgotModal.classList.add('is-open');
-                body.style.overflow = 'hidden';
-                forgotModal.focus();
-            }
-
-            function closeForgotModal() {
-                forgotModal.classList.remove('is-open');
-                body.style.overflow = '';
-                if (forgotTrigger) {
-                    forgotTrigger.focus();
-                }
-            }
-
-            if (forgotTrigger) {
-                forgotTrigger.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    openForgotModal();
-                });
-            }
-
-            if (forgotCloseBtn) {
-                forgotCloseBtn.addEventListener('click', closeForgotModal);
-            }
-
-            if (forgotOverlay) {
-                forgotOverlay.addEventListener('click', closeForgotModal);
-            }
-
-            // Escape key logic for modal
-            document.addEventListener('keydown', function (e) {
-                if (e.key === 'Escape' && forgotModal && forgotModal.classList.contains('is-open')) {
-                    closeForgotModal();
-                }
-            });
-        });
-    </script>
     <!-- scripts -->
 </body>
 

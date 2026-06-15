@@ -123,6 +123,8 @@ document.addEventListener("DOMContentLoaded", function () {
    initFavouriteRecipesSlider();
    initRelatedProductsSlider();
    initCustomDropdown();
+   initLoginRegisterModals();
+   initAccountInformationForgotPasswordModal();
    initCountdownTimer();
 });
 
@@ -374,6 +376,97 @@ function initHeaderDropdown() {
 
    document.addEventListener("click", function () {
       dropdown.classList.remove("active");
+   });
+}
+
+function setupModal({ modalId, triggerId, closeId, overlayId }) {
+   const modal = document.getElementById(modalId);
+   const trigger = document.getElementById(triggerId);
+   const closeBtn = document.getElementById(closeId);
+   const overlay = document.getElementById(overlayId);
+   const body = document.body;
+
+   if (!modal) return null;
+
+   function openModal() {
+      modal.classList.add("is-open");
+      body.style.overflow = "hidden";
+      modal.focus();
+   }
+
+   function closeModal() {
+      modal.classList.remove("is-open");
+      body.style.overflow = "";
+      if (trigger) {
+         trigger.focus();
+      }
+   }
+
+   if (trigger) {
+      trigger.addEventListener("click", function (e) {
+         e.preventDefault();
+         openModal();
+      });
+   }
+
+   if (closeBtn) {
+      closeBtn.addEventListener("click", closeModal);
+   }
+
+   if (overlay) {
+      overlay.addEventListener("click", closeModal);
+   }
+
+   return {
+      modal,
+      closeModal,
+   };
+}
+
+function initLoginRegisterModals() {
+   const partnerModal = setupModal({
+      modalId: "kse-partner-terms-modal",
+      triggerId: "partner-terms-trigger",
+      closeId: "kse-partner-terms-close",
+      overlayId: "kse-partner-terms-overlay",
+   });
+
+   const forgotModal = setupModal({
+      modalId: "kse-forgot-password-modal",
+      triggerId: "forgot-password-trigger",
+      closeId: "kse-forgot-password-close",
+      overlayId: "kse-forgot-password-overlay",
+   });
+
+   if (!partnerModal && !forgotModal) return;
+
+   document.addEventListener("keydown", function (e) {
+      if (e.key !== "Escape") return;
+
+      if (partnerModal && partnerModal.modal.classList.contains("is-open")) {
+         partnerModal.closeModal();
+      }
+
+      if (forgotModal && forgotModal.modal.classList.contains("is-open")) {
+         forgotModal.closeModal();
+      }
+   });
+}
+
+function initAccountInformationForgotPasswordModal() {
+   const forgotModal = setupModal({
+      modalId: "kse-forgot-password-modal",
+      triggerId: "password-setting-trigger",
+      closeId: "kse-forgot-password-close",
+      overlayId: "kse-forgot-password-overlay",
+   });
+
+   if (!forgotModal) return;
+
+   document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && forgotModal.modal.classList.contains("is-open")) {
+         forgotModal.closeModal();
+      }
    });
 }
 
