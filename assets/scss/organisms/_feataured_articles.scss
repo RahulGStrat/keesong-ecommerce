@@ -72,12 +72,17 @@
         h3 {
             font-size: 28px;
             line-height: 34px;
-            font-family: "Begum";
-            font-weight: 500;
+            font-family: 'Acumin Pro Condensed';
+            font-weight: 600;
             color: #fff;
             margin: 0;
-            max-width: 460px;
+            max-width: unset;
         }
+    }
+
+    &__desc {
+        font-family: 'Begum';
+        font-size: 16px;
     }
 
     /* RIGHT SIDE */
