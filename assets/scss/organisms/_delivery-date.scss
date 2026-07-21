@@ -48,6 +48,10 @@
    }
    &__body {
       padding: 15px;
+
+      @include mobile {
+         padding: 0;
+      }
       &-in {
          display: flex;
          justify-content: space-between;
@@ -56,6 +60,7 @@
          @include mobile {
             flex-direction: column;
             gap: 20px;
+            margin-bottom: 20px;
          }
       }
       h3 {
